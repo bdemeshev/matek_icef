@@ -1,7 +1,9 @@
 \documentclass[pdftex,12pt,a4paper]{article}
 
-\input{/home/boris/science/tex_general/title_bor_utf8}
+\input{/home/boris/science/tex_general/title_bor_utf8_knitr}
 
+% RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW 
+% RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW 
 
 \title{Exams collection. Growing. Mathematics for economists (MFE), Methods of optimal solution (MOS). }
 
@@ -11,6 +13,17 @@
 \begin{document}
 %\maketitle
 \parindent=0 pt % no indent
+
+<<"setup", echo=FALSE, include=FALSE>>=
+library(ggplot2) 
+library(gridExtra)
+opts_chunk$set(cache=TRUE,
+               dev="cairo_pdf",
+               warning=FALSE,
+               tidy=FALSE) # кэшируем все куски по умолчанию
+@
+
+
 
 \maketitle
 
@@ -82,6 +95,216 @@ c)	Find the second order conditions sufficient for maximum (two inequalities)\\
 d)	Using the implicit function theorem find $\frac{\partial K^{*}}{\partial w}$.  Is it positive or negative if you additionally know that $\frac{\partial^{2}\pi}{\partial L\partial K}>0$?\\
 
 
+
+\subsection{MFE, fall semester exam, 21.01.2009}
+
+Lecturer: K.A. Bukin, Classteachers: B.B. Demeshev, I.O. Kachkovski
+
+
+SECTION A. Answer all FOUR questions from this section (60 marks in total)
+
+\begin{enumerate}
+\item Find the gradient of $f(x,y) =\frac{x^2y}{\sqrt{x^2+y^2}}$
+at the point $M(1,3)$. Compute the derivative of $f$ at $M$ in direction of the vector $\{-1, 1\}$.
+
+\item Calculate all partial derivatives of the first and second order of $u$ with respect to $x$ and $y$ if $u=f (\xi, \eta)$ and $\xi=x+xy$, $\eta=x/y$.
+
+\item Consider the system of equations
+\[
+\left\{
+\begin{array}{l}
+x_1^2+x_1 y_1+x_2 y_2  = 3 \\
+x_2^2+x_1 y_2 -x_2 y_1 =1
+\end{array}
+\right.
+\]
+Are implicit functions $y = y(x)$ and $x = x(y)$ defined around the point $M(1, 1, 1, 1)$?
+Here $y$ denotes the vector with components $y_1$ and $y_2$ and the same notation holds for $x$. 
+If your answer is affirmative, find $\partial y_1/\partial x_1$ and $\partial x_2/\partial y_2$ at the point $M$.
+
+\item Find all stationary points of $f(x,y) = x^4 + y^4-4xy + 1$. Classify them as local minimum, maximum or saddle point.
+\end{enumerate}
+
+
+SECTION B
+Answer TWO of the three questions from this section (20 marks each)
+\begin{enumerate}[resume]
+\item Consider a problem of identifying Pareto–optimal allocations in the two goods
+economy with the two agents having identical utility functions $U_1(x_1 , y_1)= x_1 y_1$ and
+$U_2(x_2, y_2) = x_2 y_2$, where $x_i$ and $y_i$ denote respectively the amounts of goods $x$ and $y$ that are allocated to agent $i = 1, 2$. Given a weight $\alpha \in (0, 1)$, the solution of that problem can be found by maximizing the <<weighted>> utility function $\alpha U_1 + (1 - \alpha)U_2$ with respect to all the variables subject to the resource constraints $x_1 + x_2 = w_1$, $y_1 + y_2 = w_2$. In this economy $w_1$, $w_2$ are positive endowments.
+\begin{enumerate}
+\item Using the Lagrangean derive the necessary conditions for extremum and solve the
+system of equations.
+\item Without applying the second–order conditions explain why the solution
+$(x_1^* , x_2^* , y_1^* , y_2^* )$
+is the maximum of the problem stated above.
+\item Calculate the value of the <<weighted>> utility function at the Pareto-optimal allocation and compare it with the case when all the endowment in $x$ and $y$ is given to a single
+agent. How would you explain a difficulty you may find here?
+\end{enumerate}
+
+\item A firm’s inventory $I(t)$ is depleted at a constant rate per unit time, i.e. $I(t) = x-\delta t$, where $x$ is an amount of good reordered by the firm whenever the level of inventory is
+zero. The order is fulfilled immediately. The annual requirement for the commodity is
+$200$ units and the firm orders the commodity $n$ times a year where $200 = nx$. The firm
+incurs two types of inventory costs: a holding cost and an ordering cost. Since the average
+stock of inventory is $x/2$, the holding cost equals $C_h x/2$, the cost of placing one order is
+$C_o$, and with $n$ orders a year the annual ordering cost equals $C_o n$.
+\begin{enumerate}
+\item Minimize the cost of inventory $C = C_h x/2 + C_o n$ by choice of $x$ and $n$ subject to
+the constraint $nx = 200$ by the Lagrange multiplier method.
+\item Use the envelope theorem to approximate the change in the minimal cost if the
+requirement for the commodity rises to $204$ units.
+\end{enumerate}
+
+
+\item Use the Lagrange multiplier method to prove that the triangle with maximum area
+that has a given perimeter $2p$ is equilateral. Be sure to justify that the extreme you find
+is indeed maximum.
+
+
+\textit{Hint 1:} Use Heron’s formula for the area:
+\[
+A=\sqrt{p(p - x)(p - y)(p - z)}
+\]
+where $x$, $y$ and $z$ are the lengths of the sides.
+
+
+\textit{Hint 2:} You may find that maximizing $A^2$ instead of just $A$ will require somewhat more
+pleasant calculations while giving the same answer.
+\end{enumerate}
+
+\section{2009-2010}
+
+\subsection{MFE, fall semester exam, 19.01.2010}
+
+Lecturer: K. A. Bukin, Classteachers: A. Arlashin, I. Kachkovski, M. Martinovic
+
+
+Marks will be deducted for insufficient explanation within your answers. Total duration
+of the exam is 120 min.
+
+
+Variant I
+
+
+SECTION A. Answer all six questions from this section (10 marks each)
+
+\begin{enumerate}
+
+\item Consider the function $f(x,y)=(1+x)/y^2$. On the $(x,y)$-plane, sketch several level curves of $f$. Calculate and sketch unit length vectors indicating directions of the most rapid growth of $f$ at points $(1, 1)$ and $(3, -1)$.
+
+\item Use the first-order differential to approximate 
+$\sqrt[3]{4\cdot 0.9^2+2.2^2}$
+
+\item Find the equation of the tangent plane to the surface given by $x^3+z^3-3xz=y-1$ at the point $(1, 4, 2)$.
+
+\item Find $\partial^2 u / \partial x \partial y$ and $\partial^3 u / \partial x \partial z^2$ if $u=f(s,t)$ and $s=x/y$, $t=y/z$. Assume that $f$ has continuous third-order partial derivatives.
+
+\item Given the system
+\[
+\begin{cases}
+xe^{u+v}+2uv=1 \\
+ye^{u-v}-\frac{u}{1+v}=2x
+\end{cases}
+\]
+find $du$ and $dv$ at $x_0 = 1$, $y_0 = 2$, $u_0 = 0$, $v_0 = 0$.
+
+\item Use Lagrange multipliers to find the dimension of a rectangular box with the least
+possible surface area among those with a volume of 27 m$^3$. Make sure you check the second
+order condition for minimisation.
+\end{enumerate}
+
+SECTION B. Answer both questions from this section (20 marks each)
+
+\begin{enumerate}[resume]
+\item Dr. Cooper is a two-period consumer and his utility is $u(c_0 , c_1) = \ln c_0 + 0.8 \ln c_1$, with $c_0$ the initial period consumption and $c_1$ the second period consumption. He gets income of $Y_0$ and $Y_1$ in these two periods respectively, and can borrow and lend money at the same interest rate of $r$.
+
+
+That means, if Dr. Cooper consumes less than $Y_0$ in the initial period, then the difference is saved and results in the second period additional income, equal to $(Y_0 - c_0)(1 + r)$, of course. If he decides to consume more than $Y_0$ in the initial period, he has to borrow and repay the borrowed amount together with interest payments in the second period, thus lowering his second-period consumption (to what amount?).
+\begin{enumerate}
+\item Show that irrespective of whether Dr. Cooper goes borrowing or lending, his budget
+constraint is
+\[
+c_0 (1 + r) + c_1 = Y_0 (1 + r) + Y_1
+\]
+\item Sketch the budget constraint and several indifference curves on the $(c_0 , c_1)$-plane.
+\item Suppose now that $r = 0.4$ and $Y_0 = Y_1 = 10$. Set up the utility optimisation problem with variables $c_0$ and $c_1$. Use Lagrange multipliers to solve it. Justify that the point you have found is the point of maximum.
+\item Using the Envelope Theorem, approximate the change in Dr. Cooper’s maximum
+utility if the interest rate rises to $0.45$ with unchanged income in both periods.
+\end{enumerate}
+
+\item Consider the Edgeworth exchange economy with two agents, Robinson and Friday,
+and two goods, wheat and fish. Robinson has the utility of possessing $w$ units of wheat
+and $f$ units of fish equal to $u_R(w, f) = wf$, Friday’s utility is $u_F(w, f) = w^2 f$. There is one unit of wheat and one unit of fish in the economy.
+\begin{enumerate}
+\item Set up (but do not solve) the problem of optimisation of Friday’s utility given the
+fixed level of Robinson’s utility, say, $u_R(w, f ) = 1/3$. There should be 4 variables (the product levels, or allocations, for Robinson and Friday) and 3 equality constraints.
+\item The problem above can also be set up in 2 variables with 1 constraint: maximize
+$(1-w)^2(1-f)$ subject to $wf = 1/3$. Use Lagrange multipliers to solve it. Find the optimal product levels of both agents. Do not check the second-order condition.
+\item In the context, explain the geometric significance of the equation
+\[
+\nabla u_R (w, f ) = \lambda\cdot \nabla u_F (1 - w, 1 - f )
+\]
+where $\lambda$ is some real number.
+\item The optimal levels in (ii) are also the solution of the problem of optimising Robinson’s utility given some fixed level of Friday’s utility, $u_F(w,f) = a$. What is the value of $a$? What is the optimal value of Robinson’s utility under the given constraint?
+\end{enumerate}
+
+
+\end{enumerate}
+
+
+\section{2010-2011}
+
+\subsection{MFE, fall semester exam, 18.01.2011}
+
+Variant 4, Classteachers: A.Arlashin, G.Sharygin, S.Provornikov
+
+Section A.
+Answer all 6 questions from this section (10 marks each)
+
+\begin{enumerate}
+\item Let $\bar{n}$ be the unit normal at a point $M_0( x_0 , y_0 , z_0 )$ to the sphere represented by the equation $x^2+y^2+z^2=16$ in $R^3$. The point $M_0$ belongs to that sphere.
+\begin{enumerate}
+\item Find the components of $\bar{n}$ as the functions of $M_0$.
+\item Find the set of points on the sphere at which the directional derivative of the function $u( x, y, z )=x-z$ in the direction of $\bar{n}$ turns to zero.
+\end{enumerate}
+
+\item Suppose $f(x,y)$ is a twice differentiable function. Let $x$ and $y$ be defined in terms of $u$, $v$ as follows: $x(u,v)=ue^{2v}$, $y(u,v)=u^2-v^2$. Let $F(u,v)=f(x(u, v), y(u, v))$.
+Calculate $F_{uu}''$ and $F_{uv}''$.
+\item Find the linear approximation of the function $\cos(e^x+e^y)$ in the neighborhood of the point $(\ln (\pi/4), \ln (\pi/4))$.
+
+\item In the economy producing two goods $x$ and $y$ , the production possibilities set (PPS) is given by the system of inequalities
+$ \left\{ x^2-xy+2.5y^2\leq 450, \, x\geq 0, \, y\geq 0 \right\} $
+By definition the marginal rate of transformation is defined as 
+$ MRT=-\frac{dy}{dx}$
+, where derivative (if it exists) is taken at a point on the boundary of PPS which is called Production Possibilities Frontier.
+\begin{enumerate}
+\item  By completing perfect squares prove that PPS is a bounded set.
+\item Using the Implicit Function Theorem find MRT for that economy in terms of $x$, $y$. Consider $x>0$ and $y>0$.
+\item Find point(s) at which $MRT=1$.
+\end{enumerate}
+
+\item A two goods producer is a monopolist and it faces the inverse demand functions $p_x=60-2x$ and $p_y=50-3y+x$ where $x$, $y$ are produced positive quantities. Let the total cost function be $C(x,y)=x^2+2y^2+xy$. Find production levels that maximize firm’s profit. Use second-order conditions to verify maximization.
+
+\item In the macroeconomic linear IS-LM model for the closed economy
+$Y=\bar{C}+m(Y-T)+G+\bar{I}-ar$ and $\bar{L}+bY-cr=M_s$, where $M_s$ is money supply, $r$ --- interest rate, $G$ --- government expenditures, $T$ --- lump sum tax and the constant parameters $\bar{C}>0$, $0<m<1$, $\bar{I}>0$, $a>0$, $\bar{L}>0$, $b>0$, $c>0$. Find the formulas for $dr/dT$, $dY/dT$. Assume that government expenditures and money supply are fixed exogenous variables.
+\end{enumerate}
+
+
+Section B
+Answer both questions from this section (20 marks each)
+
+\begin{enumerate}[resume]
+\item In the economy described by the production possibilities set in question four from section A, the world prices on goods are set as follows: $p_x=5$, $p_y=4$. In order to maximize its national income the economy maximizes the objective function $5x+4y$ on the constraint set 
+$ \left\{ x^2-xy+2.5y^2\leq 450, \, x\geq 0, \, y\geq 0 \right\} $.
+Find the produced quantities in that economy. You may not use the Kuhn-Tucker formulation here. Can the Weierstrass Theorem on attainment of the greatest and the least values be applicable in that maximization problem? Explain.
+
+\item A consumer splits her time $\bar{L}$ hours a week between labor and leisure. Her utility function is represented by $u(c,l)=c^{\alpha}l^{1-\alpha}$, where $c$ is the amount of consumption and $l$ is leisure in hours and $0<\alpha<1$. The weekly budget constraint is written as $pc+wl=w\bar{L}$,
+where $p$ is the price of consumption, $w$ is the hourly wage rate.
+\begin{enumerate}
+\item Find the consumer’s optimal bundle $(c^*,l^*)$. Justify your answer by checking second-order conditions or otherwise.
+\item Let $\alpha=3/4$, $\bar{L}=168$, $p=16$, $w=8$. Using Envelope Theorem estimate the change in the maximum value of her utility if the wage rate has decreased by $0.5$.
+\end{enumerate}
+\end{enumerate}
 
 
 \section{2011-2012}
@@ -905,9 +1128,23 @@ Sections A and B will make up 60\% and 40\% of the exam grade, respectively. Tot
 
 \item The level curves of a function $f(x,y)$ are shown below. Draw the level curves of the functions $g(x,y)=f(x+1,y)$ and $h(x,y)=f(-x,|y|)$.
 
-\begin{center}
-    \includegraphics[width=0.2\textwidth]{level_curves.pdf}
-\end{center}
+
+
+<<fig.height=2,fig.width=2, echo=FALSE>>=
+my_f <- function(x,y) (x-1)^2+y
+
+x <- seq(-3,3,length.out=100)
+y <- seq(-3,3,length.out=100)
+h <- data.frame(x=rep(x,times=100),y=rep(y,each=100))
+
+h$z <- my_f(h$x,h$y)
+
+ggplot(h, aes(x=x, y=y, z=z)) + stat_contour() + theme_bw() + 
+  scale_y_continuous(name="")+scale_x_continuous(name="")
+#  opts(axis.text.x = theme_blank(),axis.text.y = theme_blank())
+
+@
+
 
 \item Find the local maxima and minima of the function $f(x,y)=x^4+2y^4-xy$. Determine whether the extrema you have found are global or local.
 

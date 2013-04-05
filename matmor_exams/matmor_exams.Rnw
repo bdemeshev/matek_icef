@@ -15,6 +15,7 @@
 \parindent=0 pt % no indent
 
 <<"setup", echo=FALSE, include=FALSE>>=
+library(knitr)
 library(ggplot2) 
 library(gridExtra)
 opts_chunk$set(cache=TRUE,
@@ -1185,6 +1186,116 @@ x_2+x_2^3+y_1 y_2^2+y_2^3=4
 \item Show that Implicit Function Theorem can be applied, the function $y=y(w)$ exists and find its derivative.
 \item If we know that at long-run equilibrium $\frac{\partial MC}{\partial w}>\frac{\partial AC}{\partial w}$  what can we say about new long-run equilibrium when the market adjusts to a small rise in wage $w$? Will the equilibrium price go up? What about the output of the firm? 
 \end{enumerate}
+\end{enumerate}
+
+\subsection{MFE, fall retake 23.01.13}
+
+Part A, 10 points for each problem.
+
+\vspace{20pt}
+
+\begin{enumerate}
+\item It is known that $f'_x(x,y)>0$ and $f'_y(x,y)>0$. Sketch possible level curves for $f(x,y)$. What are the possible values of the angle between the gradient of the function $f$ and the $x$-axis?
+\item Find the local maxima and minima of the function $f(x,y)=x^4+4y^4-xy$. Determine whether the extrema you have found are global or local.
+\item Find and classify the constrained extrema of the function $f(x,y)=x+5y$ subject to $2x^2+y^2=10$.
+
+\item Given the system
+\[
+\begin{cases}
+xe^{u+v}+2uv=1 \\
+ye^{u-v}-\frac{u}{1+v}=2x
+\end{cases}
+\]
+find $du$ and $dv$ at $x_0 = 1$, $y_0 = 2$, $u_0 = 0$, $v_0 = 0$.
+
+\item Find the total differential for the function $f(x,y)=x^2y^2+xy^2+2x+4y$. Using the total differential find approximately $f(1.001,1.999)$ 
+
+\item Use the chain rule to find $f'(x)$ and $f''(x)$ for $f(x)=u(a,b,x)$ where $a=\cos(x)$ and $b=x^3$.
+
+\end{enumerate}
+
+\vspace{20pt}
+
+Part B, 20 points for each problem.
+
+\vspace{20pt}
+
+\begin{enumerate}[resume]
+\item A consumer maximizes the quasilinear utility function $u(x,y)=v(x)+y$, where $v'>0$, $v''<0$, subject to the budget constraint $px+y=I$.
+\begin{enumerate}
+\item (10 points) Denote the demand on $x$ by $x^*$. Show that $\frac{\partial x^*}{\partial I}=0$ and $\frac{\partial x^*}{\partial p}<0$.
+\item (10 points) Let $V=u(x^*,y^*)$, where $(x^*,y^*)$ is the optimal bundle. Assuming that $y^*>0$ and using the appropriate envelope theorem, show that $\frac{\partial V}{\partial I}$ is constant. 
+\end{enumerate}
+
+\item A two-product firm produces outputs $y_1$ and $y_2$ from a single factor of production which is labor, in other words, there is a function $f$, such that $f(y_1,y_2)\leq \bar{L}$. Output prices are $p_1$ and $p_2$. The firm has a fixed amount of labor supply $\bar{L}>0$ that should be utilized in full.
+\begin{enumerate}
+\item (10 points) Set the problem of the revenue maximization under the labor constraint mathematically and derive first-order conditions. Assume that both outputs should be produced in positive amounts.
+\item (10 points) Let the maximum value of the total revenue under the labor constraint be $TR(p_1,p_2,\bar{L})$. What are its derivatives with respect to the prices?
+\end{enumerate}
+
+\end{enumerate}
+
+\subsection{MFE, mock, 28.03.2013}
+
+Marks will be deducted for insufficient explanation within your answers. All problems are mandatory. Sections A and B will make up 60\% and 40\% of the exam grade, respectively. Total duration of the exam is 120 min. \\
+
+\textbf{SECTION A}
+\vspace{20pt}
+
+\begin{enumerate}
+
+\item Compute all the roots of the complex number, $\sqrt[5]{-1+i}$
+
+\item The matrix $A$ has the eigenvalues $\lambda_1=-1$, $\lambda_2=3$, $\lambda_3=-2$.
+\begin{enumerate}
+\item Compute the eigenvalues of the following matrices: $B=A^2$, $C=A+3I$, $D=A^{-1}$ where $I$ is the corresponding identity matrix.
+\item What can be said about the definiteness of these matrices?  
+\end{enumerate} 
+ 
+\item Consider the implicit function $y(x)$ given by the equation 
+\[
+y^3+y+3x^3+x^2=14.
+\]
+\begin{enumerate}
+\item Does this equation define the implicit function $y(x)$ in the neighborhood of the point $(1,2)$? 
+\item If the implicit function is defined find the Taylor series for $y(x)$ up to the second order term.
+\end{enumerate}
+ 
+
+\item Consider the difference equation $y_{t+1}(2+3y_t)=4y_t$ with initial condition $y_0=2/3$.
+\begin{enumerate}
+\item Using the substitution $z_t=1/y_t$ solve the difference equation.
+\item What is the limit of $y_t$ as $t\to\infty$?
+\end{enumerate}  
+
+\item The homogeneous function $f$ is given by the equation 
+\[ 
+f(x,y)=\int_0^{xy^a} t^3+xt \, dt.
+\]
+Find the value of the parameter $a$ and the degree of homogeneity of $\partial f/\partial x$.
+
+\item Find the two indefinite integrals $\int e^x \cos(2x)\,dx$, $\int \frac{x+1}{x^2-5x+4}\, dx$
+
+\end{enumerate}
+
+\vspace{20pt}
+\textbf{SECTION B}
+\vspace{20pt}
+
+\begin{enumerate}[resume]
+\item Suppose you enter a casino with $k$ dollars in your pocket. You decide to play a game in which you win \$1 with the probability  $2/3$ and lose \$1 dollar with the probability $1/3$. The game is over when $k=0$ (no money left) or $k=100$.
+
+Denote the probability to win the game, i.e. reaching $k=100$, starting with $k$ dollars as $x_k=\P(win|k)$. Using the total probability formula 
+\[
+\P(win|k)=\frac{1}{3} \cdot \P(win|k-1)+\frac{2}{3} \cdot \P(win|k+1)
+\] 
+derive the difference equation for $x_k$ and solve the boundary-value problem with $x_0=0$ and $x_{100}=1$.
+
+\item Let $N(t)$ denote the size of population, $X(t)=\sqrt{N}$ the total output in the economy. Consider the following model
+\[
+\frac{\dot{N}}{N}=\alpha-\beta\frac{N}{X}
+\]
+where $\alpha>0$, $\beta>0$. Find $N$ and explore its behavior as $t\to\infty$.
 \end{enumerate}
 
 

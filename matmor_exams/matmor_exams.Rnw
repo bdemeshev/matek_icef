@@ -5,7 +5,7 @@
 % RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW 
 % RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW 
 
-\title{Exams collection. Growing. Mathematics for economists (MFE), Methods of optimal solution (MOS). }
+\title{Exams collection. Growing. Mathematics for economists (MFE), Methods of optimal solution (MOS) }
 
 \providecommand{\grad}{\mathrm{grad}\,}
 \usepackage{commath} % for derivatives etc
@@ -1309,6 +1309,481 @@ derive the difference equation for $x_k$ and solve the boundary-value problem wi
 \]
 where $\alpha>0$, $\beta>0$. Find $N$ and explore its behavior as $t\to\infty$.
 \end{enumerate}
+
+% more variants :)
+\begin{comment}
+
+\newpage
+\pagestyle{empty}
+Mathematics for economists. Exam Paper. March 28, 2013, \textbf{Variant 2} \\ 
+
+%Lecturer: K.A. Bukin
+%Class teachers: A. Arlashin, G. Sharygin, S. Provornikov
+
+Marks will be deducted for insufficient explanation within your answers. All problems are mandatory. Sections A and B will make up 60\% and 40\% of the exam grade, respectively. Total duration of the exam is 120 min. \\
+
+\textbf{SECTION A}
+\vspace{20pt}
+
+\begin{enumerate}
+
+\item Compute all the roots of the complex number, $\sqrt[5]{-1-i}$
+
+\item The matrix $A$ has the eigenvalues $\lambda_1=-1$, $\lambda_2=4$, $\lambda_3=-2$.
+\begin{enumerate}
+\item Compute the eigenvalues of the following matrices: $B=A^2$, $C=A+3I$, $D=A^{-1}$ where $I$ is the corresponding identity matrix.
+\item What can be said about the definiteness of these matrices?  
+\end{enumerate} 
+ 
+\item Consider the implicit function $y(x)$ given by the equation 
+\[
+y^3+2y+3x^3+x^2=16.
+\]
+\begin{enumerate}
+\item Does this equation define the implicit function $y(x)$ in the neighborhood of the point $(1,2)$? 
+\item If the implicit function is defined find the Taylor series for $y(x)$ up to the second order term.
+\end{enumerate}
+ 
+
+\item Consider the difference equation $y_{t+1}(2+3y_t)=4y_t$ with initial condition $y_0=2/3$.
+\begin{enumerate}
+\item Using the substitution $z_t=1/y_t$ solve the difference equation.
+\item What is the limit of $y_t$ as $t\to\infty$?
+\end{enumerate}  
+
+\item The homogeneous function $f$ is given by the equation 
+\[ 
+f(x,y)=\int_0^{xy^a} t^3+xt \, dt.
+\]
+Find the value of the parameter $a$ and the degree of homogeneity of $\partial f/\partial x$.
+
+\item Find the two indefinite integrals $\int e^x \cos(3x)\,dx$, $\int \frac{x+2}{x^2-5x+4}\, dx$
+
+\end{enumerate}
+
+\vspace{20pt}
+\textbf{SECTION B}
+\vspace{20pt}
+
+\begin{enumerate}[resume]
+\item Suppose you enter a casino with $k$ dollars in your pocket. You decide to play a game in which you win \$1 with the probability  $2/3$ and lose \$1 dollar with the probability $1/3$. The game is over when $k=0$ (no money left) or $k=100$.
+
+Denote the probability to win the game, i.e. reaching $k=100$, starting with $k$ dollars as $x_k=\P(win|k)$. Using the total probability formula 
+\[
+\P(win|k)=\frac{1}{3} \cdot \P(win|k-1)+\frac{2}{3} \cdot \P(win|k+1)
+\] 
+derive the difference equation for $x_k$ and solve the boundary-value problem with $x_0=0$ and $x_{100}=1$.
+
+\item Let $N(t)$ denote the size of population, $X(t)=\sqrt{N}$ the total output in the economy. Consider the following model
+\[
+\frac{\dot{N}}{N}=\alpha-\beta\frac{N}{X}
+\]
+where $\alpha>0$, $\beta>0$. Find $N$ and explore its behavior as $t\to\infty$.
+\end{enumerate}
+
+
+\newpage
+\pagestyle{empty}
+Mathematics for economists. Exam Paper. March 28, 2013, \textbf{Variant 3} \\ 
+
+%Lecturer: K.A. Bukin
+%Class teachers: A. Arlashin, G. Sharygin, S. Provornikov
+
+Marks will be deducted for insufficient explanation within your answers. All problems are mandatory. Sections A and B will make up 60\% and 40\% of the exam grade, respectively. Total duration of the exam is 120 min. \\
+
+\textbf{SECTION A}
+\vspace{20pt}
+
+\begin{enumerate}
+
+\item Compute all the roots of the complex number, $\sqrt[5]{1-i}$
+
+\item The matrix $A$ has the eigenvalues $\lambda_1=-1$, $\lambda_2=5$, $\lambda_3=-2$.
+\begin{enumerate}
+\item Compute the eigenvalues of the following matrices: $B=A^2$, $C=A+3I$, $D=A^{-1}$ where $I$ is the corresponding identity matrix.
+\item What can be said about the definiteness of these matrices?  
+\end{enumerate} 
+ 
+\item Consider the implicit function $y(x)$ given by the equation 
+\[
+y^3+3y+3x^3+x^2=18.
+\]
+\begin{enumerate}
+\item Does this equation define the implicit function $y(x)$ in the neighborhood of the point $(1,2)$? 
+\item If the implicit function is defined find the Taylor series for $y(x)$ up to the second order term.
+\end{enumerate}
+ 
+
+\item Consider the difference equation $y_{t+1}(2+3y_t)=4y_t$ with initial condition $y_0=2/3$.
+\begin{enumerate}
+\item Using the substitution $z_t=1/y_t$ solve the difference equation.
+\item What is the limit of $y_t$ as $t\to\infty$?
+\end{enumerate}  
+
+\item The homogeneous function $f$ is given by the equation 
+\[ 
+f(x,y)=\int_0^{xy^a} t^3+xt \, dt.
+\]
+Find the value of the parameter $a$ and the degree of homogeneity of $\partial f/\partial x$.
+
+\item Find the two indefinite integrals $\int e^x \cos(4x)\,dx$, $\int \frac{x+3}{x^2-5x+4}\, dx$
+
+\end{enumerate}
+
+\vspace{20pt}
+\textbf{SECTION B}
+\vspace{20pt}
+
+\begin{enumerate}[resume]
+\item Suppose you enter a casino with $k$ dollars in your pocket. You decide to play a game in which you win \$1 with the probability  $2/3$ and lose \$1 dollar with the probability $1/3$. The game is over when $k=0$ (no money left) or $k=100$.
+
+Denote the probability to win the game, i.e. reaching $k=100$, starting with $k$ dollars as $x_k=\P(win|k)$. Using the total probability formula 
+\[
+\P(win|k)=\frac{1}{3} \cdot \P(win|k-1)+\frac{2}{3} \cdot \P(win|k+1)
+\] 
+derive the difference equation for $x_k$ and solve the boundary-value problem with $x_0=0$ and $x_{100}=1$.
+
+\item Let $N(t)$ denote the size of population, $X(t)=\sqrt{N}$ the total output in the economy. Consider the following model
+\[
+\frac{\dot{N}}{N}=\alpha-\beta\frac{N}{X}
+\]
+where $\alpha>0$, $\beta>0$. Find $N$ and explore its behavior as $t\to\infty$.
+\end{enumerate}
+
+
+\newpage
+\pagestyle{empty}
+Mathematics for economists. Exam Paper. March 28, 2013, \textbf{Variant 4} \\ 
+
+%Lecturer: K.A. Bukin
+%Class teachers: A. Arlashin, G. Sharygin, S. Provornikov
+
+Marks will be deducted for insufficient explanation within your answers. All problems are mandatory. Sections A and B will make up 60\% and 40\% of the exam grade, respectively. Total duration of the exam is 120 min. \\
+
+\textbf{SECTION A}
+\vspace{20pt}
+
+\begin{enumerate}
+
+\item Compute all the roots of the complex number, $\sqrt[5]{1+i}$
+
+\item The matrix $A$ has the eigenvalues $\lambda_1=-1$, $\lambda_2=6$, $\lambda_3=-2$.
+\begin{enumerate}
+\item Compute the eigenvalues of the following matrices: $B=A^2$, $C=A+3I$, $D=A^{-1}$ where $I$ is the corresponding identity matrix.
+\item What can be said about the definiteness of these matrices?  
+\end{enumerate} 
+ 
+\item Consider the implicit function $y(x)$ given by the equation 
+\[
+y^3+4y+3x^3+x^2=20.
+\]
+\begin{enumerate}
+\item Does this equation define the implicit function $y(x)$ in the neighborhood of the point $(1,2)$? 
+\item If the implicit function is defined find the Taylor series for $y(x)$ up to the second order term.
+\end{enumerate}
+ 
+
+\item Consider the difference equation $y_{t+1}(2+3y_t)=4y_t$ with initial condition $y_0=2/3$.
+\begin{enumerate}
+\item Using the substitution $z_t=1/y_t$ solve the difference equation.
+\item What is the limit of $y_t$ as $t\to\infty$?
+\end{enumerate}  
+
+\item The homogeneous function $f$ is given by the equation 
+\[ 
+f(x,y)=\int_0^{xy^a} t^3+xt \, dt.
+\]
+Find the value of the parameter $a$ and the degree of homogeneity of $\partial f/\partial x$.
+
+\item Find the two indefinite integrals $\int e^x \cos(5x)\,dx$, $\int \frac{x+4}{x^2-5x+4}\, dx$
+
+\end{enumerate}
+
+\vspace{20pt}
+\textbf{SECTION B}
+\vspace{20pt}
+
+\begin{enumerate}[resume]
+\item Suppose you enter a casino with $k$ dollars in your pocket. You decide to play a game in which you win \$1 with the probability  $2/3$ and lose \$1 dollar with the probability $1/3$. The game is over when $k=0$ (no money left) or $k=100$.
+
+Denote the probability to win the game, i.e. reaching $k=100$, starting with $k$ dollars as $x_k=\P(win|k)$. Using the total probability formula 
+\[
+\P(win|k)=\frac{1}{3} \cdot \P(win|k-1)+\frac{2}{3} \cdot \P(win|k+1)
+\] 
+derive the difference equation for $x_k$ and solve the boundary-value problem with $x_0=0$ and $x_{100}=1$.
+
+\item Let $N(t)$ denote the size of population, $X(t)=\sqrt{N}$ the total output in the economy. Consider the following model
+\[
+\frac{\dot{N}}{N}=\alpha-\beta\frac{N}{X}
+\]
+where $\alpha>0$, $\beta>0$. Find $N$ and explore its behavior as $t\to\infty$.
+\end{enumerate}
+\end{comment}
+
+\subsection{MOR, exam, 22.05.2013}
+
+
+You need to solve exactly FIVE problems out of 7. At least ONE problem from each section should be chosen for solving. Each question is worth 20 points.
+
+\vspace{20pt}
+\textbf{SECTION A}
+\vspace{20pt}
+
+\begin{enumerate}
+\item A two-product monopoly seeks to maximize its revenue which follows the formula $R(x,y)=6x-x^2+y-y^2$. The total costs function is given by $C(x,y)=x^2+y^2+4x+3y$, where $x$ and $y$ are the outputs.
+
+State the problem of the monopoly, given condition that its profit $\pi=R-C$ should always remain nonnegative. Apply the Kuhn-Tucker conditions. Use Weierstrass theorem to confirm sufficiency.
+\item For any real number $\lambda$, find the minimal value of the objective function $x_1+6x_2+2x_3+4x_4$ subject to the constraints  $\lambda x_1+x_2-x_3+x_4\geq -1$, $x_1+1.5x_2+x_3+x_4 \geq 5$,  all choice variables are nonnegative. 
+\end{enumerate}
+
+\vspace{20pt}
+\textbf{SECTION B}
+\vspace{20pt}
+
+\begin{enumerate}[resume]
+\item Solve the system of differential equations:
+\[
+\begin{cases}
+\dot{x}=x-y \\
+\dot{y}=2x-y
+\end{cases}
+\]
+\item Given the Metzler equation of inventory cycles $y_t=3by_{t-1}-2by_{t-2}+N$, where $0<b<1$ and $N$ is a number, find all such values of $b$ for which solution represents convergent stepped time path (the complex roots case). Does the value of $N$ affect your conclusion?
+\item Show that Chebyshev’s equation $(1-x^2)y''-xy'+y=0$, where $|x|<1$, can be reduced to equation $\ddot{y}+y=0$ by substituting $x=\cos t$. Hence find the general solution of Chebyshev’s equation.
+\end{enumerate}
+
+\vspace{20pt}
+\textbf{SECTION C}
+\vspace{20pt}
+
+\begin{enumerate}[resume]
+\item Find all pure and mixed Nash equilibria in the following bimatrix game:
+
+
+\begin{tabular}{c|ccc}
+ & d & e & f \\ 
+\hline 
+a & 4;5 & 1;4 & 1;1  \\ 
+b & 2;8 & 5;0 & 0;4  \\ 
+c & 0;3 & 2;2 & 5;7  \\ 
+\end{tabular} 
+
+
+\item There is an auction of a painting with two players. The value of the painting for the first player is a random variable $v_1$, for the second player --- $v_2$. The random variables $v_1$ and $v_2$ are independent and uniformly distributed from 0 to 1 million dollars. Each player makes the bid $b_i$ knowing only his own value of the painting. The player who makes the highest bid gets the painting and pays the arithmetic mean of the two bids. 
+
+Find a Nash equilibrium where each player uses linear strategy of the form $b_i=k\cdot v_i$.
+
+\end{enumerate}
+
+\subsection{MOR, marking scheme, 22.05.2013 }
+
+\begin{enumerate}
+\item 5 points for setting Kuhn-Tucker Lagrangian correctly and writing down first-order conditions. Another 3 points for showing that the only constraint in the problem is binding. 5 points for proving that an internal  critical point ($x>0$, $y>0$) does not exist. Plus 3 points for finding corner critical point. And 4 points for showing that Weierstrass theorem is applicable.
+
+\item 10 points for conversion to the dual program and correct analysis of the feasible region. The rest 10 points for maximizing objective function. The smart students who have noticed the obvious solution in Variant 3 would get full points immediately.
+
+\item 10 points for either finding eigen values +eigen vectors or rewarding the students who managed to reduce the system to one equation and solved it successfully. 10 points for finding general solution.
+
+\item 5 points for finding roots of the characteristic equation. Another 10 points for finding interval for $b$ that provides convergent stepped time path. 5 points for conclusion that for these $b$ values the particular integral is represented by a constant and thus the value of   $N$ does not affect the answer.
+
+\item 10 points for correct chain rule differentiation that reduces Chebyshev equation to the linear equation with the constant coefficients. Another 10 points for solving the latter and finding  after substitution $y=c_1 \sqrt{1-x^2}+c_2 x$.
+
+\item Correct elimination of strictly dominated strategies --- 4 points. Correct picture of best response functions --- 12 points. The rest --- 4 points.  If only pure Nash Equilibria are found --- the total is 4 points.
+
+\item 10 points for the payoff function of the first player given that his valuation of the painting is $v_1$ and his bid is $b_1$. If we denote by $W$ the win of the first player than the expected utility of the first player is given by:
+\[
+P(W) \left( v_1 - E[(b_1+b_2)/2 \mid W] \right) = \frac{b_1}{k} \left( v_1 - \frac{b_1+0.5b_1}{2}\right)
+\]
+
+5 points for stating FOC and 5 points for obtaining strategy from FOC. The final answer is $b_i=\frac{3}{8}v_i$.
+
+\end{enumerate}
+
+
+
+% more variants
+\begin{comment}
+\newpage
+\pagestyle{empty}
+Methods of Optimization. Exam Paper. May 22, 2013, \textbf{Variant 2} \\ 
+
+
+Lecturer K. Bukin
+Classteachers: B. Demeshev, D. Yesaulov, A. Kalchenko
+
+You need to solve exactly FIVE problems out of 7. At least ONE problem from each section should be chosen for solving. Each question is worth 20 points.
+
+\vspace{20pt}
+\textbf{SECTION A}
+\vspace{20pt}
+
+\begin{enumerate}
+\item A two-product monopoly seeks to maximize its revenue which follows the formula $R(x,y)=x-x^2+6y-y^2$. The total costs function is given by $C(x,y)=x^2+y^2+3x+4y$, where $x$ and $y$ are the outputs.
+
+State the problem of the monopoly, given condition that its profit $\pi=R-C$ should always remain nonnegative. Apply the Kuhn-Tucker conditions. Use Weierstrass theorem to confirm sufficiency.
+\item For any real number $\lambda$, find the minimal value of the objective function $4x_1+2x_2+10x_3+x_4$ subject to the constraints  $x_1+x_2+3x_3+x_4\leq 10$, $-x_1+x_2-2x_3+\lambda x_4 \leq 3$,  all choice variables are nonnegative. 
+\end{enumerate}
+
+\vspace{20pt}
+\textbf{SECTION B}
+\vspace{20pt}
+
+\begin{enumerate}[resume]
+\item Solve the system of differential equations:
+\[
+\begin{cases}
+\dot{x}=-x+2y \\
+\dot{y}=-x+y
+\end{cases}
+\]
+\item Given the Metzler equation of inventory cycles $y_t=4by_{t-1}-3by_{t-2}+N$, where $0<b<1$ and $N$ is a number, find all such values of $b$ for which solution represents convergent stepped time path (the complex roots case). Does the value of $N$ affect your conclusion?
+\item Show that Chebyshev’s equation $(1-x^2)y''-xy'+y=0$, where $|x|<1$, can be reduced to equation $\ddot{y}+y=0$ by substituting $x=\cos t$. Hence find the general solution of Chebyshev’s equation.
+\end{enumerate}
+
+\vspace{20pt}
+\textbf{SECTION C}
+\vspace{20pt}
+
+\begin{enumerate}[resume]
+\item Find all pure and mixed Nash equilibria in the following bimatrix game:
+
+
+\begin{tabular}{c|ccc}
+ & d & e & f \\ 
+\hline 
+a & 4;6 & 2;1 & 2;1  \\ 
+b & 2;9 & 4;6 & 1;4  \\ 
+c & 1;1 & 3;0 & 5;4  \\ 
+\end{tabular} 
+
+
+\item There is an auction of a painting with two players. The value of the painting for the first player is a random variable $v_1$, for the second player --- $v_2$. The random variables $v_1$ and $v_2$ are independent and uniformly distributed from 0 to 1 million dollars. Each player makes the bid $b_i$ knowing only his own value of the painting. The player who makes the highest bid gets the painting and pays the arithmetic mean of the two bids. 
+
+Find a Nash equilibrium where each player uses linear strategy of the form $b_i=k\cdot v_i$.
+
+\end{enumerate}
+
+\newpage
+\pagestyle{empty}
+Methods of Optimization. Exam Paper. May 22, 2013, \textbf{Variant 3} \\ 
+
+
+Lecturer K. Bukin
+Classteachers: B. Demeshev, D. Yesaulov, A. Kalchenko
+
+You need to solve exactly FIVE problems out of 7. At least ONE problem from each section should be chosen for solving. Each question is worth 20 points.
+
+\vspace{20pt}
+\textbf{SECTION A}
+\vspace{20pt}
+
+\begin{enumerate}
+\item A two-product monopoly seeks to maximize its revenue which follows the formula $R(x,y)=2x-x^2+8y-y^2$. The total costs function is given by $C(x,y)=x^2+y^2+3.5x+6y$, where $x$ and $y$ are the outputs.
+
+State the problem of the monopoly, given condition that its profit $\pi=R-C$ should always remain nonnegative. Apply the Kuhn-Tucker conditions. Use Weierstrass theorem to confirm sufficiency.
+\item For any real number $\lambda$, find the minimal value of the objective function $4x_1+2x_2+10x_3+x_4$ subject to the constraints  $\lambda x_1+x_2+3x_3+x_4\leq  10$, $-x_1+x_2-2x_3-x_4 \leq 3$,  all choice variables are nonnegative. 
+\end{enumerate}
+
+\vspace{20pt}
+\textbf{SECTION B}
+\vspace{20pt}
+
+\begin{enumerate}[resume]
+\item Solve the system of differential equations:
+\[
+\begin{cases}
+\dot{x}=x-y \\
+\dot{y}=5x-y
+\end{cases}
+\]
+\item Given the Metzler equation of inventory cycles $y_t=5by_{t-1}-4by_{t-2}+N$, where $0<b<1$ and $N$ is a number, find all such values of $b$ for which solution represents convergent stepped time path (the complex roots case). Does the value of $N$ affect your conclusion?
+\item Show that Chebyshev’s equation $(1-x^2)y''-xy'+y=0$, where $|x|<1$, can be reduced to equation $\ddot{y}+y=0$ by substituting $x=\cos t$. Hence find the general solution of Chebyshev’s equation.
+\end{enumerate}
+
+\vspace{20pt}
+\textbf{SECTION C}
+\vspace{20pt}
+
+\begin{enumerate}[resume]
+\item Find all pure and mixed Nash equilibria in the following bimatrix game:
+
+
+\begin{tabular}{c|ccc}
+ & d & e & f \\ 
+\hline 
+a & 6;5 & 2;1 & 2;1  \\ 
+b & 3;8 & 9;2 & 1;4  \\ 
+c & 1;3 & 3;2 & 5;3  \\ 
+\end{tabular} 
+
+
+\item There is an auction of a painting with two players. The value of the painting for the first player is a random variable $v_1$, for the second player --- $v_2$. The random variables $v_1$ and $v_2$ are independent and uniformly distributed from 0 to 1 million dollars. Each player makes the bid $b_i$ knowing only his own value of the painting. The player who makes the highest bid gets the painting and pays the arithmetic mean of the two bids. 
+
+Find a Nash equilibrium where each player uses linear strategy of the form $b_i=k\cdot v_i$.
+
+\end{enumerate}
+
+\newpage
+\pagestyle{empty}
+Methods of Optimization. Exam Paper. May 22, 2013, \textbf{Variant 4} \\ 
+
+
+Lecturer K. Bukin
+Classteachers: B. Demeshev, D. Yesaulov, A. Kalchenko
+
+You need to solve exactly FIVE problems out of 7. At least ONE problem from each section should be chosen for solving. Each question is worth 20 points.
+
+\vspace{20pt}
+\textbf{SECTION A}
+\vspace{20pt}
+
+\begin{enumerate}
+\item A two-product monopoly seeks to maximize its revenue which follows the formula $R(x,y)=8x-x^2+2y-y^2$. The total costs function is given by $C(x,y)=x^2+y^2+6x+3.5y$, where $x$ and $y$ are the outputs.
+
+State the problem of the monopoly, given condition that its profit $\pi=R-C$ should always remain nonnegative. Apply the Kuhn-Tucker conditions. Use Weierstrass theorem to confirm sufficiency.
+\item For any real number $\lambda$, find the minimal value of the objective function $x_1+5x_2+2x_3+4x_4$ subject to the constraints  $\lambda x_1+x_2-x_3+x_4\geq -1$, $x_1+1.5x_2+x_3+x_4 \geq 5$,  all choice variables are nonnegative. 
+\end{enumerate}
+
+\vspace{20pt}
+\textbf{SECTION B}
+\vspace{20pt}
+
+\begin{enumerate}[resume]
+\item Solve the system of differential equations:
+\[
+\begin{cases}
+\dot{x}=-x+5y \\
+\dot{y}=-x+y
+\end{cases}
+\]
+\item Given the Metzler equation of inventory cycles $y_t=6by_{t-1}-5by_{t-2}+N$, where $0<b<1$ and $N$ is a number, find all such values of $b$ for which solution represents convergent stepped time path (the complex roots case). Does the value of $N$ affect your conclusion?
+\item Show that Chebyshev’s equation $(1-x^2)y''-xy'+y=0$, where $|x|<1$, can be reduced to equation $\ddot{y}+y=0$ by substituting $x=\cos t$. Hence find the general solution of Chebyshev’s equation.
+\end{enumerate}
+
+\vspace{20pt}
+\textbf{SECTION C}
+\vspace{20pt}
+
+\begin{enumerate}[resume]
+\item Find all pure and mixed Nash equilibria in the following bimatrix game:
+
+
+\begin{tabular}{c|ccc}
+ & d & e & f \\ 
+\hline 
+a & 4;5 & 2;4 & 2;1  \\ 
+b & 2;7 & 9;5 & 1;8  \\ 
+c & 0;1 & 3;0 & 7;5  \\ 
+\end{tabular} 
+
+
+\item There is an auction of a painting with two players. The value of the painting for the first player is a random variable $v_1$, for the second player --- $v_2$. The random variables $v_1$ and $v_2$ are independent and uniformly distributed from 0 to 1 million dollars. Each player makes the bid $b_i$ knowing only his own value of the painting. The player who makes the highest bid gets the painting and pays the arithmetic mean of the two bids. 
+
+Find a Nash equilibrium where each player uses linear strategy of the form $b_i=k\cdot v_i$.
+
+\end{enumerate}
+
+\end{comment}
 
 
 

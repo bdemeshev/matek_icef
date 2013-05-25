@@ -1580,7 +1580,7 @@ Find a Nash equilibrium where each player uses linear strategy of the form $b_i=
 \begin{enumerate}
 \item 5 points for setting Kuhn-Tucker Lagrangian correctly and writing down first-order conditions. Another 3 points for showing that the only constraint in the problem is binding. 5 points for proving that an internal  critical point ($x>0$, $y>0$) does not exist. Plus 3 points for finding corner critical point. And 4 points for showing that Weierstrass theorem is applicable.
 
-\item 10 points for conversion to the dual program and correct analysis of the feasible region. The rest 10 points for maximizing objective function. The smart students who have noticed the obvious solution in Variant 3 would get full points immediately.
+\item 10 points for conversion to the dual program and correct analysis of the feasible region. The rest 10 points for maximizing objective function. 
 
 \item 10 points for either finding eigen values +eigen vectors or rewarding the students who managed to reduce the system to one equation and solved it successfully. 10 points for finding general solution.
 

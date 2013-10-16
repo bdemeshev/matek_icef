@@ -1786,6 +1786,59 @@ Find a Nash equilibrium where each player uses linear strategy of the form $b_i=
 \end{comment}
 
 
+\subsection{MOR, retake exam, 14.09.2013}
+
+
+You need to solve exactly FIVE problems out of 7. At least ONE problem from each section should be chosen for solving. Each question is worth 20 points.
+
+\vspace{20pt}
+\textbf{SECTION A}
+\vspace{20pt}
+
+\begin{enumerate}
+\item Maximise the function $f(x,y)=x+ay$, subject to $1-x^2\geq y^2$, $x+y \geq 0$ for all values of $a$ using the Lagrange multipliers approach. 
+
+\item For any real number $\lambda$, find the minimal value of the objective function $x_1+6x_2+2x_3+4x_4$ subject to the constraints  $\lambda x_1+x_2-x_3+x_4\geq -1$, $2x_1+3x_2+2x_3+2x_4 \geq 10$,  all the choice variables are nonnegative. 
+\end{enumerate}
+
+\vspace{20pt}
+\textbf{SECTION B}
+\vspace{20pt}
+
+\begin{enumerate}[resume]
+\item Solve the system of differential equations:
+\[
+\begin{cases}
+\dot{x}=2x+y+1 \\
+\dot{y}=-2x+2y
+\end{cases}
+\]
+\item Solve the difference equation $y_{t+2}-3y_{t+1}+2y_t=\sin(\pi t/2)$ and determine whether the solution paths are convergent or divergent.
+
+\item In the model of interacting inflation and unemployment based on the Phillips relation,  both unemployment rate $U$ and expected inflation $\pi$ are the solutions of the system $\dot{\pi}=\frac{3}{4}(p-\pi)$, $\dot{U}=-\frac{1}{2}(m-p)$, where $m$ is exogenously defined positive rate of nominal money growth and $p$ is the posteriori observed inflation satisfying equation $p=\frac{1}{6}-3U+\pi$. Find the steady-state solutions for the inflation both expected and observed as well as the unemployment rate in terms of $m$. Explore the dynamic stability of solutions. What is the natural rate of unemployment?
+\end{enumerate}
+
+\vspace{20pt}
+\textbf{SECTION C}
+\vspace{20pt}
+
+\begin{enumerate}[resume]
+\item Find all pure and mixed Nash equilibria in the following bimatrix game:
+
+
+\begin{tabular}{c|ccc}
+ & d & e & f \\ 
+\hline 
+a & 5;5 & 2;6 & 0;4  \\ 
+b & 2;1 & 0;2 & 4;3  \\ 
+c & 0;4 & 3;5 & 1;0  \\ 
+\end{tabular} 
+
+
+\item Two players have found The Magic Box. The Box has two holes. Simulteneously each of the two players may put any amount of money from $0$ to $100$ euros into his hole. Then the Magic Box will multiply the total sum by $a>1$, divide the resulting sum into two equal parts and give them back to the players. The value of $a$ is known. Find all the pure and mixed Nash Equilibria of this game for all values of the parameter $a$.
+
+\end{enumerate}
+
 
 
 \end{document}

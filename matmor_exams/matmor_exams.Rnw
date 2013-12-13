@@ -1,6 +1,6 @@
 \documentclass[pdftex,12pt,a4paper]{article}
 
-\input{/home/boris/science/tex_general/title_bor_utf8_knitr}
+\input{title_bor_knitr}
 
 % RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW 
 % RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW 
@@ -449,6 +449,24 @@ Section B. Answer both questions from this section (20 marks each) \\
 
 \end{enumerate}
 
+\subsection{MFE, fall semester sols}
+
+\begin{enumerate}
+\item[2]
+$f_{xx}=4h'(2x+y)-h'(x-3y)$,
+$f_{xy}=2h'(2x+y)+3h'(x-3y)$,
+$f_{yy}=h'(2x+y)-9h'(x-3y)$,
+
+
+\item[7] 
+\begin{enumerate}
+\item $x^*=1/2a$, $y^*=1/2b$
+\item SOC for maximum: $a<0$, $b<0$
+\item Convex if $a\geq 0$, $b\geq 0$, concave if $a \leq 0$, $b \leq 0$.
+\item $\partial x^*/\partial b=0$, $\partial x^*/\partial a=-1/2a^2$,
+\item  $\partial f^*/\partial a= x^{*2}=1/4a^2$
+\end{enumerate}
+\end{enumerate}
 
 \subsection{MFE, fall semester retake, 25.01.12 }
 
@@ -506,6 +524,7 @@ Section B. Answer both questions from this section (20 marks each)
 
 
 \end{enumerate}
+
 
 
 

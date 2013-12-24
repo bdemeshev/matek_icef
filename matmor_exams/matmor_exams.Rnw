@@ -2176,7 +2176,60 @@ Let's find second derivatives:
 
 \end{enumerate}
 
+\subsection{MFE, fall semester exam, 25.12.2013}
 
+\textbf{SECTION A}
+
+\begin{enumerate}
+	\item Find the gradient of $f(x,y) =\frac{x^2y}{\sqrt{x^2+y^2}}$
+at the point $M(2,1)$. Compute the derivative of $f$ at $M$ in direction of the vector $\{-1, 1\}$.
+	\item The system of equations defines $x(z)$ and $y(z)$:
+\begin{equation}
+\begin{cases}
+x^2+zxy+y^2+5z+y^3=9 \\
+y^3x^2+3x+2y+z=7 \nonumber
+\end{cases}
+\end{equation}
+Find $x'(z)$ and $y'(z)$ at the point $x=1$ and $y=1$. State the implicit function theorem.
+ \item For the function $f(x,y)=x^3y^5+x^2-y^3+xy$ find first order Taylor approximation at the point $(1,1)$ and second order Taylor approximation at the same point.
+	\item Find all stationary points of $f(x,y) = -2y^3+24y-x^2e^y$. Classify them as local minimum, maximum or saddle point.
+	\item Find the constrained extrema of the function $f(x,y)=2x^2+x+y+y^2$ subject to $2x^2+y^2=5$.
+	\item  For each value of $a$ determine whether the function $f(x,y,z)=x^2+xz+ayz+z^2$ is concave, convex, strictly concave, strictly convex.
+\end{enumerate}
+
+\textbf{SECTION B}
+
+\begin{enumerate}[resume]
+\item Robinson Crusoe produces nuts (good $x$) and corn (good $y$) using two factors of production: labor $L$ and land $T$ in accordance with the production functions, namely $x=\sqrt{L_x T_x}$ and $y=\sqrt{L_y T_y}$, where the $L_x$, $L_y$, $T_x$, $T_y$ are the quantities of labor and land employed by Crusoe in the production processes. The overall supply of labor and supply of the cultivated land equal 1. In order to find the \textbf{Production Possibilities Frontier} in the Crusoe’s economy the following problem should be solved:
+\[
+(A)\,
+\begin{cases}
+	\sqrt{L_x T_x} \to \max \\
+	\sqrt{L_y T_y}=y=const \\
+	L_x + L_y = 1, \, T_x + T_y = 1
+\end{cases}
+\]
+In this problem all variables take nonnegative values and $0\leq y\leq 1$.
+
+\begin{enumerate}
+\item (15 points) Solve this maximization problem by the Lagrange multiplier method. You may consider only the case when $L_x,\, L_y,\, T_x, \, T_y>0$  and $0<y<1$.
+\item (5 points) Let $L_x^*$, $L_y^*$, $T_x^*$, $T_y^*$ be the solution of problem (A) (optimal combination of factors). Then the produced quantities of nuts and corn equal $x=\sqrt{L_x^* T_x^*}$ and $y=\sqrt{L_y^* T_y^*}$. Find the relationship between $x$ and $y$ in the form of some equation $G(x,y)=0$.
+\end{enumerate}
+
+\item (continuation) Crusoe does not care about his leisure time and consumes nuts and corn. His utility function is $u(x,y)=\frac{1}{3}\ln x + \frac{2}{3}\ln y$. 
+
+\begin{enumerate}
+\item (10 points) By solving utility maximization problem: 
+$
+\begin{cases}
+u(x,u) \to \max \\
+G(x,y)=0
+\end{cases},
+$ find his optimal consumption bundle $(\tilde{x},\tilde{y})$.
+\item (10 points) Crusoe has plowed more land in the amount of $dT$ (a small number). By using Envelope theorem find $\partial \tilde{x}/\partial T$. Hint. Firstly apply the theorem to problem (A).
+\end{enumerate}
+
+\end{enumerate}
 
 
 \section{I wish more problems\ldots}

@@ -2222,12 +2222,28 @@ In this problem all variables take nonnegative values and $0\leq y\leq 1$.
 \item (10 points) By solving utility maximization problem: 
 $
 \begin{cases}
-u(x,u) \to \max \\
+u(x,y) \to \max \\
 G(x,y)=0
 \end{cases},
 $ find his optimal consumption bundle $(\tilde{x},\tilde{y})$.
 \item (10 points) Crusoe has plowed more land in the amount of $dT$ (a small number). By using Envelope theorem find $\partial \tilde{x}/\partial T$. Hint. Firstly apply the theorem to problem (A).
 \end{enumerate}
+
+\end{enumerate}
+
+\subsection{MFE, 25.12.2013, marking scheme}
+
+\begin{enumerate}
+\item $f'_x$ --- 3 points (2 for formula, 1 for value at  the point), $f'_y$ --- 3 points, the rest --- 4 points
+\item Statement of IFT --- 2 points. Each derivative --- 4 points (3 for formula, 1 for calculations)
+\item 4 points --- first order (1 pt for each first derivative, 2 pt for final formula), 6 points --- second order (1 pts for each second derivative, 3 pts for final formula)
+\item Correct FOC --- 2 points, Solution of FOC --- 4 points. Check SOC --- 4 points.
+\item NDCQ --- 1 pt, Correct FOC --- 2 pts, Solution of FOC --- 4 pts, check SOC --- 3 pts.
+\item Hesse matrix --- 2 pts. Concavity and convexity --- 5 pts. Considering particular value of $a$ for strict concavity and strict convexity --- 3  pts.
+
+\item Point a. NDCQ --- 2 pts. Writing FOC --- 3 pts. Solving FOC --- 5 pts. Checking SOC --- 5 pts. Point b --- 5 pts.
+
+\item  Point a. NDCQ --- 1 pt. Writing FOC --- 2 pts. Solving FOC --- 4 pts. Checking SOC --- 3 pts. Point b. Solution 1. Applying Envelope theorem to problem (A) --- 5 pts, conclusion --- 5 pts. Solution 2. Applying IFT to the FOC --- 10 pts.
 
 \end{enumerate}
 

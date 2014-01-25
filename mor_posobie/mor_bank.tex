@@ -1,0 +1,413 @@
+
+
+\section{Однородные функции}
+
+\begin{problem}
+Find the values $a$ and $b$ such that the function $f$ is homogeneous:
+
+\[f(x,y)=2x^{b-a} y^{b+2} +y^{a+1} x^{-3b} +y^{7b} x^{-2a} .\] 
+
+For the values $a$ and $b$ you have found expand the function
+
+\[h(x)=\sqrt{1+f(x,x)} \cdot (1-\cos (f(x,x))\] 
+
+as a power series up to $x^{4} $. State the range for $x$ where your expansion is correct. (Spring mock, 2012).
+\end{problem}
+
+
+\begin{solution}
+Функция $f(x,y)$ называется однородной степени однородности $m$, если для любого $t>0$ и для любых $x,y$ из области определения функции $f$, выполнено $f(tx,ty)=t^{m} f(x,y)$. Функция, заданная формулой в условии задачи является многочленом от двух переменных, состоящим из трех слагаемых. Каждое из слагаемых -- однородная функция автоматически, но для того чтобы сумма была однородной, необходимо и достаточно, чтобы однородность всех трех слагаемых была одной степени, откуда получаем систему уравнений 
+
+\[b-a+b+2=a+1-3b=7b-2a,\] 
+
+решением, которой является $a=3,\_ b=1$. Тогда $f(x,x)=4x$. Разложим по формуле Тейлора $1-\cos (4x)$ до члена $x^{4} $. Мы получим $1-\cos (4x)=8x^{2} -\frac{32}{3} x^{4} +...$
+
+так как это разложение начинается с $x^{2} $, то нам достаточно разложить $\sqrt{1+4x} $ до члена с $x^{2} $. Окончательно получаем $\sqrt{1+4x} \cdot (1-\cos (4x))=(1+2x-2x^{2} +...)(8x^{2} -\frac{32}{3} x^{4} +...)=8x^{2} +16x^{3} -\frac{80}{2} x^{4} +...$, или, используя запись остатка в форме Пеано $h(x)=8x^{2} +16x^{3} -\frac{80}{2} x^{4} +o(x^{4} )$.
+\end{solution}
+
+
+\begin{problem}
+The homogeneous function $f$ is given by the equation
+
+\[f(x,y)=\int _{0}^{xy^{a} }(t^{3} +xt)dt .\] 
+
+
+Find the value of the parameter $a$ and the degree of homogeneity of $\frac{\partial f}{\partial x} $. (Spring mock 2013).
+\end{problem}
+
+
+\begin{solution}
+Функция $f(x,y)$ находится интегрированием $f=\frac{1}{4} x^{4} y^{4a} +\frac{1}{2} x^{3} y^{2a} $. Оба слагаемых должны иметь одинаковую однородность, т.е. $4+4a=3+2a$, откуда $a=-\frac{1}{2} $. Тогда степень однородности функции $f(x,y)$ равна 2. Однородность любой из ее первых производных будет на единицу меньше, т.е. 1.
+\end{solution}
+
+
+
+
+\section{Оптимизация с ограничениями в виде неравенств. Условия Куна-Таккера.}
+
+\begin{problem}
+Consider the monopolist producing two distinct goods. The cost function is given by $TC(q_{1} ,q_{2} )=q_{1} +kq_{2} $, where the constant $k\in (0;1)$. And the demand functions are given by $q_{1} (p_{1} ,p_{2} )=q_{2} (p_{1} ,p_{2} )=(p_{1} p_{2} )^{-3} $. 
+
+a) Find the optimal production bundle for the monopolist.
+
+b) For which values of  $k$ one of the products is priced under marginal cost? (Spring mock, 2012).
+\end{problem}
+
+
+\begin{solution}
+Запишем задачу монополиста по максимизации прибыли:
+
+$\pi =\frac{p_{1} +p_{2} -1-k}{(p_{1} p_{2} )^{3} } \to \max $. Прибыль здесь максимизируется по ценам $p_{1} ,p_{2} >0$. Выписывая условия первого порядка $\frac{\partial \pi }{\partial p_{1} } =0$ и $\frac{\partial \pi }{\partial p_{2} } =0$, и решая систему, получаем значения равновесных цен $p_{1} =p_{2} =\frac{3}{5} (1+k)$. Затем вычисляем производные второго порядка $\pi _{11} $, $\pi _{22} $ и $\pi _{12} =\pi _{21} $ при $p_{1} =p_{2} =\frac{3}{5} (1+k)$. $\times$тобы облегчить вычисление этих производных, лучше всего представить прибыль в виде суммы трех дробей
+
+
+
+$\pi =\frac{1}{p_{1}^{2} p_{2}^{3} } +\frac{1}{p_{1}^{3} p_{2}^{2} } -\frac{1+k}{p_{1}^{3} p_{2}^{3} } $. Гессиан при равновесных ценах является отрицательно определенным, что означает выполнение достаточного условия максимизации. $\times$тобы ответить на второй вопрос задачи следует рассмотреть два двойных неравенства
+
+(1) $1\le \frac{3}{5} (1+k)<k$ и (2) $k\le \frac{3}{5} (1+k)<1$. Решением второго из них является пустое множество, а решением первого - $k>\frac{3}{2} $. Окончательный ответ: $k>\frac{3}{2} $.
+\end{solution}
+
+
+\begin{problem}
+Using the Lagrange multiplier method without reducing the number of variables by substitution find the minimum of the function
+
+\[f(x,y,z)=2x^{2} +4y^{2} +xy+8z^{2} +2yz\] 
+
+subject to $x+y+\frac{3}{2} z\ge \frac{6}{5} $ and $x+y+z=1$. (Spring mock 2012).
+\end{problem}
+
+\begin{solution}
+Проверка NDCQ тривиальна, т.к. ранг матрицы Якоби, составленной на основе ограничений, является полным, т.е. равняется 2. В самом деле, $J=\left(\begin{array}{c} {\begin{array}{ccc} {1} & {1} & {3/2} \end{array}} \\ {\begin{array}{ccc} {1} & {1} & {1} \end{array}} \end{array}\right)$.
+
+Преобразуем, ограничения задачи к более простому виду, однако, как предписано условием, не уменьшая число неизвестных:
+
+\[z\ge \frac{2}{5} , x+y+z=1.\] 
+
+$ $Составим функцию Лагранжа задачи. $ $$L=2x^{2} +4y^{2} +xy+8z^{2} +2yz+\lambda (1-x-y-z)+\mu (\frac{2}{5} -z)$. Тогда условия первого порядка будут выглядеть
+
+\[\begin{array}{l} {\frac{\partial L}{\partial x} =4x+y-\lambda =0,} \\ {\frac{\partial L}{\partial y} =8y+x+2z-\lambda =0,} \\ {\frac{\partial L}{\partial z} =16z+2y-\lambda -\mu =0,} \\ {\mu \ge 0,\_ \mu (2/5-z)=0,\_ z\ge 2/5,\_ x+y+z=1.} \end{array}\] 
+
+Рассмотрим 2 случая: 1) пусть ограничение в виде неравенства не активно, т.е.$z>\frac{2}{5} $. Тогда $\mu =0$, и систему линейных уравнений относительно неизвестных $x,y,z,\lambda $ можно решить, например, методом Гаусса. Вычисления дают $z=1/7$, значение, не удовлетворяющее ограничению. Во втором случае полагаем $z=\frac{2}{5} $. Тогда решив систему относительно $x,y\lambda ,\mu $, получаем значения  $x=1/2,\_ y=1/10$. Осталось проверить, будет ли точка $(1/2,1/10,2/5)$ решением задачи. Для проверки достаточного условия минимизации, поступим таким образом -- проверим, что функция $f(x,y,2/5)$ является вогнутой для всех $x,y$. Ее гессиан равен $H=\left(\begin{array}{cc} {4} & {1} \\ {1} & {8} \end{array}\right)$, а эта матрица положительно определенная. Таким образом, она является также вогнутой на выпуклом множестве, заданном ограничением $x+y+2/5=1$. Однако, критическая точка вогнутой функции является точкой минимума. Соответственно, минимальное значение функции, заданной на множестве, определенном ограничениями, равняется  $\frac{39}{25} $.
+\end{solution}
+
+
+\begin{problem}
+Use Lagrange multipliers method to solve optimization problem
+
+\[xy\to \max \] 
+
+subject to $x\ge 0,\_ 0\le y\le 3,\_ x+2y\le 8,\_ y\ge \frac{x^{2} }{16} +1$. (Exam, 2012).
+\end{problem}
+
+\begin{solution}
+Проверка NDCQ в этой задаче не вызывает трудностей. Градиенты ограничений на границе допустимого множества нигде не обращаются в ноль, а если составить якобиан, порожденный двумя ограничениями, то его равен 2. В этой задаче, всего с учетом неотрицательности переменных, 5 ограничений в виде неравенств. При использовании метода Куна-Таккера нам понадобятся только 3 множителя Лагранжа (вместо пяти). Кроме того, поскольку мы решаем задачу на максимум, то нулевые значения переменных в качестве критических точек не годятся (иначе данная целевая функция обратится в ноль). С учетом сказанного, мы введем функцию Лагранжа $L=xy+\lambda (3-y)+\mu (y-\frac{x^{2} }{16} -1)+\gamma (8-x-2y)$. Множество, на котором ищется максимум, является компактом, заданным неравенствами $\left\{\right. x\ge 0,\_ 0\le y\le 3,\_ x+2y\le 8,\_ y\ge \frac{x^{2} }{16} +1\left. \right\}$. Легко видеть, что функция принимает максимальное значение только на границе этой области, т.к. внутри ее градиент всюду отличен от нуля. Тогда разобьем границу на три участка: (1) $\left\{y=3,\_ 0\le x\le 2\right\}$, (2) $\left\{x+2y=8,\_ 2\le x\le 4\right\}$ и (3) $\left\{y=\frac{x^{2} }{16} ,\_ 0\le x\le 4\right\}$. Участки (1) и (2) имеют общую точку $(2,3)$, а участки (2) и (3) общую точку $(4,2)$. Выпишем условия Куна-Таккера с учетом положительности $x$и $y$:
+
+\[\begin{array}{l} {\frac{\partial L}{\partial x} =y-\mu \frac{x}{8} -\gamma =0,} \\ {\frac{\partial L}{\partial y} =x-\lambda +\mu -2\gamma =0,} \\ {\gamma ,\mu ,\lambda \ge 0,\_ \mu (y-\frac{x^{2} }{16} -1)=0,\_ \gamma (8-x-2y)=0,\_ \lambda (3-y)=0.} \end{array}\] 
+
+\[x\ge 0,\_ 0\le y\le 3,\_ x+2y\le 8,\_ y\ge \frac{x^{2} }{16} +1.\] 
+
+Будем искать критические точки лагранжиана на каждом из участков по отдельности. На участке (1) $\mu =\gamma =0$, поэтому мы получим $y=0$, что не может являться решением (см. выше). Аналогично, на участке (3)  $\gamma =\lambda =0$, откуда $x+\mu =0$, что также не дает решений. Остался участок (2).  Получим систему
+
+\[\begin{array}{l} {y-\gamma =0,} \\ {x-2\gamma =0,} \\ {x+2y=8.} \end{array}\] 
+
+В качестве решения получаем точку $(4,2)$. Нами, правда, не исследована еще точка $(2,3)$, лежащая на границе первого и второго участков. Но она не может быть критической точкой лагранжиана, т.к. иначе мы получили бы $\lambda =-4$ (проверьте самостоятельно). По теореме Вейрштрасса данная функция принимает наибольшее значение на данном множестве, стало быть, найденная точка является решением задачи (точка глобального максимума). В этой точке функция принимает значение, равное 8.
+\end{solution}
+
+\begin{problem} 
+A two-product monopoly seeks to maximize its revenue which follows the formula $R(x,y)=6x-x^{2} +y-y^{2} $. The total costs function is given by $C(x,y)=x^{2} +y^{2} +4x+3y$, where $x$ and $y$ are outputs. State the problem of the monopoly, given condition that its profit $\pi =R-C$ should always remain nonnegative. Apply the Kuhn-Tucker conditions. Use Weierstrass theorem to confirm sufficiency. (Exam, 2013).
+\end{problem}
+
+\begin{solution}
+Сформулируем задачу монополиста.
+
+\[\pi =2x-2y-2x^{2} -2y^{2} \to \max \] 
+
+при условии, что $x,y\ge 0,\_ 2x-2y-2x^{2} -2y^{2} \ge 0.$
+
+NDCQ выполнено, т.к. градиент ограничения $(2-4x,-2-4y)$ обращается в 0 при отрицательном значении $y$. Выпишем лагранжиан задачи $L=(1-\lambda )(2x-2y-2x^{2} -2y^{2} )$. Условия Куна-Таккера таковы
+
+\[\begin{array}{l} {(1-\lambda )(2-4x)\le 0,\, x(1-\lambda )(2-4x)=0,} \\ {(1-\lambda )(-2-4y)\le 0,\_ y(1-\lambda )(-2-4y)=0,\_ \lambda \ge 0,\_ \lambda (2x-2y-2x^{2} -2y^{2} )=0,} \end{array}\] 
+
+кроме того, должны быть выполнены ограничения $x,y\ge 0,\_ 2x-2y-2x^{2} -2y^{2} \ge 0.$
+
+Решением этой системы является комбинация выпусков $(x,y)=(\frac{1}{2} ,0)$. Заметим, что в этом случае $\lambda =0$. Множество, заданное неравенствами является компактом (представляет собою сегмент круга), поэтому применение теоремы Вейерштрасса возможно и найденная критическая точка является точкой максимума.
+\end{solution}
+
+\section{Линейное программирование}
+
+\begin{problem}
+For any real number $\lambda $, find the minimal value of the objective function $x_{1} +6x_{2} +2x_{3} +4x_{4} $
+
+Subject to the constraints $\lambda x_{1} +x_{2} -x_{3} +x_{4} \ge -1,\_ x_{1} +\frac{3}{2} x_{2} +x_{3} +x_{4} \ge 5,$ all choice variables are nonnegative. (Exam, 2013).
+\end{problem}
+
+
+\begin{solution}
+Сформулируем двойственную задачу. Матрица ограничений исходной задачи имеет вид $A=\left(\begin{array}{c} {\begin{array}{cccc} {\lambda } & {1} & {-1} & {1} \end{array}} \\ {\begin{array}{cccc} {1} & {3/2} & {1} & {1} \end{array}} \end{array}\right)$. В двойственной задаче будет максимизироваться функция $-y_{1} +5y_{2} $ по неотрицательным двойственным переменным, удовлетворяющим ограничениям, записанным в матричной форме $A^{T} \left(\begin{array}{c} {y_{1} } \\ {y_{2} } \end{array}\right)\le \left(\begin{array}{c} {1} \\ {6} \\ {2} \\ {4} \end{array}\right)$.
+
+Изобразим допустимое множество на плоскости переменных $(y_{1} ,y_{2} )$ (см. рисунок), пока без учета неравенства $\lambda y_{1} +y_{2} \le 1$.
+
+\textit{Здесь вставить рисунок}
+
+
+
+Уравнение $\lambda y_{1} +y_{2} =1$ при варьировании параметра $\lambda $ определяет пучок прямых проходящих через точку $(0,1)$. Без учета этого уравнения (неравенства из системы ограничений) допустимое множество представляет собою четырехугольник, заданный неравенствами $D=\left\{y_{1} ,y_{2} \ge 0,y_{1} +y_{2} \le 4,y_{2} \le 2+y_{1} \right\}$. В зависимости от знака $\lambda $ результирующим допустимым множеством будет являться либо часть множества $D$, лежащая над прямой $\lambda y_{1} +y_{2} =1$, или же под нею. $\times$тобы найти максимальное значение двойственной целевой функции, необходимо рассмотреть следующие диапазоны значений параметра $\lambda $: (1) $-\infty <\lambda \le -2,$ (2) $-2<\lambda \le 1/5,$ (3) $\lambda >1/5.$ Целевая функция принимает равные значения в точках прямой $-y_{1} +5y_{2} =C$, тем самым, выбирая наибольшее возможное значение $C$, мы сдвигаем посредством параллельного переноса прямую $y_{2} =\frac{1}{5} y_{1} $, до тех пор, пока она имеет хотя бы одну общую точку с допустимым множеством. При значениях $\lambda $ из первого диапазона, максимум целевой функции достигается в вершине четырехугольника $D$, а именно в точке $(1,3)$. Тогда минимум целевой функции прямой (исходной) задачи равен 14. При росте значения $\lambda $, прямые из пучка, заданного $\lambda y_{1} +y_{2} =1$ поворачиваются вокруг общей вершины по часовой стрелке. В диапазоне (2) максимум достигается в точке пересечения прямых $\lambda y_{1} +y_{2} =1$ и $y_{1} +y_{2} =4$. Тогда оптимальное значение  равно $\frac{2-20\lambda }{1-\lambda } $, т.к. оно вычисляется в $(\frac{3}{1-\lambda } ,\_ \frac{1-4\lambda }{1-\lambda } )$. Наконец, для всех остальных значений $\lambda $ максимум достигается в $(0,1).$ Оно равно 5. По теореме двойственности, все найденные максимальные значения функции в двойственной задаче совпадают с минимальными значениями функции прямой задачи.
+\end{solution}
+
+
+\section{Обыкновенные дифференциальные уравнения и системы ОДУ}
+
+\textit{В этом разделе мы не рассматриваем упражнения по решению уравнений с постоянными коэффициентами и правой частью -- квазиполиномом, т.к. они разобраны в задачниках и пособиях по ДУ.}
+
+\begin{problem}
+The point elasticity of demand for a good is given by $\varepsilon =\frac{p^{2} }{p^{2} +4p+3} $. Find the demand function $q(p)$ given the initial condition $q(1)=1$. (Spring mock, 2012).
+\end{problem}
+
+
+\begin{solution}
+В условии задачи эластичность положительна, поэтому воспользуемся формулой эластичности с учетом знака $\varepsilon =-\frac{dq}{dp} \frac{p}{q} $. Нам нужно решить задачу Коши, проинтегрировав уравнение первого порядка с начальным значением.
+
+$ $
+
+\[-\frac{dq}{dp} \frac{p}{q} =\frac{p^{2} }{p^{2} +4p+3} , q(1)=1.\] 
+
+Это уравнение с разделяющимися переменными $-\int \frac{dq}{q} =\int \frac{pdp}{p^{2} +4p+3}   $. Представляя дробь $\frac{p}{p^{2} +4p+3} $ в виде суммы элементарных дробей $\frac{p}{p^{2} +4p+3} =\frac{-1/2}{p+1} +\frac{3/2}{p+3} $, интегрируем, оставляя константу интегрирования в виде множителя $q(p)=C\frac{\sqrt{p+1} }{(p+3)^{3/2} } $. Начальное условие позволяет определить константу $C=4\sqrt{2} $. Окончательно, $q(p)=\frac{4\sqrt{2} \sqrt{p+1} }{(p+3)^{3/2} } $.
+\end{solution}
+
+\begin{problem}
+Let $N(t)$ denote the size of population, $X(t)=\sqrt{N} $ being the total output in the economy. Consider the following model
+
+\[\frac{\dot{N}}{N} =\alpha -\beta \frac{N}{X} ,\] 
+
+where $\dot{N}=\frac{dN}{dt} $ and  are some constants. Find  and explore its behavior as $t\to \infty $. (Spring mock, 2013).
+\end{problem}
+
+
+\begin{solution}
+Преобразуем уравнение к виду $\frac{dN}{N(\alpha -\beta \sqrt{N} )} =dt$, т.е. переменные разделились. Введя замену переменной $x=\sqrt{N} $, можем проинтегрировать левую часть уравнения, тогда
+
+$\frac{2}{\alpha } \ln \frac{\sqrt{N} }{\alpha -\beta \sqrt{N} } =t+C$, где $C$ константа интегрирования. После ряда алгебраических операций получаем решение уравнения $N(t)=\left(\frac{\alpha }{\beta +\gamma \exp (-\frac{\alpha }{2} t)} \right)^{2} $, где $\gamma $ константа, которую можно было бы определить, зная $N(0)$. Но в условии это значение не задано, поэтому оставим формулу как есть. При стремлении $t$ к бесконечности численность населения $N(t)$ стремится к $\left(\frac{\alpha }{\beta } \right)^{2} $, т.е. к конечному пределу.
+\end{solution}
+
+
+\begin{problem}
+Show that Chebyshev's equation $(1-x^{2} )y''-xy'+y=0$, where $\left|x\right|<1$, can be reduced to equation $\ddot{y}+y=0$ by substituting $x=\cos t$. Hence find the general solution of  Chebyshev's equation. (Exam 2013).
+\end{problem}
+
+\begin{solution}
+
+\end{solution}
+
+
+\section{Теория игр}
+
+
+\begin{problem}
+Find all pure and mixed Nash equilibria in the following bimatrix game:
+
+
+\begin{tabular}{c|ccc}
+ & D & E & F \\ 
+\hline 
+A & 3;4 & 1;3 & 1;0  \\ 
+B & 2;7 & 3;6 & 0;3  \\ 
+C & 0;2 & 2;1 & 5;6  \\ 
+\end{tabular} 
+\end{problem}
+
+\begin{solution}
+Сначала найдем в матрице строго доминируемые стратегии. С точки зрения второго игрока, стратегия $D$ строго доминирует стратегию $E$. В равновесии Нэша не используются строго доминируемые стратегии, поэтому стратегию $E$ можно вычеркнуть.
+
+Применяя аналогичные рассуждения к матрице без столбца $E$, обнаруживаем, что стратегия $A$ первого игрока доминирует стратегию $B$. Следовательно, стратегию $B$ также можно вычеркнуть.
+
+Результате мы получили матрицу с меньшим числом стратегий:
+\begin{tabular}{c|cc}
+ & D &  F \\ 
+\hline 
+A & 3;4 &  1;0  \\ 
+C & 0;2 &  5;6  \\ 
+\end{tabular} 
+
+Находим равновесия Нэша в чистых стратегиях: $(A,D)$ и $(C,F)$.
+
+Ищем равновесия в смешанных стратегиях. Пусть первый игрок использует стратегию $A$ с вероятностью $p$ и стратегию $C$ с вероятностью $(1-p)$. Пусть второй игрок использует стратегию $D$ с вероятностью $q$ и стратегию $F$ с вероятностью $(1-q)$.
+
+Находим ожидаемый выигрыш первого игрока:
+\[
+\E(u_1)=3pq+1p(1-q)+0(1-p)q+5(1-p)(1-q)=\ldots=5+7pq-4p-5q=p(7q-4)+5-5q
+\]
+
+Получаем кривую реакции первого игрока:
+\[
+p=
+\begin{cases}
+1, \, 7q-4>0, \, q>4/7 \\
+[0;1], \, 7q-4=0, \, q=4/7 \\
+0, \, 7q-4<0, \, q<4/7
+\end{cases}
+\]
+
+
+Аналогично находим ожидаемый выигрыш второго игрока:
+\[
+\E(u_2)=4pq+0p(1-q)+2(1-p)q+6(1-p)(1-q)=\ldots=6+10pq-6p-4q=q(10p-6)+6-4q
+\]
+
+И его кривую реакции:
+\[
+q=
+\begin{cases}
+1, \, 10p-6>0, \, p>6/10 \\
+[0;1], \, 10p-6=0, \, p=6/10 \\
+0, \, 10p-6<0, \, p<6/10
+\end{cases}
+\]
+
+Точки пересечения кривых реакции дадут равновесия Нэша. Получаем три равновесия Нэша в смешанных стратегиях, $(p=0, q=0)$, $(p=1,q=1)$  и $(p=6/10,q=4/7)$.
+
+Заметим, что эти  три  смешанных равновесия включают в себя два ранее найденных чистых равновесия. А именно, вероятности $(p=0,q=0)$ соответствуют профилю стратегий  $(C,F)$, а вероятности $(p=1,q=1)$ соответствуют профилю стратегий  $(A,D)$. Вероятности $(p=6/10,q=4/7)$ также можно записать в виде профиля стратегий $(\frac{6}{10}A+\frac{4}{10}C,\frac{4}{7}D+\frac{3}{7}F)$
+\end{solution}
+
+\begin{problem}
+Two players play a version of Rock-Paper-Scissor game. Paper beats Rock, Rock beats Scissors, Scissors beats Paper. The two players simultaneously make their choice. The first player can choose any object. The second player can choose Rock or Paper. The winner receives 1 rouble from the loser. In case of a draw the wealth of a player does not change.
+\begin{enumerate}
+\item Construct the payoff matrix of the game.
+\item Find all pure and mixed Nash equilibria
+\end{enumerate}
+\end{problem}
+
+\begin{solution}
+Матрица игры имеет вид:
+
+\begin{tabular}{c|cc}
+ & Камень & Бумага \\ 
+\hline 
+Камень & 0,0 & -1,1 \\ 
+Ножницы & -1,1 & 1,-1 \\ 
+Бумага & 1,-1 & 0,0 \\ 
+\end{tabular} 
+
+Замечаем, что стратегия Бумага первого игрока строго доминирует стратегию Камень. В равновесии Нэша строго доминируемые стратегии не используются, поэтому вычеркиваем стратегию Камень первого игрока. Получаем матрицу:
+
+\begin{tabular}{c|cc}
+ & Камень & Бумага \\ 
+\hline 
+Ножницы & -1,1 & 1,-1 \\ 
+Бумага & 1,-1 & 0,0 \\ 
+\end{tabular} 
+
+Замечаем, что равновесий в чистых стратегиях нет, ищем равновесия в смешанных стратегиях. Пусть первый игрок использует стратегию \verb|Ножницы| с вероятностью $p$ и стратегию \verb|Бумага| с вероятностью $(1-p)$. Пусть второй игрок использует стратегию \verb|Камень| с вероятностью $q$ и стратегию \verb|Бумага| с вероятностью $(1-q)$.
+
+Находим ожидаемый выигрыш первого игрока:
+\[
+\E(u_1)=-pq+1p(1-q)+1(1-p)q+0(1-p)(1-q)=\ldots=p+q-3pq=p(1-3q)+q
+\]
+
+Получаем кривую реакции первого игрока:
+\[
+p=
+\begin{cases}
+1, \, 1-3q>0, \, q<1/3 \\
+[0;1], \, 1-3q=0, \, q=1/3 \\
+0, \, 1-3q<0, \, q>1/3
+\end{cases}
+\]
+
+
+Аналогично находим ожидаемый выигрыш второго игрока:
+\[
+\E(u_2)=+pq-1p(1-q)-1(1-p)q+0(1-p)(1-q)=\ldots=-p-q+3pq=q(3p-1)-p
+\]
+
+И его кривую реакции:
+\[
+q=
+\begin{cases}
+1, \, 3p-1>0, \, p>1/3 \\
+[0;1], \, 3p-1=0, \, p=1/3 \\
+0, \, 3p-1<0, \, p<1/3
+\end{cases}
+\]
+
+Точки пересечения кривых реакции дадут равновесия Нэша. Получаем одно равновесие Нэша $(p=1/3,q=1/3)$. Его также можно записать в виде профиля стратегий $(\frac{1}{3}A+\frac{2}{3}C,\frac{1}{3}D+\frac{2}{3}F)$
+
+
+\end{solution}
+
+\begin{problem}
+Two players are trying to bribe the judge. The possible amount of bribe is any real number between 0 and 1 million roubles. The player who gives the biggest bribe is announced as the winner of the affair by the judge. The winner receives 1 million roubles. The loser gets nothing. Obviously bribes are not returned by the judge. In the case of equal bribes each player gets nothing.
+\begin{enumerate}
+\item Are there any pure Nash equilibria in this game?
+\item Find at least one mixed Nash equilibrium.
+\end{enumerate}
+\end{problem}
+
+\begin{solution}
+If the second player choses his move according continuous distribution function $F$ then the expected payoff of the first player for the bribe $b$ is equal to
+\[
+1\cdot P(b_2 \leq b) - b = 1\cdot F(b)-b
+\]
+
+If a rational player uses mixed strategies he is indifferend between the corresponding pure strategies. That means that $F(b)-b=const$ for pure strategies that are mixed. For pure strategies that are mixed the density function $f(b)=F'(b)=1$. Do I know such a random variable? Yes, I know! A uniform on $[0;1]$.
+\end{solution}
+
+\begin{problem}
+A man has two sons. When he dies, the value of his estate after tax is \$1000. In his will it states that the sons must specify the sum of money $s_i$ that they are willing to accept. If $s_1+2s_2\leq 1000$, then each gets the sum he asked for and the rest goes the cats’ shelter. If $s_1+2s_2> 1000$, then neither of them gets any money and the entire sum goes to the cats’ shelter. Assume that the sons only care about the money they will inherit and they ask for the whole dollars. Find the pure strategies Nash equlibria of this game.
+\end{problem}
+
+\begin{solution}
+Чтобы почувствовать задачу, сначала полезно просто рассмотреть несколько профилей стратегий <<от фонаря>> и проверить, являются ли они равновесиями Нэша.
+
+Например, рассмотрим профиль $(s_1=300,s_2=200)$. Здесь $s_1+2s_2\leq 1000$ и каждый игрок получает столько денег, сколько запросил. Однако профиль  равновесием Нэша не является, т.к., например, первому игроку выгодно отклониться и выбрать $s_1=600$.  Второму игроку также выгодно отклониться от данного профиля.
+
+Например, рассмотрим профиль $(s_1=500,s_2=400)$. Здесь $s_1+2s_2>1000$, поэтому игроки денег не получают. Естественно, обоим игрокам выгодно отклониться и запросить меньше денег. Например, первому выгодно выбрать $s_1=200$. 
+
+Если всё наследство израсходовано, то ни один игрок не сможет получить больше и такая ситуация будет равновесием Нэша. Т.е. любой профиль $(s_1,s_2)$, где  $s_1+2s_2=1000$ является равновесием Нэша.
+
+Также есть равновесия Нэша, где оба игрока супер-жадные, т.е. профили вида $(s_1,s_2)$, где $s_1\geq 1000$ и $s_2 \geq 500$. Ни один игрок не может в одиночку отклониться и  получить положительный выигрыш.
+\end{solution}
+
+\begin{problem}
+There is an auction of a painting with two players. The value of the painting for the first player is a random variable $v_1$, for the second player --- $v_2$. The random variables $v_1$ and $v_2$ are independent and uniformly distributed from 0 to 1 million dollars. Each player makes the bid $b_i$ knowing only his own value of the painting. The player who makes the highest bid gets the painting and pays the arithmetic mean of the two bids. 
+
+Find a Nash equilibrium where each player uses linear strategy of the form $b_i=k\cdot v_i$.
+\end{problem}
+
+\begin{solution}
+По условию, первый игрок использует стратегию вида $b_1=k_1\cdot v_1$, а второй игрок --- стратегию виду $u_2=k_2\cdot v_2$. 
+
+Выпишем ожидаемый выигрыш первого игрока. Здесь следует помнить, что с точки зрения первого игрока, значение $v_1$ --- известная величина, а $v_2$ --- неизвестная равномерно распределенная случайная величина.
+\[
+u_1(k_1,k_2)=\P(b_1>b_2)(v_1- \frac{b_1+\E(b_2\mid b_1>b_2)}{2}) + \P(b_1<b_2) \frac{b_1+\E(b_2\mid b_1< b_2)}{2}
+\]
+\end{solution}
+
+\begin{problem}
+Two players have found The Magic Box. The Box has two holes. Simulteneously each of the two players may put any amount of money from $0$ to $100$ euros into his hole. Then the Magic Box will multiply the total sum by $a>1$, divide the resulting sum into two equal parts and give them back to the players. The value of $a$ is known. Find all the pure and mixed Nash Equilibria of this game for all values of the parameter $a$.
+\end{problem}
+
+\begin{solution}
+Сначала выпишем функции выигрыша игроков. Пусть первый игрок кладёт в шкатулку $x_1$ евро, а второй --- $x_2$. Тогда выигрыш первого игрока равен
+\[
+u_1(x_1,x_2)=\frac{a(x_1+x_2)}{2} - x_1=\frac{ax_2+(a-2)x_1}{2}
+\]
+В силу симметрии выигрыш второго игрока равен
+\[
+u_2(x_1,x_2)=\frac{a(x_1+x_2)}{2} - x_2=\frac{ax_1+(a-2)x_2}{2}
+\]
+
+Уже заметно, что возникает три случая: $a \in (1;2)$, $a=2$, $a>2$. Рассмотрим их по порядку.
+\begin{enumerate}
+\item Случай $a\in(1;2)$. В этом случае выигрыш каждого игрока отрицательно зависит от количества денег, которое он положит. Это значит, что стратегия <<не класть денег>> строго доминирует любую другую стратегию. Поскольку в равновесии Нэша не может играться строго доминируемая стратегия, мы получаем единственное равновесие Нэша: $(x_1=0, x_2=0)$.
+
+\item Случай $a>2$. В этом случае выигрыш каждого игрока положительно зависит от количества денег, которое он положит. Это значит, что стратегия <<класть все деньги>> строго доминирует любую другую стратегию. Поскольку в равновесии Нэша не может играться строго доминируемая стратегия, мы получаем единственное равновесие Нэша: $(x_1=100, x_2=100)$.
+
+\item Случай $a=2$. В этом случае выигрыш каждого игрока не зависит от количества денег, которое он положит. В этом случае любой набор чистых или смешанных стратегий является равновесием Нэша.
+
+\end{enumerate}
+
+
+\end{solution}
+
+
+
+

@@ -2294,6 +2294,18 @@ where $p$ is the price of consumption, $w$ is the hourly wage rate.
 
 \end{enumerate}
 
+\subsection{MFE, retake, marking scheme}
+
+\begin{enumerate}
+\item $5+5=10$, example $f(x,y)=x^2+(y-5)^2$, $f(x,y)=1/(x-3y)$
+\item equation for $r$ 3 pts, the rest --- 7 pts. $e^r=(8/7)^{0.1}$
+\item NDCQ --- 1 pt, formulated FOC --- 2 pts, solution --- 4 pts, SOC --- 3 pts, $(1,0)$, $(-1,0)$ --- maxima, $(0,1)$, $(0,-1)$ --- minima
+\item Use of IFT --- 1 pt, four partial derivatives --- 6 pts, differentials --- 3 pts.
+\item FOC, 2 values of $k$, $k_1=1$, $k_2=-13$ --- 6 pts, choice of $k=-13$ using SOC --- 4 pts.
+\item 5 pts each derivative, $Y'(T)=cm/(cm-c-ab)$, $r'(T)=bm/(cm-c-ab)$
+\item formulation of maximization problem --- 5 pts, NDCQ --- 2 pts, FOC --- 3 pts, solution of FOC --- 5 pts, SOC --- 5 pts
+\item  NDCQ --- 2 pts, FOC --- 3 pts, solution of FOC --- 5 pts, SOC --- 5 pts, question b --- 5 pts. $pc=\alpha w\bar{L}$, $wl=(1-\alpha)w\bar{L}$
+\end{enumerate}
 
 
 

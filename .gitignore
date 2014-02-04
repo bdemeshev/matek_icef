@@ -38,3 +38,11 @@ mor_posobie/mor_posobie.toc
 2013/dec2013/dec2013.fdb_latexmk
 
 2013/dec2013/dec2013.aux
+
+*.bcf
+
+*.blg
+
+*.tdo
+
+mor_posobie/mor_posobie.run.xml

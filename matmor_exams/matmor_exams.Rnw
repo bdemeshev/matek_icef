@@ -2368,6 +2368,89 @@ Find the equation of the firm's expansion path if the point $(8,16)$ lies on thi
 \end{enumerate}
 
 
+\subsection{MOR, exam, 23.05.14}
+
+You need to solve all the problems from Sections A, B, C.
+
+\pagestyle{empty}
+
+\textbf{SECTION A}
+
+\begin{enumerate}
+\item (15 points) A problem with the mixed constraints is given: $3x_1 x_2-x_2^3 \to \max$
+
+subject to $2x_1+5x_2 \geq 20$, $x_1-2x_2=5$, $x_1, x_2 \geq 0$.
+\begin{enumerate}
+\item Check NDCQ conditions.
+\item  Form the Langrangian function.
+\item Solve the maximization problem by the use of Langrange method or otherwise.
+\item Justify that the maximum point was found.
+\end{enumerate}
+\item  (20 points)   Consider the linear programming problem with parameter $\beta$ and nonnegative $x_i$:
+\begin{align*}
+3x_1+x_2-x_3+4x_4 \to \max \\
+x_1+x_2-x_3+x_4\leq 1 \\
+\beta x_1+x_2+x_3+2x_4 \leq 2
+\end{align*}
+
+\begin{enumerate}
+\item Find the optimal values of the primal variables for $\beta=6$.
+\item Find the function $\phi(\beta)$, where $\phi(\beta)$  is the maximum value of the objective function for fixed value of $\beta$.
+\item Sketch the graph of $\phi(\beta)$.
+\end{enumerate}
+
+
+\end{enumerate}
+
+\textbf{SECTION B}
+
+\begin{enumerate}[resume]
+\item (15 points)  Consider the system of difference equation:
+\[
+\begin{cases}
+x_{t+1}=x_t-y_t+6 \\
+y_{t+1}=2x_t-y_t+3
+\end{cases}
+\]
+
+\begin{enumerate}
+\item Solve the system of difference equations 
+\item Explore the stability of its solutions.
+\end{enumerate}
+
+\item   (15 points)   Solve the  Euler’s equation $x^2y''-4xy'+6y=0$ on the interval $(0,\infty)$ by using the substitution $x=e^t$ or otherwise. The answer should be written as a function of $x$.
+
+\end{enumerate}
+
+
+\textbf{SECTION C}
+
+\begin{enumerate}[resume]
+\item  (15 points)   Consider the following bimatrix game:
+
+
+\begin{tabular}{c|ccc}
+ & D & E & F \\ 
+\hline 
+A & 4;3 & 2;2 & 2;1  \\ 
+B & -2;8 & 4;7 & 2;4  \\ 
+C & 1;2 & 3;1 & 3;3  \\ 
+\end{tabular} 
+
+\begin{enumerate}
+\item Find all the pure and mixed Nash equilibria
+\item State whether the equilibria are Pareto-optimal
+\end{enumerate}
+
+\item  (20 points)  Three players play the following game. Simultenuously each of them chooses one of three numbers: $1$, $2$ and $3$. If all players choose the same number, then everyone gets nothing. Otherwise the player with smallest unique number receives two rubles, and other players pay one ruble each. Example: if $1$, $1$ and $3$ are chosen, then the winner is the player who chose $3$. She receives two rubles, and  each of the other two players pays one ruble.
+\begin{enumerate}
+\item Find all the pure and mixed Nash equilibria
+\item State whether the equilibria are Pareto-optimal
+\end{enumerate}
+
+
+
+\end{enumerate}
 
 
 \section{I wish more problems\ldots}

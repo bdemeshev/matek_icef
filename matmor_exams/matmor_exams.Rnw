@@ -2453,7 +2453,7 @@ C & 1;2 & 3;1 & 3;3  \\
 \end{enumerate}
 
 
-\section{I wish more problems\ldots}
+\section{I wish for more problems\ldots}
 
 \begin{enumerate}
 \item A production function $y=f(x_1,x_2)$ exhibits constant returns to scale, that is $f(tx_1,tx_2)=tf(x_1,x_2)$ for every $t>0$, where $x_1, x_2 \geq 0$. 

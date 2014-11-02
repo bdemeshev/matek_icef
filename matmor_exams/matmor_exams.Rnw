@@ -2453,7 +2453,132 @@ C & 1;2 & 3;1 & 3;3  \\
 \end{enumerate}
 
 
+\section{2014-2015}
+
+\subsection{MFE, mock, 30.10.14}
+
+\textbf{Variant 1}. Please, don't forget to write you variant number. Sections A and B will make up 60\% and 40\% of the exam grade, respectively. Total duration of the exam is 120 min. Good luck! :) 
+
+\textbf{SECTION A}
+
+\begin{enumerate}
+
+\item Consider the function $f(x,y,z)=x^5+2xyz-3z^3$. Using the total differential find the approximate value of $f(1.02,0.99,1)$.
+
+\item Consider the function $f(x,y,z)=x^4+(x+y)^2+(x+z)^3$. 
+\begin{enumerate}
+\item Find the Hesse matrix. Clearly state the Young theorem even if you don't use it.
+\item Find all the points where the Hesse matrix is positive definite.
+\end{enumerate}
+
+\item Consider the function 
+\begin{equation} \nonumber
+f(x,y)=
+\begin{cases}
+	\frac{xy}{\sqrt{7x^2+3y^2}}, \text{ if } (x,y)\neq (0,0) \\
+	a, \text{ if } (x,y)=(0,0)
+\end{cases}
+\end{equation}
+Find all the values of $a$ such that the function $f$ will be continuous.
+
+
+\item The microbe Veniamin is staying on the surface of the ellipsoid $4x^2+y^2+z^2=9$ at the point $(1,2,1)$. All coordinates are measured in centimetres. He digs into the ellipsoid perdpendicularly to the surface by $0.02$ cm. Find new approximate coordinates of Veniamin.
+
+\item Consider the function $u(x,y)=2f(r)$ where $r=\sqrt{x^2+y^2}$. Is it possible to represent the function $x\frac{\partial u}{\partial x}+y\frac{\partial u}{\partial y}$ as a function of $r$ alone, i.e. $g(r)$? If yes, then find $g(r)$.
+
+\item Given the system
+\begin{equation} \nonumber
+\begin{cases}
+u^2-w^2+x^2+y^2=0 \\
+uw+xy=0
+\end{cases}
+\end{equation}
+\begin{enumerate}
+\item Define a sufficient condition for functions $u(x,y)$ and $w(x,y)$ to be differentiable
+\item Find $\frac{\partial u}{\partial x}$
+\end{enumerate}
+
+\end{enumerate}
+
+\textbf{SECTION B}
+
+\begin{enumerate}[resume]
+\item (20 points) Let the demand and supply for an ice-cream on the sunny day be $q_D=D(p, T, d)$ and $q_S=S(p,T)$ correspondingly. Here $p$ is the price, $T$ is the temperature on this day, $d$ --- distance of the selling place from the center of the park, $D_p<0,$ $D_T>0,$ $S_p>0,$ $S_T<0,$ $D_d<0.$ 
+
+\begin{enumerate}
+\item Find analytically how the equilibrium price $p^{\ast}$ changes with the increase of $T.$ How does it change with the increase of $d?$ 
+\item Let $q^{\ast}$ be the equilibrium supply quantity. Find $\frac{\partial{q^{\ast}}}{\partial T}.$ Find the condition when $\frac{\partial{q^{\ast}}}{\partial T}<0.$
+\end{enumerate}
+ 
+\item (20 points) Consider the utility function
+$$
+U(x_1, x_2) = \left(x_1^\frac{\sigma-1}{\sigma}+x_2^\frac{\sigma-1}{\sigma}\right)^\frac{\sigma}{\sigma-1}
+$$
+where $\sigma \geq 0$ is a parameter. 
+
+\begin{enumerate}
+\item Sketch the indifference curves corresponding to $\sigma=2$. 
+\item Find the limiting utility function and sketch the corresponding indifference curves for two cases: $\sigma \rightarrow \infty$ and $\sigma \rightarrow 0$
+%\item $\sigma \rightarrow 1$
+\end{enumerate}
+% Hint: you may use the fact that $\lim_{a\rightarrow 0} \frac{x^a-1}{a} = \ln x$
+\end{enumerate}
+
+
+Marking scheme and answers
+\begin{enumerate}
+\item $f'_x=5x^4+2yz=7$, $f'_y=2xz=2$, $f'_z=2xy-9z^2=-7$, $df=7\cdot 0.02-2\cdot 0.01-7\cdot 0=0.12$, $f(1.02,0.99,1)\approx f(1,1,1)+df=0+0.12=0.12$.
+each derivative --- 2 points, formula for differential --- 3 points, calculation of new $f$ --- 1 point
+
+\item  Statement of the theorem --- 2 points, Hesse matrix --- 4 points, condition for positive definiteness --- 4 points (2 points --- inequalities, 2 points --- solution).
+
+\[
+\begin{pmatrix}
+12x^2+2+6(x+z) & 2 & 6(x+z) \\ 
+2 & 2 & 0 \\ 
+6(x+z) & 0 & 6(x+z)
+\end{pmatrix}
+\]
+
+Condition: $x+z>0$ and $x\neq 0$.
+
+
+\item $\lim_{x,y\to 0} \frac{xy}{\sqrt{7x^2+3y^2}}=\lim_{x,y\to 0} \frac{sign(xy)}{\sqrt{7/y^2+3/x^2}}=0$ (6 points), conclusion that $a=0$ (4 points)
+
+\item $\grad f=(8x, 2y, 2z)=(8, 4, 2)$ (5 points). To dig into we need the direction $(-8, -4,-2)$ (1 point). The length of gradient, $|\grad f| = \sqrt{84}$ (2 points). New coordinates are approximately equal $(1,2,1)+\frac{0.02}{\sqrt{84}}(-8,-4,-2)=(1,2,1)+\frac{0.02}{\sqrt{21}}(-4,-2,-1)$ (2 points).
+
+\item $x\frac{\partial u}{\partial x}+y\frac{\partial u}{\partial y}=2f'\frac{-x^2}{(x^2+y^2)^{3/2}}+2f'\frac{-y^2}{(x^2+y^2)^{3/2}}=-2f'(r)/r$. Derivatives $\frac{\partial u}{\partial x}$ and $\frac{\partial u}{\partial y}$ --- 3 points each. The remaining part --- 4 points.
+
+\item statement --- 3 points, correct formula with determinants for the derivative --- 4 points, calculations of all derivatives in determinants --- 3 points, 
+
+\[
+\frac{\partial u}{\partial x}=- \frac{2xu+2wy}{2u^2+2w^2}
+\]
+
+\item a) Each of the two derivatives --- 5 points b) the derivative --- 5 points, condition --- 5 points
+
+\[
+\frac{\partial p^*}{\partial T}=\frac{S_T-D_T}{D_p-S_p}
+\]
+
+\[
+\frac{\partial p^*}{\partial d}=\frac{D_d}{S_p-D_p}
+\]
+
+\[
+\frac{\partial q^*}{\partial T}=S_p\frac{S_T-D_T}{D_p-S_p}+S_T
+\]
+
+\item 4 points for each plot of indifference curves, 4 points for each limiting utility function
+
+limiting cases: $\sigma\to\infty$, $U(x_1,x_2)=x_1+x_2$, $\sigma\to 0$, $U(x_1,x_2)=\min(x_1,x_2)$
+
+
+\end{enumerate}
+
 \section{I wish for more problems\ldots}
+
+Here we present more problems for practice.
 
 \begin{enumerate}
 \item A production function $y=f(x_1,x_2)$ exhibits constant returns to scale, that is $f(tx_1,tx_2)=tf(x_1,x_2)$ for every $t>0$, where $x_1, x_2 \geq 0$. 
@@ -2462,7 +2587,25 @@ C & 1;2 & 3;1 & 3;3  \\
 \item Let $MRTS=f_1/f_2$. Show that its value remains the same along a straight line $x_2=\lambda x_1$, where $\lambda$ is a given positive number and $x_1, x_2>0$.
 \end{enumerate}
 
+\item Consider the function $f(x,y,z)=2x^5+2xyz-z^3$. Using the total differential find the approximate value of $f(1.02,0.99,1)$.
+
+\item Consider the function $u(x,y)=4f(r)$ where $r=\sqrt{x^2+y^2}$. Is it possible to represent the function $x\frac{\partial u}{\partial x}+y\frac{\partial u}{\partial y}$ as a function of $r$ alone, i.e. $g(r)$? If yes, then find $g(r)$.
+
+\item Given the system
+\begin{equation} \nonumber
+\begin{cases}
+u^2-w^2+x^2+y^2=0 \\
+uw+xy=0
+\end{cases}
+\end{equation}
+\begin{enumerate}
+\item Define a sufficient condition for functions $u(x,y)$ and $w(x,y)$ to be differentiable
+\item Find $\frac{\partial w}{\partial x}$
+\end{enumerate}
 
 \end{enumerate}
+
+
+
 
 \end{document}

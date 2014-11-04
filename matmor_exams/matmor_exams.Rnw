@@ -2544,10 +2544,9 @@ Condition: $x+z>0$ and $x\neq 0$.
 
 
 \item $\lim_{x,y\to 0} \frac{xy}{\sqrt{7x^2+3y^2}}=\lim_{x,y\to 0} \frac{sign(xy)}{\sqrt{7/y^2+3/x^2}}=0$ (6 points), conclusion that $a=0$ (4 points)
-
 \item $\grad f=(8x, 2y, 2z)=(8, 4, 2)$ (5 points). To dig into we need the direction $(-8, -4,-2)$ (1 point). The length of gradient, $|\grad f| = \sqrt{84}$ (2 points). New coordinates are approximately equal $(1,2,1)+\frac{0.02}{\sqrt{84}}(-8,-4,-2)=(1,2,1)+\frac{0.02}{\sqrt{21}}(-4,-2,-1)$ (2 points).
 
-\item $x\frac{\partial u}{\partial x}+y\frac{\partial u}{\partial y}=2f'\frac{-x^2}{(x^2+y^2)^{3/2}}+2f'\frac{-y^2}{(x^2+y^2)^{3/2}}=-2f'(r)/r$. Derivatives $\frac{\partial u}{\partial x}$ and $\frac{\partial u}{\partial y}$ --- 3 points each. The remaining part --- 4 points.
+\item $x\frac{\partial u}{\partial x}+y\frac{\partial u}{\partial y}=2f'\frac{x^2}{(x^2+y^2)^{1/2}}+2f'\frac{y^2}{(x^2+y^2)^{1/2}}=2f'(r)r$. Derivatives $\frac{\partial u}{\partial x}$ and $\frac{\partial u}{\partial y}$ --- 3 points each. The remaining part --- 4 points.
 
 \item statement --- 3 points, correct formula with determinants for the derivative --- 4 points, calculations of all derivatives in determinants --- 3 points, 
 

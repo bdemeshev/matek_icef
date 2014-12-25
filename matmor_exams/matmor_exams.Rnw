@@ -2524,8 +2524,8 @@ where $\sigma \geq 0$ is a parameter.
 % Hint: you may use the fact that $\lim_{a\rightarrow 0} \frac{x^a-1}{a} = \ln x$
 \end{enumerate}
 
+\subsection{MFE, mock, 30.10.14-marking}
 
-Marking scheme and answers
 \begin{enumerate}
 \item $f'_x=5x^4+2yz=7$, $f'_y=2xz=2$, $f'_z=2xy-9z^2=-7$, $df=7\cdot 0.02-2\cdot 0.01-7\cdot 0=0.12$, $f(1.02,0.99,1)\approx f(1,1,1)+df=0+0.12=0.12$.
 each derivative --- 2 points, formula for differential --- 3 points, calculation of new $f$ --- 1 point
@@ -2574,6 +2574,83 @@ limiting cases: $\sigma\to\infty$, $U(x_1,x_2)=x_1+x_2$, $\sigma\to 0$, $U(x_1,x
 
 
 \end{enumerate}
+
+
+
+\subsection{Fall-exam, 24.12.14}
+
+\textbf{Variant 1}. Please, don't forget to write you variant number. Sections A and B will make up 60\% and 40\% of the exam grade, respectively. Total duration of the exam is 120 min. Good luck! :) 
+
+\vspace{10pt}
+
+\textbf{SECTION A}
+
+
+\begin{enumerate}
+\item Consider the set $A=\cup_{i=1}^{\infty} \left\{ 1-\frac{1}{i} \right\} \subset \mathbb{R}$.
+\begin{enumerate}
+\item Is the set $A$ bounded? Open? Closed? Compact?
+\item Roughly sketch the set $A \times A$
+\end{enumerate}
+
+\item Consider the system of equations 
+\[
+\begin{cases}
+xyz^2+x^3y+3y^3z^3-2x=3 \\
+2x^2yz+z^2+3xy+5yx^3=-5
+\end{cases}
+\]
+\begin{enumerate}
+\item Are the function $x(z)$ and $y(z)$ defined around the point $A=(-1,1,1)$?
+\item Find $df/dz$, where $f(z)=x(z)y(z)$
+\end{enumerate}
+\item Consider the functions $f(x,y)=x^2+2x+y^2+6y+7$ and $g(x,y)=x^2-8x+y^2-10y+9$. Find all the points where the gradients are parallel.
+\item Find and classify all the local extrema of the function $g(x,y)=y^3 -12y+x^2e^y$. Which of them are global?
+\item It is known that the point $(1,0)$ is the constrained local maximum of the function $f(x,y)=5x-ky-3x^2+2xy-5y^2$ subject to $x+y=1$.
+\begin{enumerate}
+\item Find the value of $k$ and the maximum value of the function $f$
+\item Using Envelope theorem find the new value of maximum if $k$ will increase by $0.1$
+\end{enumerate}
+\item Use Lagrange multipliers to find the height and radius of a cylinder with the least possible
+surface area among those with a volume of $6\pi$ m$^3$. Make sure you check the second order
+condition for minimisation.
+\end{enumerate}
+
+\textbf{SECTION B}
+
+\begin{enumerate}[resume]
+\item In perfectly competitive agricultural industry a typical firm uses labor, capital and land. Its short-run costs can be found by the formula $C_{sr}(y,K^*,T^*)=\frac{y^3}{K^*T^*}+K^*+T^*$, where $y$  is the output, $K^*$  and $T^*$  are fixed quantities of capital and land, respectively.
+The long run costs $C_{lr}(y)$ can be found by minimizing $C_{sr}$ with respect to $K^*$  and $T^*$.
+\begin{enumerate} 
+\item Find  $C_{lr}(y)$
+\item The profits of the firm in both short-run and long-run can be found by $\pi_{sr}=py-C_{sr}$  and   $\pi_{lr}=py-C_{lr}$, where $p$ is price. When the profits are maximized with respect to the output, the maximum values of these are denoted by $\tilde{\pi}_{sr}(p,K^*,T^*)$ and $\tilde{\pi}_{lr}(p)$, respectively. Let $p=3$. Show that $\tilde{\pi}_{sr}(3,K^*,T^*) \leq 0$ for all values of  $K^*>0$  and  $T^*>0$. 
+%\item Without actually calculating the Hessian $D^2_{K^*,T^*}\tilde{\pi}_{sr}$ make a guess about the definiteness of the matrix. Justify your claim.
+\item Use Envelope Theorem to evaluate $\frac{\partial \tilde{\pi}_{sr}}{\partial K^*}$ and $\frac{\partial \tilde{\pi}_{sr}}{\partial T^*}$ for $p=3$. Is it possible that these derivatives turn zero simultaneously for $T^* \neq K^*$?
+\end{enumerate}
+
+\item Let $f(x)$ be twice continuously differentiable function whose second-order derivative is $f''(x)>0$ for all $x$. Consider a constrained minimization problem $F=\sum_{i=1}^n f(x_i) \to \min$ 
+subject to $\sum_{i=1}^n x_i = 1$,  $(x_1, \ldots, x_n)\in \mathbb{R}^n$. Using the first-order conditions find the critical point. By checking bordered Hessian or otherwise show that the found point is minimum.
+\end{enumerate}
+
+\subsection{Fall-exam, 24.12.14-marking}
+
+\begin{enumerate}
+\item bounded --- 2 pts, closed --- 2 pts, not open --- 2 pts, compact --- 2 pts, graph --- 2 pts
+\item the function is defined --- 2 pts, $x'$ and $y'$ --- $2\times 3=6$ pts, $df/dz$ --- 2 pts.
+\item $\grad f$ --- 2 pts, $\grad g$ --- 2 pts, condition --- 2 pts, solution of condition --- 4 pts
+\item FOC statement --- 1 pt, FOC solution --- 4 pts, SOC check --- 3 pts, globality --- 2 pts
+\item NDCQ --- 1 pt, FOC statement --- 1 pt, max and $k$ --- 3 pts, SOC checking --- 3 pts, Envelope  --- 2 pts
+\item problem formulation (target function, constraint) --- 2 pts, NDCQ --- 1 pt, FOC formulation --- 1 pt, FOC solution 4, SOC check --- 2 pts
+\item 
+\begin{enumerate}
+\item FOC statement --- 1 pt, FOC solution --- 4 pts, SOC check --- 3 pts
+\item proof --- 6 pts
+\item derivatives --- 2 pts each, inequality check --- 2 pts 
+\end{enumerate}
+\item FOC statement --- 2 pt, FOC solution --- 8 pts, SOC check --- 10 pts
+\end{enumerate}
+
+
 
 \section{I wish for more problems\ldots}
 

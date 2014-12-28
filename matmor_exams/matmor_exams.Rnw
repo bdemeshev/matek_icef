@@ -2635,7 +2635,7 @@ subject to $\sum_{i=1}^n x_i = 1$,  $(x_1, \ldots, x_n)\in \mathbb{R}^n$. Using 
 \subsection{Fall-exam, 24.12.14-marking}
 
 \begin{enumerate}
-\item bounded --- 2 pts, closed --- 2 pts, not open --- 2 pts, compact --- 2 pts, graph --- 2 pts
+\item bounded --- 2 pts, not closed --- 2 pts, not open --- 2 pts, not compact --- 2 pts, graph --- 2 pts
 \item the function is defined --- 2 pts, $x'$ and $y'$ --- $2\times 3=6$ pts, $df/dz$ --- 2 pts.
 \item $\grad f$ --- 2 pts, $\grad g$ --- 2 pts, condition --- 2 pts, solution of condition --- 4 pts
 \item FOC statement --- 1 pt, FOC solution --- 4 pts, SOC check --- 3 pts, globality --- 2 pts

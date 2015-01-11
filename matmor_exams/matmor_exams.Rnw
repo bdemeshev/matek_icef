@@ -622,15 +622,13 @@ For each point $(a,b)$ in the first quadrant use the Lagrange method to find the
 
 \item Let $Y_t$, $C_t$, $I_t$ denote national income, consumption, and investment in period $t$ respectively. The economy is described by the system
 \begin{equation}
-\left\{
-\begin{array}{l}
+\begin{cases}
 Y_t=C_t+I_t\\
 C_t=c+mY_t\\
-Y_{t+1}=Y_{t}+rI_t
-\end{array} 
-\right.
-\end{equation},
-where $c$, $m$ and $r$ are positive constants.
+Y_{t+1}=Y_{t}+rI_t \\
+\end{cases},
+\end{equation}
+where $c$, $m$ and $r$ are positive constants and $m<1$.
 \begin{enumerate}
 \item Find the function $Y_t$
 \item Find the asymptote of $\ln(Y(t))$ as $t$ tends to infinity.

@@ -2789,7 +2789,7 @@ f(x,y)=x^{42}y^a + x^{b+1}\sqrt{y+x}+\frac{1}{y^a x^b}
 \end{enumerate}
 
 
-\subsection{mock. marking}
+\subsection{mock. marking. some sols}
 
 \begin{enumerate}
 \item Find all the complex roots of the equation
@@ -2843,6 +2843,44 @@ f(x,y)=x^{42}y^a + x^{b+1}\sqrt{y+x}+\frac{1}{y^a x^b}
     \item \textbf{7 points} for (b): $a(x)$ - 4, $b(x)$ - 3
 \end{itemize}
 
+\textbf{Solution} \\
+\begin{enumerate}
+\item Let $z(x)=y-1$, then $z'=y', z''=y''$ and three particular solutions become $z=0, z=x-1, z=x^2-1$. The equation then becomes a homogeneous second-order equation:
+\[
+a(x)z''+b(x)z'+z=0
+\]
+The general solution of the homogeneous second-order linear equation can be expressed as $z^{gen}(x) = C_1z_1+C_2z_2$, where $z_1$ and $z_2$ are linearly independent particular solutions to the equation. As long as $z=x-1$ and $z=x^2-1$ are linearly independent particular solutions, the general solution of the homogeneous equation is 
+\[z(x) = C_1(x-1)+C_2(x^2-1)\]
+Therefore the solution of the original equation is 
+\[
+y(x) = z(x) + 1 = C_1(x-1)+C_2(x^2-1)+1
+\]
+\item Putting $y=x$ into the equation one gets 
+\[b(x) + x = 1 \Longrightarrow b(x) = 1-x\]
+Putting $y=x^2$ one gets 
+\[2a(x) + 2(1-x)x + x^2 = 1 \Longrightarrow a(x) = \frac{(x-1)^2}{2}\]
+\end{enumerate}
+
+
+\textbf{Another Solution} \\
+Please note that question (b) can be answered independently from (a).
+After finding $a(x)$ and $b(x)$ the equation becomes:
+\[
+\frac {(x-1)^2}{2} y'' + (1-x)y' + y=1
+\]
+$y=1,y=x$ and $y=x^2$ are particular solutions so the general solution has the following form:
+\[y=Ax^2+Bx+C\]
+By putting this into the equation one gets:
+\[
+\frac {(x-1)^2}{2} (2A) + (1-x)(2Ax+B) + Ax^2+Bx+C=1
+\]
+\[ Ax^2-2Ax+A+2Ax+B-2Ax^2-Bx+Ax^2+Bx+C=1 \]
+\[ \Longrightarrow A+B+C=1 \Longrightarrow C=1-A-B \]
+\[
+\Longrightarrow y = Ax^2+Bx+1-A-B=A(x^2-1)+B(x-1)+1
+\]
+
+
 \item Concave function
 \begin{itemize}
     \item \textbf{5 points} for the definition of concave function
@@ -2850,6 +2888,20 @@ f(x,y)=x^{42}y^a + x^{b+1}\sqrt{y+x}+\frac{1}{y^a x^b}
     \item \textbf{OR 3 points} for showing an example
 \end{itemize}
 \end{enumerate}
+
+\textbf{Solution} \\
+By definition the function is concave if 
+\[
+f(\alpha x_1+(1-\alpha) x_2) \geq \alpha f(x_1)+(1-\alpha) f(x_2) \;\; \forall x_1,x_2, \forall \alpha \in [0;1]
+\]
+As long as $k\geq 1$, $0\leq \frac 1 k \leq 1$\\
+By putting $x_1=kx, x_2=0$ and $\alpha = 1/k$ into the definition of the concave function one gets
+\[
+f(x + 0) \geq \frac 1 k f(kx) +(1-\frac 1 k) f(0)
+\]
+\[
+\Longrightarrow kf(x) \geq f(kx), \;\;\;\; QED
+\]
 
 \section{I wish for more problems\ldots}
 

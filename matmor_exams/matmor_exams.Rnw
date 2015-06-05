@@ -2903,6 +2903,100 @@ f(x + 0) \geq \frac 1 k f(kx) +(1-\frac 1 k) f(0)
 \Longrightarrow kf(x) \geq f(kx), \;\;\;\; QED
 \]
 
+
+\subsection{MOR, Final exam 2015, 26.05.2015}
+
+\textbf{Variant 1}. 26 May 2015. Please, don't forget to write you variant number. Total duration of the exam is 120 min. Good luck! :) 
+
+\vspace{0.6cm}
+
+\textbf{SECTION A. You need to solve BOTH problems.}
+
+\begin{enumerate}
+
+\item Using Lagrange multipliers maximize  the function $f(x_1,x_2,x_3)=-x_1-2x_2+3x_3$ subject to constraints:   $2(x_1+1)^2+x_2^2+3(x_3-1)^2\leq 5$ and $x_1, x_2, x_3 \geq 0$. Find the point(s) of maximum and maximum value of $f$. Justify your answer by reference to Weierstrass theorem if it is relevant.
+
+\item For all real values of parameter $\beta$ that lies within the range $-1<\beta<0$ maximize linear function $2x_1-x_2+8x_3-19$ subject to constraints  $x_1\geq x_2+x_3+\beta$,  $2x_1+x_2+4x_3\leq \beta+1$ and $x_1, x_2, x_3 \geq 0$. You are not asked to find the maximizer.
+
+\end{enumerate}
+
+
+\textbf{SECTION B. You need to solve TWO problems of your choice. }
+
+\begin{enumerate}[resume]
+
+\item Find the general solution of equation $y''-4y'+8y=\sin 2x + e^{-2x}$.
+
+\item Solve the initial value problem for the system of difference equations
+
+\[
+\begin{cases}
+x_{t+1}=-x_t+2y_t+7 \\
+y_{t+1}=-2x_t+2y_t
+\end{cases}
+\]
+where $x_0=y_0=0$.
+
+\item By variation of parameters solve $y''+y=\frac{1}{\sin^2 x}$.
+
+\end{enumerate}
+
+\textbf{SECTION C. You need to solve BOTH problems }
+
+\begin{enumerate}[resume]
+
+\item Andrey and Boris play the following game. Each player throws a fair coin and observes the result of his own toss. Then simultaneously Andrey guesses the result of Boris' toss and Boris guesses the result of Andrey's toss. They receive one dollar each if at least one guess was correct and receive nothing otherwise. 
+
+\begin{enumerate}
+\item Find all pure Nash equilibria of this game
+\item Are the Nash equilibria Pareto-optimal?
+\item What is the probability of at least one correct guess in the Nash equilibria?
+\end{enumerate}
+
+\item Anna and Bella play the simplified version of Battleship game. Anna places a two-decker destroyer ship on the $1\times 4$ grid. Then Bella has one shot. Bella does not know where the Anna's ship is located. If Bella hits the Anna's ship then Bella wins the game, otherwise Anna wins. 
+
+\begin{enumerate}
+\item Find at least one Nash equilibria of this game
+\item What is the probability that Anna wins in the Nash equilibria?
+\end{enumerate}
+
+
+\end{enumerate}
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[scale=1]{math-jokes-5.png}
+\end{figure}
+
+
+
+\subsection{MOR, Final marking scheme}
+
+\begin{enumerate}
+\item Lagrange function --- 1 pt, NDCQ --- 2 pts, correct FOC 
+
+\item Correct dual --- 2 pts, feasible set drawn --- 3 pts, all cases considered --- 5 pts
+
+\item homogeneous equation solved --- 4 pts (characteristic equation --- 1 pt, roots --- 1 pt, solution --- 2 pts); particular solution --- 5 pts (2 for $\exp$, 3 for $\cos$ and $\sin$), adding them up --- 1 pt
+
+
+\item eliminating one variable --- 2 pts, roots of characteristic equation --- 1 pt, solution of homogeneous equation --- 2 pts, solution for eliminated variable --- 2 pts, particular solution --- 1 pt, constants --- 2 pts
+
+
+\item  homogeneous equation solved --- 4 pts (characteristic equation --- 1 pt, roots --- 1 pt, solution --- 2 pts); variation of constants --- 6 pts (2 pts given for replacing constants $c_1$ and $c_2$ by functions)
+
+\item  correct strategy sets --- 3 pts
+
+Each player has 4 strategies: guess head, guess tail, guess the result of his toss, guess the opposite of the result of his toss.
+
+matrix --- 4 pts, pure NE --- 1 pt, Pareto-optimality --- 1 pt, probability --- 1 pt
+
+
+\item correct strategy sets --- 3 pts (Anna has 3 strategies, Bella --- 4 strategies); matrix and pure Nash --- 2 pts, elimination of non-strictly dominated strategies --- 2 pts, mixed Nash in 2x2 matrix --- 2 pts, probability that Anna wins --- 1 pt
+\end{enumerate}
+
+
+
 \section{I wish for more problems\ldots}
 
 Here we present more problems for practice.

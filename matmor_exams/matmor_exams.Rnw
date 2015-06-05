@@ -2987,12 +2987,76 @@ where $x_0=y_0=0$.
 
 \item  correct strategy sets --- 3 pts
 
-Each player has 4 strategies: guess head, guess tail, guess the result of his toss, guess the opposite of the result of his toss.
+Каждый игрок знает, как выпала его монетка и по правилам игры должен попытаться предсказать, как выпала монетка у другого игрока. Следовательно, у каждого игрока 4 стратегии:
 
+\begin{enumerate}
+\item[A]. Предсказать, что чужая монетка выпала орлом
+\item[B]. Предсказать, что чужая монетка выпала решкой
+\item[C]. Предсказать, что чужая монетка выпала так, как своя
+\item[D]. Предсказать, что чужая монетка выпала не так, как своя
+\end{enumerate}
+
+Составляем матрицу $4\times 4$ и заполняем её вероятностями выигрыша игроков. Игроки выигрывают одновременно, поэтому можно писать одну вероятность.
+
+\begin{tabular}{ccccc}
+ & A & B & C & D \\ 
+A & $3/4$ & $3/4$ & $3/4$ & $3/4$ \\ 
+B & $3/4$ & $3/4$ & $3/4$ & $3/4$ \\ 
+C & $3/4$ & $3/4$ & $1/2$ & $1$ \\ 
+D & $3/4$ & $3/4$ & $1$ & $1/2$ \\ 
+\end{tabular} 
+
+
+В равновесии Нэша вероятность выигрыша игроков равна 1. Равновесиями Нэша будут профили (C,D), (D,C).
 matrix --- 4 pts, pure NE --- 1 pt, Pareto-optimality --- 1 pt, probability --- 1 pt
 
 
 \item correct strategy sets --- 3 pts (Anna has 3 strategies, Bella --- 4 strategies); matrix and pure Nash --- 2 pts, elimination of non-strictly dominated strategies --- 2 pts, mixed Nash in 2x2 matrix --- 2 pts, probability that Anna wins --- 1 pt
+
+Составляем матрицу игры:
+
+\begin{tabular}{m{2.5cm}m{2.5cm}m{2.5cm}m{2.5cm}m{2.5cm}}
+ &
+ \begin{tikzpicture}[scale=0.5, transform shape]
+\draw[gray,very thin] (0,0) grid (4,1);
+\filldraw[fill=red] (0,0) rectangle (1,1);
+\end{tikzpicture} 
+ & 
+ \begin{tikzpicture}[scale=0.5, transform shape]
+\draw[gray,very thin] (0,0) grid (4,1);
+\filldraw[fill=red] (1,0) rectangle (2,1);
+\end{tikzpicture} 
+& 
+\begin{tikzpicture}[scale=0.5, transform shape]
+\draw[gray,very thin] (0,0) grid (4,1);
+\filldraw[fill=red] (2,0) rectangle (3,1);
+\end{tikzpicture} 
+& 
+\begin{tikzpicture}[scale=0.5, transform shape]
+\draw[gray,very thin] (0,0) grid (4,1);
+\filldraw[fill=red] (3,0) rectangle (4,1);
+\end{tikzpicture} 
+\\ 
+\begin{tikzpicture}[scale=0.5, transform shape]
+\draw[gray,very thin] (0,0) grid (4,1);
+\filldraw[fill=gray] (0,0) rectangle (2,1);
+\end{tikzpicture} 
+& $-1,1$ & $-1,1$ & $1,-1$ & $1,-1$ \\ 
+\begin{tikzpicture}[scale=0.5, transform shape]
+\draw[gray,very thin] (0,0) grid (4,1);
+\filldraw[fill=gray] (1,0) rectangle (3,1);
+\end{tikzpicture} 
+& $1,-1$ & $-1,1$ & $-1,1$ & $1,-1$ \\ 
+\begin{tikzpicture}[scale=0.5, transform shape]
+\draw[gray,very thin] (0,0) grid (4,1);
+\filldraw[fill=gray] (2,0) rectangle (4,1);
+\end{tikzpicture} 
+& $1,-1$ & $1,-1$ & $-1,1$ & $-1,1$ \\ 
+\end{tabular} 
+
+Поскольку надо найти хотя бы одно равновесие Нэша, мы имеем право вычеркивать нестрого доминируемые или эквивалентные стратегии. Сводим к матрице $2\times 2$.
+
+
 \end{enumerate}
 
 

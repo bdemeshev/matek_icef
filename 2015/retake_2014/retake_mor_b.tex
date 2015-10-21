@@ -1,0 +1,73 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+
+\begin{document}
+\section*{MOR. Retake --- 15.09.2015}
+
+\pagestyle{empty}
+
+\begin{enumerate}
+\item A problem with the mixed constraints is given: $3x_1 x_2-x_2^3 \to \max$
+
+subject to $2x_1+5x_2 \geq 20$, $x_1-2x_2=5$, $x_1, x_2 \geq 0$.
+\begin{enumerate}
+\item Check NDCQ conditions.
+\item  Form the Langrangian function.
+\item Solve the maximization problem by the use of Langrange method or otherwise.
+\item Justify that the maximum point was found.
+\end{enumerate}
+
+\item  Consider the linear programming problem with parameter $\beta$ and nonnegative $x_i$:
+\begin{align*}
+3x_1+x_2-x_3+4x_4 \to \max \\
+x_1+x_2-x_3+x_4\leq 1 \\
+\beta x_1+x_2+x_3+2x_4 \leq 2
+\end{align*}
+
+\begin{enumerate}
+\item Find the optimal values of the primal variables for $\beta=6$.
+\item Find the function $\phi(\beta)$, where $\phi(\beta)$  is the maximum value of the objective function for fixed value of $\beta$.
+\item Sketch the graph of $\phi(\beta)$.
+\end{enumerate}
+\item Find the general solution of the differential equation $y''+6y'+9y=xe^{-2x}+\sin(x)$
+\item Consider the system of difference equations
+$$ 
+\left\{ \begin{array}{l}
+x_{t+1}=2x_t-4y_t \\
+y_{t+1}=x_t-3y_t+3
+\end{array} \right.
+$$
+\begin{enumerate}
+\item Solve the system
+\item Find the equilibrium solution and check whether it's stable
+\end{enumerate}
+
+
+\item Find all pure and mixed Nash equilibria in the following bimatrix game:
+
+
+\begin{tabular}{c|ccc}
+ & d & e & f \\ 
+\hline 
+a & 4;5 & 1;4 & 1;1  \\ 
+b & 2;8 & 5;0 & 0;4  \\ 
+c & 0;3 & 2;2 & 5;7  \\ 
+\end{tabular} 
+
+
+\item There is an auction of a painting with two players. The value of the painting for the first player is a random variable $v_1$, for the second player --- $v_2$. The random variables $v_1$ and $v_2$ are independent and identically distributed from 0 to 1 million dollars with density function $f(t)=2t$. Each player makes the bid $b_i$ knowing only his own value of the painting. The player who makes the highest bid gets the painting and pays his bid. 
+
+Find a Nash equilibrium where each player uses linear strategy of the form $b_i=k\cdot v_i$.
+
+
+\end{enumerate}
+
+
+
+\end{document}

@@ -372,13 +372,13 @@ Is this function continuous at $(0;0)$?
 
 \item The value of $y$ is determined as a function of $t$ by the equation
 \begin{equation}
-\int_{0}^{t}f(x,y)dx=1
+\int_{0}^{t}f(x,y)\, dx=1
 \end{equation}
 Find $dy/dt$
 
 \begin{enumerate}
 \item Mention of the formula $dy/dt=-\frac{G_t}{G_y}$. 2 points.
-\item All the rest. 8 points
+\item All the rest. 8 points. Answer: $-f(t,y)/\int_0^tf'_y(x,y)\, dx$.
 \end{enumerate}
 
 
@@ -2113,14 +2113,14 @@ f_1(tx_1,tx_2) = f_1(x_1,x_2).
 $$
 
 By analogy $f_2(tx_1,tx_2) = f_2(x_1,x_2).$ Thus $f_i(tx_1,tx_2), \ i=1,2,$ are independent of $t$ and
-$$
+\[
 \frac{\partial f_1 (tx_1,tx_2)}{\partial t} = \frac{\partial f_2 (tx_1,tx_2)}{\partial t} = 0
-$$
+\]
 
 \noindent Method 2. By given conditions $f(x_1, x_2) = 1/t f(tx_1,tx_2).$ Therefore by chain rule
-$$
+\[
 f_1(x_1,x_2)=1/t \bigl(f_1 (tx_1,tx_2)\cdot\underbrace{\frac{\partial (tx_1)}{\partial x_1}}_{=t} +  f_2 (tx_1,tx_2)\cdot\underbrace{\frac{\partial (tx_2)}{\partial x_1}}_{=0}\bigr)=f_1(tx_1,tx_2).
-$$
+\]
 The conclusion is the same as in Method 1.
 
 
@@ -2973,7 +2973,7 @@ where $x_0=y_0=0$.
 \subsection{MOR, Final marking scheme}
 
 \begin{enumerate}
-\item Lagrange function --- 1 pt, NDCQ --- 2 pts, correct FOC 
+\item Lagrange function --- 1 pt, NDCQ --- 2 pts, correct FOC --- 2, solution -- 3, soc --- 2
 
 \item Correct dual --- 2 pts, feasible set drawn --- 3 pts, all cases considered --- 5 pts
 

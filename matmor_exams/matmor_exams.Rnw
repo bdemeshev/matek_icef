@@ -3061,6 +3061,115 @@ matrix --- 4 pts, pure NE --- 1 pt, Pareto-optimality --- 1 pt, probability --- 
 
 
 
+\section{2015-2016}
+
+\subsection{Mock 28.10.2015}
+
+
+\textbf{Variant 1}. Please, don't forget to write you variant number. Sections A and B will make up 60\% and 40\% of the exam grade, respectively. Total duration of the exam is 120 min. Good luck! :) 
+
+
+
+\textbf{SECTION A}
+
+\begin{enumerate}
+
+\item Consider the function $f(x,y,z)=x^5+2xyz-3z^3$. Using the total differential find the approximate value of $f(1.01,0.99,1.01)$.
+
+\item Consider the function $f(x,y)=2x^4-(x+y)^3$. 
+\begin{enumerate}
+\item Find the Hesse matrix. Clearly state the Young theorem even if you don't use it.
+\item Find the definiteness (positive definite, positive semidefinite, etc) of the Hesse matrix at the point $(1,2)$.
+\end{enumerate}
+
+\item Let the function $f(x,y)$ be defined by the formula
+\[
+f(x,y)=\begin{cases}
+-1, \, \text{if} \, x>y \\
+1, \, \text{if} \, x\leq y
+\end{cases}
+\]
+
+\begin{enumerate}
+\item Find the limits $\lim_{x\to\infty}\lim_{y\to \infty} f(x,y)$ and $\lim_{y\to\infty}\lim_{x\to \infty} f(x,y)$
+\item Does the limit $\lim_{x\to\infty, \, y\to \infty} f(x,y)$ exist?
+\end{enumerate}
+
+
+\item The functions $f$ and $g$ are given: $f(x,y)=x^2+2xy+y^4$, $g(x,y)=-5x^2-xy-2y^4$. Find at least one direction from the point $(1,1)$ in which both functions will grow.
+
+\item The function $z$ is defined by the formula $z(x,y)=f(x^3-y^2)$. Simplify the expression $2y\frac{\partial z}{\partial x}+3x^2\frac{\partial z}{\partial y}$. 
+
+\item Consider the function $f(x,y)=\sqrt{x+\sqrt{y+\sqrt{x+\sqrt{y + \ldots }}}}$. 
+\begin{enumerate}
+\item Find the value of $(f^2(x,y)-x)^2-y-f(x,y)$
+\item Find $\partial f/\partial x$ and $\partial f/\partial y$ at the point $(1,1)$
+\end{enumerate}
+
+ 
+
+
+%\item Given the system
+%\begin{equation} \nonumber
+%\begin{cases}
+%u^2-w^2+x^2+y^2=2 \\
+%uw+xy=2
+%\end{cases}
+%\end{equation}
+%\begin{enumerate}
+%\item Define a sufficient condition for functions $u(x,y)$ and $w(x,y)$ to be differentiable
+%\item Find $\frac{\partial u}{\partial x}$
+%\end{enumerate}
+
+\end{enumerate}
+
+\textbf{SECTION B}
+
+\begin{enumerate}[resume]
+
+
+\item (20 points) Let $S_1$ and $S_2$ be two sets from $\RR^2$: $S_1=\{(x,y) \in \RR^2 | xy=1 \}$, $S_2=\{(x,y) \in \RR^2 | xy=-1 \}$ and $S=S_1+S_2$. We denote by the sum $S_1+S_2$ the set 
+\[
+S_1+S_2=\{ (x,y) \in \RR^2 | (x,y)=(x_1,y_1)+(x_2,y_2), \, (x_1,y_1) \in S_1, \, (x_2,y_2) \in S_2 \}
+\]
+\begin{enumerate}
+\item Are the sets $S_1$ and $S_2$ closed? Justify your answer.
+\item Does the origin belongs to the set $S$? % Show that the origin does not belong to $S$.
+\item Is the set $S$ closed? % Show that $S$ is not closed.
+\end{enumerate}
+\item (20 points) Consider a Cournot duopoly of the two identical firms that compete by choosing outputs $y_1$  and $y_2$  simultaneously. Marginal costs of these firms are constant $MC_1=MC_2=c>0$. When the outputs $y_1$  and $y_2$ are set, the price of a good can be found by the formula  $p=a-b(y_1+y_2)$, where  $a>c$, $b>0$.
+\begin{enumerate}
+\item Find equations of the level curves for the profits of the firms $\pi_1(y_1, y_2)$ and  $\pi_2(y_1, y_2)$.
+\item It is known that the point of equilibrium outputs $(y_1^*, y_2^*)$  in the coordinate plane $(y_1, y_2)$ can be found by drawing tangent lines to the level curves and these tangents should be parallel to the axes. 
+Then $(y_1^*, y_2^*)$ is the point of intersection of the tangents. 
+By finding corresponding gradients of $\pi_1(y_1, y_2)$,  $\pi_2(y_1, y_2)$ and using the hint stated above, find    $(y_1^*, y_2^*)$ in terms of $a$, $b$ and $c$.
+\end{enumerate}
+
+\end{enumerate}
+
+
+\subsection{Mock 28.10.2015. Marking scheme}
+
+\begin{enumerate}
+\item Three partial derivatives = 1 pt for formula, 1 pt for value (6 pts). Value of function in the initial point = 1 pt, formula of differential = 1 pt, answer = 1 pt
+\item First derivatives =  2 pts (1 pt for each), Hesse matrix = 3 pts, statement of the Young theorem = 2 pts, definiteness = 3 pts
+\item 3 pts + 3 pts + 4 pts
+\item Two gradients = 4 pts (2 pts each). 
+
+Directional derivative approach: two directional derivatives = 2 pts, condition = 2 pts, correct direction = 2 pts. 
+
+Visual approach on plane: observation that both gradients are above $y=x$ = 2 pts, observations that $\cos \alpha >0 $ if $\alpha < \pi/2$ = 2 pts, correct direction = 2 pts
+
+\item Two derivatives = 8 pts (4 pts each). Final answer = 2 pts
+\item Evaluation of expression = 2 pts, two derivatives = 8 pts (4 pts each)
+\item a --- 8 pts, b --- 4 pts, c --- 8 pts
+\item a --- 6 pts (3 pts + 3 pts), gradients of profit functions = 6 pts (3 pts each), remaining part of the proof = 8 pts
+\end{enumerate}
+
+
+
+
+
 \section{I wish for more problems\ldots}
 
 Here we present more problems for practice.

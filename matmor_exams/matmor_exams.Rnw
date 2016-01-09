@@ -18,7 +18,7 @@
 library(knitr)
 library(ggplot2)
 library(gridExtra)
-opts_chunk$set(cache=FALSE, 
+opts_chunk$set(cache=FALSE,
                dev="cairo_pdf",
                warning=FALSE,
                tidy=FALSE) # кэшируем все куски по умолчанию
@@ -3188,6 +3188,277 @@ Visual approach on plane: observation that both gradients are above $y=x$ = 2 pt
 \item a --- 8 pts, b --- 4 pts, c --- 8 pts
 \item a --- 6 pts (3 pts + 3 pts), gradients of profit functions = 6 pts (3 pts each), remaining part of the proof = 8 pts
 \end{enumerate}
+
+
+\subsection{Fall Exam, 27.12.2015}
+
+\textbf{Variant 1. Section A}
+
+\begin{enumerate}
+
+\item At the beginning James Bond is located at the point $(1, 1)$. To choose his new location he calculates the gradient of the function $f(x,y)=x^2+y^2 - 3xy+x$ from his current location and moves in the direction given by the gradient by its length. Where he will be after two movements?
+
+\item Consider the system of equations
+\[
+\begin{cases}
+x^4 + y^4 + z^4 = 3 \\
+x + x^3 + y + 2y^3 + z + 3z^3 = 5
+\end{cases}
+\]
+
+\begin{enumerate}
+\item Are the function $x(z)$ and $y(z)$ defined around the point $A=(-1,1,1)$?
+\item Find $dx/dz$ and $dy/dz$
+\end{enumerate}
+
+
+\item Find and classify unconstrained extrema of the function $f(x,y)=x^4 + y^8 - 2xy$
+
+\item Find and classify constrained extrema of the function $f(x, y) =  xy$ subject to $x^2 + 4y^2= 9$
+
+
+\item The function $u$ is defined by the equation $u^3(t) + u(t) = f(x,y)$, where $x=2-t$ and $y=1+2t$ and $f$ is in $C^2$. Find $du/dt$ and $d^2 u/dt^2$
+
+
+\item Consider the function $f(x)=h(x)-ax$, where the function $h$ is twice differentiable and $h''(x)<0$ for all $x$. The global maximum of $f$ is denoted by $x^*(a)$.
+\begin{enumerate}
+\item Find $dx^*/da$
+\item It is known that for $a=1$ the optimal point is $x^*=3$ and the value of maximum is $2015$. What is the approximate value of maximum for $a=1.01$?
+\end{enumerate}
+
+\end{enumerate}
+
+
+
+\textbf{Variant 1. Section B.} Problems 7 and 8 can be solved separately.
+
+\begin{enumerate}[resume]
+\item A risk-averse Alex possesses $w$ dollars of wealth in money and property.  His house worth $L < w$ dollars can be completely destroyed by a landslide with the probability $p$, $0 < p < 1$. Let’s denote his wealth if landslide occurs by $x_L$ and $x_{NL}$ otherwise. Then his expected utility can be calculated by $E(u) = p \ln x_L + (1-p) \ln x_{NL}$, where $x_L, x_{NL} > 0$.
+\begin{enumerate}
+\item Show that $E(u)$ is a concave function in its domain.
+\item Show that the set in  $(x_L, x_{NL})$ plane defined by the inequality $E(u)\geq const$  is convex.
+\end{enumerate}
+
+\item In order to reduce risk Alex buys insurance from a perfectly competitive company. By doing that he maximizes his expected utility $E(u)$ with respect to $(x_L, x_{NL})$ subject to constraint imposed by the company $p(w-L-x_L)+(1-p)(w-x_{NL})=0$.
+\begin{enumerate}
+\item  Find his optimal bundle  $(x_L^*, x_{NL}^*)$. Use bordered Hessian to check sufficiency. Is Alex better-off with the insurance? Explain.
+\item Let $E(u)^*$ be the maximum value of $E(u)$ with insurance. By applying Envelope Theorem find $\partial E(u)^* / \partial p$. Express your answer in terms of $p$, $w$ and $L$ alone.
+\end{enumerate}
+
+
+\end{enumerate}
+
+\subsection{Solution to Fall Exam, 27.12.2015}
+
+\begin{enumerate}
+
+\item Marking
+\begin{itemize}
+\item first movement 6 pt: 1 pt for the formula of gradient, 2 pt for the calculation of derivatives, 1 pt for the substitution of initial point, 2 pt for the location after first movement
+
+\item second movement 4 pt: 2 pt for the calculation of gradient at the new point, 2 pt for the final location.
+
+\item common mistake: movement by 2*(first gradient) --- 6 pt.
+\end{itemize}
+\textbf{Solution:}
+
+Calculate the gradient of the function
+\[
+\nabla f(x,y):=(\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y})=(2x-3y+1, 2y -3x).
+\]
+Then substitute the initial point (1, 1) to the formula above: $\nabla f(1,1)=(0,-1).$ This is the direction of James's first movement. He moves exactly by the length of this vector (problem conditions) so we don't need to normalize obtained result. Thus Bond's location after the first movement will be $(1,1)+(0,-1)=(1,0).$
+
+Now calculate the gradient at the new point:$\nabla f(1,0)=(3,-3).$ This is the direction of the second movement. The final location will be $(1,0)+(3,-3)=(4,-3).$ This is the final answer.
+
+
+\item Marking
+\begin{itemize}
+\item 2pt for IFT checking
+\item each derivative 4 pt: 3 pt for the formula, 1 pt for the calculations
+\end{itemize}
+\textbf{Solution:}
+
+Let $f_1 = x^4+y^4+z^4-3, f_2=x+x^3+y+2y^3+z+3z^3-5.$
+\begin{enumerate}
+\item Check the conditions of the IFT:
+\begin{enumerate}
+\item $f_1(-1,1,1) =0$, $f_2(-1,1,1)=0,$
+\item $f_1, f_2 \in C^1,$
+\item \begin{equation*}
+\left|\frac {\partial(f_1,f_2)}{\partial(x,y)}\right|=\left|
+\begin{array}{cc}
+4x^3 & 4y^3 \\
+1+3x^2 & 1+6y^2
+\end{array}
+\right|=\left|
+\begin{array}{cc}
+-4 & 4 \\
+4 & 7
+\end{array}
+\right| = -44 \neq 0.
+\end{equation*}
+\end{enumerate}
+\item
+\begin{equation*}
+\frac{d x}{d z} = -\frac{\left|\frac {\partial(f_1,f_2)}{\partial(z,y)}\right|}{\left|\frac {\partial(f_1,f_2)}{\partial(x,y)}\right|} = -\frac{
+\left|
+\begin{array}{cc}
+4z^3 & 4y^3 \\
+1+9z^2 & 1+6y^2
+\end{array}
+\right|
+} {
+\left|
+\begin{array}{cc}
+44x^3 & 4y^3 \\
+1+3x^2 & 1+6y^2
+\end{array}
+\right|} = -\frac{
+\left|
+\begin{array}{cc}
+4 & 4 \\
+10 & 7
+\end{array}
+\right|
+}{
+\left|
+\begin{array}{cc}
+-4 & 4 \\
+4 & 7
+\end{array}
+\right|
+} = -\frac {3} {11};
+\end{equation*}
+\begin{equation*}
+\frac{d y}{d z} = -\frac{\left|\frac {\partial(f_1,f_2)}{\partial(x,z)}\right|}{\left|\frac {\partial(f_1,f_2)}{\partial(z,y)}\right|} = -\frac{
+\left|
+\begin{array}{cc}
+4x^3 & 4z^3 \\
+1+3x^2 & 1+9z^2
+\end{array}
+\right|
+} {
+\left|
+\begin{array}{cc}
+4x^3 & 4y^3 \\
+1+3x^2 & 1+6y^2
+\end{array}
+\right|} = -\frac{
+\left|
+\begin{array}{cc}
+-4 & 	4 \\
+4 & 10
+\end{array}
+\right|
+}{
+\left|
+\begin{array}{cc}
+-4 & 4 \\
+4 & 7
+\end{array}
+\right|
+} = -\frac {14} {11}.
+\end{equation*}
+\end{enumerate}
+
+
+\item  FOC - 2 pts, all the critical points - 4 pts, SOC - 4 pts.
+\item  NDCQ - 1 pt, FOC - 2 pts, correct solution - 4 pts, SOC - 3 pts.
+
+\item marking
+\begin{itemize}
+\item first derivative: 3 pt for differentiating w.r.t. \(t\) OR applying IFT. 2 pt for correct answer
+\item second derivative: 1 pt for the idea of differentiating the expression for the first derivative, 2 pt for correct application of chain rule, 2 pt for correct answer
+\end{itemize}
+\textbf{Solution:}
+
+Differentiate both sides of the equality w.r.t. \(t\):
+\[
+3u^2 \frac{du}{dt} + \frac{du}{dt} = \frac{\partial f}{\partial x}\frac{\partial x}{\partial t}+\frac{\partial f}{\partial y}\frac{\partial y}{\partial t}
+\]
+\[
+\frac{du}{dt} = \frac{\frac{\partial f}{\partial x}\frac{\partial x}{\partial t}+\frac{\partial f}{\partial y}\frac{\partial y}{\partial t}}{3u^2+1} = \frac{-\frac{\partial f}{\partial x}+2\frac{\partial f}{\partial y}}{3u^2+1}
+\]
+In order to find \(\frac{d^2u}{dt^2}\) differentiate the latter expression w.r.t.  \(t\) (don't forget to apply the chain rule for \(\frac{\partial f}{\partial x}\) and \(\frac{\partial f}{\partial y}\)):
+\[
+\frac{d^2u}{dt^2} = \frac{(-\frac{\partial ^2f}{\partial x^2}\frac{\partial x}{\partial t}-\frac{\partial ^2f}{\partial y\partial x}\frac{\partial y}{\partial t} + 2\frac{\partial ^2f}{\partial x\partial y}\frac{\partial x}{\partial t}+2\frac{\partial ^2f}{\partial y^2}\frac{\partial y}{\partial t})(3u^2+1) -
+6u\frac{\partial u}{\partial t}(-\frac{\partial f}{\partial x}+2\frac{\partial f}{\partial y})}
+{(3u^2+1)^2}
+\]
+Finally substitute \(\frac{du}{dt}\):
+\[
+\frac{d^2u}{dt^2} = \frac{(\frac{\partial ^2f}{\partial x^2}-4\frac{\partial ^2f}{\partial \partial dx}\frac{\partial y}{\partial t} + 4\frac{\partial ^2f}{\partial y^2})(3u^2+1)^2 -
+6u(-\frac{\partial f}{\partial x}+2\frac{\partial f}{\partial y})^2}
+{(3u^2+1)^3}
+\]
+
+\item marking
+\begin{enumerate}
+\item 1 pt for FOC, 1 pt for showing that FOC has unique solution, 1 pt for SOC, 2 pt for derivative
+\item 3 pt for envelope theorem (idea + correct value) OR finding \(f^*(a)\) and differentiating, 2 pt for linear approximation (idea and correct \(f^*\))
+\end{enumerate}
+\textbf{Solution:}
+
+\begin{enumerate}
+\item Write down first order condition for maximization problem:
+\[
+f'(x) = h'(x)-a=0
+\]
+
+Let's denote \(g(x)=h'(x)\). Then \(g'(x)=h''(x)<0\) therefore \(g(x)\) is a strictly decreasing function and the FOC equation has the only solution:
+\[
+x^* = g^{-1}(a)
+\]
+
+As long as \(f''(x)=h''(x)<0\) \(f(x)\) is a concave function and this point is indeed a global maximum.
+\[
+\frac{dx^*}{da} = \frac{dg^{-1}(a)}{da} =\frac{1}{\frac{dg}{dx}(x^*)}=\frac{1}{h''(x^*)}
+\]
+
+In fact there is no need to find \(x^*\), but find it's derivative by differentiating FOC w.r.t. \(a\):
+\[
+h''(x^*) \cdot \frac{dx^*}{da} - 1 = 0 \; \Longrightarrow \; \frac{dx^*}{da} = \frac{1}{h''(x^*)}
+\]
+
+\item Apply envelope theorem to the maximization problem:
+\[
+\frac{df^*}{da} = \frac{\partial f^*}{\partial a} = -x^* = -3
+\]
+\[
+f^*(1.01) \approx 2015 -3\cdot0.01 = 2014.97
+\]
+\end{enumerate}
+
+\item marking: a --- 15 pts, b --- 5 pts
+\[
+H = \begin{pmatrix}
+\frac{-p}{x_l^2} & 0 \\
+0 & \frac{p-1}{x_{NL}^2} \\
+\end{pmatrix}
+\]
+
+Here $\Delta_1 < 0$, $\Delta_2 > 0$, the function is concave.
+
+\item marking: NDCQ --- 2 pts, Lagrangian function --- 1 pt, FOC --- 1 pt, solution of FOC --- 3 pts, SOC ---
+4 pts, better-off --- 4 pts, Envelope theorem --- 5 pts
+
+Short answers:
+
+Optimal bundle: $(x_L, x_{NL})=(w-pL, w-pL)$
+
+SOC: $\det H = \frac{p(1-p)}{(w-pL)^2}>0$
+
+Envelope theorem: $\partial E(u)^*/\partial p = \frac{-L}{w-pL}<0$
+
+Alex is better-off. Proof:
+
+Utility without insurance: $E(u_0)=p \ln (w-L) + (1-p) \ln w$.
+
+Utility with insurance: $E(u)^*=\ln (w-pL)$
+
+Using concavity of $\ln$: $E(u)^* > E(u_0)$.
+\end{enumerate}
+
 
 
 

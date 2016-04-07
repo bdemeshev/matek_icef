@@ -3515,7 +3515,117 @@ condition for minimisation.
 \end{enumerate}
 
 
+\subsection{Final exam, 02 april 2016}
 
+\begin{enumerate}
+
+\item Solve differential equation $y''+2y'+y=2x+3e^{-x} \sqrt{x+1} $.
+
+\item Given the difference equation $3y_{t+2} +2y_{t+1} +\gamma y_{t} =5$ with the real parameter $\gamma $, find all the values of  $\gamma$ for whose the time path of this equation is convergent.
+Choose some value of $\gamma$ beyond the found range and show that the corresponding time path is divergent.
+
+
+\item Find all mixed Nash equilibria of the following game
+
+\begin{tabular}{c|ccc}
+  & d & e & f \\
+\midrule
+a & 0;0  & 0;-1 & 6;-2 \\
+b & 0;0  & -1;1 & 7;0 \\
+c & -1;5 & -1;4 & 5;9
+\end{tabular}
+
+\item For non-negative $y_i$ minimize the function $11y_1 + 5 y_2 + 4y_3 +4y_4$ subject to constraints $y_1 + y_2 + y_3 +0.1y_4 \geq 2$ and $2y_1+y_2+0.1y_3+y_4 \geq 7$.
+
+
+\item Use the Lagrange multiplier method to find the maximum value of $f(x,y,z)=(7+x)^2(1+y)^2(7+z)^2$ among positive numbers subject to $x^2 + 49y^2 + z^2 = 100$.
+
+\item James Bond added $x^3+7x-8y - 6y^3$ to the unknown homogeneous function $f(x, y)$. The new function was homogeneous once again! Please help the Secret Service agent recover the function $f$ if $f(1, 1)=1$.
+
+
+\item Solve initial-value problem for the difference equation
+\[
+y_{t+3} -4y_{t+2} +5y_{t+1} -2y_{t} =1
+\]
+with the initial values $y_{0} =y_{1} =y_{2} =0$.
+
+\textit{Hint: one of the characteristic roots is 1.}
+
+\item Using Lagrange multipliers maximize the function $f(x_1,x_2,x_3)=2x_1-x_2-3x_3$ subject to constraints:   $3(x_1-1)^2+(x_2+1)^2+2x_3^2\leq 4$ and $x_1, x_2, x_3 \geq 0$. Find the point(s) of maximum and maximum value of $f$.
+
+\end{enumerate}
+
+\subsection{Final exam, 02 april 2016 - Marking scheme}
+
+\begin{enumerate}
+\item A1
+\begin{itemize}
+\item 5pt: characteristic equation 2pt, characteristic roots 1pt, complementary function 2pt
+\item 2pt: linear part of particular solution (1pt for the form, 1pt for coefficients)
+\item 3pt: second part of particular solution by variation of parameters method
+\end{itemize}
+
+\item A2
+\begin{itemize}
+
+\item 2pt: characteristic roots 1pt, for convergence their absolute values are less than one 1pt
+\item 5pt: distinct real roots case 2pt, same roots case 1pt, complex roots case 2pts
+\item 3pt: example of time path (particular solution 1pt, general solution 1pt, divergence 1pt)
+
+\end{itemize}
+
+\item A3:
+\begin{itemize}
+\item 2pts: elimination
+\item 2pts: $E(u_1)$, $E(u_2)$
+\item 2pts: best responses
+\item 1pt: plot
+\item 3pts: all NE
+\end{itemize}
+
+\item A4:
+\begin{itemize}
+\item 2 pts: dual
+\item 2 pts: plot of constraints
+\item 1 pt: optimal point on the graph
+\item 1 pt: value of max
+\item 2 pts: non-binding ($y_i=0$)
+\item 2 pts: binding constraints
+\end{itemize}
+
+\item A5
+\begin{itemize}
+\item 2 pt: NDCQ
+\item 1 pt: Lagrangean
+\item 2 pt: First-order condition
+\item 2 pt: solution of FOC
+\item 2 pt: Second-order condition and
+\end{itemize}
+
+\item A6
+\begin{itemize}
+\item 3 pt: any attempts
+\item 2 pt: homogeneity condition
+\item 5 pt: correct answer
+\end{itemize}
+
+
+\item B7
+\begin{itemize}
+\item order of equation 1pt, characteristic equation 3pt, solutions 3pt
+\item complementary function 4pt, particular solution 4pt: 2pt for the form + 2pt for finding the coefficient
+\item general solution 2pt, definite solution 3pt
+\end{itemize}
+
+\item B8
+\begin{itemize}
+\item NDCQ 2pt, Lagrangean 2pt
+\item FOC 4pt, solution of FOC 6pt, max value of function 2pt
+\item SOC 4pt
+\end{itemize}
+
+
+\end{enumerate}
 
 
 \section{I wish for more problems\ldots}

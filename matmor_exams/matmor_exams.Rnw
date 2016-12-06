@@ -256,6 +256,28 @@ where $\lambda$ is some real number.
 \end{enumerate}
 
 
+\subsection{MFE, fall semester exam, solution, 19.01.2010}
+
+\begin{enumerate}
+\item
+\item
+\item
+\item
+\[
+\frac{\partial u}{\partial x} = \frac{\partial f}{\partial s} \frac{1}{y}
+\]
+
+\[
+\frac{\partial^2 u}{\partial x\partial y} = \left(\frac{\partial^2 f}{\partial s^2} \frac{-x}{y^2}+ \frac{\partial^2 f}{\partial s\partial t}\frac{1}{z}\right)\frac{1}{y} - \frac{1}{y^2}  \frac{\partial f}{\partial s}
+\]
+
+\[
+\frac{\partial^3 u}{\partial x\partial z^2} = \frac{1}{z^4} \frac{\partial^3 f}{\partial s\partial t^2} + \frac{2}{z^3} \frac{\partial^2 f}{\partial s\partial t}
+\]
+
+\end{enumerate}
+
+
 \section{2010-2011}
 
 \subsection{MFE, fall semester exam, 18.01.2011}

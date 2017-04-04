@@ -3856,6 +3856,153 @@ where  $q$ is the output and $K$ is the amount of capital fixed in the short-run
 
 
 
+\subsection{28 March 2017}
+
+\textbf{SECTION A}
+
+\begin{enumerate}
+
+\item Find indefinite integrals
+\begin{enumerate}
+  \item  $\int {{e^{3x}}\sin 2x \, dx}$;
+  \item  $\int {\frac{{x + 3}}{{{x^2} - 6x + 9}} \, dx}$.
+\end{enumerate}
+
+\item Solve the differential equation
+\[
+y''' - y'' + 6y' - 6 = 42\sin (x\sqrt 6 ).
+\]
+
+\item Solve the difference equation
+\[
+{y_{t + 2}} - 6{y_{t + 1}} + 9{y_t} = 5t.
+\]
+
+\item The function $f(x, y)$ is non-constant and homogeneous. It is also known that $h(x, y) = f'_x(x, y) + 3x^2y$ is homogeneous of degree 3. Find the value of $\frac{xf'_x(x, y) + yf'_y(x, y)}{f(x, y)}$.
+
+\item Solve the following linear programming problem:
+\[
+\begin{cases}
+2x_1 + 2x_2 + 3x_3 \to \min \\
+x_1 \geq 0, x_2 \geq 0, x_3 \geq 0 \\
+3x_1 + 5x_2 + x_3 \geq 8 \\
+5x_1 + 3x_2 + x_3 \geq 9 \\
+\end{cases}.
+\]
+
+\item Maximize the function
+\[
+11 + 10x_1 - x_1^2 -3x_2 + 8x_3 - x_3^2
+\]
+subject to constraints $2x_1 -x_2+4x_3 \leq 10$ and $x_2 \leq 100$.
+
+\end{enumerate}
+
+\textbf{SECTION B}
+
+\begin{enumerate}[resume]
+
+
+\item Consider the second-order differential equation
+\[
+xy'' - y' - 4{x^3}y = 0.
+\]
+It can be solved by an appropriate change of the variable $t = \phi (x)$.
+\begin{enumerate}
+  \item (10 points) Find this function $\phi (x)$ by setting the task of cancellation the term with $\frac{{dy}}{{dt}}$.
+  \item (5 points) After the substitution the transformed equation has constant coefficients. Find its general solution.
+  \item (5 points) Solve the original equation.
+\end{enumerate}
+
+\item Three players play the following game. Simulteneously each of them chooses one possible bet: either 1\$ or 2\$. A player is declared winner if his bet is unique and wins the amount of his bet. For example, if players have chosen 1, 2 and 1 then their corresponding payoffs are 0, 2 and 0.
+
+\begin{enumerate}
+  \item Find all Nash equilibria in pure strategies.
+  \item Find symmetric Nash equilibrium in mixed strategies.
+\end{enumerate}
+
+\end{enumerate}
+
+
+\subsection{marking 28 March 2017}
+
+\begin{enumerate}
+\item
+1a = 5 points: 2 points - correct 1st integration by parts, 2 points - correct 2nd integration by parts, 1 point - calculations of the integral
+
+2a = 5 points: 1 point - correct choice of solving method (knowledge that it's somehow connected to partial fractions), 3 poiints - correct decomposition to the sum of partial fractions,  1 point - calculations of the integral
+
+\item
+
+4 points - correct complementary function (1 point - characteristic equation, 2 points - roots, 1 point - answer)
+6 points - correct particular integral (2 points - correct form, 2 points - all necessary derivatives, 2 points - calculations)
+
+\item
+
+4 points - correct complementary function (2 points - equation and roots, 2 points - form and answer)
+6 points - correct particular solution (3 points - correct form, 3 points - calculations)
+
+\item
+
+5 points - correct degree of homogenuity of $f(x,y)$
+1 point - understanding that the answer should be constant
+1 point - recalling something about Euler's theorem
+3 points - right answer
+
+\item
+
+2 points - Dual problem
+2 points - graph
+3 points - minimum
+3 points - minimizer
+
+\item
+
+1 point - NDCQ
+2 points - Lagrangean
+3 points - FOC
+4 points - solution of FOC
+
+\item
+
+7a = 10 points:
+
+5 points - correct calculations of $dy/dt$ and $d^2y/dt^2$ for some function $t=\phi(x)$ or in general form using chain rule (2 points for the 1st derivative, 3 points - for the 2nd derivative)
+5 points - correct guess that the substitution is $t= x^2$ and trying to do something with it (just correct guess without calculations - 2 points)
+
+7b = 5 points:
+
+1 point - characteristic equation
+2 points - roots
+2 points - solution
+
+7c = 5 points
+
+\item
+
+8a = 6 points
+
+
+Every player chooses 1 is not an equlibrium (every player wants to deviate)
+Every player chooses 2 is not an equlibrium (every player wants to deviate)
+Two players choose 1 and one player chooses 2 is an equilbrium.
+Two players choose 2 and one player chooses 1 is an equilbrium.
+
+8b = 14 points
+
+Step 1. Idea that in symmetric equilibrium every player chooses 1 with some probability p and 2 with probability (1-p).
+
+Step 2. First player should be indifferent between his pure strategies.
+
+payoff if I choose 1 = payoff if I choose 2:
+$(1-p)^2 = 2 p^2$ (equation = 8 points)
+
+Step 3.  two roots $p = -1 + \sqrt{2}$ и $p= - 1 - \sqrt{2}$.
+one root is impossible, so $p = \sqrt{2} - 1$.
+
+Step 1 = 3 pts, step 2 = 6 pts, step 3 = 5 pts.
+\end{enumerate}
+
 \section{I wish for more problems\ldots}
 
 Here we present more problems for practice.

@@ -1,0 +1,80 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage[left=1.5cm, right=1.5cm, top=1.5cm, bottom=2cm]{geometry}
+
+\def \RR{\mathbb{R}}
+
+\begin{document}
+\thispagestyle{empty}
+\textbf{Variant 1}. 2017-09-21. Please, don't forget to write you variant number. Sections A and B will make up 60\% and 40\% of the exam grade, respectively. Total duration of the exam is 120 min. Good luck! :)
+
+% две оптимизации - кроме лин
+% линейное программировани
+% теория игр бруталка
+
+\textbf{SECTION A}
+
+\begin{enumerate}
+
+\item Find indefinite integrals
+\begin{enumerate}
+  \item  $\int {{e^{2x}}\cos^2 x \, dx}$;
+  \item  $\int {\frac{{x - 3}}{{{x^2} - 6x + 9}} \, dx}$.
+\end{enumerate}
+
+\item Solve the differential equation
+\[
+y''' - y'' + 6y' - 6 = 42\sin (x\sqrt 6 ).
+\]
+
+\item Solve the difference equation
+\[
+{y_{t + 2}} - 8{y_{t + 1}} + 16{y_t} = 5t.
+\]
+
+\item The function $f(x, y)$ is non-constant and homogeneous. It is also known that $h(x, y) = f'_x(x, y) + 3x^2y$ is homogeneous of degree 3. Find the value of $\frac{xf'_x(x, y) + yf'_y(x, y)}{f(x, y)}$.
+
+\item Solve the following linear programming problem:
+\[
+\begin{cases}
+2x_1 + 2x_2 + 3x_3 \to \min \\
+x_1 \geq 0, x_2 \geq 0, x_3 \geq 0 \\
+3x_1 + 5x_2 + x_3 \geq 8 \\
+5x_1 + 3x_2 + x_3 \geq 9 \\
+\end{cases}.
+\]
+
+\item Maximize the function
+\[
+11 + 10x_1 - x_1^2 -3x_2 + 8x_3 - x_3^2
+\]
+subject to constraints $2x_1 -x_2+4x_3 \leq 10$ and $x_2 \leq 100$.
+
+\end{enumerate}
+
+\textbf{SECTION B}
+
+\begin{enumerate}[resume]
+
+
+\item Solve the Euler equation $x^2y'' - xy' - 3y = 0$ on the interval $(0;\infty)$ by using the substituion $x=e^t$ or otherwise. The answer should be written as a function of $x$.
+
+\item Three players play the following game. Simulteneously each of them chooses one possible bet: either 1\$ or 2\$. A player is declared winner if his bet is unique and wins one rouble independently of the amount of the bet. For example, if players have chosen 1, 2 and 1 then their corresponding payoffs are 0, 1 and 0.
+
+\begin{enumerate}
+  \item Find all Nash equilibria in pure strategies.
+  \item Find symmetric Nash equilibrium in mixed strategies.
+\end{enumerate}
+
+\end{enumerate}
+
+
+
+
+
+\end{document}

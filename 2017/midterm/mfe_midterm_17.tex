@@ -1,0 +1,533 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{lastpage}
+\usepackage[left=1cm, right=1cm, top=1.5cm, bottom=1.5cm]{geometry}
+\usepackage{verbatim}
+
+\renewcommand{\theenumi}{\alph{enumi}}
+
+
+\def \RR{\mathbb{R}}
+\DeclareMathOperator{\grad}{grad}
+
+
+\usepackage{fancyhdr} % весёлые колонтитулы
+\pagestyle{fancy}
+\lhead{Math for economists}
+\chead{Good luck!}
+\rhead{2017-12-27}
+\lfoot{Exam duration: 120 min}
+\cfoot{Variant 1}
+\rfoot{\thepage/\pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+
+
+\begin{document}
+
+
+\fbox{
+    \begin{minipage}{42em}
+      Name, group no:\vspace*{3ex}\par
+      \noindent\dotfill\vspace{2mm}
+    \end{minipage}
+  }
+
+1. {[10 points]} Check whether the function $f(x,y)= 4x^4 + y^2+y^4+4x^2+xy$ is concave, convex or neither.
+
+\newpage
+\fbox{
+    \begin{minipage}{42em}
+      Name, group no:\vspace*{3ex}\par
+      \noindent\dotfill\vspace{2mm}
+    \end{minipage}
+  }
+
+2. {[10 points]} Find and classify the local extrema of $f(x,y) = 4 + x^3 + y^3 - 3xy$.
+
+\newpage
+\fbox{
+    \begin{minipage}{42em}
+      Name, group no:\vspace*{3ex}\par
+      \noindent\dotfill\vspace{2mm}
+    \end{minipage}
+  }
+
+3. {[10 points]} Using Lagrange multiplier method find and classify the constrained extrema of $f(x, y, z) =  5x +4y + 8z$ subject to $x^2 + y^2 + z^2 = 1$.
+
+
+% \item Find the local maxima of the function $f(x, y) =  (12 - x) x \sin y + x^2 \sin y \cos y$. Check whether these local maxima are the global ones.
+
+\newpage
+\fbox{
+    \begin{minipage}{42em}
+      Name, group no:\vspace*{3ex}\par
+      \noindent\dotfill\vspace{2mm}
+    \end{minipage}
+  }
+
+4. {[10 points]} Microbe Veniamin lives on the $(x, y)$ plane. Veniamin likes to hop and likes the function $f(x, y) = 5x^2 + 2y^4$. From the point $(x_t, y_t)$ he hops into the point
+\[
+(x_{t+1},y_{t+1})=(x_t, y_t) - 0.001\cdot \grad f(x_t, y_t)
+\]
+Veniamin starts hopping from the point $(x=1, y =2)$.
+
+\begin{enumerate}
+  \item What are the exact coordinates of Veniamin after one hop?
+  \item Where he may find himself after $10^{2017}$ hops?
+\end{enumerate}
+
+\newpage
+\fbox{
+    \begin{minipage}{42em}
+      Name, group no:\vspace*{3ex}\par
+      \noindent\dotfill\vspace{2mm}
+    \end{minipage}
+  }
+
+5. {[10 points]} Consider the function $p(x_1, x_2) = h(x_1 + x_2 a)$, where $h(t) = \exp(t)/(1+\exp(t))$ and $a$ is a fixed parameter. Find the second order Taylor expansion of $p$ at $(x_1=0, x_2=0)$.
+
+\newpage
+\fbox{
+    \begin{minipage}{42em}
+      Name, group no:\vspace*{3ex}\par
+      \noindent\dotfill\vspace{2mm}
+    \end{minipage}
+  }
+
+6. {[10 points]} Consider the function $f$ defined for $x>0$:
+\[
+f(x) = x + \frac{1}{x + \frac{1}{x + \frac{1}{x + \ldots}}}
+\]
+\begin{enumerate}
+  \item Simplify the expression $f(x) - \frac{1}{f(x)}$;
+  \item Using implicit function theorem find $f'(1)$.
+\end{enumerate}
+
+
+
+
+\newpage
+\fbox{
+    \begin{minipage}{42em}
+      Name, group no:\vspace*{3ex}\par
+      \noindent\dotfill\vspace{2mm}
+    \end{minipage}
+  }
+
+7. Let $f({x_1},\,{x_2})$ be twice continuously differentiable function whose Hessian is negative definite. Consider long-run profit maximization problem
+\[
+f({x_1},\,{x_2}) - {w_1}{x_1} - {w_2}{x_2} \to \max_{x_1, x_2},
+\]
+where ${w_1},\,{w_2} > 0$ are factor prices. The optimal bundle of factors consists of $x_1^L, x_2^L$ which are called demand on factors.
+\begin{enumerate}
+\item {[10 points]} Write down first-order conditions for the problem and check that IFT is applicable here in order to find $x_1^L, x_2^L$.
+\item {[10 points]} Prove that $\frac{{\partial x_1^L}}{{\partial {w_1}}} < 0$.
+\end{enumerate}
+
+\newpage
+\fbox{
+    \begin{minipage}{42em}
+      Name, group no:\vspace*{3ex}\par
+      \noindent\dotfill\vspace{2mm}
+    \end{minipage}
+  }
+
+8. The previous problem is stated in the long-run. In the short-run the quantity of ${x_2}$ is fixed, i.e. ${x_2} = b > 0$. The value function $\pi _L^*({w_1},\,{w_2})$ for long-run problem is called profit function. It is clear that $\pi_L^*({w_1},\,{w_2}) \geqslant \pi _S^*$, where $\pi_S^*({w_1},\,{w_2})$  is the profit function for the new short-run problem
+\[
+f({x_1},\,b) - {w_1}{x_1} - {w_2}b \to \max_{x_1}
+\]
+\begin{enumerate}
+  \item {[10 points]} Let $g({x_1}, {x_2}) \in {C^2}$ be an arbitrary function that takes the minimum value at $({\tilde x_1}, {\tilde x_2})$. Provide the argument justifying that $\frac{{{\partial ^2}g}}{{\partial x_1^2}} \geqslant 0$ at $({\tilde x_1}, {\tilde x_2})$.
+  \item {[5 points]} Let $z = \pi _L^* - \pi _S^*$. Explain why $\frac{{{\partial ^2}z}}{{\partial w_1^2}} \geqslant 0$.
+  \item {[5 points]} Using Envelope Theorem show that $\frac{{\partial x_1^L}}{{\partial {w_1}}} \leqslant \frac{{\partial x_1^S}}{{\partial {w_1}}}$, where $x_1^L$ and $x_1^S$ are factor demands in different periods.
+\end{enumerate}
+
+
+
+
+
+\newpage
+\cfoot{Variant 2}
+\setcounter{page}{1}
+\fbox{
+    \begin{minipage}{42em}
+      Name, group no:\vspace*{3ex}\par
+      \noindent\dotfill\vspace{2mm}
+    \end{minipage}
+  }
+
+1. {[10 points]} Check whether the function $f(x,y)= x^4 + 2y^2+y^4+4x^2+xy$ is concave, convex or neither.
+
+\newpage
+\fbox{
+    \begin{minipage}{42em}
+      Name, group no:\vspace*{3ex}\par
+      \noindent\dotfill\vspace{2mm}
+    \end{minipage}
+  }
+
+2. {[10 points]} Find and classify the local extrema of $f(x,y) = 6 + 2x^3 + 2y^3 - 6xy$.
+
+\newpage
+\fbox{
+    \begin{minipage}{42em}
+      Name, group no:\vspace*{3ex}\par
+      \noindent\dotfill\vspace{2mm}
+    \end{minipage}
+  }
+
+3. {[10 points]} Using Lagrange multiplier method find and classify the constrained extrema of $f(x, y, z) =  7x +2y + 9z$ subject to $x^2 + y^2 + z^2 = 1$.
+
+
+% \item Find the local maxima of the function $f(x, y) =  (12 - x) x \sin y + x^2 \sin y \cos y$. Check whether these local maxima are the global ones.
+
+\newpage
+\fbox{
+    \begin{minipage}{42em}
+      Name, group no:\vspace*{3ex}\par
+      \noindent\dotfill\vspace{2mm}
+    \end{minipage}
+  }
+
+4. {[10 points]} Microbe Veniamin lives on the $(x, y)$ plane. Veniamin likes to hop and likes the function $f(x, y) = 2x^2 + 3y^4$. From the point $(x_t, y_t)$ he hops into the point
+\[
+(x_{t+1},y_{t+1})=(x_t, y_t) - 0.001\cdot \grad f(x_t, y_t)
+\]
+Veniamin starts hopping from the point $(x=1, y =2)$.
+
+\begin{enumerate}
+  \item What are the exact coordinates of Veniamin after one hop?
+  \item Where he may find himself after $10^{2017}$ hops?
+\end{enumerate}
+
+\newpage
+\fbox{
+    \begin{minipage}{42em}
+      Name, group no:\vspace*{3ex}\par
+      \noindent\dotfill\vspace{2mm}
+    \end{minipage}
+  }
+
+5. {[10 points]} Consider the function $p(x_1, x_2) = h(x_1 + x_2 a)$, where $h(t) = \exp(t)/(1+\exp(t))$ and $a$ is a fixed parameter. Find the second order Taylor expansion of $p$ at $(x_1=0, x_2=0)$.
+
+\newpage
+\fbox{
+    \begin{minipage}{42em}
+      Name, group no:\vspace*{3ex}\par
+      \noindent\dotfill\vspace{2mm}
+    \end{minipage}
+  }
+6. {[10 points]} Consider the function $f$ defined for $x>0$:
+\[
+f(x) = x + \frac{1}{x + \frac{1}{x + \frac{1}{x + \ldots}}}
+\]
+\begin{enumerate}
+  \item Simplify the expression $f(x) - \frac{1}{f(x)}$;
+  \item Using implicit function theorem find $f'(2)$.
+\end{enumerate}
+
+
+
+\newpage
+\fbox{
+    \begin{minipage}{42em}
+      Name, group no:\vspace*{3ex}\par
+      \noindent\dotfill\vspace{2mm}
+    \end{minipage}
+  }
+
+7. Let $f({x_1},\,{x_2})$ be twice continuously differentiable function whose Hessian is negative definite. Consider long-run profit maximization problem
+\[
+f({x_1},\,{x_2}) - {w_1}{x_1} - {w_2}{x_2} \to \max_{x_1, x_2},
+\]
+where ${w_1},\,{w_2} > 0$ are factor prices. The optimal bundle of factors consists of $x_1^L, x_2^L$ which are called demand on factors.
+\begin{enumerate}
+\item {[10 points]} Write down first-order conditions for the problem and check that IFT is applicable here in order to find $x_1^L, x_2^L$.
+\item {[10 points]} Prove that $\frac{{\partial x_1^L}}{{\partial {w_1}}} < 0$.
+\end{enumerate}
+
+\newpage
+\fbox{
+    \begin{minipage}{42em}
+      Name, group no:\vspace*{3ex}\par
+      \noindent\dotfill\vspace{2mm}
+    \end{minipage}
+  }
+
+8. The previous problem is stated in the long-run. In the short-run the quantity of ${x_2}$ is fixed, i.e. ${x_2} = b > 0$. The value function $\pi _L^*({w_1},\,{w_2})$ for long-run problem is called profit function. It is clear that $\pi_L^*({w_1},\,{w_2}) \geqslant \pi _S^*$, where $\pi_S^*({w_1},\,{w_2})$  is the profit function for the new short-run problem
+\[
+f({x_1},\,b) - {w_1}{x_1} - {w_2}b \to \max_{x_1}
+\]
+\begin{enumerate}
+  \item {[10 points]} Let $g({x_1}, {x_2}) \in {C^2}$ be an arbitrary function that takes the minimum value at $({\tilde x_1}, {\tilde x_2})$. Provide the argument justifying that $\frac{{{\partial ^2}g}}{{\partial x_1^2}} \geqslant 0$ at $({\tilde x_1}, {\tilde x_2})$.
+  \item {[5 points]} Let $z = \pi _L^* - \pi _S^*$. Explain why $\frac{{{\partial ^2}z}}{{\partial w_1^2}} \geqslant 0$.
+  \item {[5 points]} Using Envelope Theorem show that $\frac{{\partial x_1^L}}{{\partial {w_1}}} \leqslant \frac{{\partial x_1^S}}{{\partial {w_1}}}$, where $x_1^L$ and $x_1^S$ are factor demands in different periods.
+\end{enumerate}
+
+
+
+
+
+
+
+\newpage
+\cfoot{Variant 3}
+\setcounter{page}{1}
+\fbox{
+    \begin{minipage}{42em}
+      Name, group no:\vspace*{3ex}\par
+      \noindent\dotfill\vspace{2mm}
+    \end{minipage}
+  }
+
+
+1. {[10 points]} Check whether the function $f(x,y)= 4x^4 + 3y^2+y^4+4x^2+xy$ is concave, convex or neither.
+
+\newpage
+\fbox{
+    \begin{minipage}{42em}
+      Name, group no:\vspace*{3ex}\par
+      \noindent\dotfill\vspace{2mm}
+    \end{minipage}
+  }
+
+2. {[10 points]} Find and classify the local extrema of $f(x,y) = -2 + 3x^3 + 3y^3 - 9xy$.
+
+\newpage
+\fbox{
+    \begin{minipage}{42em}
+      Name, group no:\vspace*{3ex}\par
+      \noindent\dotfill\vspace{2mm}
+    \end{minipage}
+  }
+
+3. {[10 points]} Using Lagrange multiplier method find and classify the constrained extrema of $f(x, y, z) =  2x +7y + 5z$ subject to $x^2 + y^2 + z^2 = 1$.
+
+
+% \item Find the local maxima of the function $f(x, y) =  (12 - x) x \sin y + x^2 \sin y \cos y$. Check whether these local maxima are the global ones.
+
+
+\newpage
+\fbox{
+    \begin{minipage}{42em}
+      Name, group no:\vspace*{3ex}\par
+      \noindent\dotfill\vspace{2mm}
+    \end{minipage}
+  }
+
+4. {[10 points]} Microbe Veniamin lives on the $(x, y)$ plane. Veniamin likes to hop and likes the function $f(x, y) = 6x^2 + 2y^4$. From the point $(x_t, y_t)$ he hops into the point
+\[
+(x_{t+1},y_{t+1})=(x_t, y_t) - 0.001\cdot \grad f(x_t, y_t)
+\]
+Veniamin starts hopping from the point $(x=1, y =2)$.
+
+\begin{enumerate}
+  \item What are the exact coordinates of Veniamin after one hop?
+  \item Where he may find himself after $10^{2017}$ hops?
+\end{enumerate}
+
+
+\newpage
+\fbox{
+    \begin{minipage}{42em}
+      Name, group no:\vspace*{3ex}\par
+      \noindent\dotfill\vspace{2mm}
+    \end{minipage}
+  }
+
+5. {[10 points]} Consider the function $p(x_1, x_2) = h(x_1 + x_2 a)$, where $h(t) = \exp(t)/(1+\exp(t))$ and $a$ is a fixed parameter. Find the second order Taylor expansion of $p$ at $(x_1=0, x_2=0)$.
+
+\newpage
+\fbox{
+    \begin{minipage}{42em}
+      Name, group no:\vspace*{3ex}\par
+      \noindent\dotfill\vspace{2mm}
+    \end{minipage}
+  }
+
+6. {[10 points]} Consider the function $f$ defined for $x>0$:
+\[
+f(x) = x + \frac{1}{x + \frac{1}{x + \frac{1}{x + \ldots}}}
+\]
+\begin{enumerate}
+  \item Simplify the expression $f(x) - \frac{1}{f(x)}$;
+  \item Using implicit function theorem find $f'(3)$.
+\end{enumerate}
+
+
+
+\newpage
+\fbox{
+    \begin{minipage}{42em}
+      Name, group no:\vspace*{3ex}\par
+      \noindent\dotfill\vspace{2mm}
+    \end{minipage}
+  }
+
+7. Let $f({x_1},\,{x_2})$ be twice continuously differentiable function whose Hessian is negative definite. Consider long-run profit maximization problem
+\[
+f({x_1},\,{x_2}) - {w_1}{x_1} - {w_2}{x_2} \to \max_{x_1, x_2},
+\]
+where ${w_1},\,{w_2} > 0$ are factor prices. The optimal bundle of factors consists of $x_1^L, x_2^L$ which are called demand on factors.
+\begin{enumerate}
+\item {[10 points]} Write down first-order conditions for the problem and check that IFT is applicable here in order to find $x_1^L, x_2^L$.
+\item {[10 points]} Prove that $\frac{{\partial x_1^L}}{{\partial {w_1}}} < 0$.
+\end{enumerate}
+
+\newpage
+\fbox{
+    \begin{minipage}{42em}
+      Name, group no:\vspace*{3ex}\par
+      \noindent\dotfill\vspace{2mm}
+    \end{minipage}
+  }
+
+8. The previous problem is stated in the long-run. In the short-run the quantity of ${x_2}$ is fixed, i.e. ${x_2} = b > 0$. The value function $\pi _L^*({w_1},\,{w_2})$ for long-run problem is called profit function. It is clear that $\pi_L^*({w_1},\,{w_2}) \geqslant \pi _S^*$, where $\pi_S^*({w_1},\,{w_2})$  is the profit function for the new short-run problem
+\[
+f({x_1},\,b) - {w_1}{x_1} - {w_2}b \to \max_{x_1}
+\]
+\begin{enumerate}
+  \item {[10 points]} Let $g({x_1}, {x_2}) \in {C^2}$ be an arbitrary function that takes the minimum value at $({\tilde x_1}, {\tilde x_2})$. Provide the argument justifying that $\frac{{{\partial ^2}g}}{{\partial x_1^2}} \geqslant 0$ at $({\tilde x_1}, {\tilde x_2})$.
+  \item {[5 points]} Let $z = \pi _L^* - \pi _S^*$. Explain why $\frac{{{\partial ^2}z}}{{\partial w_1^2}} \geqslant 0$.
+  \item {[5 points]} Using Envelope Theorem show that $\frac{{\partial x_1^L}}{{\partial {w_1}}} \leqslant \frac{{\partial x_1^S}}{{\partial {w_1}}}$, where $x_1^L$ and $x_1^S$ are factor demands in different periods.
+\end{enumerate}
+
+
+
+
+
+
+
+\newpage
+\cfoot{Variant 4}
+\setcounter{page}{1}
+\fbox{
+    \begin{minipage}{42em}
+      Name, group no:\vspace*{3ex}\par
+      \noindent\dotfill\vspace{2mm}
+    \end{minipage}
+  }
+
+1. {[10 points]} Check whether the function $f(x,y)= 4x^4 + 4y^2+y^4+4x^2+xy$ is concave, convex or neither.
+
+\newpage
+\fbox{
+    \begin{minipage}{42em}
+      Name, group no:\vspace*{3ex}\par
+      \noindent\dotfill\vspace{2mm}
+    \end{minipage}
+  }
+
+2. {[10 points]} Find and classify the local extrema of $f(x,y) = 3 + 2x^3 + 2y^3 - 6xy$.
+
+\newpage
+\fbox{
+    \begin{minipage}{42em}
+      Name, group no:\vspace*{3ex}\par
+      \noindent\dotfill\vspace{2mm}
+    \end{minipage}
+  }
+
+3. {[10 points]} Using Lagrange multiplier method find and classify the constrained extrema of $f(x, y, z) =  3x +8y + 5z$ subject to $x^2 + y^2 + z^2 = 1$.
+
+
+% \item Find the local maxima of the function $f(x, y) =  (12 - x) x \sin y + x^2 \sin y \cos y$. Check whether these local maxima are the global ones.
+
+
+\newpage
+\fbox{
+    \begin{minipage}{42em}
+      Name, group no:\vspace*{3ex}\par
+      \noindent\dotfill\vspace{2mm}
+    \end{minipage}
+  }
+
+4. {[10 points]} Microbe Veniamin lives on the $(x, y)$ plane. Veniamin likes to hop and likes the function $f(x, y) = 2x^2 + 3y^4$. From the point $(x_t, y_t)$ he hops into the point
+\[
+(x_{t+1},y_{t+1})=(x_t, y_t) - 0.001\cdot \grad f(x_t, y_t)
+\]
+Veniamin starts hopping from the point $(x=1, y =2)$.
+
+\begin{enumerate}
+  \item What are the exact coordinates of Veniamin after one hop?
+  \item Where he may find himself after $10^{2017}$ hops?
+\end{enumerate}
+
+
+\newpage
+\fbox{
+    \begin{minipage}{42em}
+      Name, group no:\vspace*{3ex}\par
+      \noindent\dotfill\vspace{2mm}
+    \end{minipage}
+  }
+
+5. {[10 points]} Consider the function $p(x_1, x_2) = h(x_1 + x_2 a)$, where $h(t) = \exp(t)/(1+\exp(t))$ and $a$ is a fixed parameter. Find the second order Taylor expansion of $p$ at $(x_1=0, x_2=0)$.
+
+\newpage
+\fbox{
+    \begin{minipage}{42em}
+      Name, group no:\vspace*{3ex}\par
+      \noindent\dotfill\vspace{2mm}
+    \end{minipage}
+  }
+
+6. {[10 points]} Consider the function $f$ defined for $x>0$:
+\[
+f(x) = x + \frac{1}{x + \frac{1}{x + \frac{1}{x + \ldots}}}
+\]
+\begin{enumerate}
+  \item Simplify the expression $f(x) - \frac{1}{f(x)}$;
+  \item Using implicit function theorem find $f'(4)$.
+\end{enumerate}
+
+
+
+
+
+\newpage
+\fbox{
+    \begin{minipage}{42em}
+      Name, group no:\vspace*{3ex}\par
+      \noindent\dotfill\vspace{2mm}
+    \end{minipage}
+  }
+
+7.  Let $f({x_1},\,{x_2})$ be twice continuously differentiable function whose Hessian is negative definite. Consider long-run profit maximization problem
+\[
+f({x_1},\,{x_2}) - {w_1}{x_1} - {w_2}{x_2} \to \max_{x_1, x_2},
+\]
+where ${w_1},\,{w_2} > 0$ are factor prices. The optimal bundle of factors consists of $x_1^L, x_2^L$ which are called demand on factors.
+\begin{enumerate}
+\item {[10 points]} Write down first-order conditions for the problem and check that IFT is applicable here in order to find $x_1^L, x_2^L$.
+\item {[10 points]} Prove that $\frac{{\partial x_1^L}}{{\partial {w_1}}} < 0$.
+\end{enumerate}
+
+\newpage
+\fbox{
+    \begin{minipage}{42em}
+      Name, group no:\vspace*{3ex}\par
+      \noindent\dotfill\vspace{2mm}
+    \end{minipage}
+  }
+
+8. The previous problem is stated in the long-run. In the short-run the quantity of ${x_2}$ is fixed, i.e. ${x_2} = b > 0$. The value function $\pi _L^*({w_1},\,{w_2})$ for long-run problem is called profit function. It is clear that $\pi_L^*({w_1},\,{w_2}) \geqslant \pi _S^*$, where $\pi_S^*({w_1},\,{w_2})$  is the profit function for the new short-run problem
+\[
+f({x_1},\,b) - {w_1}{x_1} - {w_2}b \to \max_{x_1}
+\]
+\begin{enumerate}
+  \item {[10 points]} Let $g({x_1}, {x_2}) \in {C^2}$ be an arbitrary function that takes the minimum value at $({\tilde x_1}, {\tilde x_2})$. Provide the argument justifying that $\frac{{{\partial ^2}g}}{{\partial x_1^2}} \geqslant 0$ at $({\tilde x_1}, {\tilde x_2})$.
+  \item {[5 points]} Let $z = \pi _L^* - \pi _S^*$. Explain why $\frac{{{\partial ^2}z}}{{\partial w_1^2}} \geqslant 0$.
+  \item {[5 points]} Using Envelope Theorem show that $\frac{{\partial x_1^L}}{{\partial {w_1}}} \leqslant \frac{{\partial x_1^S}}{{\partial {w_1}}}$, where $x_1^L$ and $x_1^S$ are factor demands in different periods.
+\end{enumerate}
+
+
+
+\end{document}

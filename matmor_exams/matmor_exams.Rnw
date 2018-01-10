@@ -4133,13 +4133,14 @@ f({x_1},\,b) - {w_1}{x_1} - {w_2}b \to \max_{x_1}
 \subsection{Midterm marking}
 
 \begin{enumerate}
-  \item 10 points
-  \item 10 points
+  \item First derivatives - 2 points, Hessian matrix - 4 points, Hessian is positive definite - 2 points, Conclusion that the function is convex - 2 points
+  \item FOC - 2 points, Solution of FOC - 2 points, Hessian matrix - 2 points, Classification of critical point - 4 points: 2 points for each
+
   \item NDCQ - 1 point,  Lagrangean - 1 point, FOC - 2 points, Solution of FOC - 2 points, SOC - 4 points: 2 points for each extremum
 \item
 Gradient - 2 points, Correct second step for $x$ - 2 points, Correct second step for $y$ - 2 points, Correct answer for coordinate $x$ with explanation - 2 points, Correct answer for coordinate $y$ with explanation - 2 points
-\item general formula for second order Taylow expansion — 2 points, value at the initial point — 1 point, first order derivatives — 3 points, second order derivatives — 4 points.
-\item point a — 2 points, $f'$ expressed using $f$ — 5 points, exact value of $f$ — 3 points.
+\item general formula for second order Taylor expansion — 2 points, value at the initial point — 1 point, first order derivatives — 3 points, second order derivatives — 4 points.
+\item point a — 2 points, $f'$ expressed in terms of $f$ — 5 points, exact value of $f$ — 3 points.
 \item
 а) FOC – 4 points; 1-st and 2-nd IFT conditions – 2 points; 3-d IFT conditions – 4 points;
 b) correct formula for derivative - 5 points

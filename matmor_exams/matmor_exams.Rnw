@@ -4153,21 +4153,21 @@ c) only Envelope theorem – 3 points
 \subsection{Midterm retake}
 
 \begin{enumerate}
-  \item  Find the local maxima and minima of the function $f(x,y)=x^4+2y^4-xy$. 
-  \item 
+  \item  Find the local maxima and minima of the function $f(x,y)=x^4+2y^4-xy$.
+  \item
 Find all critical points of the function $z=z(x,y)$ implicitly defined by the equation
 \begin{equation}
 x^2+y^2+z^2-xz-yz+x+y+4z+1=0
 \end{equation}
-\item 
+\item
 Using Lagrange multiplier method find and classify the constrained extrema of $f(x, y, z) =  5x +4y + 8z$ subject to $x^2 + y^2 + z^2 = 1$.
-\item 
+\item
   For the function $f(x,y)=2xy+3$ find the level curve and the equation for its tangent at the point $(1,2)$.
-\item 
+\item
 Use the chain rule to find $f'(x)$ and $f''(x)$ for $f(x)=u(a,b,x)$ where $a=\sin(x)$ and $b=x^3$.
-\item 
+\item
 Consider the function $f(x,y)=x^2+y^3-xy+3y$ at the point $(2;1)$. Find all the directions in which the  growth rate of the function constitutes $80\%$ of the maximal possible growth rate at that point.
-\item Consider an expenditure minimization problem for the agent whose utility function is $u({{x}_{1}},\ {{x}_{2}})=\sqrt{{{x}_{1}}{{x}_{2}}}$. Let $\bar{u}$ be a prescribed level of utility. Then find solution to the problem 
+\item Consider an expenditure minimization problem for the agent whose utility function is $u({{x}_{1}},\ {{x}_{2}})=\sqrt{{{x}_{1}}{{x}_{2}}}$. Let $\bar{u}$ be a prescribed level of utility. Then find solution to the problem
 \[
   \begin{cases}
     {{p}_{1}}{{x}_{1}}+{{p}_{2}}{{x}_{2}}\to \min   \\
@@ -4176,7 +4176,7 @@ Consider the function $f(x,y)=x^2+y^3-xy+3y$ at the point $(2;1)$. Find all the 
 \]
 
 where ${x}_{1},\ {{x}_{2}}\ge 0$. Let $e={{p}_{1}}{{\tilde{x}}_{1}}+{{p}_{2}}{{\tilde{x}}_{2}}$ be the expenditure function, ${{\tilde{x}}_{1}}$ and ${{\tilde{x}}_{2}}$ being the solutions of the minimization problem. By using the appropriate envelope theorem find $\frac{\partial e}{\partial {{p}_{1}}}$ and $\frac{\partial e}{\partial {{p}_{2}}}$.
-\item 
+\item
  For what values of $p$, $q$ is the function $f(x,y)={{x}^{p}}+{{y}^{q}}$ convex or concave. Consider only $x>0$, $y>0$.
 \end{enumerate}
 
@@ -4184,12 +4184,12 @@ where ${x}_{1},\ {{x}_{2}}\ge 0$. Let $e={{p}_{1}}{{\tilde{x}}_{1}}+{{p}_{2}}{{\
 \begin{enumerate}
   \item formulate FOC = 2 pts, solve FOC = 4 pts, SOC = 4 pts;
   \item system of 3 equations and one inequality = 5 pts; solution = 5 pts; Frequent incomplete solution: only two equations (with argument) = 3 pts;
-  \item NDCQ =  1 pt; Lagrangian function = 1 pt; formulate FOC = 2 pts; solve FOC = 3 pts; SOC = 3 pts;  
+  \item NDCQ =  1 pt; Lagrangian function = 1 pt; formulate FOC = 2 pts; solve FOC = 3 pts; SOC = 3 pts;
   \item level curve = 5 pts; tangent line = 5 pts;
   \item first derivative = 4 pts; second derivative = 6 pts;
   \item grad = 2 pts; maximum growth speed = 1 pt; equation for direction = 2 pt; solution = 5 pts;
   \item NDCQ = 2 pts; formulate FOC = 2 pts; solve FOC = 6 pts; envelope theorem = 4 pts;
-  \item Hesse matrix = 4 pts, convexity = 8 pts, concavity = 8 pts. 
+  \item Hesse matrix = 4 pts, convexity = 8 pts, concavity = 8 pts.
 \end{enumerate}
 
 
@@ -4220,23 +4220,23 @@ x_1 \geq 0, x_2 \geq 0, x_3 \geq 0 \\
 \end{cases}.
 \]
 
-\item Expand the function $f(x) = \exp(1 - \cos^2 (\ln(1 + 2x)))$ as a power series in terms up to $x^5$. 
+\item Expand the function $f(x) = \exp(1 - \cos^2 (\ln(1 + 2x)))$ as a power series in terms up to $x^5$.
   State the range for which your expansion is valid.
-  
+
 \item Sketch the set $\Re(z\cdot (1+i))+z\bar z =0$ on the complex plane.
 
 \item A firm with the production function $y=x_1x_2+x_1+x_2$ employs factors $x_1$, $x_2 \geq 0$.
 	  \begin{enumerate}[label=\alph*)]
-	    \item {[15 points]} Minimize the function $100x_1+x_2$  subject to constraint  $x_1x_2+x_1+x_2 \geq y$, where  $y\geq 0$ is the output. 
+	    \item {[15 points]} Minimize the function $100x_1+x_2$  subject to constraint  $x_1x_2+x_1+x_2 \geq y$, where  $y\geq 0$ is the output.
 	      Justify the found optimal bundle(s).
 	    \item {[5 points]} Find the total costs function  $TC(y)$.
 	  \end{enumerate}
-	  
-\item Solve second-order differential equation $xy''-(2x+1)y'+2y=0$ following hints: 
+
+\item Solve second-order differential equation $xy''-(2x+1)y'+2y=0$ following hints:
 	\begin{enumerate}[label=\alph*)]
-	    \item {[5 points]} Find a particular solution by substituting for $y(x)$ a polynomial $\tilde y(x)$ with 
+	    \item {[5 points]} Find a particular solution by substituting for $y(x)$ a polynomial $\tilde y(x)$ with
 	      the undetermined coefficients starting with the smallest degree possible.
-	    \item {[15 points]} Let $\tilde y(x)$  be the solution found in a),  introduce new function $z(x)=y(x)/\tilde y(x)$. 
+	    \item {[15 points]} Let $\tilde y(x)$  be the solution found in a),  introduce new function $z(x)=y(x)/\tilde y(x)$.
 	      Derive equation for $z$ and solve it. Then find $y$.
 	  \end{enumerate}
 
@@ -4260,12 +4260,12 @@ Solution of dual $y = (0.25, 0.25)$, original $x = (13/16, 21/16, 0)$
 \item 10 points
 \item 10 points
 
-\item 
+\item
 a. NDCQ - 2 points, Lagrangian - 2 points, FOC - 4 ponts, Solutions  - 6 points (2 points each), 1 point for describing dependence on the y-value
 
 b. 2 points for each of the functions, 1 point for describing dependence on the y-value
 
-\item 
+\item
 a. Correct form of polynomial and its derivative - 2 points, plugging into initial equation and simplification - 2 points, result - 1 point
 
 b. The first derivative of y in terms of z and x - 2 points, he second derivative of y in terms of z and x - 2 points, differential equation with z' and z" - 2 points, substitution u=z' and the first order differential equation with u - 2 points, correct partial fractions and correct integral for u - 4 points, correct integral for z and final expression for y - 3 points.
@@ -4274,12 +4274,21 @@ b. The first derivative of y in terms of z and x - 2 points, he second derivativ
 \end{enumerate}
 
 
+
+
+
+
+
+\input{chapters/2018_2019.tex}
+
+
+
 \section{I wish for more problems\ldots}
 
 Here we present more problems for practice.
 
 \begin{enumerate}
-\item A production function $y=f(x_1,x_2)$ exhibits constant returns to scale, that is $f(tx_1,tx_2)=tf(x_1,x_2)$ for every $t>0$, where $x_1, x_2 \geq 0$.
+\item A production function $y=f(x_1, x_2)$ exhibits constant returns to scale, that is $f(tx_1,tx_2)=tf(x_1,x_2)$ for every $t>0$, where $x_1, x_2 \geq 0$.
 \begin{enumerate}
 \item Let $f_1(x_1,x_2)=\frac{\partial f}{\partial x_1}$ and $f_2(x_1,x_2)=\frac{\partial f}{\partial x_2}$. Using the chain rule show that both partial derivatives of $f$ have the property $f_i(tx_1,tx_2)=f_i(x_1,x_2)$ for $i=1,2$.
 \item Let $MRTS=f_1/f_2$. Show that its value remains the same along a straight line $x_2=\lambda x_1$, where $\lambda$ is a given positive number and $x_1, x_2>0$.

@@ -1,9 +1,11 @@
-/matmor_exams.aux
-/matmor_exams.log
-/matmor_exams.out
-/matmor_exams.pyg
-/matmor_exams.synctex.gz
-/matmor_exams.toc
+*.aux
+*.log
+*.out
+*.pyg
+*.synctex.gz
+*.toc
+*.fdb_latexmk
+*.fls
 /NA
 /cache/
 /matmor_exams.tex

@@ -3008,10 +3008,10 @@ where $x_0=y_0=0$.
 
 \end{enumerate}
 
-\begin{figure}[hbtp]
-\centering
-\includegraphics[scale=1]{math-jokes-5.png}
-\end{figure}
+%\begin{figure}[hbtp]
+%\centering
+%\includegraphics[scale=1]{math-jokes-5.png}
+%\end{figure}
 
 
 
@@ -4277,7 +4277,7 @@ b. The first derivative of y in terms of z and x - 2 points, he second derivativ
 
 
 
-
+\section{2018-2019}
 
 \input{chapters/2018_2019.tex}
 

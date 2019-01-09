@@ -84,11 +84,14 @@ Correct calculations (4).
   (b) For each value of $\alpha$ find the definiteness of Hesse matrix.\\
 
   \textbf{Solution.}
-   $$(a)\; \begin{pmatrix}
+  (a)\;
+  \[
+  \begin{pmatrix}
   2& 2 &0\\
   2 &20& 0\\
   0& 0& 2\alpha
-  \end{pmatrix}$$
+  \end{pmatrix}
+  \]
 
   (b) $\Delta_1=2>0$, $\Delta_2=40-4=36>0$, $\Delta_3=72\alpha$.\\
   1. If $\alpha >0$ then all corner principal minors are greater than 0. According to Silvester criterion the Hesse matrix is positive definite.
@@ -130,8 +133,9 @@ Correct calculations (4).
 
   \textbf{Solution+Marking scheme}
 
-  $\displaystyle
-  u'=\frac{\partial f}{\partial a}\underbrace{\frac{\partial \alpha}{\partial q}}_{1 pt}\underbrace{(-2x)}_{1 pt}+\frac{\partial f}{\partial a}\underbrace{\frac{\partial \alpha}{\partial r}}_{1 pt}\underbrace{3x^2}_{1 pt}+\frac{\partial f}{\partial b}\underbrace{\frac{\partial \beta}{\partial x}}_{1 pt}+\frac{\partial f}{\partial c}\underbrace{\frac{\partial \gamma}{\partial x}}_{1 pt}+\frac{\partial f}{\partial c}\underbrace{\frac{\partial\gamma}{\partial q}}_{1 pt}\underbrace{(-2x)}_{1 pt}$
+  \[
+  u'=\frac{\partial f}{\partial a}\underbrace{\frac{\partial \alpha}{\partial q}}_{1 pt}\underbrace{(-2x)}_{1 pt}+\frac{\partial f}{\partial a}\underbrace{\frac{\partial \alpha}{\partial r}}_{1 pt}\underbrace{3x^2}_{1 pt}+\frac{\partial f}{\partial b}\underbrace{\frac{\partial \beta}{\partial x}}_{1 pt}+\frac{\partial f}{\partial c}\underbrace{\frac{\partial \gamma}{\partial x}}_{1 pt}+\frac{\partial f}{\partial c}\underbrace{\frac{\partial\gamma}{\partial q}}_{1 pt}\underbrace{(-2x)}_{1 pt}
+  \]
 
   + 2 pts for the correct form of the answer
 
@@ -172,5 +176,78 @@ Correct calculations (4).
     hard inequality = 5 pts (1 pt for statement and 4 pts for proof).
     \item 3 pts.
   \end{enumerate}
+
+\end{enumerate}
+
+
+
+\subsection{Midterm, 2018-12-27}
+
+\begin{enumerate}
+  \item (10 points) Find the limit or prove that it does not exist
+  \[
+  \lim_{x,y \to 0} \frac{1 - \cos(x+2y)}{\sin(xy)}
+  \]
+
+  \item (10 points) Using Lagrange multipliers find the extrema of the function $f(x,y) = x^2 + 4xy + y^2$ subject to $x^2 + 2y^2 = 16$.
+
+ \item (10 points) Consider the function $u(x,y) = x^2 - 4xy + ay^2 -\ln(xy)$ for $x>0$ and $y>0$.
+ For which values of $a$ the function $u$ is convex?
+
+ \item (10 points) Find the second order Taylor approximation of a function $f(x,y) = x^5y^3 + 3x^2y$ at a point $x=1$, $y=2$.
+
+  \item (10 points) Use Lagrange multipliers to find the height and radius of a cylinder
+  with the maximal volume among those with a surface $S=10\pi$. Make sure you check the second order
+condition for maximisation.
+
+  \item (10 points) Let $h(x, y) = kx^2 + 6xy + 14y^2 + 4y + 10$.
+  \begin{enumerate}
+    \item Find the minimal value of the function $h$ for $k=2$.
+    \item Using envelope theorem find approximate minimal value of $h$ for $k=1.98$.
+  \end{enumerate}
+
+
+\item This is a road construction costs minimization problem. Let the terrain profile be represented by the function $y(t)=\begin{cases}
+3-3|t|, \text{ if } |t|\leq 1\\
+0, \text{ otherwise}
+\end{cases}$.
+A road works start from the east of this hill (on the negative half-axis). Excavation costs can be found by the formula
+\[
+I(a, b) = \int_{-b/a}^0 (at + b - y(t))^2 \, dt
+\]
+where $at+b$  is the road profile we need to find with the constants $a>0$, $b>0$, and $b/a\geq 1$.
+\begin{enumerate}
+  \item (15 points) Find the Hessian matrix of $I(a,b)$ and check its sign-definitness.
+  \item (5 points) Let $(a^*, b^*)$ be the solution of the first-order conditions for the minimization problem.
+  Justify your choice for the $(a^*, b^*)$ values.
+\end{enumerate}
+
+\item (continuation of problem 7) (20 points)
+
+Allowable grade of the road satisfies constraint $a\leq 1$. Under this constraint solve the problem $I(a, b) \to \min$ with respect to $b$.
+
+\end{enumerate}
+
+
+S
+
+\subsection{Midterm, 2018-12-27, marking}
+
+\begin{enumerate}
+  \item 10 points
+  \item 10 points
+  \item Each derivative 1 point (total 5 points), Hesse matrix – 1
+  point, conditions for positive (semi) definiteness – 1 points, correct answer ($a$ greater than some real number) – 3 points
+ \item  Each derivative and its value 1 point (total 5 points), correct formula for Taylor approximation – 5
+points
+  \item 10 points
+  \item 10 points 
+  \item Many solutions are possible. First solution, without explicit $I(a,b)$. Each derivative $I'_a$, $I'_b$ — 4 points. Second solution, with explicit $I(a,b)$. Function $I(a,b)$ — 4 points, each first derivative — 2 points.
+  Three second derivatives — 1 point each. Hesse matrix — 1 point. Definitness — 3 points.
+
+  Point b. FOC — 2 points, SOC — 3 points.
+  \item FOC for correct $I(a,b)$ — 10 points, SOC for correct $I(a,b)$ — 10 points.
+
+FOC for incorrect $I(a,b)$ — 5 points, SOC for incorrect $I(a,b)$ — 5 points.
 
 \end{enumerate}

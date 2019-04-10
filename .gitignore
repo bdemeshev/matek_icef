@@ -20,6 +20,7 @@ matmor_exams/.Rhistory
 *.fdb_latexmk
 *.fls
 *.doc#
+*-cache.yaml
 
 2013/march_mock/26march_mock.zip
 2013/march_mock/_region_.prv/tmp7160NuS/preview.dsc

@@ -1,0 +1,152 @@
+\documentclass[12pt]{article} % размер шрифта
+
+\usepackage{tikz} % картинки в tikz
+\usepackage{microtype} % свешивание пунктуации
+
+\usepackage{array} % для столбцов фиксированной ширины
+
+\usepackage{url} % для вставки ссылок \url{...}
+
+\usepackage{indentfirst} % отступ в первом параграфе
+
+\usepackage{sectsty} % для центрирования названий частей
+\allsectionsfont{\centering} % приказываем центрировать все sections
+
+\usepackage{amsthm} % теоремы и доказательства
+
+\theoremstyle{definition} % прямой шрифт в условии теорем
+\newtheorem{theorem}{Теорема}[section]
+
+
+\usepackage{amsmath, amssymb} % куча стандартных математических плюшек
+
+\usepackage[top=2cm, left=1.5cm, right=1.5cm, bottom=2cm]{geometry} % размер текста на странице
+
+\usepackage{lastpage} % чтобы узнать номер последней страницы
+
+\usepackage{enumitem} % дополнительные плюшки для списков
+%  например \begin{enumerate}[resume] позволяет продолжить нумерацию в новом списке
+\usepackage{caption} % подписи к картинкам без плавающего окружения figure
+
+
+\usepackage{fancyhdr} % весёлые колонтитулы
+\pagestyle{fancy}
+\lhead{Math for economists}
+\chead{Fall retake}
+\rhead{2019-01-22, ICEF}
+\lfoot{Variant $\mu$}
+\cfoot{Good luck!}
+\rfoot{Total time: 120 min}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+
+
+\usepackage{todonotes} % для вставки в документ заметок о том, что осталось сделать
+% \todo{Здесь надо коэффициенты исправить}
+% \missingfigure{Здесь будет картина Последний день Помпеи}
+% команда \listoftodos — печатает все поставленные \todo'шки
+
+\usepackage{booktabs} % красивые таблицы
+% заповеди из документации:
+% 1. Не используйте вертикальные линии
+% 2. Не используйте двойные линии
+% 3. Единицы измерения помещайте в шапку таблицы
+% 4. Не сокращайте .1 вместо 0.1
+% 5. Повторяющееся значение повторяйте, а не говорите "то же"
+
+\usepackage{fontspec} % поддержка разных шрифтов
+\usepackage{polyglossia} % поддержка разных языков
+
+\setmainlanguage{english}
+\setotherlanguages{russian}
+
+\setmainfont{Linux Libertine O} % выбираем шрифт
+% если Linux Libertine не установлен, то
+% можно также попробовать Helvetica, Arial, Cambria и т.Д.
+
+% чтобы использовать шрифт Linux Libertine на личном компе,
+% его надо предварительно скачать по ссылке
+% http://www.linuxlibertine.org/index.php?id=91&L=1
+
+% на сервисах типа sharelatex.com этот шрифт есть :)
+
+\newfontfamily{\cyrillicfonttt}{Linux Libertine O}
+% пояснение зачем нужно шаманство с \newfontfamily
+% http://tex.stackexchange.com/questions/91507/
+
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ} % для списков с русскими буквами
+%\setlist[enumerate, 2]{label=\asbuk\cdot),ref=\asbuk\cdot} % списки уровня 2 будут буквами а) б) ...
+
+%% эконометрические и вероятностные сокращения
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\Corr}{Corr}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\E}{E}
+\DeclareMathOperator{\grad}{grad}
+\def \hb{\hat{\beta}}
+\def \hs{\hat{\sigma}}
+\def \htheta{\hat{\theta}}
+\def \s{\sigma}
+\def \hy{\hat{y}}
+\def \hY{\hat{Y}}
+\def \v1{\vec{1}}
+\def \e{\varepsilon}
+\def \he{\hat{\e}}
+\def \z{z}
+\def \hVar{\widehat{\Var}}
+\def \hCorr{\widehat{\Corr}}
+\def \hCov{\widehat{\Cov}}
+\def \cN{\mathcal{N}}
+
+\def \putyourname{\fbox{
+    \begin{minipage}{42em}
+      Name, group no:\vspace*{3ex}\par
+      \noindent\dotfill\vspace{2mm}
+    \end{minipage}
+  }
+}
+
+
+
+\begin{document}
+
+\begin{enumerate}
+\item (10 points) Find the gradient of $f(x,y) =\frac{x^2y}{\sqrt{x^2+y^2}}$
+at the point $M(1,3)$. Compute the derivative of $f$ at $M$ in direction of the vector $\{-1, 1\}$.
+
+\item Find all stationary points of $f(x,y) = x^4 + y^4-4xy + 1$. Classify them as local minimum, maximum or saddle point.
+
+\item (10 points) Consider the function $u(x,y) = x^2 - 4xy + ay^2 -\ln(xy)$ for $x>0$ and $y>0$.
+ For which values of $a$ the function $u$ is convex?
+
+\item (10 points) Find the second order Taylor approximation of a function $f(x,y) = x^5y^3 + 3x^2y$ at a point $x=1$, $y=-1$.
+
+\item (10 points) Use Lagrange multipliers to find the height and radius of a cylinder
+  with the maximal volume among those with a surface $S=20\pi$. Make sure you check the second order
+condition for maximisation.
+
+\item (10 points) Let $h(x, y) = kx^2 + 6xy + 14y^2 + 4y + 10$.
+  \begin{enumerate}
+    \item Find the minimal value of the function $h$ for $k=3$.
+    \item Using envelope theorem find approximate minimal value of $h$ for $k=2.98$.
+  \end{enumerate}
+
+\item We wish to build a picnic zone for the travellers along a highway. The picnic zone should be rectangular with an area of 1000 m$^2$ and should have a fence on the three sides not adjacent to the highway. The price of one meter of fence is equal to \$ 20.
+\begin{enumerate}
+\item Find the dimensions of the picnic area that minimize the fencing costs.
+\item Using hessian or otherwise check that you have found the costs-minimizing solution.
+\item Using the Envelope theorem estimate the change in the costs if we increase the area of the picnic zone by 1 m$^2$.
+\end{enumerate}
+
+\item A monopolistic firm with the cost function $TC(Q)=30+15Q+Q^2$ sells a single product in two separate markets. The demand functions for these markets are given by $Q_1=25-P_1$, $Q_2=29-P_2$.
+\begin{enumerate}
+\item Find the optimal quantities $Q_1$, $Q_2$ to be supplied to the respective markets in order to maximize the profit. Using hessian or otherwise check the second order condition.
+\item Calculate the point elasticity of demand for each of the three markets. Is it true that the optimal price is negatively related to the absolute value of elasticity at the optimal levels of output?
+\item Using the Envelope theorem estimate the change in the optimal profit if the demand on the second market changes to $Q_2=29.2-1.1P_2$.
+\end{enumerate}
+
+\end{enumerate}
+
+
+\end{document}

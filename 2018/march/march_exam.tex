@@ -1,0 +1,491 @@
+\documentclass[12pt]{article} % размер шрифта
+
+\usepackage{tikz} % картинки в tikz
+\usepackage{microtype} % свешивание пунктуации
+
+\usepackage{array} % для столбцов фиксированной ширины
+
+\usepackage{url} % для вставки ссылок \url{...}
+
+\usepackage{indentfirst} % отступ в первом параграфе
+
+\usepackage{sectsty} % для центрирования названий частей
+\allsectionsfont{\centering} % приказываем центрировать все sections
+
+\usepackage{amsthm} % теоремы и доказательства
+
+\theoremstyle{definition} % прямой шрифт в условии теорем
+\newtheorem{theorem}{Теорема}[section]
+
+
+\usepackage{amsmath, amssymb} % куча стандартных математических плюшек
+
+\usepackage[top=2cm, left=1.5cm, right=1.5cm, bottom=2cm]{geometry} % размер текста на странице
+
+\usepackage{lastpage} % чтобы узнать номер последней страницы
+
+\usepackage{enumitem} % дополнительные плюшки для списков
+%  например \begin{enumerate}[resume] позволяет продолжить нумерацию в новом списке
+\usepackage{caption} % подписи к картинкам без плавающего окружения figure
+
+\usepackage{ifthen}
+
+\usepackage{fancyhdr} % весёлые колонтитулы
+\pagestyle{fancy}
+\lhead{Math for economists}
+\chead{Section A}
+\rhead{2019-03-31, ICEF}
+\lfoot{Variant $\mu$}
+\cfoot{Good luck!}
+\rfoot{Total time: 120 min}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+
+
+\usepackage{todonotes} % для вставки в документ заметок о том, что осталось сделать
+% \todo{Здесь надо коэффициенты исправить}
+% \missingfigure{Здесь будет картина Последний день Помпеи}
+% команда \listoftodos — печатает все поставленные \todo'шки
+
+\usepackage{booktabs} % красивые таблицы
+% заповеди из документации:
+% 1. Не используйте вертикальные линии
+% 2. Не используйте двойные линии
+% 3. Единицы измерения помещайте в шапку таблицы
+% 4. Не сокращайте .1 вместо 0.1
+% 5. Повторяющееся значение повторяйте, а не говорите "то же"
+
+\usepackage{fontspec} % поддержка разных шрифтов
+\usepackage{polyglossia} % поддержка разных языков
+
+\setmainlanguage{english}
+\setotherlanguages{russian}
+
+\setmainfont{Linux Libertine O} % выбираем шрифт
+% если Linux Libertine не установлен, то
+% можно также попробовать Helvetica, Arial, Cambria и т.Д.
+
+% чтобы использовать шрифт Linux Libertine на личном компе,
+% его надо предварительно скачать по ссылке
+% http://www.linuxlibertine.org/index.php?id=91&L=1
+
+% на сервисах типа sharelatex.com этот шрифт есть :)
+
+\newfontfamily{\cyrillicfonttt}{Linux Libertine O}
+% пояснение зачем нужно шаманство с \newfontfamily
+% http://tex.stackexchange.com/questions/91507/
+
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ} % для списков с русскими буквами
+%\setlist[enumerate, 2]{label=\asbuk\cdot),ref=\asbuk\cdot} % списки уровня 2 будут буквами а) б) ...
+
+%% эконометрические и вероятностные сокращения
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\Corr}{Corr}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\E}{E}
+\DeclareMathOperator{\grad}{grad}
+\def \hb{\hat{\beta}}
+\def \hs{\hat{\sigma}}
+\def \htheta{\hat{\theta}}
+\def \s{\sigma}
+\def \hy{\hat{y}}
+\def \hY{\hat{Y}}
+\def \v1{\vec{1}}
+\def \e{\varepsilon}
+\def \he{\hat{\e}}
+\def \z{z}
+\def \hVar{\widehat{\Var}}
+\def \hCorr{\widehat{\Corr}}
+\def \hCov{\widehat{\Cov}}
+\def \cN{\mathcal{N}}
+
+\def \putyourname{\fbox{
+    \begin{minipage}{42em}
+      Name, group no:\vspace*{3ex}\par
+      \noindent\dotfill\vspace{2mm}
+    \end{minipage}
+  }
+}
+
+
+
+\begin{document}
+
+\putyourname
+\begin{enumerate}
+  \item (10 points) Solve the equation
+  \[
+z^3 + iz^2 - \left( - \frac{1}{2}  + i\frac{\sqrt{3}}{2}  \right)z  - i\left( - \frac{1}{2}  + i\frac{\sqrt{3}}{2} \right) = 0
+\]
+  in complex numbers if one of the roots is $-i$.
+
+\newpage
+\putyourname
+  \item (10 points) The function $f(x, y, z)$ is homogeneous of degree $9$. Consider two functions,
+  $h(x, y, z) = (x+ 3y+ 5z)\frac{\partial^2 f}{\partial x\partial y} $ and
+  $q(x, y, z) = h(x,y,z) + (x^3+ 3xyz)\frac{\partial f}{\partial x}$. Check the homogeneity
+  of these functions, for homogeneous functions state the degree.
+
+\newpage
+\putyourname
+ \item (10 points) Find the minimal value of $x_1 + 2x_2 + 3x_3$ for non-negative values of all $x_i$ given that $x_1 + 2x_2 + 2x_3 \geq 3$ and $3x_1 + 2x_2 + x_3 \geq 4$.
+
+\newpage
+\putyourname
+ \item (10 points) Bill and John are relaxing in a pub. Bill decided to spend 10 dollars,
+ John decided to spend 2 dollars. Money is infinitely divisible.
+ They love the same music. Each can spend money on music or on drinks.
+ The utility of each player is $u_i = (m_1 + m_2)\cdot d_i$, where $(m_1 + m_2)$ —
+ is the total sum of money spent on music by both players
+ and $d_i$ — the personal expenses on drinks.
+
+ Find all Nash Equilibria in pure strategies.
+
+\newpage
+\putyourname
+  \item (10 points) Find the global maximum of $x + 2y + 3z$ given that $x^2 + y^2 + z^2 \leq 6$.
+
+\newpage
+\putyourname
+  \item (10 points) Find the general solution of the difference equation $y_{t+3} - 2y_{t+2} + y_{t+1} - 2y_t = 2^t$.
+
+
+\end{enumerate}
+
+
+
+\newpage
+\chead{Section B}
+\putyourname
+
+\begin{enumerate}[resume]
+\item In exchange economy of two agents and two goods all Pareto-optimal allocations can be found by solving the maximization problem
+\[
+\begin{cases}
+u_1 = 2\sqrt{x_1} + y_1 \to \max \\
+u_2 = 2x_2 + y_2 \geq \bar u_2; \\
+x_1 + x_2 = 1; \\
+y_1 + y_2 = 1,
+\end{cases}
+\]
+where $\bar u_2$ is a nonnegative parameter and all the amounts of goods $x_1$, $x_2$, $y_1$, $y_2$ are consumed by agents in nonnegative quantities.
+
+\begin{enumerate}
+  \item (5 points) Write the Kuhn-Tucker Lagrangian of the problem and set the system of first-order Kuhn-Tucker conditions;
+  \item (5 points) Solve it in particular case when all goods are consumed in positive quantities;
+  \item (10 points) Solve the system completely and find all corner solutions.
+\end{enumerate}
+
+\newpage
+\putyourname
+\item (20 points)
+
+Consider the system of differential equations
+\[
+\begin{cases}
+\dot x = x - y + \frac{\sin t + \cos t}{2 \sin t}; \\
+\dot y = 2x - y.
+\end{cases}
+\]
+
+\begin{enumerate}
+  \item (4 points) Reduce the system to a single equation for $y(t)$.
+  \item (16 points) By applying the variation of parameters method or otherwise find general solution for $y(t)$.
+\end{enumerate}
+
+Note: you don't need to find $x(t)$.
+
+
+\end{enumerate}
+
+
+
+
+
+
+%%%% вар!!!
+
+\newpage
+\chead{Section A}
+\lfoot{Variant $\rho$}
+
+\putyourname
+\begin{enumerate}
+  \item (10 points) Solve the equation
+  \[
+z^3 + iz^2 - \left( - \frac{1}{2}  - i\frac{\sqrt{3}}{2}  \right)z  - i\left( - \frac{1}{2}  - i\frac{\sqrt{3}}{2} \right) = 0
+\]
+  in complex numbers if one of the roots is $-i$.
+
+\newpage
+\putyourname
+  \item (10 points) The function $f(x, y, z)$ is homogeneous of degree $8$. Consider two functions,
+  $h(x, y, z) = (2x+ 4y+ 3z)\frac{\partial^2 f}{\partial x\partial y} $ and
+  $q(x, y, z) = h(x,y,z) + (x^3+ 2xyz)\frac{\partial f}{\partial x}$. Check the homogeneity
+  of these functions, for homogeneous functions state the degree.
+
+\newpage
+\putyourname
+ \item (10 points) Find the minimal value of $x_1 + 2x_2 + 4x_3$ for non-negative values of all $x_i$ given that $x_1 + 2x_2 + 2x_3 \geq 3$ and $3x_1 + 2x_2 + x_3 \geq 4$.
+
+\newpage
+\putyourname
+ \item (10 points) Bill and John are relaxing in a pub. Bill decided to spend 20 dollars,
+ John decided to spend 4 dollars. Money is infinitely divisible.
+ They love the same music. Each can spend money on music or on drinks.
+ The utility of each player is $u_i = (m_1 + m_2)\cdot d_i$, where $(m_1 + m_2)$ —
+ is the total sum of money spent on music by both players
+ and $d_i$ — the personal expenses on drinks.
+
+ Find all Nash Equilibria in pure strategies.
+
+\newpage
+\putyourname
+  \item (10 points) Find the global maximum of $2x + y + 3z$ given that $x^2 + y^2 + z^2 \leq 6$.
+
+\newpage
+\putyourname
+\item (10 points) Find the general solution of the difference equation $y_{t+3} + 2y_{t+2} + y_{t+1} + 2y_t = (-2)^t$.
+
+\end{enumerate}
+
+
+\newpage
+\chead{Section B}
+\putyourname
+
+\begin{enumerate}[resume]
+\item In exchange economy of two agents and two goods all Pareto-optimal allocations can be found by solving the maximization problem
+\[
+\begin{cases}
+u_1 = 2\sqrt{x_1} + y_1 \to \max \\
+u_2 = 2x_2 + y_2 \geq \bar u_2; \\
+x_1 + x_2 = 1; \\
+y_1 + y_2 = 1,
+\end{cases}
+\]
+where $\bar u_2$ is a nonnegative parameter and all the amounts of goods $x_1$, $x_2$, $y_1$, $y_2$ are consumed by agents in nonnegative quantities.
+
+\begin{enumerate}
+  \item (5 points) Write the Kuhn-Tucker Lagrangian of the problem and set the system of first-order Kuhn-Tucker conditions;
+  \item (5 points) Solve it in particular case when all goods are consumed in positive quantities;
+  \item (10 points) Solve the system completely and find all corner solutions.
+\end{enumerate}
+
+\newpage
+\putyourname
+\item (20 points)
+
+Consider the system of differential equations
+\[
+\begin{cases}
+\dot x = x - y + \frac{\sin t + \cos t}{2 \sin t}; \\
+\dot y = 2x - y.
+\end{cases}
+\]
+
+\begin{enumerate}
+  \item (4 points) Reduce the system to a single equation for $y(t)$.
+  \item (16 points) By applying the variation of parameters method or otherwise find general solution for $y(t)$.
+\end{enumerate}
+
+Note: you don't need to find $x(t)$.
+
+
+\end{enumerate}
+
+
+
+
+
+%%%% вар!!!
+
+\newpage
+\chead{Section A}
+\lfoot{Variant $\xi$}
+
+\putyourname
+\begin{enumerate}
+  \item (10 points) Solve the equation
+  \[
+z^3 - iz^2 - \left( - \frac{1}{2}  + i\frac{\sqrt{3}}{2}  \right)z  + i\left( - \frac{1}{2}  + i\frac{\sqrt{3}}{2} \right) = 0
+\]
+  in complex numbers if one of the roots is $i$.
+
+\newpage
+\putyourname
+  \item (10 points) The function $f(x, y, z)$ is homogeneous of degree $7$. Consider two functions,
+  $h(x, y, z) = (4x+ 3y+ 5z)\frac{\partial^2 f}{\partial x\partial y} $ and
+  $q(x, y, z) = h(x,y,z) + (5x^3+ 3xyz)\frac{\partial f}{\partial x}$. Check the homogeneity
+  of these functions, for homogeneous functions state the degree.
+
+\newpage
+\putyourname
+ \item (10 points) Find the minimal value of $x_1 + 2x_2 + 5x_3$ for non-negative values of all $x_i$ given that $x_1 + 2x_2 + 2x_3 \geq 3$ and $3x_1 + 2x_2 + x_3 \geq 4$.
+
+\newpage
+\putyourname
+ \item (10 points) Bill and John are relaxing in a pub. Bill decided to spend 30 dollars,
+ John decided to spend 6 dollars. Money is infinitely divisible.
+ They love the same music. Each can spend money on music or on drinks.
+ The utility of each player is $u_i = (m_1 + m_2)\cdot d_i$, where $(m_1 + m_2)$ —
+ is the total sum of money spent on music by both players
+ and $d_i$ — the personal expenses on drinks.
+
+ Find all Nash Equilibria in pure strategies.
+
+\newpage
+\putyourname
+  \item (10 points) Find the global maximum of $3x + 2y + z$ given that $x^2 + y^2 + z^2 \leq 6$.
+
+\newpage
+\putyourname
+\item (10 points) Find the general solution of the difference equation $2y_{t+3} + y_{t+2} + 2y_{t+1} + y_t = (-1/2)^t$.
+
+\end{enumerate}
+
+
+\newpage
+\chead{Section B}
+\putyourname
+
+\begin{enumerate}[resume]
+\item In exchange economy of two agents and two goods all Pareto-optimal allocations can be found by solving the maximization problem
+\[
+\begin{cases}
+u_1 = 2\sqrt{x_1} + y_1 \to \max \\
+u_2 = 2x_2 + y_2 \geq \bar u_2; \\
+x_1 + x_2 = 1; \\
+y_1 + y_2 = 1,
+\end{cases}
+\]
+where $\bar u_2$ is a nonnegative parameter and all the amounts of goods $x_1$, $x_2$, $y_1$, $y_2$ are consumed by agents in nonnegative quantities.
+
+\begin{enumerate}
+  \item (5 points) Write the Kuhn-Tucker Lagrangian of the problem and set the system of first-order Kuhn-Tucker conditions;
+  \item (5 points) Solve it in particular case when all goods are consumed in positive quantities;
+  \item (10 points) Solve the system completely and find all corner solutions.
+\end{enumerate}
+
+\newpage
+\putyourname
+\item (20 points)
+
+Consider the system of differential equations
+\[
+\begin{cases}
+\dot x = x - y + \frac{\sin t + \cos t}{2 \sin t}; \\
+\dot y = 2x - y.
+\end{cases}
+\]
+
+\begin{enumerate}
+  \item (4 points) Reduce the system to a single equation for $y(t)$.
+  \item (16 points) By applying the variation of parameters method or otherwise find general solution for $y(t)$.
+\end{enumerate}
+
+Note: you don't need to find $x(t)$.
+
+
+\end{enumerate}
+
+
+
+
+
+%%%% вар!!!
+
+\newpage
+\chead{Section A}
+\lfoot{Variant $\omega$}
+
+\putyourname
+\begin{enumerate}
+  \item (10 points) Solve the equation
+  \[
+z^3 - iz^2 - \left( - \frac{1}{2}  - i\frac{\sqrt{3}}{2}  \right)z  + i\left( - \frac{1}{2}  - i\frac{\sqrt{3}}{2} \right) = 0
+\]
+  in complex numbers if one of the roots is $i$.
+
+
+\newpage
+\putyourname
+  \item (10 points) The function $f(x, y, z)$ is homogeneous of degree $6$. Consider two functions,
+  $h(x, y, z) = (4x - 3y+ 5z)\frac{\partial^2 f}{\partial x\partial y} $ and
+  $q(x, y, z) = h(x,y,z) + (7x^3+ 3xyz)\frac{\partial f}{\partial x}$. Check the homogeneity
+  of these functions, for homogeneous functions state the degree.
+
+\newpage
+\putyourname
+ \item (10 points) Find the minimal value of $x_1 + 2x_2 + 6x_3$ for non-negative values of all $x_i$ given that $x_1 + 2x_2 + 2x_3 \geq 3$ and $3x_1 + 2x_2 + x_3 \geq 4$.
+
+\newpage
+\putyourname
+ \item (10 points) Bill and John are relaxing in a pub. Bill decided to spend 40 dollars,
+ John decided to spend 8 dollars. Money is infinitely divisible.
+ They love the same music. Each can spend money on music or on drinks.
+ The utility of each player is $u_i = (m_1 + m_2)\cdot d_i$, where $(m_1 + m_2)$ —
+ is the total sum of money spent on music by both players
+ and $d_i$ — the personal expenses on drinks.
+
+ Find all Nash Equilibria in pure strategies.
+
+\newpage
+\putyourname
+  \item (10 points) Find the global maximum of $3x + y + 2z$ given that $x^2 + y^2 + z^2 \leq 6$.
+
+\newpage
+\putyourname
+\item (10 points) Find the general solution of the difference equation $2y_{t+3} - y_{t+2} + 2y_{t+1} - y_t = (1/2)^t$.
+
+\end{enumerate}
+
+\newpage
+\chead{Section B}
+\putyourname
+
+\begin{enumerate}[resume]
+\item In exchange economy of two agents and two goods all Pareto-optimal allocations can be found by solving the maximization problem
+\[
+\begin{cases}
+u_1 = 2\sqrt{x_1} + y_1 \to \max \\
+u_2 = 2x_2 + y_2 \geq \bar u_2; \\
+x_1 + x_2 = 1; \\
+y_1 + y_2 = 1,
+\end{cases}
+\]
+where $\bar u_2$ is a nonnegative parameter and all the amounts of goods $x_1$, $x_2$, $y_1$, $y_2$ are consumed by agents in nonnegative quantities.
+
+\begin{enumerate}
+  \item (5 points) Write the Kuhn-Tucker Lagrangian of the problem and set the system of first-order Kuhn-Tucker conditions;
+  \item (5 points) Solve it in particular case when all goods are consumed in positive quantities;
+  \item (10 points) Solve the system completely and find all corner solutions.
+\end{enumerate}
+
+\newpage
+\putyourname
+\item (20 points)
+
+Consider the system of differential equations
+\[
+\begin{cases}
+\dot x = x - y + \frac{\sin t + \cos t}{2 \sin t}; \\
+\dot y = 2x - y.
+\end{cases}
+\]
+
+\begin{enumerate}
+  \item (4 points) Reduce the system to a single equation for $y(t)$.
+  \item (16 points) By applying the variation of parameters method or otherwise find general solution for $y(t)$.
+\end{enumerate}
+
+Note: you don't need to find $x(t)$.
+
+
+\end{enumerate}
+
+
+
+
+\end{document}

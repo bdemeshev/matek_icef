@@ -135,14 +135,14 @@ Answer TWO of the three questions from this section (20 marks each)
 \begin{enumerate}[resume]
 \item Consider a problem of identifying Pareto–optimal allocations in the two goods
 economy with the two agents having identical utility functions $U_1(x_1 , y_1)= x_1 y_1$ and
-$U_2(x_2, y_2) = x_2 y_2$, where $x_i$ and $y_i$ denote respectively the amounts of goods $x$ and $y$ that are allocated to agent $i = 1, 2$. Given a weight $\alpha \in (0, 1)$, the solution of that problem can be found by maximizing the <<weighted>> utility function $\alpha U_1 + (1 - \alpha)U_2$ with respect to all the variables subject to the resource constraints $x_1 + x_2 = w_1$, $y_1 + y_2 = w_2$. In this economy $w_1$, $w_2$ are positive endowments.
+$U_2(x_2, y_2) = x_2 y_2$, where $x_i$ and $y_i$ denote respectively the amounts of goods $x$ and $y$ that are allocated to agent $i = 1, 2$. Given a weight $\alpha \in (0, 1)$, the solution of that problem can be found by maximizing the weighted utility function $\alpha U_1 + (1 - \alpha)U_2$ with respect to all the variables subject to the resource constraints $x_1 + x_2 = w_1$, $y_1 + y_2 = w_2$. In this economy $w_1$, $w_2$ are positive endowments.
 \begin{enumerate}
 \item Using the Lagrangean derive the necessary conditions for extremum and solve the
 system of equations.
 \item Without applying the second–order conditions explain why the solution
 $(x_1^* , x_2^* , y_1^* , y_2^* )$
 is the maximum of the problem stated above.
-\item Calculate the value of the <<weighted>> utility function at the Pareto-optimal allocation and compare it with the case when all the endowment in $x$ and $y$ is given to a single
+\item Calculate the value of the weighted utility function at the Pareto-optimal allocation and compare it with the case when all the endowment in $x$ and $y$ is given to a single
 agent. How would you explain a difficulty you may find here?
 \end{enumerate}
 

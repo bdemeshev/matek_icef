@@ -1,0 +1,62 @@
+---
+title: "Bonus home assignments!"
+output:
+  pdf_document:
+    toc: false
+    toc_depth: 2
+    keep_tex: yes
+    number_sections: false
+    fig_width: 4
+    fig_height: 3
+    fig_caption: true
+    highlight: tango
+    latex_engine: xelatex
+  word_document: default
+  html_document: default
+lang: ru-RU
+mainfont: Arial
+fontsize: 11pt
+geometry: left=2cm, right=2cm, top=2cm, bottom=2cm
+documentclass: article
+linkcolor: blue
+urlcolor: blue
+citecolor: blue
+header-includes:
+- \newfontfamily{\cyrillicfonttt}{Arial}
+- \newfontfamily{\cyrillicfont}{Arial}
+- \newfontfamily{\cyrillicfontsf}{Arial}
+editor_options:
+  chunk_output_type: console
+---
+
+
+Dear ICEF students :) 
+
+You have an opportunity to develop your programming skills and deeper understand optimization role in modern data analysis. 
+And receive bonus points for home assignments too!
+
+# What should I do?
+
+1. Continue doing mini-courses!
+
+The last two courses are: 
+
+* [Supervized learning](https://www.datacamp.com/courses/supervised-learning-with-scikit-learn) 
+* [Unsupervized learning](https://www.datacamp.com/courses/unsupervised-learning-in-python). 
+
+The deadline for both courses is April 14, 20:19.
+
+2. If you have not registered yet...
+
+Register at [datacamp.com](https://datacamp.com) under any email. Just fill in your true first and last name. 
+Add your registration email in the list [tiny.cc/kh6b2y](https://tiny.cc/kh6b2y). 
+
+3. That's all :) Have a nice day!!!
+
+
+
+
+
+
+
+

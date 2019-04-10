@@ -6,6 +6,7 @@
 *.toc
 *.fdb_latexmk
 *.fls
+*-cache.yaml
 /NA
 /cache/
 /matmor_exams.tex

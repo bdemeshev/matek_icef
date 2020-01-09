@@ -1,0 +1,525 @@
+\documentclass[12pt]{article} % размер шрифта
+
+\usepackage{tikz} % картинки в tikz
+\usepackage{microtype} % свешивание пунктуации
+
+\usepackage{array} % для столбцов фиксированной ширины
+
+\usepackage{url} % для вставки ссылок \url{...}
+
+\usepackage{indentfirst} % отступ в первом параграфе
+
+\usepackage{sectsty} % для центрирования названий частей
+\allsectionsfont{\centering} % приказываем центрировать все sections
+
+\usepackage{amsthm} % теоремы и доказательства
+
+\theoremstyle{definition} % прямой шрифт в условии теорем
+\newtheorem{theorem}{Теорема}[section]
+
+
+\usepackage{amsmath, amssymb} % куча стандартных математических плюшек
+
+\usepackage[top=2cm, left=1.5cm, right=1.5cm, bottom=2cm]{geometry} % размер текста на странице
+
+\usepackage{lastpage} % чтобы узнать номер последней страницы
+
+\usepackage{enumitem} % дополнительные плюшки для списков
+%  например \begin{enumerate}[resume] позволяет продолжить нумерацию в новом списке
+\usepackage{caption} % подписи к картинкам без плавающего окружения figure
+
+
+\usepackage{fancyhdr} % весёлые колонтитулы
+\pagestyle{fancy}
+\lhead{Math for economists}
+\chead{Section A}
+\rhead{2018-12-27, ICEF}
+\lfoot{Variant $\mu$}
+\cfoot{Good luck!}
+\rfoot{Total time: 120 min}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+
+
+\usepackage{todonotes} % для вставки в документ заметок о том, что осталось сделать
+% \todo{Здесь надо коэффициенты исправить}
+% \missingfigure{Здесь будет картина Последний день Помпеи}
+% команда \listoftodos — печатает все поставленные \todo'шки
+
+\usepackage{booktabs} % красивые таблицы
+% заповеди из документации:
+% 1. Не используйте вертикальные линии
+% 2. Не используйте двойные линии
+% 3. Единицы измерения помещайте в шапку таблицы
+% 4. Не сокращайте .1 вместо 0.1
+% 5. Повторяющееся значение повторяйте, а не говорите "то же"
+
+\usepackage{fontspec} % поддержка разных шрифтов
+\usepackage{polyglossia} % поддержка разных языков
+
+\setmainlanguage{english}
+\setotherlanguages{russian}
+
+\setmainfont{Linux Libertine O} % выбираем шрифт
+% если Linux Libertine не установлен, то
+% можно также попробовать Helvetica, Arial, Cambria и т.Д.
+
+% чтобы использовать шрифт Linux Libertine на личном компе,
+% его надо предварительно скачать по ссылке
+% http://www.linuxlibertine.org/index.php?id=91&L=1
+
+% на сервисах типа sharelatex.com этот шрифт есть :)
+
+\newfontfamily{\cyrillicfonttt}{Linux Libertine O}
+% пояснение зачем нужно шаманство с \newfontfamily
+% http://tex.stackexchange.com/questions/91507/
+
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ} % для списков с русскими буквами
+%\setlist[enumerate, 2]{label=\asbuk\cdot),ref=\asbuk\cdot} % списки уровня 2 будут буквами а) б) ...
+
+%% эконометрические и вероятностные сокращения
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\Corr}{Corr}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\E}{E}
+\DeclareMathOperator{\grad}{grad}
+\def \hb{\hat{\beta}}
+\def \hs{\hat{\sigma}}
+\def \htheta{\hat{\theta}}
+\def \s{\sigma}
+\def \hy{\hat{y}}
+\def \hY{\hat{Y}}
+\def \v1{\vec{1}}
+\def \e{\varepsilon}
+\def \he{\hat{\e}}
+\def \z{z}
+\def \hVar{\widehat{\Var}}
+\def \hCorr{\widehat{\Corr}}
+\def \hCov{\widehat{\Cov}}
+\def \cN{\mathcal{N}}
+
+\def \putyourname{\fbox{
+    \begin{minipage}{42em}
+      Name, group no:\vspace*{3ex}\par
+      \noindent\dotfill\vspace{2mm}
+    \end{minipage}
+  }
+}
+
+
+
+\begin{document}
+
+\putyourname
+\begin{enumerate}
+  \item (10 points) Find the limit or prove that it does not exist
+  \[
+  \lim_{x_1, x_2, x_3 \to 0} \frac{x_1^2 + 4x_1 x_2 - x_2^2 + 6 x_3x_2}{x_1^2 + x_2^2 +x_3^2}
+  \]
+
+\newpage
+\putyourname
+  \item (10 points) Using Lagrange multipliers find the extrema of the function $f(x,y) = x^2 + 2 y^2$ subject to $x^2 + y^2 = 16$.
+Check sufficiency conditions.
+
+\newpage
+\putyourname
+ \item (10 points) Consider the function $u(x,y) = x^2 + x^4 + axy + y^2$. 
+ For which values of $a$ the function $u$ is convex? concave?
+
+\newpage
+\putyourname
+ \item (10 points) Using Envelope theorem find the approximate minimum of the function
+ \[
+ f(x, y) = x^4 + 0.001 (x^2 + y + y^2) + (y-1)^4.
+ \]
+
+\newpage
+\putyourname
+  \item (10 points) Find and classify all the local extrema of the function $f = x^2 - 4xy +y^3 +4y$.
+
+\newpage
+\putyourname
+
+\item (10 points) Using optimization techniques prove for $x> 0$, $y>0$ the inequality 
+\[
+\frac{x + y}{2} \geq \frac{2}{x^{-1} + y^{-1}}  
+\]
+
+%  \item (10 points) The fully connected artificial neural network layer with ReLU activation may be represented as
+%  a function from $\mathbb{R}^n$ to $\mathbb{R}^n$, $y = \sigma(Wx + b)$, 
+%  where $W$ is a $n\times n$ constant matrix, $b$ is a constant vector. 
+%  And scalar function $\sigma(t) = \max(t, 0)$ 
+%  is applied element by element to the argument vector. 
+  
+%  Calculate maximal and minimal value of $dy_{2020}/dx_{2019}$ if $w_{i,j} = i+j$.
+
+
+
+\end{enumerate}
+
+
+
+\newpage
+\chead{Section B}
+\putyourname
+
+\begin{enumerate}[resume]
+
+\item Consider a problem $f(x_1, x_2, \alpha) \to \max$ subject to $g(x_1, x_2) = 0$. 
+The function $f$ is maximized with respect to $x_1$, $x_2$ and $\alpha$ is a real parameter. 
+Both functions $f$ and $g$ are twice continuous differentiable. 
+Let $(x_1^*, x_2^*)$ be a solution to this problem depending on $\alpha$ 
+and $\phi(\alpha)$ be the value function of this problem. 
+
+\begin{enumerate}
+  \item (5 points) Formulate the envelope theorem that provides the value of $d\phi/da$.
+  \item  (5 points) Introduce the function $F=f(x_1, x_2, \alpha) - \phi(\alpha)$. 
+  Clearly state the second-order sufficiency condition applicable to $F$ 
+  that guarantees the optimality of $(x_1^*, x_2^*)$. 
+  \item (10 points) The SOC condition stated in b) should justify inequality
+  $\frac{\partial^2 f}{\partial x_1 \partial \alpha} \frac{dx_1^*}{d\alpha} +
+  \frac{\partial^2 f}{\partial x_2 \partial \alpha} \frac{dx_2^*}{d\alpha} > 0$. 
+  Show this. 
+\end{enumerate}
+
+\newpage
+\putyourname
+\item Consider a function 
+\[
+  f(x) = \frac{\sum_{i=1}^n \sum_{j=1}^n a_{ij}x_i x_j}
+{\sum_{i=1}^n x_i^2}
+\]
+in $\mathbb{R}^n$ defined everywhere except at the origin. 
+Here $a_{ij}$ are entries of the symmetric matrix $A$. 
+\begin{enumerate}
+\item (5 points) Show that $A=cI$ implies that $f(x)=c$. 
+Here $c$ is a real number and $I$ is identity matrix.
+\item (5 points) Let $A$ be a matrix other than in a). 
+Show that then $f$ is discontinuous at the origin with the irremovable discontinuity. 
+\textit{Hint: you may show this using part c) or otherwise}.
+\item (10 points) In order to find the points of extremum of $f$ 
+the optimal problem is reformulated as follows:
+\[
+\begin{cases}
+  \sum_{i=1}^n \sum_{j=1}^n a_{ij}x_i x_j \to \max / \min \\
+  \sum_{i=1}^n x_i^2 = 1
+\end{cases}
+\] 
+Solve it by Lagrangian and find the maximum and minimum values of $f$ 
+in terms of eigenvalues of matrix $A$.
+\end{enumerate}
+
+
+\end{enumerate}
+
+
+
+
+%%%% вар!!!
+
+\newpage
+\chead{Section A}
+\lfoot{Variant $\rho$}
+
+\putyourname
+\begin{enumerate}
+  \item (10 points) Find the limit or prove that it does not exist
+  \[
+  \lim_{x_1, x_2, x_3 \to 0} \frac{x_1^2 + 4x_1 x_2 + 4x_2^2 + 6 x_3x_2}{x_1^2 + x_2^2 +x_3^2}
+  \]
+
+\newpage
+\putyourname
+  \item (10 points) Using Lagrange multipliers find the extrema of the function $f(x,y) = x^2 + 3 y^2$ subject to $x^2 + y^2 = 16$.
+  Check sufficiency conditions.
+
+
+\newpage
+\putyourname
+ \item (10 points) Consider the function $u(x,y) = x^2 + x^4 + axy + 2y^2$. 
+ For which values of $a$ the function $u$ is convex? concave?
+
+\newpage
+\putyourname
+ \item (10 points) Using Envelope theorem find the approximate minimum of the function
+ \[
+ f(x, y) = x^4 + 0.001 (x^2 + 3y + y^2) + (y-1)^4.
+ \]
+
+\newpage
+\putyourname
+  \item (10 points) Find and classify all the local extrema of the function $f = x^2 - 4xy +y^3 +4y + 5$.
+
+\newpage
+\putyourname
+\item (10 points) Using optimization techniques prove for $x> 0$, $y>0$ the inequality 
+\[
+\frac{x + y}{2} \geq \frac{2}{x^{-1} + y^{-1}}  
+\]
+
+
+
+\end{enumerate}
+
+
+
+\newpage
+\chead{Section B}
+\putyourname
+
+\begin{enumerate}[resume]
+
+\item Consider a problem $f(x_1, x_2, \alpha) \to \max$ subject to $g(x_1, x_2) = 0$. 
+The function $f$ is maximized with respect to $x_1$, $x_2$ and $\alpha$ is a real parameter. 
+Both functions $f$ and $g$ are twice continuous differentiable. 
+Let $(x_1^*, x_2^*)$ be a solution to this problem depending on $\alpha$ 
+and $\phi(\alpha)$ be the value function of this problem. 
+
+\begin{enumerate}
+  \item (5 points) Formulate the envelope theorem that provides the value of $d\phi/da$.
+  \item  (5 points) Introduce the function $F=f(x_1, x_2, \alpha) - \phi(\alpha)$. 
+  Clearly state the second-order sufficiency condition applicable to $F$ 
+  that guarantees the optimality of $(x_1^*, x_2^*)$. 
+  \item (10 points) The SOC condition stated in b) should justify inequality
+  $\frac{\partial^2 f}{\partial x_1 \partial \alpha} \frac{dx_1^*}{d\alpha} +
+  \frac{\partial^2 f}{\partial x_2 \partial \alpha} \frac{dx_2^*}{d\alpha} > 0$. 
+  Show this. 
+\end{enumerate}
+
+\newpage
+\putyourname
+\item Consider a function 
+\[
+  f(x) = \frac{\sum_{i=1}^n \sum_{j=1}^n a_{ij}x_i x_j}
+{\sum_{i=1}^n x_i^2}
+\]
+in $\mathbb{R}^n$ defined everywhere except at the origin. 
+Here $a_{ij}$ are entries of the symmetric matrix $A$. 
+\begin{enumerate}
+\item (5 points) Show that $A=cI$ implies that $f(x)=c$. 
+Here $c$ is a real number and $I$ is identity matrix.
+\item (5 points) Let $A$ be a matrix other than in a). 
+Show that then $f$ is discontinuous at the origin with the irremovable discontinuity. 
+\textit{Hint: you may show this using part c) or otherwise}.
+\item (10 points) In order to find the points of extremum of $f$ 
+the optimal problem is reformulated as follows:
+\[
+\begin{cases}
+  \sum_{i=1}^n \sum_{j=1}^n a_{ij}x_i x_j \to \max / \min \\
+  \sum_{i=1}^n x_i^2 = 1
+\end{cases}
+\] 
+Solve it by Lagrangian and find the maximum and minimum values of $f$ 
+in terms of eigenvalues of matrix $A$.
+\end{enumerate}
+
+
+\end{enumerate}
+
+
+
+
+%%%% вар!!!
+
+\newpage
+\chead{Section A}
+\lfoot{Variant $\xi$}
+
+\putyourname
+\begin{enumerate}
+  \item (10 points) Find the limit or prove that it does not exist
+  \[
+  \lim_{x_1, x_2, x_3 \to 0} \frac{x_1^2 + 9x_1 x_2 - x_2^2 + 6 x_3x_2}{x_1^2 + x_2^2 +x_3^2}
+  \]
+
+\newpage
+\putyourname
+  \item (10 points) Using Lagrange multipliers find the extrema of the function $f(x,y) = x^2 + 4 y^2$ subject to $x^2 + y^2 = 16$.
+  Check sufficiency conditions.
+
+\newpage
+\putyourname
+ \item (10 points) Consider the function $u(x,y) = x^2 + x^4 + axy + 5y^2$. 
+ For which values of $a$ the function $u$ is convex? concave?
+
+\newpage
+\putyourname
+ \item (10 points) Using Envelope theorem find the approximate minimum of the function
+ \[
+ f(x, y) = x^4 + 0.001 (x^2 + 4y + y^2) + (y-1)^4.
+ \]
+
+\newpage
+\putyourname
+  \item (10 points) Find and classify all the local extrema of the function $f = x^2 - 4xy +y^3 +4y + 9$.
+
+\newpage
+\putyourname
+\item (10 points) Using optimization techniques prove for $x> 0$, $y>0$ the inequality 
+\[
+\frac{x + y}{2} \geq \frac{2}{x^{-1} + y^{-1}}  
+\]
+
+
+
+\end{enumerate}
+
+
+
+\newpage
+\chead{Section B}
+\putyourname
+
+\begin{enumerate}[resume]
+
+\item Consider a problem $f(x_1, x_2, \alpha) \to \max$ subject to $g(x_1, x_2) = 0$. 
+The function $f$ is maximized with respect to $x_1$, $x_2$ and $\alpha$ is a real parameter. 
+Both functions $f$ and $g$ are twice continuous differentiable. 
+Let $(x_1^*, x_2^*)$ be a solution to this problem depending on $\alpha$ 
+and $\phi(\alpha)$ be the value function of this problem. 
+
+\begin{enumerate}
+  \item (5 points) Formulate the envelope theorem that provides the value of $d\phi/da$.
+  \item  (5 points) Introduce the function $F=f(x_1, x_2, \alpha) - \phi(\alpha)$. 
+  Clearly state the second-order sufficiency condition applicable to $F$ 
+  that guarantees the optimality of $(x_1^*, x_2^*)$. 
+  \item (10 points) The SOC condition stated in b) should justify inequality
+  $\frac{\partial^2 f}{\partial x_1 \partial \alpha} \frac{dx_1^*}{d\alpha} +
+  \frac{\partial^2 f}{\partial x_2 \partial \alpha} \frac{dx_2^*}{d\alpha} > 0$. 
+  Show this. 
+\end{enumerate}
+
+\newpage
+\putyourname
+\item Consider a function 
+\[
+  f(x) = \frac{\sum_{i=1}^n \sum_{j=1}^n a_{ij}x_i x_j}
+{\sum_{i=1}^n x_i^2}
+\]
+in $\mathbb{R}^n$ defined everywhere except at the origin. 
+Here $a_{ij}$ are entries of the symmetric matrix $A$. 
+\begin{enumerate}
+\item (5 points) Show that $A=cI$ implies that $f(x)=c$. 
+Here $c$ is a real number and $I$ is identity matrix.
+\item (5 points) Let $A$ be a matrix other than in a). 
+Show that then $f$ is discontinuous at the origin with the irremovable discontinuity. 
+\textit{Hint: you may show this using part c) or otherwise}.
+\item (10 points) In order to find the points of extremum of $f$ 
+the optimal problem is reformulated as follows:
+\[
+\begin{cases}
+  \sum_{i=1}^n \sum_{j=1}^n a_{ij}x_i x_j \to \max / \min \\
+  \sum_{i=1}^n x_i^2 = 1
+\end{cases}
+\] 
+Solve it by Lagrangian and find the maximum and minimum values of $f$ 
+in terms of eigenvalues of matrix $A$.
+\end{enumerate}
+
+
+\end{enumerate}
+
+
+%%%% вар!!!
+
+\newpage
+\chead{Section A}
+\lfoot{Variant $\omega$}
+
+\putyourname
+\begin{enumerate}
+  \item (10 points) Find the limit or prove that it does not exist
+  \[
+  \lim_{x_1, x_2, x_3 \to 0} \frac{7x_1^2 + 4x_1 x_2 - x_2^2 + 6 x_3x_2}{x_1^2 + x_2^2 +x_3^2}
+  \]
+
+\newpage
+\putyourname
+  \item (10 points) Using Lagrange multipliers find the extrema of the function $f(x,y) = x^2 + 5 y^2$ subject to $x^2 + y^2 = 16$.
+  Check sufficiency conditions.
+
+\newpage
+\putyourname
+ \item (10 points) Consider the function $u(x,y) = x^2 + x^4 + axy + 5y^2$. 
+ For which values of $a$ the function $u$ is convex? concave?
+
+\newpage
+\putyourname
+ \item (10 points) Using Envelope theorem find the approximate minimum of the function
+ \[
+ f(x, y) = x^4 + 0.001 (x^2 + 6y + y^2) + (y-1)^4.
+ \]
+
+\newpage
+\putyourname
+  \item (10 points) Find and classify all the local extrema of the function $f = x^2 - 4xy +y^3 +4y - 11$.
+
+\newpage
+\putyourname
+  \item (10 points) Using optimization techniques prove for $x> 0$, $y>0$ the inequality 
+  \[
+  \frac{x + y}{2} \geq \frac{2}{x^{-1} + y^{-1}}  
+  \]
+
+\end{enumerate}
+
+
+
+\newpage
+\chead{Section B}
+\putyourname
+
+\begin{enumerate}[resume]
+
+\item Consider a problem $f(x_1, x_2, \alpha) \to \max$ subject to $g(x_1, x_2) = 0$. 
+The function $f$ is maximized with respect to $x_1$, $x_2$ and $\alpha$ is a real parameter. 
+Both functions $f$ and $g$ are twice continuous differentiable. 
+Let $(x_1^*, x_2^*)$ be a solution to this problem depending on $\alpha$ 
+and $\phi(\alpha)$ be the value function of this problem. 
+
+\begin{enumerate}
+  \item (5 points) Formulate the envelope theorem that provides the value of $d\phi/da$.
+  \item  (5 points) Introduce the function $F=f(x_1, x_2, \alpha) - \phi(\alpha)$. 
+  Clearly state the second-order sufficiency condition applicable to $F$ 
+  that guarantees the optimality of $(x_1^*, x_2^*)$. 
+  \item (10 points) The SOC condition stated in b) should justify inequality
+  $\frac{\partial^2 f}{\partial x_1 \partial \alpha} \frac{dx_1^*}{d\alpha} +
+  \frac{\partial^2 f}{\partial x_2 \partial \alpha} \frac{dx_2^*}{d\alpha} > 0$. 
+  Show this. 
+\end{enumerate}
+
+\newpage
+\putyourname
+\item Consider a function 
+\[
+  f(x) = \frac{\sum_{i=1}^n \sum_{j=1}^n a_{ij}x_i x_j}
+{\sum_{i=1}^n x_i^2}
+\]
+in $\mathbb{R}^n$ defined everywhere except at the origin. 
+Here $a_{ij}$ are entries of the symmetric matrix $A$. 
+\begin{enumerate}
+\item (5 points) Show that $A=cI$ implies that $f(x)=c$. 
+Here $c$ is a real number and $I$ is identity matrix.
+\item (5 points) Let $A$ be a matrix other than in a). 
+Show that then $f$ is discontinuous at the origin with the irremovable discontinuity. 
+\textit{Hint: you may show this using part c) or otherwise}.
+\item (10 points) In order to find the points of extremum of $f$ 
+the optimal problem is reformulated as follows:
+\[
+\begin{cases}
+  \sum_{i=1}^n \sum_{j=1}^n a_{ij}x_i x_j \to \max / \min \\
+  \sum_{i=1}^n x_i^2 = 1
+\end{cases}
+\] 
+Solve it by Lagrangian and find the maximum and minimum values of $f$ 
+in terms of eigenvalues of matrix $A$.
+\end{enumerate}
+
+
+\end{enumerate}
+
+
+
+\end{document}

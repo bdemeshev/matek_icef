@@ -1,0 +1,304 @@
+\documentclass[12pt]{article} % размер шрифта
+
+\usepackage{tikz} % картинки в tikz
+\usepackage{microtype} % свешивание пунктуации
+
+\usepackage{array} % для столбцов фиксированной ширины
+
+\usepackage{url} % для вставки ссылок \url{...}
+
+\usepackage{indentfirst} % отступ в первом параграфе
+
+\usepackage{sectsty} % для центрирования названий частей
+\allsectionsfont{\centering} % приказываем центрировать все sections
+
+\usepackage{amsthm} % теоремы и доказательства
+
+\theoremstyle{definition} % прямой шрифт в условии теорем
+\newtheorem{theorem}{Теорема}[section]
+
+
+\usepackage{amsmath, amssymb} % куча стандартных математических плюшек
+
+\usepackage[top=2cm, left=1.5cm, right=1.5cm, bottom=2cm]{geometry} % размер текста на странице
+
+\usepackage{lastpage} % чтобы узнать номер последней страницы
+
+\usepackage{enumitem} % дополнительные плюшки для списков
+%  например \begin{enumerate}[resume] позволяет продолжить нумерацию в новом списке
+\usepackage{caption} % подписи к картинкам без плавающего окружения figure
+
+\usepackage{ifthen}
+
+\usepackage{fancyhdr} % весёлые колонтитулы
+\pagestyle{fancy}
+\lhead{Math for economists}
+\chead{}
+\rhead{2020-03-XX, ICEF}
+\lfoot{Variant $\mu$}
+\cfoot{Marking scheme}
+\rfoot{Total time: 120 min}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+
+
+\usepackage{todonotes} % для вставки в документ заметок о том, что осталось сделать
+% \todo{Здесь надо коэффициенты исправить}
+% \missingfigure{Здесь будет картина Последний день Помпеи}
+% команда \listoftodos — печатает все поставленные \todo'шки
+
+\usepackage{booktabs} % красивые таблицы
+% заповеди из документации:
+% 1. Не используйте вертикальные линии
+% 2. Не используйте двойные линии
+% 3. Единицы измерения помещайте в шапку таблицы
+% 4. Не сокращайте .1 вместо 0.1
+% 5. Повторяющееся значение повторяйте, а не говорите "то же"
+
+\usepackage{fontspec} % поддержка разных шрифтов
+\usepackage{polyglossia} % поддержка разных языков
+
+\setmainlanguage{english}
+\setotherlanguages{russian}
+
+\setmainfont{Linux Libertine O} % выбираем шрифт
+% если Linux Libertine не установлен, то
+% можно также попробовать Helvetica, Arial, Cambria и т.Д.
+
+% чтобы использовать шрифт Linux Libertine на личном компе,
+% его надо предварительно скачать по ссылке
+% http://www.linuxlibertine.org/index.php?id=91&L=1
+
+% на сервисах типа sharelatex.com этот шрифт есть :)
+
+\newfontfamily{\cyrillicfonttt}{Linux Libertine O}
+% пояснение зачем нужно шаманство с \newfontfamily
+% http://tex.stackexchange.com/questions/91507/
+
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ} % для списков с русскими буквами
+%\setlist[enumerate, 2]{label=\asbuk\cdot),ref=\asbuk\cdot} % списки уровня 2 будут буквами а) б) ...
+
+%% эконометрические и вероятностные сокращения
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\Corr}{Corr}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\E}{E}
+\DeclareMathOperator{\grad}{grad}
+\def \hb{\hat{\beta}}
+\def \hs{\hat{\sigma}}
+\def \htheta{\hat{\theta}}
+\def \s{\sigma}
+\def \hy{\hat{y}}
+\def \hY{\hat{Y}}
+\def \v1{\vec{1}}
+\def \e{\varepsilon}
+\def \he{\hat{\e}}
+\def \z{z}
+\def \hVar{\widehat{\Var}}
+\def \hCorr{\widehat{\Corr}}
+\def \hCov{\widehat{\Cov}}
+\def \cN{\mathcal{N}}
+
+\def \putyourname{\fbox{
+    \begin{minipage}{42em}
+      Name, group no:\vspace*{3ex}\par
+      \noindent\dotfill\vspace{2mm}
+    \end{minipage}
+  }
+}
+
+
+
+\begin{document}
+
+
+
+Brief solutions and marking scheme for March demo mock.
+
+
+
+\section*{Section A}
+
+
+\begin{enumerate}
+
+\item Five points will be given for the correct equation representing the set in $(x, y)$-plane. 
+Completing perfect squares will provide another 2 points. 
+Drawing of this circle with labeling its center with exposition that the origin belongs to it 
+(that is all we need from sketchy drawing) will give final 3 points.
+
+\item When we multiply this equation by $xyz$ and divide by 2 we get 
+familiar Euler’s equation for a function $f(x, y, z)$. 
+That is necessary and sufficient condition for a function to be homogeneous and 
+we can establish its degree of homogeneity which is in this case $0.5$. 
+This correctly stated will give 5 points. 
+Another theoretical fact that first-order derivative of a homogeneous function 
+with respect to any variable brings down its degree by 1 will give us the final answer $-0.5$. 
+This reference to theory along with correct answer will give another 5 points.
+
+\item to be inserted later
+
+\item to be inserted later
+
+\item This is a maximization problem with one equality constraint. 
+We shall solve it by Lagrange method. 
+Firstly we check NDCQ condition: 
+the gradient of constraint $(2x, 2y, 2z) = (0, 0, 0)$ is zero at the origin 
+but the origin does not belong to constraint set. 
+Proper NDCQ trial gives 2 points. 
+Lagrangian forming with correctly written FOCs gives 3 points. 
+The substitution of $(x, y, z) = (5/2\lambda, 1/\lambda, 3/2\lambda)$ 
+into constraint equation gives two values to $\lambda$: $\sqrt{19/12}$ and $-\sqrt{19/12}$. 
+This correct part of solution gives another 2 points. 
+It would be reasonable at this stage to apply Weierstrass’ theorem. 
+This theorem is readily applicable since 
+the objective function is continuous and the constraint set is compact. 
+Both maximum and minimum values globally are attained 
+(this theorem is about global properties). 
+For a maximum we need to choose positive $\lambda$. 
+This reference to theory and correct answer will provide extra 3 points. 
+Answer: $(x, y, z) = (5, 2, 3)$, optimal value is $\sqrt{3/19}$.
+
+\item Characteristic equation for Fibonacci’s equation is $q^2 - q -1$ 
+with the roots $(1+\sqrt 5)/2$, $(1-\sqrt 5)/2$.  
+These findings will give 2 points. 
+The formula for general solution $F_t = C_1 q_1^t + C_2 q_2^t$ gives another 3 points. 
+Set the system for $C_1$ and $C_2$  and solve it: 
+\[
+\begin{cases}
+    C_1 + C_2 = -1 \\
+    C_1 q_1 + C_2 q_2 = 4 \\
+\end{cases}
+\]
+
+Then $C_1 = (9 - \sqrt 5)/10$, $C_2 = (-9 - \sqrt 5)/10$. 
+Here 1 point is awarded for correct system and another 3 points for correct coefficients values. 
+After substitution of these values into general solution we get final answer (extra 1 point). 
+This answer does not require further simplification.
+\end{enumerate}
+
+
+\section*{Section B}
+
+\begin{enumerate}[resume]
+
+\item We start with NDCQ checking (worth 3 points). 
+Jacobian matrix based on these constraints is:
+\[
+J = \begin{pmatrix}
+    1 & 1 & 1 \\
+    1 & 1 & 1.5 \\
+\end{pmatrix}.
+\]
+
+This matrix has non-zero rows and matrix has itself has the maximal rank which is 2. 
+After forming Lagrangian (3 points) 
+\[
+L = 2x^2 + 4y^2 +xy + 8z^2 + 2yz + \lambda (1 - x - y - z) + \mu (5/6 - x - y - 3z/2)  
+\]
+we derive FOCs:   
+\[
+\begin{cases}
+4x + y - \lambda - \mu = 0 \\
+8y + x + 2z -\lambda - \mu = 0 \\
+16z + 2y - \lambda - 3\mu/2 = 0 \\
+\lambda, \mu \geq 0 \\
+\lambda (1 - x - y - z) =0, \quad \mu (5/6 - x - y - 3z/2) = 0 \\
+1 - x - y - z \geq 0, \quad 5/6 - x - y - 3z/2 \geq 0
+\end{cases}
+\]
+
+The solution of any such system of conditions is based on considering all possible cases. 
+The problem is in identifying possible shortcuts that reduce the work. 
+Let us at first assume that $x+y+z >1$ (one of the cases to be considered). 
+Duly considered it will give 5 points. 
+Then either $5/6 - x - y - 3z/2 >0$  or $5/6 - x - y - 3z/2 =0$. 
+
+
+In the case $5/6 - x - y - 3z/2 >0$ since $\lambda = \mu =0$ (guess why?) 
+the FOC system easily provides $x=y=z=0$ which does not satisfy constraint set. 
+
+
+In $5/6 - x - y - 3z/2 =0$ we deal with a system in 4 equations with 4 unknowns. 
+This system should be reduced by Gaussian elimination procedure up to a point when we are able to assess the sign of $z$ alone. 
+Not hard to see  and this violates $x+y+z>1$ condition. 
+
+
+Then we proceed with $x+y+z =1$ case.
+Here $z = 1 - x- y$. 
+After substituting into objective function we get
+\[
+f(x, y) = 10x^2  + 10y^2 + 15xy -16x -14y + 8
+\]
+under constraint $x+y \leq 3/5$. 
+Here again we consider two cases: binding and nonbinding. 
+If constraint does not bind then we get from FOC $x=22/35$, $y=1/70$. 
+It violates constraint. 
+A binding case gives another point, $x=13/15$, $y=7/15$. 
+Here Weierstrass theorem can not be applied (why?). 
+We may 
+check bordered Hessian instead:
+\[
+\det
+\begin{pmatrix}
+    0 & 1 & 1\\
+    1 & 20 & 15 \\
+    1 & 15 & 20 \\
+\end{pmatrix} = -10
+\] 
+
+We conclude that this is the local minimum. 
+If you have successfully reached that point you deserved 20 points. 
+
+
+Globality exposition of this minimum will give some extra points. 
+The simplest proof is as follows: we are solving a minimization problem 
+for an objective function which is a positively defined quadratic form. 
+The constraint set in 3d is a straight line (a line of intersection of the 2 planes). 
+On the points of this line this form becomes just a quadratic function facing up. 
+Then the point of minimum is global.
+
+\item Firstly we solve characteristic equation 
+\[
+  q^4 + 7q^2 -18q +10=0  
+\] 
+Writing down this equation is worth 1 point. 
+Among divisors of number 10 we choose the smallest which is 1 and substitute: $q_1 =1$. 
+After dividing polynomial by $q-1$ we get the quotient and the equation:
+\[
+  q^3 +q^2 + 8q -10=0  
+\]
+We try again 1 and find $q_2 = 1$. 
+The resulting quadratic equation has two complex roots $q_3 = -1 -3i$, $q_4 = -1+3i$. 
+Correct finding of all the roots provide 6 points. 
+
+
+Now  we can write down complementary function:
+\[
+y_{cf}(x) = C_1 e^x + C_2 x e^x + e^{-x}(C_3 \cos 3x + C_4 \sin 3x)
+\]
+
+We get for this step another 3 points. 
+Now we seek a particular integral as a sum of two terms. 
+
+The first term results from $x$ in the right side (no resonance here). 
+Undetermined coefficients method gives us $y_1 = 0.1x + 0.18$ (worth 3 points). 
+
+Finding the second term of particular integral is much more complicated (resonance case). 
+Performed correctly it will bring 6 points. So we seek this term in the form of $y_2 =ax^2 e^x$.
+ The ultimate 1 point is given when the solution is written correctly. 
+It is useful to use Leibnitz formula for the multiple differentiation of the product. 
+Finally we get $y_2 = x^2 e^x /26$. And the final answer is:
+\[
+y(x) = C_1 e^x + C_2 x e^x + e^{-x}(C_3 \cos 3x + C_4 \sin 3x) + 0.1x + 0.18 +  x^2 e^x /26,
+\]
+with all $C_i \in \mathbb{R}$.
+
+A remark on computational mistakes: 
+if the route for solution is correct with the understanding of all performed operations 
+then the range for points deduction is from 1 to 5 points 
+depending on severity of consequences resulted from these mistakes.
+\end{enumerate}
+
+\end{document}

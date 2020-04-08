@@ -137,9 +137,67 @@ Another theoretical fact that first-order derivative of a homogeneous function
 with respect to any variable brings down its degree by 1 will give us the final answer $-0.5$. 
 This reference to theory along with correct answer will give another 5 points.
 
-\item to be inserted later
+\item Two points for dual problem:
+\begin{align*}
+3y_1 + 4y_2 \to \max  \\ 
+y_1 \geq 0, y_2 \geq 0 \\
+y_1 + 3y_2 \leq 1 \\
+2y_1 + 2y_2 \leq 2 \\
+2y_1 + y_2 \leq 3 \\
+y_1 - y_2 \leq 1 \\
+\end{align*}
 
-\item to be inserted later
+The geometric solution of the dual is easy, $y_1 = 1$, $y_2 = 0$, $f = 3$ (3 points).
+
+The way back from dual to original problem is awarded 3 points. 
+There infinitely many solutions. Let's describe all of them. 
+Minimal value is 3, and
+\begin{align*}
+x_1 \geq 0, x_2 \geq 0 \\
+x_1 + x_2 \geq 7/4 \\
+x_1 + 2x_2 \leq 3 \\  
+x_3 = 0 \\
+x_4 = 3 - x_1 - 2x_2 \\
+\end{align*}
+
+\newpage
+\item We eliminate strictly dominated strategies: $c \succ b$ and than $d \succ e$:
+
+\begin{tabular}{c|cc}
+    & d & f \\
+ \midrule
+ a & 1, 1 &  4, 3 \\
+ c & 5, 6 &  0, 2 \\
+  \end{tabular}
+
+Two points are given for the elimination process.
+
+Than we introduce probabilities for mixed strategies. 
+First player plays $s_1 = pa + (1-p)c$, second player plays $s_2 = qd + (1-q)f$.
+
+Expected payoffs are $u_1 = p(4-8q) + 5q$ (2 points) and $u_2 = q(4-6p)+2+p$ (2 points).
+
+Best response functions (1 point each) are 
+\[
+  BR_1(q) =  \begin{cases}
+    1, \text{ if } q < 0.5, \\
+    [0;1], \text{ if } q = 0.5, \\
+    0, \text{ if } q > 0.5.
+  \end{cases}
+\]
+\[
+  BR_2(p) =  \begin{cases}
+    1, \text{ if } p < 2/3, \\
+    [0;1], \text{ if } p = 0.5, \\
+    0, \text{ if } p > 2/3.
+  \end{cases}
+\]
+
+Finally, all NE are: $(c, d)$, $(a, f)$, $(2/3 a + 1/3 c, 1/2 d + 1/2f)$. 
+Anwer is worth 2 points.
+
+If only pure NE are computed then 2 points are awarded.
+ 
 
 \item This is a maximization problem with one equality constraint. 
 We shall solve it by Lagrange method. 

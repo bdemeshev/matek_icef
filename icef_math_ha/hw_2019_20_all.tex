@@ -1,0 +1,968 @@
+\documentclass[12pt]{article} % размер шрифта
+
+\usepackage{tikz} % картинки в tikz
+\usepackage{microtype} % свешивание пунктуации
+
+\usepackage{array} % для столбцов фиксированной ширины
+
+\usepackage{url} % для вставки ссылок \url{...}
+
+\usepackage{indentfirst} % отступ в первом параграфе
+
+\usepackage{sectsty} % для центрирования названий частей
+\allsectionsfont{\centering} % приказываем центрировать все sections
+
+\usepackage{amsthm} % теоремы и доказательства
+
+\theoremstyle{definition} % прямой шрифт в условии теорем
+\newtheorem{theorem}{Теорема}[section]
+
+
+\usepackage{amsmath, amssymb} % куча стандартных математических плюшек
+
+\usepackage[top=2cm, left=1.5cm, right=1.5cm, bottom=2cm]{geometry} % размер текста на странице
+
+\usepackage{lastpage} % чтобы узнать номер последней страницы
+
+\usepackage{enumitem} % дополнительные плюшки для списков
+%  например \begin{enumerate}[resume] позволяет продолжить нумерацию в новом списке
+\usepackage{caption} % подписи к картинкам без плавающего окружения figure
+
+\usepackage{ifthen}
+
+\usepackage{fancyhdr} % весёлые колонтитулы
+\pagestyle{fancy}
+\lhead{Math for economists}
+\chead{}
+\rhead{2020, ICEF}
+\lfoot{Home assignments}
+\cfoot{}
+\rfoot{}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+
+
+\usepackage{todonotes} % для вставки в документ заметок о том, что осталось сделать
+% \todo{Здесь надо коэффициенты исправить}
+% \missingfigure{Здесь будет картина Последний день Помпеи}
+% команда \listoftodos — печатает все поставленные \todo'шки
+
+\usepackage{booktabs} % красивые таблицы
+% заповеди из документации:
+% 1. Не используйте вертикальные линии
+% 2. Не используйте двойные линии
+% 3. Единицы измерения помещайте в шапку таблицы
+% 4. Не сокращайте .1 вместо 0.1
+% 5. Повторяющееся значение повторяйте, а не говорите "то же"
+
+\usepackage{fontspec} % поддержка разных шрифтов
+\usepackage{polyglossia} % поддержка разных языков
+
+\setmainlanguage{english}
+\setotherlanguages{russian}
+
+\setmainfont{Linux Libertine O} % выбираем шрифт
+% если Linux Libertine не установлен, то
+% можно также попробовать Helvetica, Arial, Cambria и т.Д.
+
+% чтобы использовать шрифт Linux Libertine на личном компе,
+% его надо предварительно скачать по ссылке
+% http://www.linuxlibertine.org/index.php?id=91&L=1
+
+% на сервисах типа sharelatex.com этот шрифт есть :)
+
+\newfontfamily{\cyrillicfonttt}{Linux Libertine O}
+% пояснение зачем нужно шаманство с \newfontfamily
+% http://tex.stackexchange.com/questions/91507/
+
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ} % для списков с русскими буквами
+%\setlist[enumerate, 2]{label=\asbuk\cdot),ref=\asbuk\cdot} % списки уровня 2 будут буквами а) б) ...
+
+%% эконометрические и вероятностные сокращения
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\Corr}{Corr}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\E}{E}
+\DeclareMathOperator{\grad}{grad}
+\def \hb{\hat{\beta}}
+\def \hs{\hat{\sigma}}
+\def \htheta{\hat{\theta}}
+\def \s{\sigma}
+\def \hy{\hat{y}}
+\def \hY{\hat{Y}}
+\def \v1{\vec{1}}
+\def \e{\varepsilon}
+\def \he{\hat{\e}}
+\def \z{z}
+\def \hVar{\widehat{\Var}}
+\def \hCorr{\widehat{\Corr}}
+\def \hCov{\widehat{\Cov}}
+\def \cN{\mathcal{N}}
+
+\def \putyourname{\fbox{
+    \begin{minipage}{42em}
+      Name, group no:\vspace*{3ex}\par
+      \noindent\dotfill\vspace{2mm}
+    \end{minipage}
+  }
+}
+
+
+
+\begin{document}
+
+
+
+\section{Assignment 1 (Due on the week September 11 – 17)}
+
+\begin{enumerate}
+
+\item Given the sets $A=\{1,\, 2,\, 3,\, 4,\, 6\}$, $B=\{2,\, 4,\, 6\}$, $C=\{1,\, 5,\, 6\}$.  Find:
+
+	\begin{enumerate}
+\item $(A\cap B)\cup C$,
+\item $(A\times B)\cap (A\times C)$
+\end{enumerate}
+
+\item Given the sets $A=\{a,\, b,\, c,\, d,\, e\}$, $B=\{f,\, c,\, d\}$, $C=\{a,\, f,\, c\}$.  Find:
+	\begin{enumerate}
+\item $(A\cup B)\cap C$,
+\item $(A\cap B)\times (A\cap C)$
+\end{enumerate}
+
+
+\item Find the direct product $A\times B\times C$, using the sets from the previous problem (problem~2).
+
+\item  If the domain of the function $y=5-3x$ is the set $\{x\,|\,1\leqslant x\leqslant 4\}$, find the range of the function and express it as a set. Do the same for the function $y=x^2-6x+13$.
+
+\item Prove validity of the formula: $(A\cap B)\cup C=(A\cup C)\cap (B\cup C)$,
+\begin{enumerate}
+\item By using Venn diagrams (don't forget to show all intermediate calculations, not only the final picture).
+\item By proving that every element of the set in left-hand side belongs to the set in the right-hand side and vice versa.
+\end{enumerate}
+
+\end{enumerate}
+
+
+\section{Assignment 2 (Due on the week September 18 – 24)}
+\begin{enumerate}
+
+\item Prove that $|x+y+z|\leqslant |x|+|y|+|z|$ for all numbers $x$, $y$, and $z$.
+
+\item Show that a \textit{convergent} sequence in $\mathbb{R}^n$ can have only one accumulating point, and therefore only one limit.
+
+\item Show that the positive orthant
+\[
+	\mathbb{R}^n_+=\{(x_1, x_2,\dots, x_n)\,|\, x_i>0, i=1,2,\dots, n\}
+\]
+
+is an open subset of $\mathbb{R}^n$ by finding a formula for $\varepsilon$ in terms of the $x_i$'s.
+
+\item Prove that every convergent sequence in $\mathbb{R}^n$ is bounded.
+
+\item Given two sets $S_1$ and $S_2$ in $\mathbb{R}^n$ define their sum by 
+\[
+	S_1+S_2=\{x\in \mathbb{R}^n\colon x=x_1+x_2,\, x_1\in S_1, x_2\in S_2\}.
+\]
+Prove that if $S_1$ and $S_2$ are compact, then $S_1+S_2$ is also compact.
+
+\end{enumerate}
+
+
+
+\section{Assignment 3 (September 25 – October 1)}
+
+\begin{enumerate}
+
+\item Prove that any intersection of closed sets is closed.
+
+\item For each of the following subsets of $\mathbb{R}^2$,
+\begin{itemize}
+\item Sketch the set.
+\item Determine whether or not it is \textbf{open}, \textbf{closed} or \textbf{compact}. 
+\textit{Hint: a set is closed if and only if its complement is open.}
+\item Give  reasons for your negative answers to the previous part.
+\end{itemize}
+
+\begin{enumerate}
+\item $\{(x, y)\colon x=0, y\geqslant 0\}$,
+\item $\{(x,y)\colon 1\leqslant x^2+y^2\leqslant 2\}$,
+\item $\{(x,y)\colon 1\leqslant x\leqslant 2\}$,
+\item $\{(x,y)\colon x=0 \text{ or } y=0, \text{ but not both}\}$.
+\end{enumerate}
+
+\item Sketch level sets for each of the following functions from $\mathbb{R}^3$ to $\mathbb{R}^1$:
+
+\begin{enumerate}
+\item $f(x_1, x_2, x_3)=x_1^2+x_2^2+x_3^2$,
+\item $f(x_1, x_2, x_3)=x_1^2+x_2^2$,
+\item $f(x_1, x_2, x_3)=x_1^2-x_2-x_3$,
+\item $f(x_1, x_2, x_3)=x_1+2x_2+3x_3$.
+\end{enumerate}
+
+\item Does the following limit exist: 
+\[
+	\lim_{(x,y)\to (0,0)}\frac{2xy}{x^2+y^2}?
+\]
+
+\item Find points of discontinuity of the following functions:
+\begin{enumerate}
+\item $u=\sin\frac1{xy}$,
+\item $u=\ln\frac1{\sqrt{(x-a)^2+(y-b)^2+(z-c)^2}}$.
+\end{enumerate}
+
+\end{enumerate}
+
+
+\section{Assignment 4 (Due on the week October 2 – October 8)}
+
+\begin{enumerate}
+
+\item Find $f'_x(x,b)$, if $f(x,y)= x+(y-1)\arcsin \sqrt{\frac xy}$ .
+
+\item Find all partial derivatives of the following function: $u=\left(\frac xy\right)^z$ .
+
+\item Find all partial derivatives of the following function: $u=xyz e^{x+y+z}$ .
+
+\item Find the total differential of the following function: $u=\ln (x^x+y^y+z^z)$ .
+
+\item Use differentials to approximate each of the following values of $f(x,y)$ at a given point. Show all necessary calculations that are to be done if no calculator is available.
+\begin{enumerate}
+\item $f(x,y)=x^4+2x^2y^2+xy^4+10y$ at $x=10.36$ and $y=1.04$;
+\item $f(x,y)=6x^{2/3}y^{1/2}$  at $x=998$ and $y=101.5$;
+\item $f(x,y,z)=\sqrt{x^{1/2}+y^{1/3}+5z^2}$ at $x=4.03$, $y=7.95$ and $z=1.02$.
+\end{enumerate}
+\end{enumerate}
+
+
+
+\section{Assignment 5 (Due on the week October 9 – 15)}
+
+
+\begin{enumerate}
+
+\item Compute the directional derivative of the function $z=xy^2-xy+x^3y$ at a point
+$M (4; -2)$ in the direction $\left(\frac 1{\sqrt{10}};\frac 3{\sqrt{10}}\right)$ 
+
+\item Find the derivative of the function $z=1-\left(\frac{x^2}{a^2}+\frac{y^2}{b^2}\right)$ at a point $M\left(\frac a{\sqrt{2}};\frac b{\sqrt{2}}\right)$  in the direction of the inward normal line at the point $M$ to the curve line defined by $\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$.
+
+\item Using the Chain Rule calculate $\frac{dz}{dt}$ at $t=0$ if $z=\frac{5t^2+3xy}{2w^2y}$, $x=t^2+1$, $y=\sqrt{t^2+1}$ and $w=e^t+1$.
+
+\item Calculate all partial derivatives of the first order with respect to $x$ and $y$, if $u=f(\xi,\eta,\zeta)$, where $\xi=x^2+y^2$, $\eta=x^2-y^2$, $\zeta=2xy$.
+
+\item Calculate the gradient function and Hesse matrix for the following functions:
+ \begin{enumerate}
+ \item $f(x,y)=xy-\ln (x^2+2y^2),$
+ \item $f(x,y)=ax^2+2bxy+cy^2.$
+ \end{enumerate}
+
+\end{enumerate} 
+
+
+
+%%%% missing 6?
+
+
+\section{Assignment 7 (Due on the week November 5 – 10)}
+
+
+\begin{enumerate}
+\item The supply function of a certain commodity is: $Q = a + bP^2 + R^{1/2}$ ($a<0$, $b>0$), (here $R$ is rainfall).
+\begin{enumerate}
+\item Find the price elasticity of supply and rainfall elasticity of supply.
+\item How do the two partial elasticities vary with $P$ and $R$? In monotonic fashion (assuming positive $P$ and $R$)?
+\end{enumerate}
+\item Find all partial derivatives of the first and second order of the composite function $w=f(x,y,z)$, where $x=u+v^2$, $y=u-v$, $z=\ln u +\ln v$.
+
+\medskip
+For each of the following functions find the critical points.
+
+\item $z=x^2y^3 (6-x-y)$.
+\item $u=x+\dfrac {y^2}{4x}+\dfrac{z^2}{y}+\dfrac 2z$, ($x>0$, $y>0$, $z>0$).
+
+\item Find the critical points (if any) of the implicit function $z$ of variables $x$ and $y$ defined by $x^2+y^2+z^2-xz-yz+2x+2y+2z-2=0$.
+\end{enumerate}
+
+
+\section{Assignment 8 (Due on the week November 11 – 17)}
+
+
+\begin{enumerate}
+\item Find $d^2u$, if $u=x^3+y^3-3xy(x-y)$ .
+\item Find $dz$ and $d^2z$, if $xyz=x+y+z$.
+\item Express the quadratic approximation of the following functions:
+\begin{enumerate}
+\item $f(x_1, x_2)=e^{x_1x_2-1}$ around the point $a=\begin{pmatrix}1\\1\end{pmatrix}$;
+\item $f(x,y)=\dfrac xy$ around the point $a=\begin{pmatrix}1\\1\end{pmatrix}$.
+\end{enumerate}
+\item Determine the definiteness of the following symmetric matrices:\\
+a) $\begin{pmatrix}2 &-1\\-1 &1\end{pmatrix}$ b) $\begin{pmatrix}-3 &4\\4 & -5\end{pmatrix}$ c) $\begin{pmatrix}-3& 4\\4 & -6\end{pmatrix}$ d) $\begin{pmatrix}8 &4\\4 &2\end{pmatrix}$\\
+e) $\begin{pmatrix}1 &2 & 0\\2 &4 & 5\\ 0 & 5 & 6\end{pmatrix}$ f) $\begin{pmatrix}-1 & 1 & 0\\1 & -1 & 0\\ 0 & 0 & -2\end{pmatrix}$ g) $\begin{pmatrix}1 & 0 & 3 &0\\0 & 2 & 0 & 5\\ 3 & 0 & 4 & 0\\ 0 & 5 & 0 & 6\end{pmatrix}$
+\item Express the quadratic approximation of the function $f(x,y)=\tan^{-1}\dfrac{1+x+y}{1-x+y}$ around the point $a=\begin{pmatrix}0\\0\end{pmatrix}$.
+
+\end{enumerate}
+
+
+
+\section{Assignment 9 (Due on the week November 18 – 24)}
+
+
+For each of the following functions find the critical points and classify them as local max, local min, saddle point, or ``can't tell''. What can you say about their global properties (in other words are at least some of them global extrema)?
+
+\begin{enumerate}
+\item $f(x,y)=x^4+x^2-6xy+3y^2$,
+\item $f(x,y)=x^2-6xy+2y^2+10x+2y-5$,
+\item $f(x,y)=xy^2+x^3y-xy$,
+\item $f(x,y)=3x^4+3x^2y-y^3$,
+\item $f(x,y, z)=x^2+6xy+y^2-3yz+4z^2-10x-5y-21z$,
+\item $f(x,y,z)=(x^2+2y^2+3z^2)e^{-(x^2+y^2+z^2)}$.
+\end{enumerate}
+
+
+
+
+\section{Assignment 10 (Due on the week November 25 – 30)}
+
+\begin{enumerate}
+\item Which of the following functions on $\mathbb{R}^n$ are concave or convex?
+\begin{enumerate}
+\item $f(x)=3e^x+5x^4-\ln x$,
+\item $f(x, y)=-3x^2+2xy-y^2+3x-4y+1$,
+\item $f(x,y,z)=3e^x+5y^4-\ln z$,
+\item $f(x,y,z)=Ax^\alpha y^\beta z^\gamma$, $\alpha,\beta,\gamma>0$.
+\end{enumerate}
+\item Graph each of the following sets, and indicate whether it is convex:
+\begin{enumerate}
+\item $\{(x,y)\;|\; y=e^x\}$,
+\item $\{(x,y)\;|\; y\geqslant e^x\}$,
+\item $\{(x,y)\;|\;y\leqslant 13-x^2\}$,
+\item $\{(x,y)\;|\; xy\geqslant 1; x>0,\, y>0\}$.
+\end{enumerate}
+\end{enumerate}
+
+Find critical points using the first-order conditions. To check whether a critical point is the optimal solution try the Weierstrass theorem where applicable.
+
+\begin{enumerate}[resume]
+\item $z=\dfrac xa+\dfrac yb$, if $x^2+y^2=1$,
+\item $z=x^2+12xy+2y^2$, if $4x^2+y^2=25$,
+\item Maximize $u(x,y,z)=xy^2z^3$ subject to $x+2y+3z=a$, where $x,\,y,\,z,\,a>0$.
+\end{enumerate}
+
+
+
+
+\section{Assignment 11 (Due on the week December 2 – 7)}
+
+\begin{enumerate}
+\item Train	services on a railway branch line cost \$ 1600 per month to operate. Passengers consist of the two cohorts: business passengers with the aggregated demand $Q_d=2000-10P$, where $Q_d$ is the number of journeys made per month and $P$ is the price in cents charged for each journey and the retired holidaymakers with demand $Q_d=4000-40P$. How much should	the railway authority charge if:
+    \begin{enumerate}
+    \item the same price is charged for everyone?
+    \item prices for the cohorts are different?
+    \end{enumerate}
+What price variant will the company choose?
+\item Assume that $U=(x+2)(y+1)$, and we assign no specific numerical values to the positive price and income parameters in the budget constraint $p_xx+p_yy=I$.
+    \begin{enumerate}
+    \item Write down the Lagrangian function.
+    \item Find the optimal values of the choice variables and the Lagrange multiplier in terms of the price and income parameters, assuming that the optimal bundle includes both goods in positive quantities.
+    \item Check the second-order sufficient condition for maximum.
+    \end{enumerate}
+\end{enumerate}
+
+Find points of local extrema and classify them
+
+\begin{enumerate}[resume]
+\item $u=x_1^2+x_2^2$, if $x_1^2+x_2=1$,
+\item $z=2x^4+y^4-x^2-2y^2$,
+\item $z=xy+\dfrac{50}x+\dfrac{20}y$, subject to $x>0$, $y>0$.
+\end{enumerate}
+
+
+
+
+\section{Assignment 12 (Due on the week December 9 – 14)}
+
+\begin{enumerate}
+\item Use the Lagrange multiplier method to write the first-order conditions 
+for the maximum of the function $f(x,y)=\sqrt{x}+\sqrt{y}$, subject to $ax+y=1$, 
+where $a$ is a real parameter. For what values of $a$ solution exists? Check sufficiency condition.
+
+\item Find the points of relative optimum and classify them using second-order conditions:\\ 
+$u=x^2+y+2z\rightarrow extr$, s.t. $x^3yz^2=w$, where $w$ is a real parameter.
+
+\item Find the points of relative optimum and classify them using second-order conditions:\\ 
+$u=(x+z)y\rightarrow extr$, s.t. $x^2+y^2=2$, $y+z=2$, where all the variables are positive.
+    
+\item A firm with the smooth production function $Q(x,y)$ wants to find the least-cost input combination 
+for a production of a specified level output $Q_0$ representing, say, a customer's special order. 
+Show that at the point of optimal input combination, 
+the input-price-marginal-product ratio must be the same for each input.
+\item Show that the function $z=(1+e^y)\cos x-y e^y$ 
+has an infinite number of points of maximum and no point of minimum.
+\end{enumerate}
+
+
+
+\section{Assignment 13 (Due on the week December 15 – 20)}
+
+\begin{enumerate}
+\item Let $f(x,y)=-x^2-y^2$, and we seek to maximize that function subject to constraint $(x-1)^3=y^2$. Solve that problem with and without the additional Lagrange multiplier $\lambda_0$.
+
+\item Find the critical points in the problem of constrained optimization and classify them using the second-order conditions: $f(x,y,z)=xyz\rightarrow extr$ , subject to $x^2+y^2+z^2=1$, $x+y+z=0$.
+
+\item The weekly production of a factory depends on the amounts of capital and labor it employs by the formula $q(k,l)=\sqrt{kl}$. The cost of capital is \$4 per unit and the cost of labor is \$1. Find the minimum weekly cost of producing $q=200$. How the cost of production changes if the factory has to produce $q=202$?
+
+\item A firm's inventory $I(t)$ is depleted at a constant rate per unit time, i.e. $I(t)=x-\delta t$, where $x$ is an amount of good reordered by the firm whenever the level of inventory is zero. The order is fulfilled immediately. The annual requirement for the commodity is $A$ and the firm orders the commodity $n$ times a year where $A=nx$. The firm incurs two types of inventory costs: a holding cost and an ordering cost. Since the average stock of inventory is $x/2$ the holding cost equals $C_hx/2$, the cost of placing one order is $C_0$ and with $n$ orders a year this cost equals $C_0n$.
+\begin{enumerate} 
+\item Minimize the cost of inventory $C=C_hx/2+C_0n$ by choice of $x$ and $n$ subject to the constraint $A=nx$ by the Lagrange multiplier method.
+\item Using the envelope theorem interpret the Lagrange multiplier.
+\end{enumerate}
+\item Use the Lagrange multipliers to find the dimensions of a rectangular box with the least possible surface area among those with a volume of 27 m$^3$. Check the second-order conditions. Evaluate the change in the minimal surface area if the volume drops by 0.5 m$^3$. Compare your estimate with the direct computation.
+\end{enumerate}
+
+
+
+\section{Assignment 14 (Due on the week January 20 – 26)}
+
+\begin{enumerate}
+\item Determine whether the following functions are homogenous. If so, of what degree?
+
+\begin{enumerate}
+\item $f(x,y)=\sqrt{xy}$
+\item $f(x, y)=(x^2-y^2)^{1/2}$
+\item $f(x,y)=x^3-xy+y^3$
+\item $f(x,y)= 2x+y+3 \sqrt[2]{xy}$
+\item $f(x,y,w)=\dfrac{xy^2}w+2xw$
+\item $f(x,y,w)=x^4-5yw^3$
+\end{enumerate}
+
+\item Deduce from Euler's theorem that, for production function with constant returns to scale:
+\begin{enumerate}
+\item If $\mathrm{MPP_K}= 0$, then $\mathrm{APP_L}$ is equal to $\mathrm{MPP_L}$.
+\item If $\mathrm{MPP_L} = 0$, then $\mathrm{APP_K}$ is equal to $\mathrm{MPP_K}$.
+\end{enumerate}
+
+\item  Let the production function $Q=f(x)$ of a firm be a differentiable homogenous function of degree $k>0$. 
+The firm wants to maximize its revenue $pf(x)$ subject to $w^Tx=C$, 
+where $w$ is a vector of input prices, $p$  is the output price, $C$ is the total cost of production. 
+Assume that the firm buys all of the factors in positive quantities. 
+Show that the cost function is a homogenous function $C(Q)$ of degree $\frac 1k$. 
+\textit{Hint: use Euler's equation and derive necessary conditions for the minimization problem.}
+    
+\item Find the general solution and the definite solution, given
+\begin{enumerate}
+\item $\frac{dy}{dt}+4y=12, \; y(0)=2$;
+\item $\frac{dy}{dt}-2y=0, \; y(0)=9$;
+\item $y'=3y^{2/3}, y(2)=0$;
+\item $(x^2-1)y'+2xy^2=0,\quad y(0)=1$;
+\end{enumerate}
+\item Solve the following first-order linear differential equation:
+\[
+	(2x+1)y'=4x+2y.
+\]
+\end{enumerate}
+
+
+
+
+\section{Assignment 15 (Due on the week January 27 – Febuary 2)}
+
+\begin{enumerate}
+\item Find the maximizer of $f(x,y)=x^2+y^2$, subject to the constraints $2x+y\leqslant 2$, $x\geqslant0$, $y\geqslant 0$.
+
+\item Solve Bernoulli equation, definitize the arbitrary constant:
+\[
+	\frac{dy}{dt}+2y=y^2e^t, \; y(0)=6.
+\]
+
+\item Show that the function
+\[
+	g(x,y)=3xy^3+6x^4-y(2x^{3/4}-y^{3/4})^4
+\]
+is homogeneous. Verify Euler's Theorem for $g$.
+
+\item Verify that each of the following differential equation is exact and solve it by step-by-step procedure:
+\begin{enumerate}
+\item $2yt^3dy+3y^2t^2dt=0$;
+\item $3y^2tdy+(y^3+2t)dt=0$;
+\item $t(1+2y)dy+y(1+y)dt=0$;
+\end{enumerate}
+\item Solve the following first-order differential equations:
+\begin{enumerate}
+\item $(t^2+y^2)\dfrac{dy}{dt}=2ty$;
+\item $(t+y^2)dy=ydt$;
+\end{enumerate}
+\end{enumerate}
+
+
+
+\section{Assignment 16 (Due on the week Febuary 10 – 14)}
+
+\begin{enumerate}
+\item Find the solution of the IVP in the Solow's growth model, 
+\[
+	\dot k=A\sqrt{k}-(n+\delta)k, \; k(0)=k_0,
+\]
+where $A,n,\delta>0$.
+
+\item Find the values $a$ and $b$ such that the function $f$ is homogeneous:
+\[
+	f(x,y)=2x^{b-a}y^{b+2}+y^{a+1}x^{-3b}+y^{7b}x^{-2a}.
+\]
+For the values $a$ and $b$ you have found expand the function 
+\[
+	h(x)=\sqrt{1+f(x,x)}(1-\cos(f(x,x))
+\]
+as a power series up to $x^4$. State the range for $x$ where your expansion is correct.
+
+\item Maximize $3xy-x^3$ subject to the constraints
+\[
+\begin{array}{l}
+2x-y=-5,\\
+5x+2y\geqslant 37,\\
+x\geqslant 0,\; y\geqslant 0.
+\end{array}
+\]
+\item Solve the following first-order differential equation 
+\[
+(y^2-2xy)dx+x^2dy=0.
+\]
+\item For what values of $(x_0,y_0)$ does the differential equation $xy'=\sqrt{x-y}$ 
+have a unique solution $y=y(x)$ such that $y(x_0)=y_0$?
+\end{enumerate}
+
+
+
+
+
+\section{Assignment 17 (Due on the week Febuary 17 – 22)}
+
+\begin{enumerate}
+\item A production function is given by $Q=2KL+\sqrt{L}$, where $Q$ is output, $K$ is capital and $L$ is labour. Given that the current levels of $K$ and $L$ are 9 and 4 respectively
+    \begin{enumerate}
+    \item Determine the value of the Marginal Rate of Technical Substitution, i. e. $\left(-\dfrac{dK}{dL}\right)$ where $Q$ is kept constant.
+    \item Estimate the increase in labour needed to maintain the current level of output given a decrease in capital of half a unit.
+    \item Sketch the isoquant of the above function for $Q = 74$.
+\end{enumerate}
+
+\item Solve the following differential equation: 
+\[
+	y^2dx+(xy+\mathrm\,{tg}(xy))dy=0.
+\]
+
+\item Minimize $x^2-2y$ subject to constraints $x^2+y^2\leqslant 1$, $x\geqslant 0$, $y\geqslant 0$.
+
+\item The supply function for a commodity takes the form $Q=aP^2+bP+c$ for some constants $a$, $b$, $c$, where $P$ denotes the price of the commodity supplied. When $P = 1$, the quantity supplied is $3$; when $P =2$, the quantity supplied is $11$; when $P = 3$, the quantity supplied is $25$. Using matrices, find the constants $a$, $b$, $c$, and find the quantity supplied when the market price is $4$.
+
+\item Plot the phase line for each of the following equation and interpret dynamic behavior of the solution:
+\begin{enumerate}
+\item $\dfrac{dy}{dt}=(y+1)^2-16$ ($y\geqslant 0$),
+\item $\dfrac {dy}{dt}=\dfrac 12y-y^2$ ($y\geqslant 0$).
+\end{enumerate}
+\end{enumerate}
+
+
+
+\section{Assignment 18 (Due on the week Febuary 24 – 29)}
+
+\begin{enumerate}
+\item Find the polar and the exponential form of the following complex numbers:
+
+\begin{tabular}{lll}
+1). $1+\sqrt{3}i$ & 2). $2i$ & 3). $-7i$\\
+4). $1-\sqrt{3}i$ & 5). $\sqrt{3}i$ & 6). $3+4i$\\
+7). $-1+\sqrt{3}i$ & 8). $1+i$ & 9). $-5+12i$
+\end{tabular}
+
+\item Calculate the following
+1). $(1+\sqrt{3}i)^{\frac12}$ \quad 2). $(2i)^{\frac13}$ \quad 3). $(-7i)^{\frac16}$
+
+\item Find the particular integral and the complementary function, the general solution and the definite solution of the following:
+\begin{enumerate}
+\item $y''(t)-4y'(t)+8y=0;\quad y(0)=3,\; y'(0)=7$.
+\item $y''(t)+4y'(t)+8y=2;\quad y(0)=2.25,\; y'(0)=4$.
+\item $y''(t)+3y'(t)+4y=12;\quad y(0)=2,\; y'(0)=2$.
+\item $y''(t)-2y'(t)+10y=12;\quad y(0)=6,\; y'(0)=8.5$.
+\item $y''(t)+9y=3;\quad y(0)=1,\; y'(0)=3$.
+\end{enumerate}
+
+
+\item Solve the following equations:
+\begin{enumerate}
+\item $y''-2y'-3y=e^{4t}$,
+\item $y''+y=\sin t$,
+\item $y''''+4y''+3y=0$,
+\item $y''+2y'-3y=te^t$.
+\end{enumerate}
+\item Expand $e^{-x}\ln(1+2x)$ in ascending powers of $x$ as far as the term in $x^4$. State the range of values of $x$ for which this series is valid.
+\end{enumerate}
+
+
+
+
+\section{Assignment 19 (Due on the week March 2 – 7)}
+
+\begin{enumerate}
+\item Find the particular integral of each of the following equations by the method of undetermined coefficients:
+
+\begin{enumerate}
+\item $y''(t)+2y'+y=t$,
+\item $y''(t)+4y'+y=2t^2$,
+\item $y''(t)+y'+2y=e^t$,
+\item $y''(t)+y'+3y=\sin t$.
+\end{enumerate}
+
+\item Without finding their characteristic roots, determine whether the following differential equations will give rise to convergent time paths:
+\begin{enumerate}
+\item $y'''(t)-10y''(t)+27 y'(t)-18y=3$,
+\item $y'''(t)+11y''(t)+34 y'(t)+24 y=5$,
+\item $y'''(t)+4y''(t)+5y'(t)-2y=-2$.
+\end{enumerate}
+
+\item Find all $a$ and $b$ such that all solutions of the differential equation $\ddot{y}+a\dot{y}+by=0$ converge to zero as $t$ goes to $\infty$.
+
+\item Find the polar form of the following complex numbers:
+
+\begin{tabular}{llll}
+1). $\dfrac32+\dfrac{3\sqrt{3}}2i$ & 2). $4(\sqrt{3}+i)$ & 3). $1+i$ & 4). $1-i$\\
+5). $-\dfrac12+\dfrac {\sqrt{3}}2i$ & 6). $-2-3i$ & 7). $3-4i$ & 8) $-5-i$\\
+\end{tabular}
+
+\item Using the method of Lagrange find points of extrema and classify them for the objective function $W=y^2-3x$ under constraints: $xy\leqslant 6$, $0\leqslant x\leqslant 5$, $0\leqslant y\leqslant 3$. How does the optimal value of the goal function change if the right side of each constraint decreases by $0,1$?
+\end{enumerate}
+
+
+
+
+\section{Assignment 20 (Due on the week March 10 – 14)}
+
+\begin{enumerate}
+\item For each of the following difference equations find the complementary function, the particular integral and the definite solution:
+
+\begin{enumerate}
+\item $y_{t+1}+3y_t=4\; (y_0=4)$
+\item $2y_{t+1}-y_t=6\; (y_0=7)$
+\item $y_{t+1}=0.2y_t+4\; (y_0=4)$
+\end{enumerate}
+
+\item Find the solutions of the following equations and determine whether the time paths are oscillatory and convergent:
+\begin{enumerate}
+\item $y_{t+1}-\frac13y_t=6\; (y_0=1)$
+\item $y_{t+1}+2y_t=9\; (y_0=4)$
+\item $y_{t+1}+\frac14y_t=5\; (y_0=2)$
+\item $y_{t+1}-y_t=3\; (y_0=5)$
+\end{enumerate}
+
+\item Solve graphically the following linear program:
+\[
+\begin{cases}
+\max (4x_1+2x_2)\\
+2x_1+3x_2\leqslant 18,\\
+-x_1+2x_2\leqslant 9,\\
+2x_1-4x_2\leqslant 10,\\
+x_1\geqslant 0,\, x_2\geqslant 0.
+\end{cases}
+\]
+
+\item Find the minimal value of the objective function in the linear program stated below, where $\lambda$ is a real value parameter using the dual program
+
+\[
+\begin{cases}
+\min  (x_1+10 x_2+2x_3+4x_4),\\
+\lambda x_1+2x_2-x_3+x_4\geqslant -1,\\
+x_1+3x_2+x_3+x_4\geqslant 5,\\
+x_i\geqslant 0,\; i=1,2,3,4.
+\end{cases}
+\]
+
+\item Consider the utility maximization problem in the economy of $n$-goods:\\ $U(x_1,x_2,\dots, x_n)=x_1^{a_1}x_2^{a_2}\dots x_n^{a_n}\rightarrow \max $ subject to the budget constraint $\sum\limits_{i=1}^nx_i\leqslant I$, $x_i\geqslant 0$, $a_i>0$.
+Find the optimal bundle an check whether you found the maximum. Find the rate of change of the indirect utility function when the income slightly changes.
+\end{enumerate}
+
+
+\section{Assignment 21 (Due on the week March 16 – 21)}
+
+\begin{enumerate}
+
+\item Given the demand and supply function for the cobweb model as follows, find the intertemporal
+equilibrium price, and determine whether the equilibrium is stable:
+\begin{enumerate}
+\item $Q^d_t = 18 - 3P_t, \; Q^s_t = -3 + 4P_{t-1}$
+\item $Q^d_t = 22 - 3P_t, \; Q^s_t = -2 + P_{t-1}$
+\item $Q^d_t = 19 - 6P_t, \; Q^s_t = -5 + 6P_{t-1}$
+\end{enumerate}
+
+
+\item If a market model with inventory has the following numerical form
+\[
+\begin{cases}
+Q^d_t = 21 - 2P_t, \\
+Q^s_t = -3 + 6P_t, \\
+P_{t+1} = P_t - 0.3(Q^s_t - Q^d_t) \\
+\end{cases}
+\]
+find the time path Pt and determine whether it is convergent.
+
+\item Solve the following linear program:
+
+\[
+\begin{array}{l}
+\max 7x_1 - 6x_2 - x_3 - 7x_4 \\
+2x_1 - 3x_2 - 3x_3 - x_4 \leq 2, \\
+x_1 + 2x_2 + x_3 - x_4 \leq 1, \\
+x_1, x_2, x_3, x_4 \geq 0. \\
+\end{array}
+\]
+
+\item Solve the following linear program:
+
+\[
+\begin{array}{l}
+\max -x_1 + 2x_2 + 3x_3 - x_4, \\
+2x_1 + x_2 + 2x_3 - x_4 \leq 2, \\
+-x_1 + x_2 + x_3 + 3x_4 \leq 2, \\
+x_1, x_2, x_3, x_4 \geq 0. \\
+\end{array}
+\]
+
+\item An economy produces an income $Y_t$ at year $t$. In the absence of governmental expenditures
+the following identity is valid: $Y_t = C_t + I_t$, where $C_t$ is the consumption in year $t$ and $I_t$ is
+the investment in year $t$. 
+The investment $I_t$ equals to 75\% of the previous year income $Y_{t-1}$
+and there is no autonomous consumption. 
+Let denote the marginal propensity to consume by $k$.
+
+Derive a first order difference equation for the consumption $C_t$. 
+Solve this equation and find the condition upon $k$ for which consumption will raise from year to year. 
+If $k = 0.32$, $C_0 = 100$, sketch and describe the solution $C_t$ for $t = 0, 1, 2, \ldots$ 
+Determine when, if ever, the consumption in a year first falls bellow $10$.
+\end{enumerate}
+
+
+
+
+
+\section{Bonus Assignment (Due before April 18)}
+
+
+There will be 5\% of your score for this HA added to MathEcon earnings on 100-point scale.
+
+\medskip
+
+\begin{enumerate}
+\item Consider a bi-matrix game with the pay-off matrix
+\[
+\begin{pmatrix}
+(4,3) & (5,1) & (6,2) & (5,1)\\
+(2,1) & (8,4) & (3,6) & (3,4)\\
+(3,0) & (9,6) & (2,8) &(4,6)\\
+(1,1) & (4,2) & (7,3) & (2,2)
+\end{pmatrix}. 
+\]
+Player $A$ chooses a row and player $B$ chooses a column. 
+Left number represents the pay-off of player $A$ and right number represents pay-off of player $B$. 
+Find all Nash equilibria of this game both pure and mixed.
+
+\item Find all solutions of this linear program for all values of parameter $\lambda$:
+
+\[
+\begin{cases}
+x_1+10x_2+2x_3+4x_4\rightarrow \min,\text{ subject to}\\
+\lambda x_1+2x_2-x_3+x_4\geqslant -1,\\
+x_1+3x_2+x_3+x_4\geqslant 5.
+\end{cases}
+\]
+
+All the variables here are nonnegative.
+
+\item Solve the system of differential equations 
+$\begin{pmatrix}\dot x\\ \dot y \\ \dot z\end{pmatrix}=A\begin{pmatrix} x\\ y \\  z\end{pmatrix}$, 
+where matrix $A$  is  equal to $\begin{pmatrix}2 &1 &0\\ 1 &3 &-1 \\ -1 & 2& 3\end{pmatrix}$. \textit{Hint: one of the eigenvalues is 2.}
+
+\item Solve the system of difference equations 
+\[
+\begin{cases}x_{t+1}=2x_t+y_t+2^{t/2},\\ y_{t+1}=-2x_t+2t.\end{cases}
+\]
+
+\item Form a difference equation of the smallest order possible whose linearly independent solutions in discrete time are represented by 
+    
+    \centerline{$2^t$, $\cos \left(\frac {\pi}2t\right)$, $\sin \left(\frac {\pi}2t\right)$, $t\cos\left(\frac {\pi}2t\right)$, $t\sin\left(\frac {\pi}2t\right)$.}
+\end{enumerate}
+
+
+
+Some more old\ldots
+
+
+\subsection*{Assignment 23 (20 April)}
+
+\begin{enumerate}
+
+
+
+\item Solve the following differential-equation system and analyse the time path:
+\[
+\begin{cases}
+x'(t)-x(t)-12y(t)=-60 \\
+y'(t)+x(t)+6y(t)=36
+\end{cases}
+\]
+with $x(0)=13$, $y(0)=4$.
+
+\item  Solve the following difference-equation system and analyse the time path
+\[
+\begin{cases}
+x_{t+1}+x_t+2y_t=24 \\
+y_{t+1}+2x_t-2y_t=9
+\end{cases}
+\]
+ with $x_0=10$, $y_0=9$.
+
+\item  Find the eigenvalues of the matrix
+\[
+A=\begin{pmatrix}
+4 & -1 & -1 \\
+1 & 2 & -1 \\
+1 & -1 & 2
+\end{pmatrix}
+\]
+and find the eigenvectors corresponding to each eigenvalue. Hence find an invertible matrix $P$  and a diagonal matrix $D$ such that $D=P^{-1}AP$.
+
+\begin{enumerate}
+\item  Use your result to find the sequences $x_t$, $y_t$, $z_t$, such that $x_0=1$, $y_0=3$, $z_0=2$ and for $t>0$,
+\[
+\begin{cases}
+x_{t+1}=4x_t-y_t-z_t \\
+y_{t+1}=x_t+2y_t-z_t \\
+z_{t+1}=x_t-y_t+2z_t
+\end{cases}
+\]
+
+
+\item Use your result to find the functions $x(t)$, $y(t)$, $z(t)$  such that
+$x(0)=1$, $y(0)=3$, $z(0)=2$ and
+\[
+\begin{cases}
+x'=4x-y-z \\
+y'=x+2y-z \\
+z'=x-y+2z
+\end{cases}
+\]
+
+
+
+\end{enumerate}
+\item  Given the pay-off bi-matrix
+
+
+\begin{tabular}{c|cccc}
+ & e & f & g & h \\
+\hline
+a & 1,1 & 5,3 & 3,2 & 3,4 \\
+b & 1,0 & 1,2 & 2,5 & 2,6 \\
+c & 3,3 & 3,5 & 3,4 & 4,4 \\
+d & 2,2 & 0,3 & 2,2 & 2,2 \\
+\end{tabular}
+
+Find all Nash equilibria in pure and mixed strategies. Check whether they are Pareto-optimal.
+
+\item Given the pay-off matrix of a zero-sum game
+
+\begin{tabular}{c|ccc}
+ & c & d & e \\
+\hline
+a & -1 & -3 & 0 \\
+b & -4 & 2 & -5 \\
+\end{tabular}
+
+Find all Nash equilibria in pure and mixed strategies. Check whether they are Pareto-optimal.
+
+\end{enumerate}
+
+\newpage
+\subsection*{Assignment 24 (27 April)}
+
+\begin{enumerate}
+
+\item A policymaker desires to double in 10 periods of time the value of GDP $Y_t$ produced in period $t$. Evolution of GDP over time is given by equation $2Y_{t+2}-3Y_{t+1}+Y_t=2^t+t$. If it is possible find at least one value of  $Y_0$ and $Y_1$ that the GDP will eventually double.
+
+% Is doubling of GDP feasible? If the answer is positive,  find the period $t$ when the value of $Y_t$ will first exceed $2Y_0$, where $Y_0$ is the initial GDP.
+
+\item  Solve the system of ODE
+\[
+\begin{cases}
+\dot{x}=3x-2y \\
+\dot{y}=2x-y
+\end{cases}
+\]
+
+
+
+
+\item  Let production function $F(K, L)$ be twice continuous differentiable and homogeneous of the first degree. Show that its Hessian matrix has a zero determinant.
+
+\item  Two candidates, A and B, compete in an election. Of the 100 citizens, $k$ support candidate A and $m= 100 - k$ support candidate B. Each citizen decides whether to vote, at a cost, for the candidate she supports, or to abstain. A citizen who abstains receives the payoff of 2 if the candidate she supports wins, 1 if this candidate ties for first place, and 0 if this candidate loses. A citizen who votes receives the payoffs $2 - c$, $1 - c$, and $-c$ in these three cases, where $0 < c < 1$.
+\begin{enumerate}
+\item  For $k = 50$, find the set of Nash equilibria in pure strategies. (Is the action profile in which everyone votes a Nash equilibrium? Is there any Nash equilibrium in which the candidates tie and not everyone votes? Is there any Nash equilibrium in which one of the candidates wins by one vote? Is there any Nash equilibrium in which one of the candidates wins by two or more votes?)
+\item  What is the set of Nash equilibria in pure strategies for $k < 50$?
+\end{enumerate}
+
+\item General A is defending territory accessible by two mountain passes against an attack by general B. General A has three divisions at her disposal, and general B has two divisions. Each general allocates her divisions between the two passes. General A wins the battle at a pass if and only if she assigns at least as many divisions to the pass as does general B; she successfully defends her territory if and only if she wins the battle at both passes. Find all the mixed strategy equilibria.
+
+
+\end{enumerate}
+
+\newpage
+\subsection*{Additional Computer Home Assignment (27 April)}
+
+You may use any open source software, R is recommended but not mandatory. Please provide not only the answers but also the code.
+
+\begin{enumerate}
+
+\item Find all the eigenvalues and eigenvectors of the following matrix
+
+\[
+\begin{pmatrix}
+5 & 2 & -1\\
+2 & 3 & 6\\
+-1 & 6 & -2
+\end{pmatrix}
+\]
+
+\item Draw the solution of the second order equation
+
+\[
+y''+(x+1)\cdot y' + y=\arctan x
+\]
+
+with initial conditions $y(0)=0$, $y'(0)=1$.
+
+\item Find numerically the global minimum of the function $f(x,y)=x^4+y^8+2xy-4x+xy^2$.
+
+\item Find at least one Nash Equilibrium of the following zero-sum game:
+
+\begin{tabular}{c|ccc}
+ & e & f & g \\
+\hline
+a & 2;-2 & -3;3 & 0;0 \\
+b & 0;0 & 3;-3 & -5;5 \\
+c & -4;4 & 0;0 & 2;-2 \\
+\end{tabular}
+
+\item Masha and Sasha play the following game. Masha writes two numbers on two small sheets of paper. The number on the first sheet is uniformly distributed on $[0;1]$, the number on the second sheet is just the first number squared. Sasha selects one of the two sheets at random with equal probabilities. He looks at the number and may either keep it or discard it and take the other number. Sasha maximises his expected payoff. Find his optimal strategy and the maximal expected payoff.
+
+\item Download stock prices of five selected stocks of your choice. Any time period is ok.
+
+\begin{enumerate}
+\item Estimate expected returns and covariance matrix for returns
+\item For different values of $\lambda$ solve the maximisation problem
+\[
+(\text{Expected portfolio return}) - \lambda (\text{MAD of portfolio return})
+\]
+\item Plot the optimal portfolios and original stocks on a scatter plot using expected returns and MAD as axis.
+\end{enumerate}
+\end{enumerate}
+
+
+
+\end{document} 

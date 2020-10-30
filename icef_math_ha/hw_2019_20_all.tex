@@ -85,22 +85,22 @@
 \DeclareMathOperator{\Var}{Var}
 \DeclareMathOperator{\E}{E}
 \DeclareMathOperator{\grad}{grad}
-\def \hb{\hat{\beta}}
-\def \hs{\hat{\sigma}}
-\def \htheta{\hat{\theta}}
-\def \s{\sigma}
-\def \hy{\hat{y}}
-\def \hY{\hat{Y}}
-\def \v1{\vec{1}}
-\def \e{\varepsilon}
-\def \he{\hat{\e}}
-\def \z{z}
-\def \hVar{\widehat{\Var}}
-\def \hCorr{\widehat{\Corr}}
-\def \hCov{\widehat{\Cov}}
-\def \cN{\mathcal{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand \hb{\hat{\beta}}
+\newcommand \hs{\hat{\sigma}}
+\newcommand \htheta{\hat{\theta}}
+\newcommand \s{\sigma}
+\newcommand \hy{\hat{y}}
+\newcommand \hY{\hat{Y}}
+\newcommand \e{\varepsilon}
+\newcommand \he{\hat{\e}}
+\newcommand \z{z}
+\newcommand \hVar{\widehat{\Var}}
+\newcommand \hCorr{\widehat{\Corr}}
+\newcommand \hCov{\widehat{\Cov}}
+\newcommand \cN{\mathcal{N}}
 
-\def \putyourname{\fbox{
+\newcommand \putyourname{\fbox{
     \begin{minipage}{42em}
       Name, group no:\vspace*{3ex}\par
       \noindent\dotfill\vspace{2mm}
@@ -114,7 +114,7 @@
 
 
 
-\section{Assignment 1 (Due on the week September 11 – 17)}
+\section*{Assignment 1 (Due on the week September 11 – 17)}
 
 \begin{enumerate}
 
@@ -134,7 +134,7 @@
 
 \item Find the direct product $A\times B\times C$, using the sets from the previous problem (problem~2).
 
-\item  If the domain of the function $y=5-3x$ is the set $\{x\,|\,1\leqslant x\leqslant 4\}$, find the range of the function and express it as a set. Do the same for the function $y=x^2-6x+13$.
+\item  If the domain of the function $y=5-3x$ is the set $\{x\,|\,1\leq x\leq 4\}$, find the range of the function and express it as a set. Do the same for the function $y=x^2-6x+13$.
 
 \item Prove validity of the formula: $(A\cap B)\cup C=(A\cup C)\cap (B\cup C)$,
 \begin{enumerate}
@@ -145,25 +145,25 @@
 \end{enumerate}
 
 
-\section{Assignment 2 (Due on the week September 18 – 24)}
+\section*{Assignment 2 (Due on the week September 18 – 24)}
 \begin{enumerate}
 
-\item Prove that $|x+y+z|\leqslant |x|+|y|+|z|$ for all numbers $x$, $y$, and $z$.
+\item Prove that $|x+y+z|\leq |x|+|y|+|z|$ for all numbers $x$, $y$, and $z$.
 
-\item Show that a \textit{convergent} sequence in $\mathbb{R}^n$ can have only one accumulating point, and therefore only one limit.
+\item Show that a \textit{convergent} sequence in $\R^n$ can have only one accumulating point, and therefore only one limit.
 
 \item Show that the positive orthant
 \[
-	\mathbb{R}^n_+=\{(x_1, x_2,\dots, x_n)\,|\, x_i>0, i=1,2,\dots, n\}
+	\R^n_+=\{(x_1, x_2,\dots, x_n)\,|\, x_i>0, i=1,2,\dots, n\}
 \]
 
-is an open subset of $\mathbb{R}^n$ by finding a formula for $\varepsilon$ in terms of the $x_i$'s.
+is an open subset of $\R^n$ by finding a formula for $\varepsilon$ in terms of the $x_i$'s.
 
-\item Prove that every convergent sequence in $\mathbb{R}^n$ is bounded.
+\item Prove that every convergent sequence in $\R^n$ is bounded.
 
-\item Given two sets $S_1$ and $S_2$ in $\mathbb{R}^n$ define their sum by 
+\item Given two sets $S_1$ and $S_2$ in $\R^n$ define their sum by 
 \[
-	S_1+S_2=\{x\in \mathbb{R}^n\colon x=x_1+x_2,\, x_1\in S_1, x_2\in S_2\}.
+	S_1+S_2=\{x\in \R^n\colon x=x_1+x_2,\, x_1\in S_1, x_2\in S_2\}.
 \]
 Prove that if $S_1$ and $S_2$ are compact, then $S_1+S_2$ is also compact.
 
@@ -171,13 +171,13 @@ Prove that if $S_1$ and $S_2$ are compact, then $S_1+S_2$ is also compact.
 
 
 
-\section{Assignment 3 (September 25 – October 1)}
+\section*{Assignment 3 (September 25 – October 1)}
 
 \begin{enumerate}
 
 \item Prove that any intersection of closed sets is closed.
 
-\item For each of the following subsets of $\mathbb{R}^2$,
+\item For each of the following subsets of $\R^2$,
 \begin{itemize}
 \item Sketch the set.
 \item Determine whether or not it is \textbf{open}, \textbf{closed} or \textbf{compact}. 
@@ -186,13 +186,13 @@ Prove that if $S_1$ and $S_2$ are compact, then $S_1+S_2$ is also compact.
 \end{itemize}
 
 \begin{enumerate}
-\item $\{(x, y)\colon x=0, y\geqslant 0\}$,
-\item $\{(x,y)\colon 1\leqslant x^2+y^2\leqslant 2\}$,
-\item $\{(x,y)\colon 1\leqslant x\leqslant 2\}$,
+\item $\{(x, y)\colon x=0, y\geq 0\}$,
+\item $\{(x,y)\colon 1\leq x^2+y^2\leq 2\}$,
+\item $\{(x,y)\colon 1\leq x\leq 2\}$,
 \item $\{(x,y)\colon x=0 \text{ or } y=0, \text{ but not both}\}$.
 \end{enumerate}
 
-\item Sketch level sets for each of the following functions from $\mathbb{R}^3$ to $\mathbb{R}^1$:
+\item Sketch level sets for each of the following functions from $\R^3$ to $\R^1$:
 
 \begin{enumerate}
 \item $f(x_1, x_2, x_3)=x_1^2+x_2^2+x_3^2$,
@@ -208,14 +208,14 @@ Prove that if $S_1$ and $S_2$ are compact, then $S_1+S_2$ is also compact.
 
 \item Find points of discontinuity of the following functions:
 \begin{enumerate}
-\item $u=\sin\frac1{xy}$,
-\item $u=\ln\frac1{\sqrt{(x-a)^2+(y-b)^2+(z-c)^2}}$.
+\item $u=\sin\frac 1{xy}$,
+\item $u=\ln\frac 1{\sqrt{(x-a)^2+(y-b)^2+(z-c)^2}}$.
 \end{enumerate}
 
 \end{enumerate}
 
 
-\section{Assignment 4 (Due on the week October 2 – October 8)}
+\section*{Assignment 4 (Due on the week October 2 – October 8)}
 
 \begin{enumerate}
 
@@ -237,7 +237,7 @@ Prove that if $S_1$ and $S_2$ are compact, then $S_1+S_2$ is also compact.
 
 
 
-\section{Assignment 5 (Due on the week October 9 – 15)}
+\section*{Assignment 5 (Due on the week October 9 – 15)}
 
 
 \begin{enumerate}
@@ -260,11 +260,37 @@ $M (4; -2)$ in the direction $\left(\frac 1{\sqrt{10}};\frac 3{\sqrt{10}}\right)
 \end{enumerate} 
 
 
+\subsection*{Assignment 6 (Due on the week October 14 – 20)}
 
-%%%% missing 6?
+\begin{enumerate}
+\item  Consider the equation $x^3+3y^2+4xz^2-3z^2y=1$. 
+Does this equation define $z$ as a function of $x$ and $y$? If so, 
+compute $\frac{\partial z}{\partial x}$ and $\frac{\partial z}{\partial y}$ at this point.
+\begin{enumerate}
+\item In a neighborhood of $x=1$, $y=1$,
+\item In a neighborhood of $x=1$, $y=0$,
+\item In a neighborhood of $x=0.5$, $y=0$.
+\end{enumerate}
+\item Consider $3x^2yz+xyz^2=30$ as defining $x$ as an implicit function of $y$ and $z$ around the point $x=1$, $y=3$, $z=2$.
+If $y$ increases to $3.2$ and $z$ remains at 2, 
+use the Implicit Function Theorem to estimate the corresponding $x$.
+\item
+\begin{enumerate}
+\item Find all points $(x_0, y_0)$, where $y'=0$, 
+if $y(x)$ is an implicit function given by an equation $\ln\sqrt{x^2+y^2}=\arctg(y/x)$.
+\item Calculate $y''(x)$ at these points.
+\end{enumerate}
+\item Prove that $y''(x)\equiv 0$ if $y(x)$ is an implicit function 
+given by an equation $y=2x\arctg(y/x)$. Where does $y(x)$ exist?
+\item Find all partial derivatives of the first and second order of the composite function $w=f(x,y)$, 
+where $x=u^2+v^2$, $y=uv$.
+\end{enumerate}
 
 
-\section{Assignment 7 (Due on the week November 5 – 10)}
+
+
+
+\section*{Assignment 7 (Due on the week November 5 – 10)}
 
 
 \begin{enumerate}
@@ -285,7 +311,7 @@ For each of the following functions find the critical points.
 \end{enumerate}
 
 
-\section{Assignment 8 (Due on the week November 11 – 17)}
+\section*{Assignment 8 (Due on the week November 11 – 17)}
 
 
 \begin{enumerate}
@@ -305,7 +331,7 @@ e) $\begin{pmatrix}1 &2 & 0\\2 &4 & 5\\ 0 & 5 & 6\end{pmatrix}$ f) $\begin{pmatr
 
 
 
-\section{Assignment 9 (Due on the week November 18 – 24)}
+\section*{Assignment 9 (Due on the week November 18 – 24)}
 
 
 For each of the following functions find the critical points and classify them as local max, local min, saddle point, or ``can't tell''. What can you say about their global properties (in other words are at least some of them global extrema)?
@@ -322,10 +348,10 @@ For each of the following functions find the critical points and classify them a
 
 
 
-\section{Assignment 10 (Due on the week November 25 – 30)}
+\section*{Assignment 10 (Due on the week November 25 – 30)}
 
 \begin{enumerate}
-\item Which of the following functions on $\mathbb{R}^n$ are concave or convex?
+\item Which of the following functions on $\R^n$ are concave or convex?
 \begin{enumerate}
 \item $f(x)=3e^x+5x^4-\ln x$,
 \item $f(x, y)=-3x^2+2xy-y^2+3x-4y+1$,
@@ -335,9 +361,9 @@ For each of the following functions find the critical points and classify them a
 \item Graph each of the following sets, and indicate whether it is convex:
 \begin{enumerate}
 \item $\{(x,y)\;|\; y=e^x\}$,
-\item $\{(x,y)\;|\; y\geqslant e^x\}$,
-\item $\{(x,y)\;|\;y\leqslant 13-x^2\}$,
-\item $\{(x,y)\;|\; xy\geqslant 1; x>0,\, y>0\}$.
+\item $\{(x,y)\;|\; y\geq e^x\}$,
+\item $\{(x,y)\;|\;y\leq 13-x^2\}$,
+\item $\{(x,y)\;|\; xy\geq 1; x>0,\, y>0\}$.
 \end{enumerate}
 \end{enumerate}
 
@@ -352,7 +378,7 @@ Find critical points using the first-order conditions. To check whether a critic
 
 
 
-\section{Assignment 11 (Due on the week December 2 – 7)}
+\section*{Assignment 11 (Due on the week December 2 – 7)}
 
 \begin{enumerate}
 \item Train	services on a railway branch line cost \$ 1600 per month to operate. Passengers consist of the two cohorts: business passengers with the aggregated demand $Q_d=2000-10P$, where $Q_d$ is the number of journeys made per month and $P$ is the price in cents charged for each journey and the retired holidaymakers with demand $Q_d=4000-40P$. How much should	the railway authority charge if:
@@ -380,7 +406,7 @@ Find points of local extrema and classify them
 
 
 
-\section{Assignment 12 (Due on the week December 9 – 14)}
+\section*{Assignment 12 (Due on the week December 9 – 14)}
 
 \begin{enumerate}
 \item Use the Lagrange multiplier method to write the first-order conditions 
@@ -403,7 +429,7 @@ has an infinite number of points of maximum and no point of minimum.
 
 
 
-\section{Assignment 13 (Due on the week December 15 – 20)}
+\section*{Assignment 13 (Due on the week December 15 – 20)}
 
 \begin{enumerate}
 \item Let $f(x,y)=-x^2-y^2$, and we seek to maximize that function subject to constraint $(x-1)^3=y^2$. Solve that problem with and without the additional Lagrange multiplier $\lambda_0$.
@@ -422,7 +448,7 @@ has an infinite number of points of maximum and no point of minimum.
 
 
 
-\section{Assignment 14 (Due on the week January 20 – 26)}
+\section*{Assignment 14 (Due on the week January 20 – 26)}
 
 \begin{enumerate}
 \item Determine whether the following functions are homogenous. If so, of what degree?
@@ -465,10 +491,10 @@ Show that the cost function is a homogenous function $C(Q)$ of degree $\frac 1k$
 
 
 
-\section{Assignment 15 (Due on the week January 27 – Febuary 2)}
+\section*{Assignment 15 (Due on the week January 27 – Febuary 2)}
 
 \begin{enumerate}
-\item Find the maximizer of $f(x,y)=x^2+y^2$, subject to the constraints $2x+y\leqslant 2$, $x\geqslant0$, $y\geqslant 0$.
+\item Find the maximizer of $f(x,y)=x^2+y^2$, subject to the constraints $2x+y\leq 2$, $x\geq0$, $y\geq 0$.
 
 \item Solve Bernoulli equation, definitize the arbitrary constant:
 \[
@@ -496,7 +522,7 @@ is homogeneous. Verify Euler's Theorem for $g$.
 
 
 
-\section{Assignment 16 (Due on the week Febuary 10 – 14)}
+\section*{Assignment 16 (Due on the week Febuary 10 – 14)}
 
 \begin{enumerate}
 \item Find the solution of the IVP in the Solow's growth model, 
@@ -519,8 +545,8 @@ as a power series up to $x^4$. State the range for $x$ where your expansion is c
 \[
 \begin{array}{l}
 2x-y=-5,\\
-5x+2y\geqslant 37,\\
-x\geqslant 0,\; y\geqslant 0.
+5x+2y\geq 37,\\
+x\geq 0,\; y\geq 0.
 \end{array}
 \]
 \item Solve the following first-order differential equation 
@@ -535,7 +561,7 @@ have a unique solution $y=y(x)$ such that $y(x_0)=y_0$?
 
 
 
-\section{Assignment 17 (Due on the week Febuary 17 – 22)}
+\section*{Assignment 17 (Due on the week Febuary 17 – 22)}
 
 \begin{enumerate}
 \item A production function is given by $Q=2KL+\sqrt{L}$, where $Q$ is output, $K$ is capital and $L$ is labour. Given that the current levels of $K$ and $L$ are 9 and 4 respectively
@@ -547,23 +573,23 @@ have a unique solution $y=y(x)$ such that $y(x_0)=y_0$?
 
 \item Solve the following differential equation: 
 \[
-	y^2dx+(xy+\mathrm\,{tg}(xy))dy=0.
+	y^2 dx+(xy+\tg(xy)) dy=0.
 \]
 
-\item Minimize $x^2-2y$ subject to constraints $x^2+y^2\leqslant 1$, $x\geqslant 0$, $y\geqslant 0$.
+\item Minimize $x^2-2y$ subject to constraints $x^2+y^2\leq 1$, $x\geq 0$, $y\geq 0$.
 
 \item The supply function for a commodity takes the form $Q=aP^2+bP+c$ for some constants $a$, $b$, $c$, where $P$ denotes the price of the commodity supplied. When $P = 1$, the quantity supplied is $3$; when $P =2$, the quantity supplied is $11$; when $P = 3$, the quantity supplied is $25$. Using matrices, find the constants $a$, $b$, $c$, and find the quantity supplied when the market price is $4$.
 
 \item Plot the phase line for each of the following equation and interpret dynamic behavior of the solution:
 \begin{enumerate}
-\item $\dfrac{dy}{dt}=(y+1)^2-16$ ($y\geqslant 0$),
-\item $\dfrac {dy}{dt}=\dfrac 12y-y^2$ ($y\geqslant 0$).
+\item $\dfrac{dy}{dt}=(y+1)^2-16$ ($y\geq 0$),
+\item $\dfrac {dy}{dt}=\dfrac 12y-y^2$ ($y\geq 0$).
 \end{enumerate}
 \end{enumerate}
 
 
 
-\section{Assignment 18 (Due on the week Febuary 24 – 29)}
+\section*{Assignment 18 (Due on the week Febuary 24 – 29)}
 
 \begin{enumerate}
 \item Find the polar and the exponential form of the following complex numbers:
@@ -600,7 +626,7 @@ have a unique solution $y=y(x)$ such that $y(x_0)=y_0$?
 
 
 
-\section{Assignment 19 (Due on the week March 2 – 7)}
+\section*{Assignment 19 (Due on the week March 2 – 7)}
 
 \begin{enumerate}
 \item Find the particular integral of each of the following equations by the method of undetermined coefficients:
@@ -628,13 +654,13 @@ have a unique solution $y=y(x)$ such that $y(x_0)=y_0$?
 5). $-\dfrac12+\dfrac {\sqrt{3}}2i$ & 6). $-2-3i$ & 7). $3-4i$ & 8) $-5-i$\\
 \end{tabular}
 
-\item Using the method of Lagrange find points of extrema and classify them for the objective function $W=y^2-3x$ under constraints: $xy\leqslant 6$, $0\leqslant x\leqslant 5$, $0\leqslant y\leqslant 3$. How does the optimal value of the goal function change if the right side of each constraint decreases by $0,1$?
+\item Using the method of Lagrange find points of extrema and classify them for the objective function $W=y^2-3x$ under constraints: $xy\leq 6$, $0\leq x\leq 5$, $0\leq y\leq 3$. How does the optimal value of the goal function change if the right side of each constraint decreases by $0,1$?
 \end{enumerate}
 
 
 
 
-\section{Assignment 20 (Due on the week March 10 – 14)}
+\section*{Assignment 20 (Due on the week March 10 – 14)}
 
 \begin{enumerate}
 \item For each of the following difference equations find the complementary function, the particular integral and the definite solution:
@@ -657,10 +683,10 @@ have a unique solution $y=y(x)$ such that $y(x_0)=y_0$?
 \[
 \begin{cases}
 \max (4x_1+2x_2)\\
-2x_1+3x_2\leqslant 18,\\
--x_1+2x_2\leqslant 9,\\
-2x_1-4x_2\leqslant 10,\\
-x_1\geqslant 0,\, x_2\geqslant 0.
+2x_1+3x_2\leq 18,\\
+-x_1+2x_2\leq 9,\\
+2x_1-4x_2\leq 10,\\
+x_1\geq 0,\, x_2\geq 0.
 \end{cases}
 \]
 
@@ -669,18 +695,18 @@ x_1\geqslant 0,\, x_2\geqslant 0.
 \[
 \begin{cases}
 \min  (x_1+10 x_2+2x_3+4x_4),\\
-\lambda x_1+2x_2-x_3+x_4\geqslant -1,\\
-x_1+3x_2+x_3+x_4\geqslant 5,\\
-x_i\geqslant 0,\; i=1,2,3,4.
+\lambda x_1+2x_2-x_3+x_4\geq -1,\\
+x_1+3x_2+x_3+x_4\geq 5,\\
+x_i\geq 0,\; i=1,2,3,4.
 \end{cases}
 \]
 
-\item Consider the utility maximization problem in the economy of $n$-goods:\\ $U(x_1,x_2,\dots, x_n)=x_1^{a_1}x_2^{a_2}\dots x_n^{a_n}\rightarrow \max $ subject to the budget constraint $\sum\limits_{i=1}^nx_i\leqslant I$, $x_i\geqslant 0$, $a_i>0$.
+\item Consider the utility maximization problem in the economy of $n$-goods:\\ $U(x_1,x_2,\dots, x_n)=x_1^{a_1}x_2^{a_2}\dots x_n^{a_n}\rightarrow \max $ subject to the budget constraint $\sum\limits_{i=1}^nx_i\leq I$, $x_i\geq 0$, $a_i>0$.
 Find the optimal bundle an check whether you found the maximum. Find the rate of change of the indirect utility function when the income slightly changes.
 \end{enumerate}
 
 
-\section{Assignment 21 (Due on the week March 16 – 21)}
+\section*{Assignment 21 (Due on the week March 16 – 21)}
 
 \begin{enumerate}
 
@@ -742,7 +768,7 @@ Determine when, if ever, the consumption in a year first falls bellow $10$.
 
 
 
-\section{Bonus Assignment (Due before April 18)}
+\section*{Bonus Assignment (Due before April 18)}
 
 
 There will be 5\% of your score for this HA added to MathEcon earnings on 100-point scale.
@@ -768,8 +794,8 @@ Find all Nash equilibria of this game both pure and mixed.
 \[
 \begin{cases}
 x_1+10x_2+2x_3+4x_4\rightarrow \min,\text{ subject to}\\
-\lambda x_1+2x_2-x_3+x_4\geqslant -1,\\
-x_1+3x_2+x_3+x_4\geqslant 5.
+\lambda x_1+2x_2-x_3+x_4\geq -1,\\
+x_1+3x_2+x_3+x_4\geq 5.
 \end{cases}
 \]
 

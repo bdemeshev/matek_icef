@@ -1,0 +1,221 @@
+% !TEX root = ../matmor_exams.tex
+
+\subsection{MFE, October mock, 2020-10-24}
+
+
+\begin{enumerate}
+
+\item (10 points) Consider the function $f(x, y) = x^3 +3a y^3 + 2axy$ where $a$ is a parameter. 
+  Using the total differential find the approximate value of $f(1.98, 0.99)$.
+
+  \item (10 points) Consider the system
+  \[
+  \begin{cases}
+  3x^3 + u(y) + u(z) = 5 \\
+  x + x^3 + 2u(y^3x) = 4 \\
+  \end{cases},
+  \]
+  where $u(x)$ is a differentiable function with $u(1)=1$. 
+
+
+  \begin{enumerate}
+    \item Clearly state conditions sufficient to guarantee that the system defines the functions $z(y)$ and $x(y)$ at a point $(1, 1, 1)$. 
+    \item Find $z'(y)$ provided the conditions are met.
+ \end{enumerate}
+
+ \item (10 points) Consider the function $f (x, y) = xy^3$  and the point $A = (−1, −2)$.
+
+ Find the direction of the maximal rate of change of the function and this maximal rate.
+
+
+\item (10 points) For $x>0$, $y>0$ find the limit 
+\[
+u(x,y) = \lim_{t\to 0} \left(x^{\frac{t-1}{t}} + y^{\frac{t-1}{t}}  \right)^{\frac{t}{t-1}}
+\]
+
+\item (10 points) Provide an explicit example of a non-convergent sequence $(x_n)$ in $\RR^2$ 
+such that the sequences $y_n = \| x_n \|$ and $z_n = \| x_n  + 2x_{n+1}\|$ are convergent.
+
+\item (10 points) Let's consider the sets $A_n = \{ x\in \RR \mid x^2 n = 1\}$.
+
+Describe the set $A = \cup_{n=1}^{\infty} A_n$: is it closed, open, bounded, compact?
+
+
+
+\item 
+A curve represented by the equation $(x^2 + y^2)^2 = x^2 - y^2$ is called lemniscate. 
+
+\begin{enumerate}
+  \item (5 points) While solving for $y=y(x)$ implicit function defined by this equation 
+  is it possible to use IFT in the neighborhood of the point $(0,0)$?
+  \item (5 points) Show that in the first quadrant $\{(x,y) \mid x>0, y>0 \}$ 
+  such implicit function $y=y(x)$ exists. Justify your reasoning. 
+  \item (10 points) Find $y'(0)$ if it exists. 
+\end{enumerate}
+
+Hint: for c) it is convenient  to change Cartesian coordinates to polar coordinates 
+following the formulas $x=r\cos \phi$ and $y=r\sin \phi$.
+
+
+\item Let $u$ be a composite function $u=g(x^2 + y^2)$, where $g(t) \in C^2$ for $t>0$. 
+
+\begin{enumerate}
+  \item (5 points) Is the formula 
+  \[
+du = g'(x^2 + y^2)(2xdx + 2ydy)
+  \]
+  for the total differential valid? Provide a clear argument. 
+\item  (5 points) For higher order differentials we would like to continue in the same fashion:
+\[
+d^2u = g''(x^2 + y^2)(2xdx + 2ydy)^2
+\]  
+Does this method work? Justify your answer. 
+\item (10 points) Let $g(t)=\sqrt{t}$. 
+Prove that for the function $u(x,y)=\sqrt{x^2 + y^2}$ the second-order differential is non-negative.
+\end{enumerate}
+
+  
+
+
+  
+\end{enumerate}
+  
+
+\subsection{MFE, October mock, 2020-10-24, marking}
+
+
+\begin{enumerate}
+
+    \item
+    The total differential at point $(2,\,1)$ is given by $df=f'_x(2,\,1)dx+f'_y(2,\,1)dy$. The partial derivatives are $f'_x(x,\,y)=3x^2+2ay$ and $f'_y(x,\,y)=9ay^2+2ax$, so $f'_x(2,\,1)=12+2a$ and $f'_y(2,\,1)=13a$. Therefore, given that $\Delta x = 1.98-2 = -0.02$ and $\Delta y=0.99-1=-0.01$, we have
+    \[\begin{split}
+    f(1.98,\,0.99)\approx f(2,\,1)+f'_x(2,\,1)\Delta x+f'_y(2,\,1)\Delta y=(8+7a)+(12+2a)(-0.02)+13a(-0.01)=\\=7.76+6.83a
+    \end{split}
+    \]
+    
+    Marking:
+    \begin{itemize}
+        \item  $f'_x(2,1)$ and $f'_y(2,1)$ calculated -- 1 point each,
+        \item correct (negative) $\Delta x$ and $\Delta y$ -- 1 point each,
+        \item correct formula for $f(x_0+\Delta x,\,y_0+\Delta y)$ -- 4 points,
+        \item correct final answer -- 2 points.
+    \end{itemize}
+    
+    Frequent mistakes:
+    \begin{itemize}
+        \item used the starting point $(1,\,1)$ -- penalty of 1 point.
+    \end{itemize}
+    
+    \item Let $F(x,\,y,\,z)=3x^2+u(y)+u(z)$ and $G(x,\,y,\,z)=x+x^3+2u(y^3x)$.
+    \begin{enumerate}
+        \item The Implicit Function Theorem has 3 conditions to be verified:
+        \begin{enumerate}
+            \item The equations are satisfied at the point considered. This is indeed true --
+            \[
+            \begin{cases}
+                F(1,\,1,\,1)=3\cdot 1^2+u(1)+u(1)=3+1+1=5,\\
+                G(1,\,1,\,1)=1+1^3+2u(1^3\cdot1)=1+1+2=4.
+            \end{cases}
+            \]
+            \item The function is continuously differentiable in a neighbourhood of the point considered. $F$ and $G$ are sums of polynomials (which are continuously differentiable) and a differentiable function $u$. For the conditions of the theorem to be satisfied, the function $u(x)$ has to be continuously differentiable in a neighbourhood of $x=1$.
+            \item The determinant of the Jacobian $J=\frac{\partial(F,\,G)}{\partial(x,\,z)}$ is not 0 at the point considered. Checking:
+            \[
+            |J|=\begin{vmatrix}\frac{\partial F}{\partial x}& \frac{\partial F}{\partial z}\\
+            \frac{\partial G}{\partial x}& \frac{\partial G}{\partial z}\end{vmatrix}=
+            \begin{vmatrix}9x^2&u'(z)\\1+3x^2+2y^3u'(y^3x)&0\end{vmatrix}=-u'(z)(1+3x^2+2y^3u'(y^3x))
+            \]
+            At $x=y=z=1$ we have $|J|=-u'(1)(4+2u'(1))$. For $|J|\neq 0$ we should have $u'(1)\neq 0$ and $u'(1)\neq -2$.
+            \end{enumerate}
+        Marking:
+        \begin{itemize}
+        \item verified that the point lies on the curve -- 1 point
+        \item any justification that the functions are differentiable (not necessarily continuously) -- 1 point
+        \item correct expression for the Jacobian -- 1 point,
+        \item computing all the partial derivatives in the Jacobian -- 1 point
+        \item computing the determinant of the Jacobian -- 1 point
+        \item answer in terms of $u'(1)$ -- 1 point.
+        \end{itemize}
+    \item Assuming the conditions in part (a) hold, the IFT gives the expression for $z'(y)$:
+    \[\begin{split}
+    z'(y)=-\frac{\begin{vmatrix}\frac{\partial F}{\partial x}& \frac{\partial F}{\partial y}\\
+            \frac{\partial G}{\partial x}& \frac{\partial G}{\partial y}\end{vmatrix}}
+            {\begin{vmatrix}\frac{\partial F}{\partial x}& \frac{\partial F}{\partial z}\\
+            \frac{\partial G}{\partial x}& \frac{\partial G}{\partial z}\end{vmatrix}}=
+            -\frac{\begin{vmatrix}9x^2&u'(y)\\1+3x^2+2y^3u'(y^3x)&6y^2xu'(y^3x)\end{vmatrix}}{-u'(z)(1+3x^2+2y^3u'(y^3x))}=\\=-\frac{54x^3y^2u'(y^3x)-u'(y)(1+3x+2y^3u'(y^3x))}{-u'(z)(1+3x^2+2y^3u'(y^3x))}
+    \end{split}
+    \]
+    Note that in order to get the actual dependence $z'(y)$, $x$ and $z$ in the latter expression should be understood as $x(y)$ and $z(y)$ correspondingly.
+    Marking:
+    \begin{itemize}
+        \item correct formula for $z'(y)$ -- 1 point,
+        \item computing all partial derivatives in it -- 1 point,
+        \item final answer -- 2 points.
+    \end{itemize}
+\end{enumerate}
+
+    Frequent mistakes:
+    \begin{itemize}
+    \item the IFT is written down, but its requirements are not verified -- no points for the requirements which have not been verified,
+    \item $u$ considered as a separate variable instead of a function -- no more points after this mistake,
+    \item $u$ considered as a function of several variables (via partial derivatives $u'_x,\,u'_z$) -- no more points after this mistake,
+    \item incorrect formulas for the Jacobian and/or for $z'(y)$ -- mistaken variables and/or forgotten minus sign -- no more points after this mistake,
+    \item found $z'(1)$ instead of $z'(y)$ -- penalty of $1$ point.
+    \end{itemize}
+
+        
+    \item direction of maximal growth rate — 6 points, maximal growth rate — 4 points. 
+
+    Frequent errors:
+    
+    No vector, only derivatives are calculated — 2 points.
+    
+    Gradient is computed but is not considered as the best direction — 4 points.
+
+    \item $y/x$ lives matter 4 points. 
+    
+    \item Probably, the simplest example is something like $x_n = (a_n, b_n),$ where $a_{n} = 1,$ $b_{n} = -1$ for odd $n$ and $a_{n} = -1,$ $b_n = 1$ for even $n.$ Indeed, $\forall n$ we have $||x_n|| = \sqrt{2}$   and $||x_n + 2x_{n+1}|| = \sqrt{2}$ which are obviously convergent. At the same time the sequence $x_n$ itself is divergent. 
+    However, there are infinitely many of such examples. All of them, if correctly explained, have been awarded the maximum. 3 points were awarded if the problem was solved for $x_n \in \mathbb{R}.$   
+    \item  Note, that the set is just a combination of the two sequences: 
+
+    $$A = \{\pm 1, \pm \frac{1}{\sqrt{2}}, \pm \frac{1}{\sqrt{3}}\dots\}
+    $$
+    All the points of $A$ are boundary points (which makes the set obviously \textbf{not open}). However, there is a boundary (an accumulation) point $0$ which is not included in $A.$ Thus, the set is \textbf{not closed} (closed set should contain all its boundary points). As the set is not closed then it is \textbf{not compact} (compact set should be closed and bounded). The set is obviously \textbf{bounded}: for every $x\in A$ we have $|x|\leq 1.$ The end.
+    
+    Marking:
+    \begin{itemize}
+        \item  Explain why the set is not closed - 3 points
+        \item Explain why the set is not open - 2 points
+        \item  Explain why the set is bounded - 3 points
+        
+        \item  Explain why the set is not compact - 2 points (1 point was awarded for the definition of compact)
+        
+        
+    \end{itemize}
+  
+    
+    
+    \item Problem 7
+    
+    a) IFT is not applicable - then 6 pts
+    
+    b) Correct explanation - 6 pts
+        
+        Partially correct explanation or graphical illustration or IFT reapplied - 3 pts
+    
+    c) Polar coordinates substitutaion - 5 pts
+        
+        Full proof - 5 pts
+
+    \item Problem 8
+    
+    a) any sustainable proof or explanation that formula is correct - 6 pts
+    
+    b) any sustainable proof or explanation that formula NOT correct - 4 pts
+    
+    c) 2nd order derivative computed - 5 pts
+    
+        full proof - 5 pts
+
+
+\end{enumerate}
+

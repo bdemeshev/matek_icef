@@ -1,0 +1,206 @@
+\documentclass[12pt]{article} % размер шрифта
+
+\usepackage{tikz} % картинки в tikz
+\usepackage{microtype} % свешивание пунктуации
+
+\usepackage{array} % для столбцов фиксированной ширины
+
+\usepackage{url} % для вставки ссылок \url{...}
+
+\usepackage{indentfirst} % отступ в первом параграфе
+
+\usepackage{sectsty} % для центрирования названий частей
+\allsectionsfont{\centering} % приказываем центрировать все sections
+
+\usepackage{amsthm} % теоремы и доказательства
+
+\theoremstyle{definition} % прямой шрифт в условии теорем
+\newtheorem{theorem}{Теорема}[section]
+
+
+\usepackage{amsmath, amssymb} % куча стандартных математических плюшек
+
+\usepackage[top=2cm, left=1.5cm, right=1.5cm, bottom=2cm]{geometry} % размер текста на странице
+
+\usepackage{lastpage} % чтобы узнать номер последней страницы
+
+\usepackage{enumitem} % дополнительные плюшки для списков
+%  например \begin{enumerate}[resume] позволяет продолжить нумерацию в новом списке
+\usepackage{caption} % подписи к картинкам без плавающего окружения figure
+
+
+\usepackage{fancyhdr} % весёлые колонтитулы
+\pagestyle{fancy}
+\lhead{Math for economists}
+\chead{Section A}
+\rhead{2020-12-25, ICEF}
+\lfoot{Variant $\mu$}
+\cfoot{Good luck!}
+\rfoot{}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+
+
+\usepackage{todonotes} % для вставки в документ заметок о том, что осталось сделать
+% \todo{Здесь надо коэффициенты исправить}
+% \missingfigure{Здесь будет картина Последний день Помпеи}
+% команда \listoftodos — печатает все поставленные \todo'шки
+
+\usepackage{booktabs} % красивые таблицы
+% заповеди из документации:
+% 1. Не используйте вертикальные линии
+% 2. Не используйте двойные линии
+% 3. Единицы измерения помещайте в шапку таблицы
+% 4. Не сокращайте .1 вместо 0.1
+% 5. Повторяющееся значение повторяйте, а не говорите "то же"
+
+\usepackage{fontspec} % поддержка разных шрифтов
+\usepackage{polyglossia} % поддержка разных языков
+
+\setmainlanguage{english}
+\setotherlanguages{russian}
+
+\setmainfont{Linux Libertine O} % выбираем шрифт
+% если Linux Libertine не установлен, то
+% можно также попробовать Helvetica, Arial, Cambria и т.Д.
+
+% чтобы использовать шрифт Linux Libertine на личном компе,
+% его надо предварительно скачать по ссылке
+% http://www.linuxlibertine.org/index.php?id=91&L=1
+
+% на сервисах типа sharelatex.com этот шрифт есть :)
+
+\newfontfamily{\cyrillicfonttt}{Linux Libertine O}
+% пояснение зачем нужно шаманство с \newfontfamily
+% http://tex.stackexchange.com/questions/91507/
+
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ} % для списков с русскими буквами
+%\setlist[enumerate, 2]{label=\asbuk\cdot),ref=\asbuk\cdot} % списки уровня 2 будут буквами а) б) ...
+
+%% эконометрические и вероятностные сокращения
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\Corr}{Corr}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\E}{E}
+\DeclareMathOperator{\grad}{grad}
+\def \hb{\hat{\beta}}
+\def \hs{\hat{\sigma}}
+\def \htheta{\hat{\theta}}
+\def \s{\sigma}
+\def \hy{\hat{y}}
+\def \hY{\hat{Y}}
+\def \v1{\vec{1}}
+\def \e{\varepsilon}
+\def \he{\hat{\e}}
+\def \z{z}
+\def \hVar{\widehat{\Var}}
+\def \hCorr{\widehat{\Corr}}
+\def \hCov{\widehat{\Cov}}
+\def \cN{\mathcal{N}}
+\def \RR{\mathbb{R}}
+
+
+\def \putyourname{\fbox{
+    \begin{minipage}{42em}
+      Name, group no:\vspace*{3ex}\par
+      \noindent\dotfill\vspace{2mm}
+    \end{minipage}
+  }
+}
+
+
+
+\begin{document}
+
+\begin{enumerate}
+
+\item (10 points) Consider the function $f(x, y) = x^3 + 3y^2 x^2$ and the point $A(1,1)$.
+\begin{enumerate}
+  \item Calculate the gradient of the function $f$ at the point $A$.
+  \item Find the second order Taylor approximation in the neighborhood of $A$.
+\end{enumerate}
+
+\item (10 points) Consider the equation $3x^3 + 5y^5 + z^3 + z=10$. 
+\begin{enumerate}
+  \item Check whether the equation defines the function $z(x, y)$ at a point $A(1,1,1)$.
+  \item Find $dz$ at the point $A$.
+\end{enumerate}
+
+
+\item (10 points) Find all local extrema of the function $f(x, y) = x^2 y - 3xy^2 + 5xy +2$ such that $x\neq 0$ and $y\neq 0$. 
+Classify them.
+
+\item (10 points) Find all local constrained extrema 
+of the function $f(x, y, z) = x + 2y + 3z$ subject to $\ln x + \ln y + \ln z = 0$.
+Do not forget to classify extrema. 
+
+\item (10 points) Consider the function $f(x, y) = h(x) g(y) + ax^3$, where $h$ and $g$ are twice differentiable
+and $a$ is a parameter. Let's denote the maximum point by $x^*(a)$ and $y^*(a)$ and assume that second order conditions for maximization are met.
+
+Find the sign of $dx^*/da$. 
+
+\item (10 points) The level curves of the function $f(x,y)$ are given by the equation $y - x^2 = c$.
+
+Draw two level curves of the function $g(x,y)=f(x-2, |y| + 1)$.
+
+\end{enumerate}
+
+
+
+\newpage
+\chead{Section B}
+
+\begin{enumerate}[resume]
+\item Consider a problem 
+\[
+  \begin{cases}
+xyz \to \max \\
+\text{s.t. } x+ y+ z = c \\
+x, y, z >0 
+  \end{cases}
+\]
+where $c$ is a parameter and $c>0$.
+\begin{enumerate}
+  \item (15 points) Solve this problem using first-order conditions. Use bordered
+Hessian for sufficiency.
+\item (5 points) Use the result of part a) to show that arithmetic mean 
+$(x + y + z)/3$ is 
+no less than the geometric mean  $(xyz)^{1/3}$.
+\end{enumerate}
+
+\item 
+\begin{enumerate}
+  \item (10 points) Consider a utility maximization problem
+\[
+  \begin{cases}
+    u(x,y) \to \max \\
+    \text{s.t. } p_x x + p_y y  = I \\
+      x, y > 0 \\
+  \end{cases},
+\]
+where $u\in C^1$ and parameters $p_x$, $p_y$ and $I$ are positive. 
+Let $(x^*, y^*)$ be the solution of this problem. Form the value function
+$V(p_x, p_y, I) = u(x^*, y^*)$. 
+
+Using appropriate envelope theorem show that 
+\[
+  x^* = - \frac{\partial V}{\partial p_x} / \frac{\partial V}{\partial I}, \quad 
+  y^* = - \frac{\partial V}{\partial p_y} / \frac{\partial V}{\partial I}.
+\]
+
+% (so called Roy’s identity).
+
+\item (10 points) Let $F(x,y)$ be a function such that $F\in C^2$ and $F'_y  \neq 0$. 
+The equation $F(x, y)=0$ defines the implicit function $y(x)$.
+
+Find the expression for $d^2 y / dx^2$.
+
+The expression should include only derivatives of $F(x,y)$.
+\end{enumerate}
+
+
+\end{enumerate}
+
+
+\end{document}

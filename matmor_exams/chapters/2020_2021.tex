@@ -315,38 +315,55 @@ The expression should include only derivatives of $F(x,y)$.
 \begin{enumerate}
     \item
     \begin{enumerate}
-        \item[a)] The gradient of $f$ is a vector $\begin{pmatrix}f'_x\\f'_y\end{pmatrix}$. Calculating derivatives, we get $f'_x(x,y)=3x^2+6xy^2$ and $f'_y=6x^2y$. So at the point $A(1,1)$ the gradent $\nabla f=\begin{pmatrix}9\\6\end{pmatrix}$.
+        \item The gradient of $f$ is a vector $\begin{pmatrix}f'_x\\f'_y\end{pmatrix}$. Calculating derivatives, 
+        we get $f'_x(x,y)=3x^2+6xy^2$ and $f'_y=6x^2y$. 
+        So at the point $A(1,1)$ the gradent $\nabla f=\begin{pmatrix}9\\6\end{pmatrix}$.
         
         Marking: 1 point for each derivative (as a formula). 1 point for each correct coordinate of the answer.
         
-        \item[b)] The second-order Taylor approximation in a neighbourhood of $(x_0,y_0)$ is given by \begin{multline*}T_2(x,y)=f(x_0,y_0)+f'_x(x_0,y_0)(x-x_0)+f'_y(x_0,y_0)(y-y_0)+\\+\frac12[f''_{xx}(x-x_0)^2+2f''_{xy}(x-x_0)(y-y_0)+f''_{yy}(y-y_0)^2].\end{multline*}
-        Calculating derivatives, we get $f''_{xx}=6x^2+6y^2$, $f''_{xy}=12xy$, $f''_{yy}=6x^2$, so at the point $A(1,1)$ $f''_{xx}=12,\,f''_{xy}=12,\,f''_{yy}=6$. Therefore,
-        $$
+        \item The second-order Taylor approximation in a neighbourhood of $(x_0,y_0)$ 
+        is given by 
+        \begin{multline*}
+            T_2(x,y)=f(x_0,y_0)+f'_x(x_0,y_0)(x-x_0)+f'_y(x_0,y_0)(y-y_0)+\\
+            +\frac12[f''_{xx}(x-x_0)^2+2f''_{xy}(x-x_0)(y-y_0)+f''_{yy}(y-y_0)^2].
+        \end{multline*}
+        Calculating derivatives, we get $f''_{xx}=6x^2+6y^2$, $f''_{xy}=12xy$, $f''_{yy}=6x^2$, 
+        so at the point $A(1,1)$ $f''_{xx}=12,\,f''_{xy}=12,\,f''_{yy}=6$. Therefore,
+        \[
         T_2(x,y)=4+9(x-1)+6(y-1)+\frac12[12(x-1)^2+2\cdot12(x-1)(y-1)+6(y-1)^2].
-        $$
+        \]
         
-        Marking: 1 point for each of 3 derivatives (as a number, not as a formula), 3 points for the answer. Penalties: -1 if the answer is in the paper, but is not final (e.g. something else is presented as an answer and it's not just algebraic transforms like opening the brackets). -1 for forgetting $f(x_0,y_0)$, -1 for having the linear part wrong. -1 for having the quadratic part wrong.
+        Marking: 1 point for each of 3 derivatives (as a number, not as a formula), 3 points for the answer. 
+        Penalties: -1 if the answer is in the paper, but is not final 
+        (e.g. something else is presented as an answer and it's not just algebraic transforms like opening the brackets),
+        -1 for forgetting $f(x_0,y_0)$, -1 for having the linear part wrong. -1 for having the quadratic part wrong.
     \end{enumerate}
     \item
     \begin{enumerate}
-        \item[a)] The Inverse function theorem requires that:
+        \item The Inverse function theorem requires that:
         \begin{itemize}
-            \item $F(1,1,1)=0$ -- this is correct as $3\cdot1^3+t\cdot1^5+1^3+1=10$;
-            \item $F$ is continuously differentiable -- this is correct as $F$ is a polynomial;
-            \item $F'_z(1,1,1)\neq 0$ -- this is true as $F'_z(x,y,z)=3z^2+1>0$.
+            \item $F(1,1,1)=0$ — this is correct as $3\cdot1^3+t\cdot1^5+1^3+1=10$;
+            \item $F$ is continuously differentiable — this is correct as $F$ is a polynomial;
+            \item $F'_z(1,1,1)\neq 0$ — this is true as $F'_z(x,y,z)=3z^2+1>0$.
         \end{itemize}
         Therefore, by the IFT, the equation does define a function $z(x,y)$ in a neighbourhood of $(1,1,1)$.
         
-        Marking: 1 point for each condition correctly verified. 1 point for stating the name of the theorem. 1 point for the correct conclusion (only if all 3 conditions are correct). Note that part b) is not considered when grading part a).
+        Marking: 1 point for each condition correctly verified, 1 point for stating the name of the theorem, 
+        1 point for the correct conclusion (only if all 3 conditions are correct). 
+        Note that part b) is not considered when grading part a).
         
-        \item[b)] From the IFT we have 
-        $$z'_x(1,1)=-\frac{F'_x(1,1,1)}{F'_z(1,1,1)}=-\frac94;\, z'_y(1,1)=-\frac{F'_y(1,1,1)}{F'_z(1,1,1)}=-\frac{25}{4}.$$
+        \item From the IFT we have 
+        \[
+        z'_x(1,1)=-\frac{F'_x(1,1,1)}{F'_z(1,1,1)}=-\frac94;\, z'_y(1,1)=-\frac{F'_y(1,1,1)}{F'_z(1,1,1)}=-\frac{25}{4}.
+        \]
         Therefore, at point $A$
-        $$
+        \[
         dz=z'_x\,dx+z'_y\,dy=-\frac94\,dx-\frac{25}{4}\,dy.
-        $$
+        \]
         
-        Marking: 1 point for $z'_x(1,1)$ and $z'_y(1,1)$ (as numbers). 3 points for the answer. Penalties: -1 if the point $A$ is not substituted, -1 if the answer is in the paper, but is not final, -2 for writing $(x-1)$ and $(y-1)$ instead of $dx$ and $dy$.
+        Marking: 1 point for $z'_x(1,1)$ and $z'_y(1,1)$ (as numbers). 3 points for the answer. 
+        Penalties: -1 if the point $A$ is not substituted, -1 if the answer is in the paper, but is not final, 
+        -2 for writing $(x-1)$ and $(y-1)$ instead of $dx$ and $dy$.
         
         
         
@@ -357,7 +374,8 @@ The expression should include only derivatives of $F(x,y)$.
 
         \item NDCQ — 1 pt, FOC — 2 pts, Point — 2 pts, Hessian — 3 pts, Point classified correctly — 2 pts.
 
-        \item FOC — 2 points. Formula for the implicit derivative with two determinants — 2 points. The sign of the denominator — 3 points, the sign of the nominator — 3 points.
+        \item FOC — 2 points. Formula for the implicit derivative with two determinants — 2 points. 
+        The sign of the denominator — 3 points, the sign of the nominator — 3 points.
         
         Short solution for $f(x,y) = h(x)g(y) + ax^3$.
         
@@ -380,7 +398,7 @@ The expression should include only derivatives of $F(x,y)$.
         
         \item Two clearly stated equations of level curves — 4 points. Plots of these two equations — 6 points.
         
-        Typical errors: wrong reflection for $|y|$ — 3 points penalty;
+        Typical errors: wrong reflection for $|y|$ — 3 points penalty; only one level curve is drawn — 2 points penalty.
         
         \item 
         \begin{enumerate}

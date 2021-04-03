@@ -1,0 +1,169 @@
+\documentclass[12pt]{article} % размер шрифта
+
+\usepackage{tikz} % картинки в tikz
+\usepackage{microtype} % свешивание пунктуации
+
+\usepackage{array} % для столбцов фиксированной ширины
+
+\usepackage{url} % для вставки ссылок \url{...}
+
+\usepackage{indentfirst} % отступ в первом параграфе
+
+\usepackage{sectsty} % для центрирования названий частей
+\allsectionsfont{\centering} % приказываем центрировать все sections
+
+\usepackage{amsthm} % теоремы и доказательства
+
+\theoremstyle{definition} % прямой шрифт в условии теорем
+\newtheorem{theorem}{Теорема}[section]
+
+
+\usepackage{amsmath, amssymb} % куча стандартных математических плюшек
+
+\usepackage[top=2cm, left=1.5cm, right=1.5cm, bottom=2cm]{geometry} % размер текста на странице
+
+\usepackage{lastpage} % чтобы узнать номер последней страницы
+
+\usepackage{enumitem} % дополнительные плюшки для списков
+%  например \begin{enumerate}[resume] позволяет продолжить нумерацию в новом списке
+\usepackage{caption} % подписи к картинкам без плавающего окружения figure
+
+
+\usepackage{fancyhdr} % весёлые колонтитулы
+\pagestyle{fancy}
+\lhead{Math for economists}
+\chead{}
+\rhead{2021-01-29, ICEF}
+\lfoot{Midterm retake}
+\cfoot{Good luck!}
+\rfoot{}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+
+
+\usepackage{todonotes} % для вставки в документ заметок о том, что осталось сделать
+% \todo{Здесь надо коэффициенты исправить}
+% \missingfigure{Здесь будет картина Последний день Помпеи}
+% команда \listoftodos — печатает все поставленные \todo'шки
+
+\usepackage{booktabs} % красивые таблицы
+% заповеди из документации:
+% 1. Не используйте вертикальные линии
+% 2. Не используйте двойные линии
+% 3. Единицы измерения помещайте в шапку таблицы
+% 4. Не сокращайте .1 вместо 0.1
+% 5. Повторяющееся значение повторяйте, а не говорите "то же"
+
+\usepackage{fontspec} % поддержка разных шрифтов
+\usepackage{polyglossia} % поддержка разных языков
+
+\setmainlanguage{english}
+\setotherlanguages{russian}
+
+\setmainfont{Linux Libertine O} % выбираем шрифт
+% если Linux Libertine не установлен, то
+% можно также попробовать Helvetica, Arial, Cambria и т.Д.
+
+% чтобы использовать шрифт Linux Libertine на личном компе,
+% его надо предварительно скачать по ссылке
+% http://www.linuxlibertine.org/index.php?id=91&L=1
+
+% на сервисах типа sharelatex.com этот шрифт есть :)
+
+\newfontfamily{\cyrillicfonttt}{Linux Libertine O}
+% пояснение зачем нужно шаманство с \newfontfamily
+% http://tex.stackexchange.com/questions/91507/
+
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ} % для списков с русскими буквами
+%\setlist[enumerate, 2]{label=\asbuk\cdot),ref=\asbuk\cdot} % списки уровня 2 будут буквами а) б) ...
+
+%% эконометрические и вероятностные сокращения
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\Corr}{Corr}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\E}{E}
+\DeclareMathOperator{\grad}{grad}
+\def \hb{\hat{\beta}}
+\def \hs{\hat{\sigma}}
+\def \htheta{\hat{\theta}}
+\def \s{\sigma}
+\def \hy{\hat{y}}
+\def \hY{\hat{Y}}
+\def \v1{\vec{1}}
+\def \e{\varepsilon}
+\def \he{\hat{\e}}
+\def \z{z}
+\def \hVar{\widehat{\Var}}
+\def \hCorr{\widehat{\Corr}}
+\def \hCov{\widehat{\Cov}}
+\def \cN{\mathcal{N}}
+\def \RR{\mathbb{R}}
+
+
+\def \putyourname{\fbox{
+    \begin{minipage}{42em}
+      Name, group no:\vspace*{3ex}\par
+      \noindent\dotfill\vspace{2mm}
+    \end{minipage}
+  }
+}
+
+
+
+\begin{document}
+
+\begin{enumerate}
+
+\item (10 points) Consider the set $A=\cup_{n=1}^{\infty} \left\{ \frac{3+ 2n}{n + 6} \right\} \subset \mathbb{R}$.
+\begin{enumerate}
+\item Is the set $A$ bounded? Open? Closed? Compact?
+\item Roughly sketch the set $A \times A$
+\end{enumerate}
+
+\item (10 points) Consider the system of equations
+\[
+\begin{cases}
+xyz^2+x^3y+4y^3z^3-2x=4 \\
+2x^2yz+z^2+3xy+5yx^3=-5
+\end{cases}
+\]
+\begin{enumerate}
+\item Are the function $x(z)$ and $y(z)$ defined around the point $A=(-1,1,1)$?
+\item Find $df/dz$, where $f(z)=x(z)y(z)$
+\end{enumerate}
+\item (10 points) Consider the functions $f(x,y)=x^2+2x+y^2+6y+7$ and $g(x,y)=x^2-8x+y^2-10y+9$. 
+Find all the points where the gradients are parallel.
+
+\item Find and classify all the local extrema of the function $g(x,y)=y^3 -12y+x^2e^y$. Which of them are global?
+    
+
+\item (10 points) The level curves of the function $f(x,y)$ are given by the equation $y - x^2 = c$.
+
+Draw two level curves of the function $g(x,y)=f(|x|-2, |y| + 1)$.
+
+\item (10 points) Use the first-order differential to approximate
+$\sqrt[3]{4\cdot 0.9^2+2.2^2}$.
+
+\item (20 points) Let $u(c_t)$ be utility function of consumption $c_t$ at time $t$ which is discrete, $t \in \mathbb{N}$, ($\mathbb{N}$ --- set of natural numbers).
+Function $u$ is continuously differentiable and strictly concave for $c>0$, $u(0)=0$, $u'(c)>0$, $\lim_{c\to 0+ } u'(c) = +\infty$.
+\begin{enumerate}
+\item (5 points) Consider maximization problem: $\sum_{t=1}^T u(c_t) \to \max$ subject to $\sum_{t=1}^T c_t = s$, $c_t\geq 0$, where the parameter $s$ is positive.
+Let $T=2$. Show that if $(c_1^*, c_2^*)$ is the optimal bundle then $c_1^* = c_2^*$.
+\item (7 points) Generalize this result for any natural $T$. You may refer to the Lagrange method.
+\item (8 points) Let $(c_1^*, c_2^*, c_3^*, \ldots, c_T^*)$  be the optimal bundle. Find the limit of $\sum_{t=1}^T u(c^*_t)$  as $T \to \infty$ or show that it does not exist.
+\end{enumerate}
+
+\item (20 points) In the method of least squares the straight line $a + bx$ is fit to the data $\{ (x_i, y_i), \; i \in 1, 2, \ldots, n \}$,
+by minimizing the sum $S = \sum_{i=1}^n (y_i - (a + b x_i))^2$ with respect to $a$ and $b$.
+\begin{enumerate}
+\item (15 points) Using first-order conditions find optimal $a$ and $b$. Under what conditions does the solution for $a$ and $b$ exist?
+
+\item (5 points) Show that the sufficient conditions are met.
+\end{enumerate}
+
+\end{enumerate}
+
+
+
+\end{document}

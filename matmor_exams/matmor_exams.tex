@@ -1,3 +1,9 @@
+% arara: xelatex
+%% arara: biber
+% arara: xelatex
+
+
+
 \documentclass[12pt]{article} % размер шрифта
 
 
@@ -35,16 +41,19 @@
 \usepackage{caption} % подписи к картинкам без плавающего окружения figure
 
 
-\usepackage{fancyhdr} % весёлые колонтитулы
-\pagestyle{fancy}
-\lhead{}
-\chead{}
-\rhead{}
-\lfoot{}
-\cfoot{}
-\rfoot{}
-\renewcommand{\headrulewidth}{0.4pt}
-\renewcommand{\footrulewidth}{0.4pt}
+\usepackage{titleps}
+% по поводу заголовков разделов в колонтитулах
+% https://tex.stackexchange.com/questions/236705
+% поэтому выбрали titleps вместо fancyhdr
+
+\newpagestyle{mypage}{%
+  \headrule
+  \sethead{\sectiontitle}{}{\thepage / \pageref{LastPage}}
+  \setfoot{}{}{}
+}
+\settitlemarks{section,subsection} % !!!!!!no space after comma!!!!!!
+\pagestyle{mypage}
+
 
 
 
@@ -2504,8 +2513,6 @@ Find the equation of the firm's expansion path if the point $(8,16)$ lies on thi
 \subsection{MOR, exam, 23.05.14}
 
 You need to solve all the problems from Sections A, B, C.
-
-\pagestyle{empty}
 
 \textbf{SECTION A}
 

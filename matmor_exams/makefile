@@ -25,5 +25,6 @@ clean:
 	-rm $(file_name).xdv
 	-rm $(file_name).bbl
 	-rm $(file_name).blg
+	-rm $(file_name).out
 	-rm $(file_name).run.xml
 	

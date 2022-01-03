@@ -1,0 +1,135 @@
+% !TEX root = ../matmor_exams.tex
+
+\subsection{MFE, december exam, 2021-12-25}
+
+Short rules: offline exam, 2 hours, closed book. 
+
+\begin{enumerate}
+
+    \item (10 points) Ded Moroz considers the function $f(x, y) = (1 + 2x + 3y)^{2022}$.
+    
+    Please, help him to find the second order Taylor approximation of this function at a point $x=0$, $y=0$.
+    
+    \item (10 points) Consider the function 
+    \[
+    f(x, y) = \int_0^x 3e^{u^2} \, du  + \int_0^y 2\cos(u^2) \, du.   
+    \]
+    
+    Find the gradient $\grad f$ at the point $(0, 0)$.
+    
+    \item (10 points) Consider the system 
+      \[
+      \begin{cases}
+        x + y + z = 2 \\
+        2x^2 + 2y^2 = z^2 \\
+      \end{cases}.  
+      \]
+      \begin{enumerate}
+        \item Are the functions $x(z)$ and $y(z)$ defined in a neighborhood of the point $A(x=1, y=-1, z=2)$?
+        \item Find $dx/dz$ at the point $A$ if possible. 
+      \end{enumerate}
+    
+    \item (10 points)  
+    The set $S$ is defined by $S = \{(x, y) \in \mathbb{R}^2 \mid 0 \leq y \leq 2- x^2\}$. 
+    Two rectangles one on the top of the other are inscribed in $S$, 
+    thus they have the common side and the upper vertices lie on this parabola.
+    Let $A_1 + A_2$ be the sum of their areas, where $A_1 >0$, $A_2 >0$. 
+    
+    Consider the maximization problem $A_1 + A_2 \to \max$.
+    \begin{enumerate}
+      \item Solve the maximization problem or show that the maximum does not exist.
+      \item Check whether the Weierstrass theorem is applicable.
+    \end{enumerate}
+    
+    \item (10 points)  
+    An implicit function is defined by equation $x^2 + y^2 + xy + 2x + 4y = 0$. Find all the point(s)
+    $(x^*, y^*)$ on the curve represented by this equation, where
+    \begin{enumerate}
+      \item the tangent line to the curve is horizontal with the equation $y = c$;
+      % \item this $c$ has the maximum possible value;
+      \item conditions of the implicit function theorem are satisfied.
+    \end{enumerate}
+    
+    \item (10 points)  
+    Consider the function $g(x) = \sqrt{x-1+\sqrt{x-1+\sqrt{x-1+\sqrt{\cdots}}}}$ defined for $x>1$.
+    
+    \begin{enumerate}
+        \item Express $g^{2}(x)$ through the linear combination of $g(x)$ and $x-1$.
+        \item Find $g'(2)$.
+    \end{enumerate}
+    
+    
+    %\item (10 points) The turtle starts at the point $(0, 0)$. 
+    %Every day she continues her way at constant speed in constant direction. 
+    %Every midnight she drops her speed by 30\% and turns $90^{\circ}$ counterclockwise. 
+    %On the first day she goes by 1 kilometer in the positive direction of $OX$ axis.
+    
+    %What is the ultimate destination of the turtle?
+    
+        
+      \item (20 points) The Mean Value Theorem in Calculus claims that given a continuously differentiable function $f(x)$  
+      on the closed segment $[x_0; x_0 + \Delta x]$, there exists $0 < \theta < 1$ such that $f(x_0 + \Delta x) - f(x_0) = 
+      f'(x_0 + \theta \Delta x) \Delta x$. 
+    
+      Prove the version of this theorem for a function of the two variables $z = f(x,y) \in C^1$ in the following form: 
+      there exists $0 < \theta < 1$ such that 
+      \[
+        f(x_0 + \Delta x, y_0 + \Delta y) - f(x_0, y_0) = \frac{\partial f}{\partial x}(x_0 + \theta \Delta x, y_0 + \theta \Delta y)\Delta x + \frac{\partial f}{\partial y}(x_0 + \theta \Delta x, y_0 + \theta \Delta y)\Delta y.  
+      \]
+      
+      
+      Hint. Join the 2 points $(x_0, y_0)$ and $(x_0 + \Delta x, y_0 + \Delta y)$ with the segment of a straight line passing through these points 
+      and apply the chain rule to the composite function $f(x_0 + t \Delta x, y_0 + t \Delta y)$ where $t\in [0;1]$.
+      
+      
+        \item An economist solves a problem of the minimization of expenses of an individual whose utility function is $u(x, y) = \sqrt{x} + \sqrt{y}$. 
+      Expenses are calculated by the formula $E=3x + 4y$ and the consumer would prefer to fix the value of the utility at 7 utiles.
+      \begin{enumerate}
+      \item (5 points) Formulate the problem of the expenses minimization and form a Lagrangian of this problem.
+      \item (5 points) Using first-order conditions find the minimizing bundle $(x^*, y^*)$.
+      \item (5 points) Using bordered Hessian or otherwise check the sufficiency condition.
+      \item (5 points) A consumer decided to improve her welfare by adding additional 0,1 to 7 utiles. 
+      How this decision will affect the expenditure value $E^* = 3x^* + 4y^*$, 
+      where the bundle $(x^*, y^*)$ corresponds to a greater utility value? 
+      Use appropriate Envelope Theorem to estimate $E^*$.
+    \end{enumerate}
+    
+    \end{enumerate}
+
+
+\subsection{MFE, december exam, 2021-12-25, marking}
+
+\begin{enumerate}
+    \item Two first order and three second order derivatives: 5 points (each derivative: 1 point).
+    
+    Correct Taylor formula: 5 points. 
+
+    Any non-arithmetic error in Taylor formula: penalty 4 points. 
+
+    Standard solution:
+    \[
+    f(x, y) \approx f(0, 0) + f'_x(0, 0) x + f'_y(0, 0) y + 0.5 (f''_{xx}(0, 0) x^2 + 2f''_{xy}(0, 0) xy + f''_{yy}(0, 0) x^2).
+    \]
+    Non standard solution. Consider $h(t) = (1 + t)^{2022}$.
+    \[
+    h(t)  \approx h(0) + h'(0) \cdot t + 0.5 h''(0)\cdot t^2 = 1 + 2022t + 1011 \cdot 2021 t^2,
+    \]
+    where $t = 2x + 3y$.
+
+
+    \item Knowledge of the gradient notion: 2 points. 
+    
+    Correct derivatives: 8 points (each derivative: 4 points).
+
+    Derivative just cancels integral, so
+    \[
+        \grad f = (3 \exp(x^2), 2 \cos(y^2)) = (3, 2).
+    \]
+    
+    \item 
+    \item 
+    \item 
+    \item 
+    \item 
+    \item 
+\end{enumerate}

@@ -156,9 +156,83 @@ Short rules: offline exam, 2 hours, closed book.
     or 1 point for the analysis of the set $S$. 
     This maximization problem should be solved not just on the set $S$, which is compact, but it should include conditions $A_1 >0$, $A_2 > 0$.
 \end{enumerate}
+
+\item
+
     
-    \item 
-    \item 
+    $F(x,y):= x^2+y^2+xy+2x+4y = 0$
+    
+    The slope $y'(x)$ of the tangent line to the curve $y(x)$ should be equal to 0 \textit{(1 point).} 
+    Using IFT we can find the derivative at the arbitrary point $(x_0,y_0)$:
+    \[
+    y'(x_0) = -\frac{\partial F(x_0,y_0)/\partial x }{\partial F(x_0,y_0)/\partial y}
+    \]
+    \textit{(1 point)}
+    
+    However, do not forget to mention the IFT conditions (here or in b) that these points should satisfy:
+    \begin{itemize}
+        \item $F(x,y)\in C^1$ (continuosly differentiable) as a polynomial function;
+        \item $\partial F(x_0,y_0)/\partial y = 2y+x+4 \neq 0$.
+    \end{itemize}\textit{(3 points)}
+    
+    \[
+      y'(x) = -\frac{2x+y+2}{2y+x+4} = 0.
+    \] 
+    
+    Thus, to find the requested point we need to solve the system of equations 
+    \[
+    \begin{cases}
+        y = -2x-2,\\
+        x^2+y^2+xy+2x+4y = 0
+    \end{cases}
+    \]
+
+The solution is $(2,-6)$ and $(-2/3,-2/3).$ \textit{(3 points)}
+
+To complete b) we need to check if these points satisfy the conditions of the IFT. 
+Verify that $2y + x +4 \neq 0$ at both of them or prove it using any other appropriate method. \textit{(2 points)} 
+    
+\textit{Please note that solutions without substituting $y = -2x-2$ to the initial identity $F(x,y) = 0$ can gain 5 points tops.}
+
+\item
+
+\begin{enumerate}
+    \item Raise the function to the second power:
+    
+    \[
+        g^2(x) = g(x) + (x-1)
+    \]
+    
+    \textit{(3 points)}
+
+    
+    \item Find the derivative of both sides in a):
+    \[
+        2g(x)\cdot g'(x) = g'(x) + 1
+    \]
+    Thus, 
+    \[
+      g'(x) = \frac{1}{2g(x)-1}
+    \]
+    Therefore,
+    \[
+      g'(2) = \frac{1}{2g(2)-1}
+    \]
+    \textit{(4 points)}
+    
+    The only thing left is to find $g(2)$. Use a):
+    \[
+    g^2(2) - g(2) - 1 = 0
+    \]
+    Solve the quadratic equation and use the fact that $g(2) >0$.
+    
+    \[
+      g(2) = \frac{1+\sqrt{5}}{2}
+    \]
+    \textit{(3 points)}
+\end{enumerate}
+    
+
     \item 
     \item 
 \end{enumerate}

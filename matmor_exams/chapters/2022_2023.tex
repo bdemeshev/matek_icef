@@ -1,0 +1,133 @@
+% !TEX root = ../matmor_exams.tex
+
+\subsection{MFE, december exam, 2022-12-27}
+
+
+
+\begin{enumerate}
+    \item (10 points) Consider the sets $B_n=\left[ \frac{1}{3n},\frac{2n-1}{n}\right]\subset \mathbb{R}$. 
+    Let $A=\bigcup \limits_{n=1}^{\infty}B_n$.  
+      \begin{enumerate}
+          \item Is $A$ bounded? open? closed? compact?
+          \item Sketch $A\times A$. Is it open? closed?
+      \end{enumerate} 
+
+
+  \item (10 points) Find the limit or prove it doesn't exist 
+  \[
+  \lim_{x\to +\infty, y\to +\infty}x^2y^5\sin {\frac{1}{x^5y^2}}.
+  \]
+
+  \item (10 points) Using the chain rule calculate all partial derivatives of the first and second order of $g(\alpha,\beta)=f(x(\alpha,\beta),y(\alpha,\beta))$, 
+  if $x=2\alpha-\beta^2, y=\alpha \beta$ and $f(x,y)$ is twice continuously differentiable. 
+
+
+
+  \item (10 points) Two dimensional function is given by $f(x,y)=x^3-2x^2y$.
+      \begin{enumerate} 
+          \item Find the direction of maximal growth of $f(x,y)$ from the point $A(1,1)$.
+          \item Find at least one direction from the point $A$ in which the function doesn't increase and doesn't decrease (doesn't change).
+      \end{enumerate} 
+
+
+
+  \item (10 points) Find and classify all the critical points of  $f(x,y)=(y^2-2xy+x)e^x.$
+
+
+
+  \item (10 points) Using Lagrange multiplier method find and classify the constrained extrema of $f(x,y,z)=3x-y+2z$ subject to $4x^2+4y^2+z^2=13$.
+\end{enumerate}
+
+
+
+\begin{enumerate}[resume]
+  \item (20 points) Let $h: \mathbb{R} \to \mathbb{R}$ be a $\mathbb{C}^1$ function and $h(0)=0$. Consider the system
+\[
+  \begin{cases}
+    e^x+h(y)=u^2\\
+    e^y-h(x)=v^2
+  \end{cases}   
+\]
+          \begin{enumerate} 
+              \item Prove that in a neighbourhood of $(x,y,u,v)=(0,0,1,1)$ we can define $x(u,v)$ and $y(u,v)$ as functions of $u$ and $v$.
+              \item If it is also known that $h'(0)=1$ calculate $\frac{\partial ^2 x}{\partial v^2}$ at the point $(0,0,1,1)$.
+          \end{enumerate}
+\end{enumerate}
+
+\begin{enumerate}[resume]
+      \item  In a two-product economy the price-taking industry bears total costs $C(x,y)=c_1(x)+c_2(y)$, 
+      where $x$  and $y$  are the outputs and $C_1$ and $C_2$ are the functions twice continuously differentiable with the positive first and second order derivatives. 
+      Since only one factor of production is employed, the outputs are related $2x+3y=L$, 
+      where $L$  is the total endowment of labor.
+          \begin{enumerate}
+              \item (5 points) Set the minimization problem for $C(x,y)=c_1(x)+c_2(y)$, 
+              subject to constraint and write down first-order conditions applied to the Lagrangian of the problem $K(x,y,\lambda)$.
+             \item (5 points) By checking the bordered Hessian determinant, 
+             prove that the only critical point of $K(x,y,\lambda)$ is a minimizer.
+              \item(3 points) Let this point be $(x^*,y^*,\lambda^*)$. 
+              Find $\frac{dC(x^*,y^*)}{dL}$. Use one of the envelope theorems.
+              \item(7 points) Industry economists have found out that $c_1''(x^*)=c_2''(y^*)$. 
+              Use this information to calculate the values of $\frac{dx^*}{dL}$ and $\frac{dy^*}{dL}$.
+          \end{enumerate}
+  \end{enumerate}
+  
+
+\subsection{MFE, december exam, 2021-12-25, Marking scheme}
+\begin{enumerate}
+
+  \item 
+      \begin{enumerate}
+
+          \item Understanding which set is represented by $A$ – an open interval – 1 point.
+   $A$ is open – 2 points.
+   $A$   is not closed, bounded $\Rightarrow$ not compact – 2 points.
+          \item Understanding which set is represented by  $A\times A$  – 1 point.
+     $A\times A$  - open – 2 points, not closed – 2 points.  Only answers – 0 points.
+      \end{enumerate}
+  \item Consideration of different directions without solution – 2 points. 
+  Finding incorrect limit for one of directions – 2 points. 
+  Finding correct limit for one of directions – 5 points. 
+  Arithmetic mistake – minus 1-2 points.
+
+  \item Correct $\frac{\partial x}{\partial \alpha},\frac{\partial y}{\partial  \alpha},\frac{\partial x}{\partial \beta},\frac{\partial y}{\partial \beta}$ - 2 points. 
+  Correct chain rule for $\frac{\partial g}{\partial \alpha}, \frac{\partial g}{\partial \beta}$ - 2 points. 
+  Each second order derivative - 2 points.
+  \item 
+      \begin{enumerate} 
+          \item Direction of maximal growth is a gradient vector – 1 point, correct partial derivatives of $f(x,y)$ – 2 points, correct values at the point $A$ – 1 point.
+          \item Definition of directional derivative - 2 points, it must be equal to 0 – 2 points, final answer – 2 points.
+      \end{enumerate}
+  \item Correctly formulating and solving for FOC – 3 points. 
+  Checking extremum via Hessian – 7 points. Partial or incorrect solution – 1-2 points. 
+  Numerical errors in an overall correct solution – (1-3) points subtracted. 
+  \item Correctly formulating Lagrangian and solving for FOC – 3 points.
+Checking extremum via (bordered) Hessian or correctly applying Weirstrass theorem – 7 points. 
+Partial or incorrect solution – 1-2 points.
+Numerical errors in an overall correct solution – (1-3) points subtracted.
+Graphical solution – up to 5 points, depending on detalization, if the Lagrangian is formulated.
+
+  \item 
+      \begin{enumerate} 
+          \item
+Continuity assumption - 4 points,
+point check - 4 points,
+Jacobian condition - 4 points.
+          \item
+Correct $\frac{\partial x}{\partial v}$  - 2 points,
+$\frac{\partial ^2 x}{\partial v^2}$ (formula only) - 3 points,
+correct result - 3 points
+      \end{enumerate}
+  \item 
+      \begin{enumerate} 
+              \item
+FOC - 6 points
+\item
+Hessian matrix (formula only) - 2 points, correct result - 2 points
+\item
+correct result - 3 points
+\item
+correct result - 6 points (each derivative - 3 points)
+      \end{enumerate}
+
+
+\end{enumerate}

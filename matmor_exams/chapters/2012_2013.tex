@@ -1,0 +1,761 @@
+\subsection{MFE, mock, 25.10.12}
+
+%Mathematics for economists. Mock Exam Paper. October 25, 2012 \\
+
+%Lecturer: K.A. Bukin
+%Class teachers: A. Arlashin, G. Sharygin, S. Provornikov
+
+Marks will be deducted for insufficient explanation within your answers. All problems are mandatory. Sections A and B will make up 60\% and 40\% of the exam grade, respectively. Total duration of the exam is 120 min. \\
+
+\textbf{SECTION A}
+\vspace{20pt}
+
+\begin{enumerate}
+\item Consider the function $f(x,y)=x^3+y^2+xy-y^5$. Using the total differential find the approximate value of $f(1.01,0.98)$.
+\item Consider the function $f(x,y)=x^3+y^2+xy-y^5$ at the point $A=(1,1)$. I have two choices:
+\begin{enumerate}
+\item move from $A$ in the direction $\vec{l}=(2,1)$ by a small number $\varepsilon$
+\item move from $A$ in the direction $\vec{m}=(1,2)$ by $2\varepsilon$
+\end{enumerate}
+Using the directional derivative find which choice will give me a bigger value of the function $f$ at the destination point.
+
+\item Consider the following system of equations:\\
+$\left\{\begin{array}{l}
+xyz+2x^3y^3z^3+4x^3=7\\
+x+y^3+z^3+xy^3+2x^2z^2=6\\
+\end{array}\right.$
+\begin{enumerate}
+\item Does this system define functions $z(x)$ and $y(x)$ at a point $x=1$, $y=1$, $z=1$?
+\item If it's possible find $y'(x)$ and $z'(x)$ at that point
+\end{enumerate}
+
+\item Determine whether the following limit exists
+\begin{equation} \nonumber
+\lim_{x, y\to 0} \frac{x^3+y^3}{x^2+y^2}
+\end{equation}
+
+\item Consider the function $g(u)=f(x,y)$, $x=2u$ and $y=u-u^2$. Find $g'(u)$ and $g''(u)$. Assume that $f$ has continuous second partial derivatives at any point.
+
+\item Find the equation of a tangent plane to the surface $z=x+y^2$ at the point $(0,1,1)$.
+
+
+
+\end{enumerate}
+
+\vspace{20pt}
+\textbf{SECTION B}
+\vspace{20pt}
+
+\begin{enumerate}[resume]
+\item Find all the stationary points of the implicit function $z(x,y)$ given  by the equation $x^2+y^2+z^2+xy+xz+2=4x+3y$.
+
+\item Consider a market with the demand curve $q^d=f(p)$ and the supply curve $q^s=g(p,a)$ where the parameter $a$ describes the available technology. The goal is to find how will the equilibrium price $p^*$ and quantity $q^*$ react to the change of the technology parameter $a$. We assume that  $f'(p)<0$, $\partial g/\partial p>0$ and $\partial g/\partial a>0$.
+\begin{enumerate}
+\item Find $dp^*/da$, $dq^*/da$
+\item If possible determine the sign of the derivatives $dp^*/da$ and $dq^*/da$.
+\end{enumerate}
+
+\end{enumerate}
+
+
+\subsection{MFE, fall semester exam, 27.12.2012}
+
+Sections A and B will make up 60\% and 40\% of the exam grade, respectively. Total duration of the exam is 120 min.
+
+\textbf{SECTION A:}
+\begin{enumerate}
+
+\item The level curves of a function $f(x,y)$ are shown below. Draw the level curves of the functions $g(x,y)=f(x+1,y)$ and $h(x,y)=f(-x,|y|)$.
+
+
+
+\begin{minipage}{0.6\textwidth}
+ \begin{center}
+  \includegraphics[scale = 0.3]{figure/line_curves.png}
+% \begin{tikzpicture}[scale = 0.025]
+%  \input{figure/line_curves.tex}
+%  \end{tikzpicture}
+  \end{center}
+\end{minipage}
+  
+
+
+\item Find the local maxima and minima of the function $f(x,y)=x^4+2y^4-xy$. Determine whether the extrema you have found are global or local.
+
+\item Find the gradient of the function $h(x,y)=f(x,y)\cdot g(x,y)$ at the point $A=(1,7)$. It is known that at the point $A$: $\grad f=(1,1)$, $\grad g=(3,3)$, $f(A)=4$, $g(A)=5$.
+
+\item Consider the following system of equations as defining functions $y_1(x_1,x_2)$ and $y_2(x_1,x_2)$
+\[
+\left\{
+\begin{array}{c}
+x_1^3+x_1 y_1^3+x_2 y_1 y_2+y_2^3=4 \\
+x_2+x_2^3+y_1 y_2^2+y_2^3=4
+\end{array}
+\right.
+\]
+\begin{enumerate}
+\item If possible find $dy_1$ at the point $(x_1,x_2,y_1,y_2)=(1,1,1,1)$.
+\item Find approximately $y_1$ for $x_1=1.01$ and $x_2=0.98$.
+\end{enumerate}
+\item Find the constrained extrema of the function $f(x,y)=x+2y$ subject to $2x^2+y^2=10$.
+%Short run total costs are given by $TC(q,K)=q^2+3qK+4K^2-2K$ where $q$ is the volume of output and $K$ is the amount of capital which is fixed in the short run. In the long run the firm can adapt the amount of $K$ to minimize the costs. Find the long run marginal costs using envelope theorem.
+
+\item Find the Hesse matrix of the function $h(x,y)=\P( Z \in [2x;3y])$ where $Z$ is a standard normal random variable with probability density function given by $f(z)=\frac{1}{\sqrt{2\pi}}\exp(-z^2/2)$. It is supposed that $3y>2x$.
+
+\end{enumerate}
+
+\textbf{SECTION B:}
+\begin{enumerate}
+\item A firm’s production function is $Q=K+L+2\sqrt{KL}$, where $K>0$ and $L>0$ are capital and labor, respectively. The firm is perfectly competitive and seeks to maximize its output, but the firm is run by accountants who have imposed a fixed budget on the production of $C$ dollars per hour, which means satisfying constraint $wL+rK=C$, where $w$ and $r$ are hourly wage rate and rental rate of capital, respectively.
+\begin{enumerate}
+\item State the constrained optimization problem associated with that production and solve it by the Lagrange multiplier method (it is sufficient to find the optimal values of capital and labor alone).
+\item Check the concavity of the production function and use it to classify the critical point.
+\item Explain the economic meaning of the Lagrange multiplier in this problem. Use the appropriate envelope theorem.
+\item Let $w=r$. Would it be right to conclude that if the wage rate goes up by 1\% and the rental rate goes down by the same 1\% under the fixed budget the output will not change?  How can you prove this mathematically?
+\end{enumerate}
+
+\item It is well known that a perfectly competitive firm operating in the long-run produces at the minimum point of its average costs curve, where $p=AC=MC$. Let the $AC$ curve be U-shaped. If we assume that this particular firm uses only labor, equation $AC(y,w)=MC(y,w)$ may be used to find $y=y(w)$  as an implicit function of wages ($y$ denotes the output). Moreover, the second-order condition that guarantees the profit maximization is supposed to hold.
+\begin{enumerate}
+\item Show that Implicit Function Theorem can be applied, the function $y=y(w)$ exists and find its derivative.
+\item If we know that at long-run equilibrium $\frac{\partial MC}{\partial w}>\frac{\partial AC}{\partial w}$  what can we say about new long-run equilibrium when the market adjusts to a small rise in wage $w$? Will the equilibrium price go up? What about the output of the firm?
+\end{enumerate}
+\end{enumerate}
+
+\subsection{MFE, fall retake 23.01.13}
+
+Part A, 10 points for each problem.
+
+\vspace{20pt}
+
+\begin{enumerate}
+\item It is known that $f'_x(x,y)>0$ and $f'_y(x,y)>0$. Sketch possible level curves for $f(x,y)$. What are the possible values of the angle between the gradient of the function $f$ and the $x$-axis?
+\item Find the local maxima and minima of the function $f(x,y)=x^4+4y^4-xy$. Determine whether the extrema you have found are global or local.
+\item Find and classify the constrained extrema of the function $f(x,y)=x+5y$ subject to $2x^2+y^2=10$.
+
+\item Given the system
+\[
+\begin{cases}
+xe^{u+v}+2uv=1 \\
+ye^{u-v}-\frac{u}{1+v}=2x
+\end{cases}
+\]
+find $du$ and $dv$ at $x_0 = 1$, $y_0 = 2$, $u_0 = 0$, $v_0 = 0$.
+
+\item Find the total differential for the function $f(x,y)=x^2y^2+xy^2+2x+4y$. Using the total differential find approximately $f(1.001,1.999)$
+
+\item Use the chain rule to find $f'(x)$ and $f''(x)$ for $f(x)=u(a,b,x)$ where $a=\cos(x)$ and $b=x^3$.
+
+\end{enumerate}
+
+\vspace{20pt}
+
+Part B, 20 points for each problem.
+
+\vspace{20pt}
+
+\begin{enumerate}[resume]
+\item A consumer maximizes the quasilinear utility function $u(x,y)=v(x)+y$, where $v'>0$, $v''<0$, subject to the budget constraint $px+y=I$.
+\begin{enumerate}
+\item (10 points) Denote the demand on $x$ by $x^*$. Show that $\frac{\partial x^*}{\partial I}=0$ and $\frac{\partial x^*}{\partial p}<0$.
+\item (10 points) Let $V=u(x^*,y^*)$, where $(x^*,y^*)$ is the optimal bundle. Assuming that $y^*>0$ and using the appropriate envelope theorem, show that $\frac{\partial V}{\partial I}$ is constant.
+\end{enumerate}
+
+\item A two-product firm produces outputs $y_1$ and $y_2$ from a single factor of production which is labor, in other words, there is a function $f$, such that $f(y_1,y_2)\leq \bar{L}$. Output prices are $p_1$ and $p_2$. The firm has a fixed amount of labor supply $\bar{L}>0$ that should be utilized in full.
+\begin{enumerate}
+\item (10 points) Set the problem of the revenue maximization under the labor constraint mathematically and derive first-order conditions. Assume that both outputs should be produced in positive amounts.
+\item (10 points) Let the maximum value of the total revenue under the labor constraint be $TR(p_1,p_2,\bar{L})$. What are its derivatives with respect to the prices?
+\end{enumerate}
+
+\end{enumerate}
+
+\subsection{MFE, mock, 28.03.2013}
+
+Marks will be deducted for insufficient explanation within your answers. All problems are mandatory. Sections A and B will make up 60\% and 40\% of the exam grade, respectively. Total duration of the exam is 120 min. \\
+
+\textbf{SECTION A}
+\vspace{20pt}
+
+\begin{enumerate}
+
+\item Compute all the roots of the complex number, $\sqrt[5]{-1+i}$
+
+\item The matrix $A$ has the eigenvalues $\lambda_1=-1$, $\lambda_2=3$, $\lambda_3=-2$.
+\begin{enumerate}
+\item Compute the eigenvalues of the following matrices: $B=A^2$, $C=A+3I$, $D=A^{-1}$ where $I$ is the corresponding identity matrix.
+\item What can be said about the definiteness of these matrices?
+\end{enumerate}
+
+\item Consider the implicit function $y(x)$ given by the equation
+\[
+y^3+y+3x^3+x^2=14.
+\]
+\begin{enumerate}
+\item Does this equation define the implicit function $y(x)$ in the neighborhood of the point $(1,2)$?
+\item If the implicit function is defined find the Taylor series for $y(x)$ up to the second order term.
+\end{enumerate}
+
+
+\item Consider the difference equation $y_{t+1}(2+3y_t)=4y_t$ with initial condition $y_0=2/3$.
+\begin{enumerate}
+\item Using the substitution $z_t=1/y_t$ solve the difference equation.
+\item What is the limit of $y_t$ as $t\to\infty$?
+\end{enumerate}
+
+\item The homogeneous function $f$ is given by the equation
+\[
+f(x,y)=\int_0^{xy^a} t^3+xt \, dt.
+\]
+Find the value of the parameter $a$ and the degree of homogeneity of $\partial f/\partial x$.
+
+\item Find the two indefinite integrals $\int e^x \cos(2x)\,dx$, $\int \frac{x+1}{x^2-5x+4}\, dx$
+
+\end{enumerate}
+
+\vspace{20pt}
+\textbf{SECTION B}
+\vspace{20pt}
+
+\begin{enumerate}[resume]
+\item Suppose you enter a casino with $k$ dollars in your pocket. You decide to play a game in which you win \$1 with the probability  $2/3$ and lose \$1 dollar with the probability $1/3$. The game is over when $k=0$ (no money left) or $k=100$.
+
+Denote the probability to win the game, i.e. reaching $k=100$, starting with $k$ dollars as $x_k=\P(win|k)$. Using the total probability formula
+\[
+\P(win|k)=\frac{1}{3} \cdot \P(win|k-1)+\frac{2}{3} \cdot \P(win|k+1)
+\]
+derive the difference equation for $x_k$ and solve the boundary-value problem with $x_0=0$ and $x_{100}=1$.
+
+\item Let $N(t)$ denote the size of population, $X(t)=\sqrt{N}$ the total output in the economy. Consider the following model
+\[
+\frac{\dot{N}}{N}=\alpha-\beta\frac{N}{X}
+\]
+where $\alpha>0$, $\beta>0$. Find $N$ and explore its behavior as $t\to\infty$.
+\end{enumerate}
+
+% more variants :)
+\begin{comment}
+
+\newpage
+\pagestyle{empty}
+Mathematics for economists. Exam Paper. March 28, 2013, \textbf{Variant 2} \\
+
+%Lecturer: K.A. Bukin
+%Class teachers: A. Arlashin, G. Sharygin, S. Provornikov
+
+Marks will be deducted for insufficient explanation within your answers. All problems are mandatory. Sections A and B will make up 60\% and 40\% of the exam grade, respectively. Total duration of the exam is 120 min. \\
+
+\textbf{SECTION A}
+\vspace{20pt}
+
+\begin{enumerate}
+
+\item Compute all the roots of the complex number, $\sqrt[5]{-1-i}$
+
+\item The matrix $A$ has the eigenvalues $\lambda_1=-1$, $\lambda_2=4$, $\lambda_3=-2$.
+\begin{enumerate}
+\item Compute the eigenvalues of the following matrices: $B=A^2$, $C=A+3I$, $D=A^{-1}$ where $I$ is the corresponding identity matrix.
+\item What can be said about the definiteness of these matrices?
+\end{enumerate}
+
+\item Consider the implicit function $y(x)$ given by the equation
+\[
+y^3+2y+3x^3+x^2=16.
+\]
+\begin{enumerate}
+\item Does this equation define the implicit function $y(x)$ in the neighborhood of the point $(1,2)$?
+\item If the implicit function is defined find the Taylor series for $y(x)$ up to the second order term.
+\end{enumerate}
+
+
+\item Consider the difference equation $y_{t+1}(2+3y_t)=4y_t$ with initial condition $y_0=2/3$.
+\begin{enumerate}
+\item Using the substitution $z_t=1/y_t$ solve the difference equation.
+\item What is the limit of $y_t$ as $t\to\infty$?
+\end{enumerate}
+
+\item The homogeneous function $f$ is given by the equation
+\[
+f(x,y)=\int_0^{xy^a} t^3+xt \, dt.
+\]
+Find the value of the parameter $a$ and the degree of homogeneity of $\partial f/\partial x$.
+
+\item Find the two indefinite integrals $\int e^x \cos(3x)\,dx$, $\int \frac{x+2}{x^2-5x+4}\, dx$
+
+\end{enumerate}
+
+\vspace{20pt}
+\textbf{SECTION B}
+\vspace{20pt}
+
+\begin{enumerate}[resume]
+\item Suppose you enter a casino with $k$ dollars in your pocket. You decide to play a game in which you win \$1 with the probability  $2/3$ and lose \$1 dollar with the probability $1/3$. The game is over when $k=0$ (no money left) or $k=100$.
+
+Denote the probability to win the game, i.e. reaching $k=100$, starting with $k$ dollars as $x_k=\P(win|k)$. Using the total probability formula
+\[
+\P(win|k)=\frac{1}{3} \cdot \P(win|k-1)+\frac{2}{3} \cdot \P(win|k+1)
+\]
+derive the difference equation for $x_k$ and solve the boundary-value problem with $x_0=0$ and $x_{100}=1$.
+
+\item Let $N(t)$ denote the size of population, $X(t)=\sqrt{N}$ the total output in the economy. Consider the following model
+\[
+\frac{\dot{N}}{N}=\alpha-\beta\frac{N}{X}
+\]
+where $\alpha>0$, $\beta>0$. Find $N$ and explore its behavior as $t\to\infty$.
+\end{enumerate}
+
+
+\newpage
+\pagestyle{empty}
+Mathematics for economists. Exam Paper. March 28, 2013, \textbf{Variant 3} \\
+
+%Lecturer: K.A. Bukin
+%Class teachers: A. Arlashin, G. Sharygin, S. Provornikov
+
+Marks will be deducted for insufficient explanation within your answers. All problems are mandatory. Sections A and B will make up 60\% and 40\% of the exam grade, respectively. Total duration of the exam is 120 min. \\
+
+\textbf{SECTION A}
+\vspace{20pt}
+
+\begin{enumerate}
+
+\item Compute all the roots of the complex number, $\sqrt[5]{1-i}$
+
+\item The matrix $A$ has the eigenvalues $\lambda_1=-1$, $\lambda_2=5$, $\lambda_3=-2$.
+\begin{enumerate}
+\item Compute the eigenvalues of the following matrices: $B=A^2$, $C=A+3I$, $D=A^{-1}$ where $I$ is the corresponding identity matrix.
+\item What can be said about the definiteness of these matrices?
+\end{enumerate}
+
+\item Consider the implicit function $y(x)$ given by the equation
+\[
+y^3+3y+3x^3+x^2=18.
+\]
+\begin{enumerate}
+\item Does this equation define the implicit function $y(x)$ in the neighborhood of the point $(1,2)$?
+\item If the implicit function is defined find the Taylor series for $y(x)$ up to the second order term.
+\end{enumerate}
+
+
+\item Consider the difference equation $y_{t+1}(2+3y_t)=4y_t$ with initial condition $y_0=2/3$.
+\begin{enumerate}
+\item Using the substitution $z_t=1/y_t$ solve the difference equation.
+\item What is the limit of $y_t$ as $t\to\infty$?
+\end{enumerate}
+
+\item The homogeneous function $f$ is given by the equation
+\[
+f(x,y)=\int_0^{xy^a} t^3+xt \, dt.
+\]
+Find the value of the parameter $a$ and the degree of homogeneity of $\partial f/\partial x$.
+
+\item Find the two indefinite integrals $\int e^x \cos(4x)\,dx$, $\int \frac{x+3}{x^2-5x+4}\, dx$
+
+\end{enumerate}
+
+\vspace{20pt}
+\textbf{SECTION B}
+\vspace{20pt}
+
+\begin{enumerate}[resume]
+\item Suppose you enter a casino with $k$ dollars in your pocket. You decide to play a game in which you win \$1 with the probability  $2/3$ and lose \$1 dollar with the probability $1/3$. The game is over when $k=0$ (no money left) or $k=100$.
+
+Denote the probability to win the game, i.e. reaching $k=100$, starting with $k$ dollars as $x_k=\P(win|k)$. Using the total probability formula
+\[
+\P(win|k)=\frac{1}{3} \cdot \P(win|k-1)+\frac{2}{3} \cdot \P(win|k+1)
+\]
+derive the difference equation for $x_k$ and solve the boundary-value problem with $x_0=0$ and $x_{100}=1$.
+
+\item Let $N(t)$ denote the size of population, $X(t)=\sqrt{N}$ the total output in the economy. Consider the following model
+\[
+\frac{\dot{N}}{N}=\alpha-\beta\frac{N}{X}
+\]
+where $\alpha>0$, $\beta>0$. Find $N$ and explore its behavior as $t\to\infty$.
+\end{enumerate}
+
+
+\newpage
+\pagestyle{empty}
+Mathematics for economists. Exam Paper. March 28, 2013, \textbf{Variant 4} \\
+
+%Lecturer: K.A. Bukin
+%Class teachers: A. Arlashin, G. Sharygin, S. Provornikov
+
+Marks will be deducted for insufficient explanation within your answers. All problems are mandatory. Sections A and B will make up 60\% and 40\% of the exam grade, respectively. Total duration of the exam is 120 min. \\
+
+\textbf{SECTION A}
+\vspace{20pt}
+
+\begin{enumerate}
+
+\item Compute all the roots of the complex number, $\sqrt[5]{1+i}$
+
+\item The matrix $A$ has the eigenvalues $\lambda_1=-1$, $\lambda_2=6$, $\lambda_3=-2$.
+\begin{enumerate}
+\item Compute the eigenvalues of the following matrices: $B=A^2$, $C=A+3I$, $D=A^{-1}$ where $I$ is the corresponding identity matrix.
+\item What can be said about the definiteness of these matrices?
+\end{enumerate}
+
+\item Consider the implicit function $y(x)$ given by the equation
+\[
+y^3+4y+3x^3+x^2=20.
+\]
+\begin{enumerate}
+\item Does this equation define the implicit function $y(x)$ in the neighborhood of the point $(1,2)$?
+\item If the implicit function is defined find the Taylor series for $y(x)$ up to the second order term.
+\end{enumerate}
+
+
+\item Consider the difference equation $y_{t+1}(2+3y_t)=4y_t$ with initial condition $y_0=2/3$.
+\begin{enumerate}
+\item Using the substitution $z_t=1/y_t$ solve the difference equation.
+\item What is the limit of $y_t$ as $t\to\infty$?
+\end{enumerate}
+
+\item The homogeneous function $f$ is given by the equation
+\[
+f(x,y)=\int_0^{xy^a} t^3+xt \, dt.
+\]
+Find the value of the parameter $a$ and the degree of homogeneity of $\partial f/\partial x$.
+
+\item Find the two indefinite integrals $\int e^x \cos(5x)\,dx$, $\int \frac{x+4}{x^2-5x+4}\, dx$
+
+\end{enumerate}
+
+\vspace{20pt}
+\textbf{SECTION B}
+\vspace{20pt}
+
+\begin{enumerate}[resume]
+\item Suppose you enter a casino with $k$ dollars in your pocket. You decide to play a game in which you win \$1 with the probability  $2/3$ and lose \$1 dollar with the probability $1/3$. The game is over when $k=0$ (no money left) or $k=100$.
+
+Denote the probability to win the game, i.e. reaching $k=100$, starting with $k$ dollars as $x_k=\P(win|k)$. Using the total probability formula
+\[
+\P(win|k)=\frac{1}{3} \cdot \P(win|k-1)+\frac{2}{3} \cdot \P(win|k+1)
+\]
+derive the difference equation for $x_k$ and solve the boundary-value problem with $x_0=0$ and $x_{100}=1$.
+
+\item Let $N(t)$ denote the size of population, $X(t)=\sqrt{N}$ the total output in the economy. Consider the following model
+\[
+\frac{\dot{N}}{N}=\alpha-\beta\frac{N}{X}
+\]
+where $\alpha>0$, $\beta>0$. Find $N$ and explore its behavior as $t\to\infty$.
+\end{enumerate}
+\end{comment}
+
+\subsection{MOR, exam, 22.05.2013}
+
+
+You need to solve exactly FIVE problems out of 7. At least ONE problem from each section should be chosen for solving. Each question is worth 20 points.
+
+\vspace{20pt}
+\textbf{SECTION A}
+\vspace{20pt}
+
+\begin{enumerate}
+\item A two-product monopoly seeks to maximize its profit. The revenue  follows the formula $R(x,y)=6x-x^2+y-y^2$. The total costs function is given by $C(x,y)=x^2+y^2+4x+3y$, where $x$ and $y$ are the outputs.
+
+State the problem of the monopoly, given condition that its profit $\pi=R-C$ should always remain nonnegative. Apply the Kuhn-Tucker conditions. Use Weierstrass theorem to confirm sufficiency.
+\item For any real number $\lambda$, find the minimal value of the objective function $x_1+6x_2+2x_3+4x_4$ subject to the constraints  $\lambda x_1+x_2-x_3+x_4\geq -1$, $x_1+1.5x_2+x_3+x_4 \geq 5$,  all choice variables are nonnegative.
+\end{enumerate}
+
+\vspace{20pt}
+\textbf{SECTION B}
+\vspace{20pt}
+
+\begin{enumerate}[resume]
+\item Solve the system of differential equations:
+\[
+\begin{cases}
+\dot{x}=x-y \\
+\dot{y}=2x-y
+\end{cases}
+\]
+\item Given the Metzler equation of inventory cycles $y_t=3by_{t-1}-2by_{t-2}+N$, where $0<b<1$ and $N$ is a number, find all such values of $b$ for which solution represents convergent stepped time path (the complex roots case). Does the value of $N$ affect your conclusion?
+\item Show that Chebyshev’s equation $(1-x^2)y''-xy'+y=0$, where $|x|<1$, can be reduced to equation $\ddot{y}+y=0$ by substituting $x=\cos t$. Hence find the general solution of Chebyshev’s equation.
+\end{enumerate}
+
+\vspace{20pt}
+\textbf{SECTION C}
+\vspace{20pt}
+
+\begin{enumerate}[resume]
+\item Find all pure and mixed Nash equilibria in the following bimatrix game:
+
+
+\begin{tabular}{c|ccc}
+ & d & e & f \\
+\hline
+a & 4;5 & 1;4 & 1;1  \\
+b & 2;8 & 5;0 & 0;4  \\
+c & 0;3 & 2;2 & 5;7  \\
+\end{tabular}
+
+
+\item There is an auction of a painting with two players. The value of the painting for the first player is a random variable $v_1$, for the second player --- $v_2$. The random variables $v_1$ and $v_2$ are independent and uniformly distributed from 0 to 1 million dollars. Each player makes the bid $b_i$ knowing only his own value of the painting. The player who makes the highest bid gets the painting and pays the arithmetic mean of the two bids.
+
+Find a Nash equilibrium where each player uses linear strategy of the form $b_i=k\cdot v_i$.
+
+\end{enumerate}
+
+\subsection{MOR, marking scheme, 22.05.2013 }
+
+\begin{enumerate}
+\item 5 points for setting Kuhn-Tucker Lagrangian correctly and writing down first-order conditions. Another 3 points for showing that the only constraint in the problem is binding. 5 points for proving that an internal  critical point ($x>0$, $y>0$) does not exist. Plus 3 points for finding corner critical point. And 4 points for showing that Weierstrass theorem is applicable.
+
+\item 10 points for conversion to the dual program and correct analysis of the feasible region. The rest 10 points for maximizing objective function.
+
+\item 10 points for either finding eigen values +eigen vectors or rewarding the students who managed to reduce the system to one equation and solved it successfully. 10 points for finding general solution.
+
+\item 5 points for finding roots of the characteristic equation. Another 10 points for finding interval for $b$ that provides convergent stepped time path. 5 points for conclusion that for these $b$ values the particular integral is represented by a constant and thus the value of   $N$ does not affect the answer.
+
+\item 10 points for correct chain rule differentiation that reduces Chebyshev equation to the linear equation with the constant coefficients. Another 10 points for solving the latter and finding  after substitution $y=c_1 \sqrt{1-x^2}+c_2 x$.
+
+\item Correct elimination of strictly dominated strategies --- 4 points. Correct picture of best response functions --- 12 points. The rest --- 4 points.  If only pure Nash Equilibria are found --- the total is 4 points.
+
+\item 10 points for the payoff function of the first player given that his valuation of the painting is $v_1$ and his bid is $b_1$. If we denote by $W$ the win of the first player than the expected utility of the first player is given by:
+\[
+P(W) \left( v_1 - E[(b_1+b_2)/2 \mid W] \right) = \frac{b_1}{k} \left( v_1 - \frac{b_1+0.5b_1}{2}\right)
+\]
+
+5 points for stating FOC and 5 points for obtaining strategy from FOC. The final answer is $b_i=\frac{2}{3}v_i$.
+
+\end{enumerate}
+
+
+
+% more variants
+\begin{comment}
+\newpage
+\pagestyle{empty}
+Methods of Optimization. Exam Paper. May 22, 2013, \textbf{Variant 2} \\
+
+
+Lecturer K. Bukin
+Classteachers: B. Demeshev, D. Yesaulov, A. Kalchenko
+
+You need to solve exactly FIVE problems out of 7. At least ONE problem from each section should be chosen for solving. Each question is worth 20 points.
+
+\vspace{20pt}
+\textbf{SECTION A}
+\vspace{20pt}
+
+\begin{enumerate}
+\item A two-product monopoly seeks to maximize its profit. The revenue follows the formula $R(x,y)=x-x^2+6y-y^2$. The total costs function is given by $C(x,y)=x^2+y^2+3x+4y$, where $x$ and $y$ are the outputs.
+
+State the problem of the monopoly, given condition that its profit $\pi=R-C$ should always remain nonnegative. Apply the Kuhn-Tucker conditions. Use Weierstrass theorem to confirm sufficiency.
+\item For any real number $\lambda$, find the minimal value of the objective function $4x_1+2x_2+10x_3+x_4$ subject to the constraints  $x_1+x_2+3x_3+x_4\leq 10$, $-x_1+x_2-2x_3+\lambda x_4 \leq 3$,  all choice variables are nonnegative.
+\end{enumerate}
+
+\vspace{20pt}
+\textbf{SECTION B}
+\vspace{20pt}
+
+\begin{enumerate}[resume]
+\item Solve the system of differential equations:
+\[
+\begin{cases}
+\dot{x}=-x+2y \\
+\dot{y}=-x+y
+\end{cases}
+\]
+\item Given the Metzler equation of inventory cycles $y_t=4by_{t-1}-3by_{t-2}+N$, where $0<b<1$ and $N$ is a number, find all such values of $b$ for which solution represents convergent stepped time path (the complex roots case). Does the value of $N$ affect your conclusion?
+\item Show that Chebyshev’s equation $(1-x^2)y''-xy'+y=0$, where $|x|<1$, can be reduced to equation $\ddot{y}+y=0$ by substituting $x=\cos t$. Hence find the general solution of Chebyshev’s equation.
+\end{enumerate}
+
+\vspace{20pt}
+\textbf{SECTION C}
+\vspace{20pt}
+
+\begin{enumerate}[resume]
+\item Find all pure and mixed Nash equilibria in the following bimatrix game:
+
+
+\begin{tabular}{c|ccc}
+ & d & e & f \\
+\hline
+a & 4;6 & 2;1 & 2;1  \\
+b & 2;9 & 4;6 & 1;4  \\
+c & 1;1 & 3;0 & 5;4  \\
+\end{tabular}
+
+
+\item There is an auction of a painting with two players. The value of the painting for the first player is a random variable $v_1$, for the second player --- $v_2$. The random variables $v_1$ and $v_2$ are independent and uniformly distributed from 0 to 1 million dollars. Each player makes the bid $b_i$ knowing only his own value of the painting. The player who makes the highest bid gets the painting and pays the arithmetic mean of the two bids.
+
+Find a Nash equilibrium where each player uses linear strategy of the form $b_i=k\cdot v_i$.
+
+\end{enumerate}
+
+\newpage
+\pagestyle{empty}
+Methods of Optimization. Exam Paper. May 22, 2013, \textbf{Variant 3} \\
+
+
+Lecturer K. Bukin
+Classteachers: B. Demeshev, D. Yesaulov, A. Kalchenko
+
+You need to solve exactly FIVE problems out of 7. At least ONE problem from each section should be chosen for solving. Each question is worth 20 points.
+
+\vspace{20pt}
+\textbf{SECTION A}
+\vspace{20pt}
+
+\begin{enumerate}
+\item A two-product monopoly seeks to maximize its profit.  The revenue  follows the formula $R(x,y)=2x-x^2+8y-y^2$. The total costs function is given by $C(x,y)=x^2+y^2+3.5x+6y$, where $x$ and $y$ are the outputs.
+
+State the problem of the monopoly, given condition that its profit $\pi=R-C$ should always remain nonnegative. Apply the Kuhn-Tucker conditions. Use Weierstrass theorem to confirm sufficiency.
+\item For any real number $\lambda$, find the minimal value of the objective function $4x_1+2x_2+10x_3+x_4$ subject to the constraints  $\lambda x_1+x_2+3x_3+x_4\leq  10$, $-x_1+x_2-2x_3-x_4 \leq 3$,  all choice variables are nonnegative.
+\end{enumerate}
+
+\vspace{20pt}
+\textbf{SECTION B}
+\vspace{20pt}
+
+\begin{enumerate}[resume]
+\item Solve the system of differential equations:
+\[
+\begin{cases}
+\dot{x}=x-y \\
+\dot{y}=5x-y
+\end{cases}
+\]
+\item Given the Metzler equation of inventory cycles $y_t=5by_{t-1}-4by_{t-2}+N$, where $0<b<1$ and $N$ is a number, find all such values of $b$ for which solution represents convergent stepped time path (the complex roots case). Does the value of $N$ affect your conclusion?
+\item Show that Chebyshev’s equation $(1-x^2)y''-xy'+y=0$, where $|x|<1$, can be reduced to equation $\ddot{y}+y=0$ by substituting $x=\cos t$. Hence find the general solution of Chebyshev’s equation.
+\end{enumerate}
+
+\vspace{20pt}
+\textbf{SECTION C}
+\vspace{20pt}
+
+\begin{enumerate}[resume]
+\item Find all pure and mixed Nash equilibria in the following bimatrix game:
+
+
+\begin{tabular}{c|ccc}
+ & d & e & f \\
+\hline
+a & 6;5 & 2;1 & 2;1  \\
+b & 3;8 & 9;2 & 1;4  \\
+c & 1;3 & 3;2 & 5;3  \\
+\end{tabular}
+
+
+\item There is an auction of a painting with two players. The value of the painting for the first player is a random variable $v_1$, for the second player --- $v_2$. The random variables $v_1$ and $v_2$ are independent and uniformly distributed from 0 to 1 million dollars. Each player makes the bid $b_i$ knowing only his own value of the painting. The player who makes the highest bid gets the painting and pays the arithmetic mean of the two bids.
+
+Find a Nash equilibrium where each player uses linear strategy of the form $b_i=k\cdot v_i$.
+
+\end{enumerate}
+
+\newpage
+\pagestyle{empty}
+Methods of Optimization. Exam Paper. May 22, 2013, \textbf{Variant 4} \\
+
+
+Lecturer K. Bukin
+Classteachers: B. Demeshev, D. Yesaulov, A. Kalchenko
+
+You need to solve exactly FIVE problems out of 7. At least ONE problem from each section should be chosen for solving. Each question is worth 20 points.
+
+\vspace{20pt}
+\textbf{SECTION A}
+\vspace{20pt}
+
+\begin{enumerate}
+\item A two-product monopoly seeks to maximize its profit. The revenue follows the formula $R(x,y)=8x-x^2+2y-y^2$. The total costs function is given by $C(x,y)=x^2+y^2+6x+3.5y$, where $x$ and $y$ are the outputs.
+
+State the problem of the monopoly, given condition that its profit $\pi=R-C$ should always remain nonnegative. Apply the Kuhn-Tucker conditions. Use Weierstrass theorem to confirm sufficiency.
+\item For any real number $\lambda$, find the minimal value of the objective function $x_1+5x_2+2x_3+4x_4$ subject to the constraints  $\lambda x_1+x_2-x_3+x_4\geq -1$, $x_1+1.5x_2+x_3+x_4 \geq 5$,  all choice variables are nonnegative.
+\end{enumerate}
+
+\vspace{20pt}
+\textbf{SECTION B}
+\vspace{20pt}
+
+\begin{enumerate}[resume]
+\item Solve the system of differential equations:
+\[
+\begin{cases}
+\dot{x}=-x+5y \\
+\dot{y}=-x+y
+\end{cases}
+\]
+\item Given the Metzler equation of inventory cycles $y_t=6by_{t-1}-5by_{t-2}+N$, where $0<b<1$ and $N$ is a number, find all such values of $b$ for which solution represents convergent stepped time path (the complex roots case). Does the value of $N$ affect your conclusion?
+\item Show that Chebyshev’s equation $(1-x^2)y''-xy'+y=0$, where $|x|<1$, can be reduced to equation $\ddot{y}+y=0$ by substituting $x=\cos t$. Hence find the general solution of Chebyshev’s equation.
+\end{enumerate}
+
+\vspace{20pt}
+\textbf{SECTION C}
+\vspace{20pt}
+
+\begin{enumerate}[resume]
+\item Find all pure and mixed Nash equilibria in the following bimatrix game:
+
+
+\begin{tabular}{c|ccc}
+ & d & e & f \\
+\hline
+a & 4;5 & 2;4 & 2;1  \\
+b & 2;7 & 9;5 & 1;8  \\
+c & 0;1 & 3;0 & 7;5  \\
+\end{tabular}
+
+
+\item There is an auction of a painting with two players. The value of the painting for the first player is a random variable $v_1$, for the second player --- $v_2$. The random variables $v_1$ and $v_2$ are independent and uniformly distributed from 0 to 1 million dollars. Each player makes the bid $b_i$ knowing only his own value of the painting. The player who makes the highest bid gets the painting and pays the arithmetic mean of the two bids.
+
+Find a Nash equilibrium where each player uses linear strategy of the form $b_i=k\cdot v_i$.
+
+\end{enumerate}
+
+\end{comment}
+
+
+\subsection{MOR, retake exam, 14.09.2013}
+
+
+You need to solve exactly FIVE problems out of 7. At least ONE problem from each section should be chosen for solving. Each question is worth 20 points.
+
+\vspace{20pt}
+\textbf{SECTION A}
+\vspace{20pt}
+
+\begin{enumerate}
+\item Maximise the function $f(x,y)=x+ay$, subject to $1-x^2\geq y^2$, $x+y \geq 0$ for all values of $a$ using the Lagrange multipliers approach.
+
+\item For any real number $\lambda$, find the minimal value of the objective function $x_1+6x_2+2x_3+4x_4$ subject to the constraints  $\lambda x_1+x_2-x_3+x_4\geq -1$, $2x_1+3x_2+2x_3+2x_4 \geq 10$,  all the choice variables are nonnegative.
+\end{enumerate}
+
+\vspace{20pt}
+\textbf{SECTION B}
+\vspace{20pt}
+
+\begin{enumerate}[resume]
+\item Solve the system of differential equations:
+\[
+\begin{cases}
+\dot{x}=2x+y+1 \\
+\dot{y}=-2x+2y
+\end{cases}
+\]
+\item Solve the difference equation $y_{t+2}-3y_{t+1}+2y_t=\sin(\pi t/2)$ and determine whether the solution paths are convergent or divergent.
+
+\item In the model of interacting inflation and unemployment based on the Phillips relation,  both unemployment rate $U$ and expected inflation $\pi$ are the solutions of the system $\dot{\pi}=\frac{3}{4}(p-\pi)$, $\dot{U}=-\frac{1}{2}(m-p)$, where $m$ is exogenously defined positive rate of nominal money growth and $p$ is the posteriori observed inflation satisfying equation $p=\frac{1}{6}-3U+\pi$. Find the steady-state solutions for the inflation both expected and observed as well as the unemployment rate in terms of $m$. Explore the dynamic stability of solutions. What is the natural rate of unemployment?
+\end{enumerate}
+
+\vspace{20pt}
+\textbf{SECTION C}
+\vspace{20pt}
+
+\begin{enumerate}[resume]
+\item Find all pure and mixed Nash equilibria in the following bimatrix game:
+
+
+\begin{tabular}{c|ccc}
+ & d & e & f \\
+\hline
+a & 5;5 & 2;6 & 0;4  \\
+b & 2;1 & 0;2 & 4;3  \\
+c & 0;4 & 3;5 & 1;0  \\
+\end{tabular}
+
+
+\item Two players have found The Magic Box. The Box has two holes. Simulteneously each of the two players may put any amount of money from $0$ to $100$ euros into his hole. Then the Magic Box will multiply the total sum by $a>1$, divide the resulting sum into two equal parts and give them back to the players. The value of $a$ is known. Find all the pure and mixed Nash Equilibria of this game for all values of the parameter $a$.
+
+\end{enumerate}

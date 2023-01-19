@@ -1,0 +1,618 @@
+\subsection{MFE, mock, 30.10.14}
+
+\textbf{Variant 1}. Please, don't forget to write you variant number. Sections A and B will make up 60\% and 40\% of the exam grade, respectively. Total duration of the exam is 120 min. Good luck! :)
+
+\textbf{SECTION A}
+
+\begin{enumerate}
+
+\item Consider the function $f(x,y,z)=x^5+2xyz-3z^3$. Using the total differential find the approximate value of $f(1.02,0.99,1)$.
+
+\item Consider the function $f(x,y,z)=x^4+(x+y)^2+(x+z)^3$.
+\begin{enumerate}
+\item Find the Hesse matrix. Clearly state the Young theorem even if you don't use it.
+\item Find all the points where the Hesse matrix is positive definite.
+\end{enumerate}
+
+\item Consider the function
+\begin{equation} \nonumber
+f(x,y)=
+\begin{cases}
+	\frac{xy}{\sqrt{7x^2+3y^2}}, \text{ if } (x,y)\neq (0,0) \\
+	a, \text{ if } (x,y)=(0,0)
+\end{cases}
+\end{equation}
+Find all the values of $a$ such that the function $f$ will be continuous.
+
+
+\item The microbe Veniamin is staying on the surface of the ellipsoid $4x^2+y^2+z^2=9$ at the point $(1,2,1)$. All coordinates are measured in centimetres. He digs into the ellipsoid perdpendicularly to the surface by $0.02$ cm. Find new approximate coordinates of Veniamin.
+
+\item Consider the function $u(x,y)=2f(r)$ where $r=\sqrt{x^2+y^2}$. Is it possible to represent the function $x\frac{\partial u}{\partial x}+y\frac{\partial u}{\partial y}$ as a function of $r$ alone, i.e. $g(r)$? If yes, then find $g(r)$.
+
+\item Given the system
+\begin{equation} \nonumber
+\begin{cases}
+u^2-w^2+x^2+y^2=0 \\
+uw+xy=0
+\end{cases}
+\end{equation}
+\begin{enumerate}
+\item Define a sufficient condition for functions $u(x,y)$ and $w(x,y)$ to be differentiable
+\item Find $\frac{\partial u}{\partial x}$
+\end{enumerate}
+
+\end{enumerate}
+
+\textbf{SECTION B}
+
+\begin{enumerate}[resume]
+\item (20 points) Let the demand and supply for an ice-cream on the sunny day be $q_D=D(p, T, d)$ and $q_S=S(p,T)$ correspondingly. Here $p$ is the price, $T$ is the temperature on this day, $d$ --- distance of the selling place from the center of the park, $D_p<0,$ $D_T>0,$ $S_p>0,$ $S_T<0,$ $D_d<0.$
+
+\begin{enumerate}
+\item Find analytically how the equilibrium price $p^{\ast}$ changes with the increase of $T.$ How does it change with the increase of $d?$
+\item Let $q^{\ast}$ be the equilibrium supply quantity. Find $\frac{\partial{q^{\ast}}}{\partial T}.$ Find the condition when $\frac{\partial{q^{\ast}}}{\partial T}<0.$
+\end{enumerate}
+
+\item (20 points) Consider the utility function
+$$
+U(x_1, x_2) = \left(x_1^\frac{\sigma-1}{\sigma}+x_2^\frac{\sigma-1}{\sigma}\right)^\frac{\sigma}{\sigma-1}
+$$
+where $\sigma \geq 0$ is a parameter.
+
+\begin{enumerate}
+\item Sketch the indifference curves corresponding to $\sigma=2$.
+\item Find the limiting utility function and sketch the corresponding indifference curves for two cases: $\sigma \rightarrow \infty$ and $\sigma \rightarrow 0$
+%\item $\sigma \rightarrow 1$
+\end{enumerate}
+% Hint: you may use the fact that $\lim_{a\rightarrow 0} \frac{x^a-1}{a} = \ln x$
+\end{enumerate}
+
+\subsection{MFE, mock, 30.10.14-marking}
+
+\begin{enumerate}
+\item $f'_x=5x^4+2yz=7$, $f'_y=2xz=2$, $f'_z=2xy-9z^2=-7$, $df=7\cdot 0.02-2\cdot 0.01-7\cdot 0=0.12$, $f(1.02,0.99,1)\approx f(1,1,1)+df=0+0.12=0.12$.
+each derivative --- 2 points, formula for differential --- 3 points, calculation of new $f$ --- 1 point
+
+\item  Statement of the theorem --- 2 points, Hesse matrix --- 4 points, condition for positive definiteness --- 4 points (2 points --- inequalities, 2 points --- solution).
+
+\[
+\begin{pmatrix}
+12x^2+2+6(x+z) & 2 & 6(x+z) \\
+2 & 2 & 0 \\
+6(x+z) & 0 & 6(x+z)
+\end{pmatrix}
+\]
+
+Condition: $x+z>0$ and $x\neq 0$.
+
+
+\item $\lim_{x,y\to 0} \frac{xy}{\sqrt{7x^2+3y^2}}=\lim_{x,y\to 0} \frac{sign(xy)}{\sqrt{7/y^2+3/x^2}}=0$ (6 points), conclusion that $a=0$ (4 points)
+\item $\grad f=(8x, 2y, 2z)=(8, 4, 2)$ (5 points). To dig into we need the direction $(-8, -4,-2)$ (1 point). The length of gradient, $|\grad f| = \sqrt{84}$ (2 points). New coordinates are approximately equal $(1,2,1)+\frac{0.02}{\sqrt{84}}(-8,-4,-2)=(1,2,1)+\frac{0.02}{\sqrt{21}}(-4,-2,-1)$ (2 points).
+
+\item $x\frac{\partial u}{\partial x}+y\frac{\partial u}{\partial y}=2f'\frac{x^2}{(x^2+y^2)^{1/2}}+2f'\frac{y^2}{(x^2+y^2)^{1/2}}=2f'(r)r$. Derivatives $\frac{\partial u}{\partial x}$ and $\frac{\partial u}{\partial y}$ --- 3 points each. The remaining part --- 4 points.
+
+\item statement --- 3 points, correct formula with determinants for the derivative --- 4 points, calculations of all derivatives in determinants --- 3 points,
+
+\[
+\frac{\partial u}{\partial x}=- \frac{2xu+2wy}{2u^2+2w^2}
+\]
+
+\item a) Each of the two derivatives --- 5 points b) the derivative --- 5 points, condition --- 5 points
+
+\[
+\frac{\partial p^*}{\partial T}=\frac{S_T-D_T}{D_p-S_p}
+\]
+
+\[
+\frac{\partial p^*}{\partial d}=\frac{D_d}{S_p-D_p}
+\]
+
+\[
+\frac{\partial q^*}{\partial T}=S_p\frac{S_T-D_T}{D_p-S_p}+S_T
+\]
+
+\item 4 points for each plot of indifference curves, 4 points for each limiting utility function
+
+limiting cases: $\sigma\to\infty$, $U(x_1,x_2)=x_1+x_2$, $\sigma\to 0$, $U(x_1,x_2)=\min(x_1,x_2)$
+
+
+\end{enumerate}
+
+
+
+\subsection{Fall-exam, 24.12.14}
+
+\textbf{Variant 1}. Please, don't forget to write you variant number. Sections A and B will make up 60\% and 40\% of the exam grade, respectively. Total duration of the exam is 120 min. Good luck! :)
+
+\vspace{10pt}
+
+\textbf{SECTION A}
+
+
+\begin{enumerate}
+\item Consider the set $A=\cup_{i=1}^{\infty} \left\{ 1-\frac{1}{i} \right\} \subset \mathbb{R}$.
+\begin{enumerate}
+\item Is the set $A$ bounded? Open? Closed? Compact?
+\item Roughly sketch the set $A \times A$
+\end{enumerate}
+
+\item Consider the system of equations
+\[
+\begin{cases}
+xyz^2+x^3y+3y^3z^3-2x=3 \\
+2x^2yz+z^2+3xy+5yx^3=-5
+\end{cases}
+\]
+\begin{enumerate}
+\item Are the function $x(z)$ and $y(z)$ defined around the point $A=(-1,1,1)$?
+\item Find $df/dz$, where $f(z)=x(z)y(z)$
+\end{enumerate}
+\item Consider the functions $f(x,y)=x^2+2x+y^2+6y+7$ and $g(x,y)=x^2-8x+y^2-10y+9$. Find all the points where the gradients are parallel.
+\item Find and classify all the local extrema of the function $g(x,y)=y^3 -12y+x^2e^y$. Which of them are global?
+\item It is known that the point $(1,0)$ is the constrained local maximum of the function $f(x,y)=5x-ky-3x^2+2xy-5y^2$ subject to $x+y=1$.
+\begin{enumerate}
+\item Find the value of $k$ and the maximum value of the function $f$
+\item Using Envelope theorem find the new value of maximum if $k$ will increase by $0.1$
+\end{enumerate}
+\item Use Lagrange multipliers to find the height and radius of a cylinder with the least possible
+surface area among those with a volume of $6\pi$ m$^3$. Make sure you check the second order
+condition for minimisation.
+\end{enumerate}
+
+\textbf{SECTION B}
+
+\begin{enumerate}[resume]
+\item In perfectly competitive agricultural industry a typical firm uses labor, capital and land. Its short-run costs can be found by the formula $C_{sr}(y,K^*,T^*)=\frac{y^3}{K^*T^*}+K^*+T^*$, where $y$  is the output, $K^*$  and $T^*$  are fixed quantities of capital and land, respectively.
+The long run costs $C_{lr}(y)$ can be found by minimizing $C_{sr}$ with respect to $K^*$  and $T^*$.
+\begin{enumerate}
+\item Find  $C_{lr}(y)$
+\item The profits of the firm in both short-run and long-run can be found by $\pi_{sr}=py-C_{sr}$  and   $\pi_{lr}=py-C_{lr}$, where $p$ is price. When the profits are maximized with respect to the output, the maximum values of these are denoted by $\tilde{\pi}_{sr}(p,K^*,T^*)$ and $\tilde{\pi}_{lr}(p)$, respectively. Let $p=3$. Show that $\tilde{\pi}_{sr}(3,K^*,T^*) \leq 0$ for all values of  $K^*>0$  and  $T^*>0$.
+%\item Without actually calculating the Hessian $D^2_{K^*,T^*}\tilde{\pi}_{sr}$ make a guess about the definiteness of the matrix. Justify your claim.
+\item Use Envelope Theorem to evaluate $\frac{\partial \tilde{\pi}_{sr}}{\partial K^*}$ and $\frac{\partial \tilde{\pi}_{sr}}{\partial T^*}$ for $p=3$. Is it possible that these derivatives turn zero simultaneously for $T^* \neq K^*$?
+\end{enumerate}
+
+\item Let $f(x)$ be twice continuously differentiable function whose second-order derivative is $f''(x)>0$ for all $x$. Consider a constrained minimization problem $F=\sum_{i=1}^n f(x_i) \to \min$
+subject to $\sum_{i=1}^n x_i = 1$,  $(x_1, \ldots, x_n)\in \mathbb{R}^n$. Using the first-order conditions find the critical point. By checking bordered Hessian or otherwise show that the found point is minimum.
+\end{enumerate}
+
+\subsection{Fall-exam, 24.12.14-marking}
+
+\begin{enumerate}
+\item bounded --- 2 pts, not closed --- 2 pts, not open --- 2 pts, not compact --- 2 pts, graph --- 2 pts
+\item the function is defined --- 2 pts, $x'$ and $y'$ --- $2\times 3=6$ pts, $df/dz$ --- 2 pts.
+\item $\grad f$ --- 2 pts, $\grad g$ --- 2 pts, condition --- 2 pts, solution of condition --- 4 pts
+\item FOC statement --- 1 pt, FOC solution --- 4 pts, SOC check --- 3 pts, globality --- 2 pts
+\item NDCQ --- 1 pt, FOC statement --- 1 pt, max and $k$ --- 3 pts, SOC checking --- 3 pts, Envelope  --- 2 pts
+\item problem formulation (target function, constraint) --- 2 pts, NDCQ --- 1 pt, FOC formulation --- 1 pt, FOC solution 4, SOC check --- 2 pts
+\item
+\begin{enumerate}
+\item FOC statement --- 1 pt, FOC solution --- 4 pts, SOC check --- 3 pts
+\item proof --- 6 pts
+\item derivatives --- 2 pts each, inequality check --- 2 pts
+\end{enumerate}
+\item FOC statement --- 2 pt, FOC solution --- 8 pts, SOC check --- 10 pts
+\end{enumerate}
+
+
+\subsection{fall-Retake 24.01.2015}
+
+\textbf{Part A}
+
+\begin{enumerate}
+
+\item The function $f(x,y)$ is given by $f(x,y)=u^2(x,y)+v^3(x,y)$. The values of $u$ and $v$ and their gradients at the point $(x,y)=(1,1)$ are also known, $u(1,1)=3$, $v(1,1)=-2$, $\grad u=(1,4)$, $\grad v=(-1,1)$. Find $\grad f$ at the point $(1,1)$ if $u,v \in C^1$.
+
+\item Find the local maxima and minima of the function $f(x,y)=x^4+2y^4-xy$. Determine whether the extrema you have found are global or local.
+
+\item For the function $f(x,y)=x^3y^5+x^2-y^3+xy$ find first order Taylor approximation at the point $(1,1)$ and second order Taylor approximation at the same point.
+
+\item Use Lagrange multipliers to find the height and radius of a cylinder with the least possible
+surface area among those with a volume of $6\pi$ m$^3$. Make sure you check the second order
+condition for minimisation.
+
+\item Find the equation of the tangent plane to the surface given by $x^3+z^3-3xz=y-1$ at the point $(1, 4, 2)$.
+
+\item Suppose $f(x,y)$ is a twice differentiable function. Let $x$ and $y$ be defined in terms of $u$, $v$ as follows: $x(u,v)=ue^{2v}$, $y(u,v)=u^2-v^2$. Let $F(u,v)=f(x(u, v), y(u, v))$.
+Calculate $F_{uu}''$ and $F_{uv}''$.
+
+\end{enumerate}
+
+\textbf{Part B}
+
+
+\begin{enumerate}[resume]
+\item A firm’s inventory $I(t)$ is depleted at a constant rate per unit time, i.e. $I(t) = x-\delta t$, where $x$ is an amount of good reordered by the firm whenever the level of inventory is
+zero. The order is fulfilled immediately. The annual requirement for the commodity is
+$200$ units and the firm orders the commodity $n$ times a year where $200 = nx$. The firm
+incurs two types of inventory costs: a holding cost and an ordering cost. Since the average
+stock of inventory is $x/2$, the holding cost equals $C_h x/2$, the cost of placing one order is
+$C_o$, and with $n$ orders a year the annual ordering cost equals $C_o n$.
+\begin{enumerate}
+\item Minimize the cost of inventory $C = C_h x/2 + C_o n$ by choice of $x$ and $n$ subject to
+the constraint $nx = 200$ by the Lagrange multiplier method.
+\item Use the envelope theorem to approximate the change in the minimal cost if the
+requirement for the commodity rises to $204$ units.
+\end{enumerate}
+
+
+\item A two-product firm produces outputs $y_1$ and $y_2$ from a single factor of production which is labor, in other words, there is a function $f$, such that $f(y_1,y_2)\leq \bar{L}$. Output prices are $p_1$ and $p_2$. The firm has a fixed amount of labor supply $\bar{L}>0$ that should be utilized in full.
+\begin{enumerate}
+\item (10 points) Set the problem of the revenue maximization under the labor constraint mathematically and derive first-order conditions. Assume that both outputs should be produced in positive amounts.
+\item (10 points) Let the maximum value of the total revenue under the labor constraint be $TR(p_1,p_2,\bar{L})$. What are its derivatives with respect to the prices?
+\end{enumerate}
+
+
+\end{enumerate}
+
+\subsection{fall-retake. marking}
+\begin{enumerate}
+\item $\grad f =2u \grad u + 3v^2 \grad v = 6\cdot (1,4)+12\cdot (-1,1)=(-6,36)$. Maybe solved by computing $f'_x$ (formula + value, 3+1 pts) and $f'_y$ (3+1 pts) and putting them in a vector (2 pts).
+\item FOC statement --- 1 pt, FOC solution --- 4 pts, SOC --- 3 pts, globality --- 2 pts.
+
+Critical points: $(x,y)=(0,0)$ (saddle), $(2^{-9/8},2^{-11/8})$ (global min), $(-2^{-9/8},-2^{-11/8})$ (global min)
+
+\item 1 pt for each derivative (5 pts total $f_x$, $f_y$, $f_{xx}$, $f_{yy}$, $f_{xy}$), 2 pts for first order, 3 pts for second order approximation
+
+\[
+f(x,y)\approx 2 + 6(x-1) + 3(y-1) + \frac{1}{2} (8(x-1)^2 + 2\cdot 16(x-1)(y-1)+14(y-1)^2)
+\]
+
+\item problem formulation (target function, constraint) --- 2 pts, NDCQ --- 1 pt, FOC formulation --- 1 pt, FOC solution 4, SOC check --- 2 pts
+
+\[
+R^*=\sqrt[3]{3}, \; \lambda^*=2/\sqrt[3]{3}, \; h^*=2\sqrt[3]{3}
+\]
+
+\item $\grad f = (3x^2-3z,-1,3z^2-3x)=(-3,-1,9)$ (4 pts). So tangent plane equation is $-3x-y+9z=c_0$ (4 pts). Plugging in the coordinates of the point we obtain $c_0=11$ (2 pts).
+
+\item $F_u$ 4 pts, $F_{uu}$ --- 3 pts, $F_{uv}$ --- 3pts
+
+\item a) NDCQ --- 2 pts, Langrangean --- 1 pt,  FOC statement --- 1 pt, FOC solution --- 5 pts, SOC --- 5 pts, minimum value --- 2 pts, b) 4 pts
+
+\[
+n^*=10\sqrt{\frac{C_h}{C_o}}, \; x^*=20\sqrt{\frac{C_o}{C_h}}
+\]
+
+\item formulation --- 5, NDCQ --- 2 pts, FOC statement --- 3 points
+
+\end{enumerate}
+
+\subsection{mock. 25.03.2015}
+
+\textbf{Variant 1}. Please, don't forget to write you variant number. Sections A and B will make up 60\% and 40\% of the exam grade, respectively. Total duration of the exam is 120 min. Good luck! :)
+
+
+\textbf{SECTION A}
+
+\begin{enumerate}
+
+\item Find all the complex roots of the equation $(z+i)^3=1+i$.
+
+\item Solve the differential equation $-2x^2y'=x^2+y^2$ with initial condition $y(e)=e$.
+
+\item Consider the equation $y^3+xy+3x^2+2x^3=7$.
+\begin{enumerate}
+\item Does this equation define the implicit function $y(x)$ at a point $(x=1,y=1)$?
+\item If the function $y(x)$ is defined find its second order Taylor expansion
+\end{enumerate}
+
+\item The function $f(x,y)$ for positive $x$ and $y$ is defined as
+\[
+f(x,y)=x^{42}y^a + x^{b+1}\sqrt{y+x}+\frac{1}{y^a x^b}
+\]
+
+\begin{enumerate}
+\item Find the values of $a$ and $b$ such that $f$ is homogeneous
+\item For the values of  $a$ and $b$ you have found find the degree of homegeneity of $x\frac{\partial^2 f}{\partial y^2} +y\frac{\partial^2 f}{\partial x^2}$
+\end{enumerate}
+
+\item Consider two vectors, $\vec{x}=(1,0,-1)$ and $\vec{y}=(1,1,-2)$. Find a vector $\vec{z}$ with maximal length (called \textit{first principal component}) such that $\vec{z}$ is a linear combination of $\vec{x}$ and $\vec{y}$, i.e. $\vec{z}=a \vec{x} + b \vec{y}$ with weights satisfying the condition $a^2+b^2=1$.
+
+\item The Fibonacci sequence is defined as $F_n=F_{n-1}+F_{n-2}$ with initial conditions $F_0=0$ and $F_1=1$.
+\begin{enumerate}
+\item Find explicit formula for $F_n$
+\item Find the ``golden ratio'', $\phi=\lim_{n\to\infty} F_{n+1}/F_n$
+\item Is it true that $F_n$ is the closest integer to $\phi^n/\sqrt{5}$?
+\end{enumerate}
+
+
+
+\end{enumerate}
+
+\textbf{SECTION B}
+
+\begin{enumerate}[resume]
+
+\item It is known that functions $1$, $x$ and $x^2$  are particular solutions of the second-order linear differential equation  $a(x)y''+b(x)y'+y=1$,  where $a(x)$  and $b(x)$  are continuous functions.
+\begin{enumerate}
+\item  Find the general solution of this equation
+\item  Find $a(x)$ and  $b(x)$
+\end{enumerate}
+\item Let $f(x)$ be a concave function defined on $[0;\infty)$  and $f(0)=0$. Is it true that for $k \geq 1$ the following inequality holds: $kf(x)\geq f(kx)$?
+
+
+\end{enumerate}
+
+
+\subsection{mock. marking. some sols}
+
+\begin{enumerate}
+\item Find all the complex roots of the equation
+\begin{itemize}
+    \item \textbf{2 point} for polar form of the right-hand side
+    \item \textbf{3 points} if only one root found
+    \item \textbf{3 points} for introduction of $+2k\pi$
+    \item \textbf{2 points} for explicitly finding 2 more roots
+\end{itemize}
+
+\item Solve the differential equation
+\begin{itemize}
+    \item \textbf{1 point} for spotting that the equation is homogeneous
+    \item \textbf{1 point} for correct change of variables
+    \item \textbf{7 points} for general solution
+    \item \textbf{1 point} for finding the constant using initial condition
+\end{itemize}
+
+\item Consider the equation
+\begin{itemize}
+    \item \textbf{3 points} for part (a)
+    \item \textbf{2 points} for $y'(x)$
+    \item \textbf{3 points} for $y''(x)$
+    \item \textbf{2 points} for correct series
+\end{itemize}
+
+\item Homogeneous function
+\begin{itemize}
+    \item \textbf{6 points} for part (a): a - 3, b - 3
+    \item \textbf{4 points} for part (b)
+\end{itemize}
+
+\item Find a vector with maximal length
+\begin{itemize}
+    \item \textbf{2 points} for correct formulation of the maximization problem
+    \item \textbf{3 points} for NDCQ, Lagrangian and FOC (1 point each)
+    \item \textbf{3 points} for finding all 4 critical points
+    \item \textbf{2 points} for the SOC
+\end{itemize}
+
+$z = \begin{pmatrix}
+  \alpha + \beta \\
+  \beta \\
+  -\alpha - 2\beta \\
+\end{pmatrix}$, $\abs{z}^2 = 2\alpha^2 + 6\alpha\beta + 6\beta^2$
+
+\[
+  2\alpha^2 + 6\alpha\beta + 6\beta^2 \to \max,
+\]
+subject to $\alpha^2 + \beta^2 = 1$. 
+
+
+\item Fibonacci sequence
+\begin{itemize}
+    \item \textbf{4 points} for (a): characteristic polynomial - 1, roots - 1, general solution - 1, constants - 1
+    \item \textbf{3 points} for (b)
+    \item \textbf{3 points} for (c)
+\end{itemize}
+
+\item Second-order equation
+\begin{itemize}
+    \item \textbf{13 points} for (a)
+    \item \textbf{7 points} for (b): $a(x)$ - 4, $b(x)$ - 3
+\end{itemize}
+
+\textbf{Solution} \\
+\begin{enumerate}
+\item Let $z(x)=y-1$, then $z'=y', z''=y''$ and three particular solutions become $z=0, z=x-1, z=x^2-1$. The equation then becomes a homogeneous second-order equation:
+\[
+a(x)z''+b(x)z'+z=0
+\]
+The general solution of the homogeneous second-order linear equation can be expressed as $z^{gen}(x) = C_1z_1+C_2z_2$, where $z_1$ and $z_2$ are linearly independent particular solutions to the equation. As long as $z=x-1$ and $z=x^2-1$ are linearly independent particular solutions, the general solution of the homogeneous equation is
+\[z(x) = C_1(x-1)+C_2(x^2-1)\]
+Therefore the solution of the original equation is
+\[
+y(x) = z(x) + 1 = C_1(x-1)+C_2(x^2-1)+1
+\]
+\item Putting $y=x$ into the equation one gets
+\[b(x) + x = 1 \Longrightarrow b(x) = 1-x\]
+Putting $y=x^2$ one gets
+\[2a(x) + 2(1-x)x + x^2 = 1 \Longrightarrow a(x) = \frac{(x-1)^2}{2}\]
+\end{enumerate}
+
+
+\textbf{Another Solution} \\
+Please note that question (b) can be answered independently from (a).
+After finding $a(x)$ and $b(x)$ the equation becomes:
+\[
+\frac {(x-1)^2}{2} y'' + (1-x)y' + y=1
+\]
+$y=1,y=x$ and $y=x^2$ are particular solutions so the general solution has the following form:
+\[y=Ax^2+Bx+C\]
+By putting this into the equation one gets:
+\[
+\frac {(x-1)^2}{2} (2A) + (1-x)(2Ax+B) + Ax^2+Bx+C=1
+\]
+\[ Ax^2-2Ax+A+2Ax+B-2Ax^2-Bx+Ax^2+Bx+C=1 \]
+\[ \Longrightarrow A+B+C=1 \Longrightarrow C=1-A-B \]
+\[
+\Longrightarrow y = Ax^2+Bx+1-A-B=A(x^2-1)+B(x-1)+1
+\]
+
+
+\item Concave function
+\begin{itemize}
+    \item \textbf{5 points} for the definition of concave function
+    \item \textbf{15 points} for proving the inequality
+    \item \textbf{OR 3 points} for showing an example
+\end{itemize}
+\end{enumerate}
+
+\textbf{Solution} \\
+By definition the function is concave if
+\[
+f(\alpha x_1+(1-\alpha) x_2) \geq \alpha f(x_1)+(1-\alpha) f(x_2) \;\; \forall x_1,x_2, \forall \alpha \in [0;1]
+\]
+As long as $k\geq 1$, $0\leq \frac 1 k \leq 1$\\
+By putting $x_1=kx, x_2=0$ and $\alpha = 1/k$ into the definition of the concave function one gets
+\[
+f(x + 0) \geq \frac 1 k f(kx) +(1-\frac 1 k) f(0)
+\]
+\[
+\Longrightarrow kf(x) \geq f(kx), \;\;\;\; QED
+\]
+
+
+\subsection{MOR, Final exam 2015, 26.05.2015}
+
+\textbf{Variant 1}. 26 May 2015. Please, don't forget to write you variant number. Total duration of the exam is 120 min. Good luck! :)
+
+\vspace{0.6cm}
+
+\textbf{SECTION A. You need to solve BOTH problems.}
+
+\begin{enumerate}
+
+\item Using Lagrange multipliers maximize  the function $f(x_1,x_2,x_3)=-x_1-2x_2+3x_3$ subject to constraints:   $2(x_1+1)^2+x_2^2+3(x_3-1)^2\leq 5$ and $x_1, x_2, x_3 \geq 0$. Find the point(s) of maximum and maximum value of $f$. Justify your answer by reference to Weierstrass theorem if it is relevant.
+
+\item For all real values of parameter $\beta$ that lies within the range $-1<\beta<0$ maximize linear function $2x_1-x_2+8x_3-19$ subject to constraints  $x_1\geq x_2+x_3+\beta$,  $2x_1+x_2+4x_3\leq \beta+1$ and $x_1, x_2, x_3 \geq 0$. You are not asked to find the maximizer.
+
+\end{enumerate}
+
+
+\textbf{SECTION B. You need to solve TWO problems of your choice. }
+
+\begin{enumerate}[resume]
+
+\item Find the general solution of equation $y''-4y'+8y=\sin 2x + e^{-2x}$.
+
+\item Solve the initial value problem for the system of difference equations
+
+\[
+\begin{cases}
+x_{t+1}=-x_t+2y_t+7 \\
+y_{t+1}=-2x_t+2y_t
+\end{cases}
+\]
+where $x_0=y_0=0$.
+
+\item By variation of parameters solve $y''+y=\frac{1}{\sin^2 x}$.
+
+\end{enumerate}
+
+\textbf{SECTION C. You need to solve BOTH problems }
+
+\begin{enumerate}[resume]
+
+\item Andrey and Boris play the following game. Each player throws a fair coin and observes the result of his own toss. Then simultaneously Andrey guesses the result of Boris' toss and Boris guesses the result of Andrey's toss. They receive one dollar each if at least one guess was correct and receive nothing otherwise.
+
+\begin{enumerate}
+\item Find all pure Nash equilibria of this game
+\item Are the Nash equilibria Pareto-optimal?
+\item What is the probability of at least one correct guess in the Nash equilibria?
+\end{enumerate}
+
+\item Anna and Bella play the simplified version of Battleship game. Anna places a two-decker destroyer ship on the $1\times 4$ grid. Then Bella has one shot. Bella does not know where the Anna's ship is located. If Bella hits the Anna's ship then Bella wins the game, otherwise Anna wins.
+
+\begin{enumerate}
+\item Find at least one Nash equilibria of this game
+\item What is the probability that Anna wins in the Nash equilibria?
+\end{enumerate}
+
+
+\end{enumerate}
+
+%\begin{figure}[hbtp]
+%\centering
+%\includegraphics[scale=1]{math-jokes-5.png}
+%\end{figure}
+
+
+
+\subsection{MOR, Final marking scheme}
+
+\begin{enumerate}
+\item Lagrange function --- 1 pt, NDCQ --- 2 pts, correct FOC --- 2, solution -- 3, soc --- 2
+
+\item Correct dual --- 2 pts, feasible set drawn --- 3 pts, all cases considered --- 5 pts
+
+\item homogeneous equation solved --- 4 pts (characteristic equation --- 1 pt, roots --- 1 pt, solution --- 2 pts); particular solution --- 5 pts (2 for $\exp$, 3 for $\cos$ and $\sin$), adding them up --- 1 pt
+
+
+\item eliminating one variable --- 2 pts, roots of characteristic equation --- 1 pt, solution of homogeneous equation --- 2 pts, solution for eliminated variable --- 2 pts, particular solution --- 1 pt, constants --- 2 pts
+
+
+\item  homogeneous equation solved --- 4 pts (characteristic equation --- 1 pt, roots --- 1 pt, solution --- 2 pts); variation of constants --- 6 pts (2 pts given for replacing constants $c_1$ and $c_2$ by functions)
+
+\item  correct strategy sets --- 3 pts
+
+Каждый игрок знает, как выпала его монетка и по правилам игры должен попытаться предсказать, как выпала монетка у другого игрока. Следовательно, у каждого игрока 4 стратегии:
+
+\begin{enumerate}
+\item[A]. Предсказать, что чужая монетка выпала орлом
+\item[B]. Предсказать, что чужая монетка выпала решкой
+\item[C]. Предсказать, что чужая монетка выпала так, как своя
+\item[D]. Предсказать, что чужая монетка выпала не так, как своя
+\end{enumerate}
+
+Составляем матрицу $4\times 4$ и заполняем её вероятностями выигрыша игроков. Игроки выигрывают одновременно, поэтому можно писать одну вероятность.
+
+\begin{tabular}{ccccc}
+ & A & B & C & D \\
+A & $3/4$ & $3/4$ & $3/4$ & $3/4$ \\
+B & $3/4$ & $3/4$ & $3/4$ & $3/4$ \\
+C & $3/4$ & $3/4$ & $1/2$ & $1$ \\
+D & $3/4$ & $3/4$ & $1$ & $1/2$ \\
+\end{tabular}
+
+
+ Равновесиями Нэша будут профили (A,A), (A,B), (B,A), (B,B), (C,D), (D,C). В равновесии Нэша вероятность выигрыша игроков равна 1 или 3/4.
+matrix --- 4 pts, pure NE --- 1 pt, Pareto-optimality --- 1 pt, probability --- 1 pt
+
+
+\item correct strategy sets --- 3 pts (Anna has 3 strategies, Bella --- 4 strategies); matrix and pure Nash --- 2 pts, elimination of non-strictly dominated strategies --- 2 pts, mixed Nash in 2x2 matrix --- 2 pts, probability that Anna wins --- 1 pt
+
+Составляем матрицу игры:
+
+\begin{tabular}{m{2.5cm}m{2.5cm}m{2.5cm}m{2.5cm}m{2.5cm}}
+ &
+ \begin{tikzpicture}[scale=0.5, transform shape]
+\draw[gray,very thin] (0,0) grid (4,1);
+\filldraw[fill=red] (0,0) rectangle (1,1);
+\end{tikzpicture}
+ &
+ \begin{tikzpicture}[scale=0.5, transform shape]
+\draw[gray,very thin] (0,0) grid (4,1);
+\filldraw[fill=red] (1,0) rectangle (2,1);
+\end{tikzpicture}
+&
+\begin{tikzpicture}[scale=0.5, transform shape]
+\draw[gray,very thin] (0,0) grid (4,1);
+\filldraw[fill=red] (2,0) rectangle (3,1);
+\end{tikzpicture}
+&
+\begin{tikzpicture}[scale=0.5, transform shape]
+\draw[gray,very thin] (0,0) grid (4,1);
+\filldraw[fill=red] (3,0) rectangle (4,1);
+\end{tikzpicture}
+\\
+\begin{tikzpicture}[scale=0.5, transform shape]
+\draw[gray,very thin] (0,0) grid (4,1);
+\filldraw[fill=gray] (0,0) rectangle (2,1);
+\end{tikzpicture}
+& $-1,1$ & $-1,1$ & $1,-1$ & $1,-1$ \\
+\begin{tikzpicture}[scale=0.5, transform shape]
+\draw[gray,very thin] (0,0) grid (4,1);
+\filldraw[fill=gray] (1,0) rectangle (3,1);
+\end{tikzpicture}
+& $1,-1$ & $-1,1$ & $-1,1$ & $1,-1$ \\
+\begin{tikzpicture}[scale=0.5, transform shape]
+\draw[gray,very thin] (0,0) grid (4,1);
+\filldraw[fill=gray] (2,0) rectangle (4,1);
+\end{tikzpicture}
+& $1,-1$ & $1,-1$ & $-1,1$ & $-1,1$ \\
+\end{tabular}
+
+Поскольку надо найти хотя бы одно равновесие Нэша, мы имеем право вычеркивать нестрого доминируемые или эквивалентные стратегии. Сводим к матрице $2\times 2$.
+
+
+\end{enumerate}
+

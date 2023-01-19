@@ -1,0 +1,633 @@
+
+\subsection{MFE, mock, 31.10.13}
+
+Marks will be deducted for insufficient explanation within your answers. All problems are mandatory. Sections A and B will make up 60\% and 40\% of the exam grade, respectively. Total duration of the exam is 120 min. \\
+
+\textbf{SECTION A}
+
+\begin{enumerate}
+
+\item Find the angle between the gradients of the function $f(x,y,z)=x^3+xyz-2z^3$ at the points $(1,2,-1)$ and $(0,1,2)$.
+
+\item Consider the function $f(x,y,z)=x^3+xyz-2z^3$. Using the total differential find the approximate value of $f(1.02,0.99,-0.98)$.
+
+\item Consider the function $f(x,y,z)=x^4+(x+y)^2+(x+z)^3$.
+\begin{enumerate}
+\item Find the Hesse matrix. Clearly state the Young theorem if you use it.
+\item Find all the points where the Hesse matrix is positive definite.
+\end{enumerate}
+
+\item Consider the following system of equation:
+\[
+\begin{cases}
+3xyzw+2x^3y^3z^3+4w^3=9\\
+5x+y+z^3+w^3+w^2z^2=9
+\end{cases}
+\]
+\begin{enumerate}
+\item Does this system define functions $z(x,y)$ and $w(x,y)$ at a point $x=1$, $y=1$, $z=1$, $w=1$?
+\item If it's possible find $\frac{\partial z}{\partial x}$ and $\frac{\partial w}{\partial y}$ at that point
+\end{enumerate}
+
+\item Function $z(x,y)$ is given by the equation $z(x,y)=f(x^2+y^2)$. Simplify $y\frac{\partial z}{\partial x}-x\frac{\partial z}{\partial y}$.
+
+\item A production function $y=f(x_1,x_2)$ exhibits constant returns to scale, that is $f(tx_1,tx_2)=tf(x_1,x_2)$ for every $t>0$, where $x_1, x_2 \geq 0$. Let $f_1(x_1,x_2)=\frac{\partial f}{\partial x_1}$ and $f_2(x_1,x_2)=\frac{\partial f}{\partial x_2}$. Find $\frac{\partial f_1(tx_1,tx_2)}{\partial t}$ and $\frac{\partial f_2(tx_1,tx_2)}{\partial t}$.
+
+\end{enumerate}
+
+\textbf{SECTION B}
+
+\begin{enumerate}[resume]
+\item A person has an option to buy a $x_0$ units of good at a price $p_0$ per unit. She can use her leisure time seeking a lower price $p(t)<p_0$, where $t$ is time spent on search. Her gain of finding a lower price provided the cost of search is $wt$, where $w$ is the wage rate, can be evaluated by the formula $g(t)=(p_0-p(t))x_0-wt$.
+\begin{enumerate}
+\item (10 points) Set the problem for maximizing the gain. Find the first-order condition. Assume that  $p'<0$ and $p''>0$.
+\item (10 points) Let $t^*$ be optimal time of search. Using IFT find the formula for $\frac{\partial t^*}{\partial x_0}$ and determine its sign.
+\end{enumerate}
+
+\item (20 points) Find $dz$ and $d^2z$ if the function $z$ is defined by the equation $F(x/z,y/z)=2013$. You may denote the derivatives of $F$ with respect to the first and the second arguments by $F_1$ and $F_2$ correspondingly.
+
+
+
+\end{enumerate}
+
+
+
+\subsection{MFE, mock, 31.10.13, Solution and marking scheme, A. Kalchenko, D. Esaulov}
+
+\begin{enumerate}
+\item Three partial derivatives --- $4$ points, Two gradient vectors --- $3$ points, cosine of the angle --- $2$ points, angle itself --- $1$ point.
+
+\textit{Solution.}
+\begin{equation*}\nabla f = (6 x^2+3 y z,3 x z,3 x y-3 z^2)\end{equation*}
+\begin{equation*}g_1 = \nabla f(2,1,-1) = (21,-6,3)\end{equation*}
+\begin{equation*}g_2 = \nabla f(0,1,-2) = (-6,0,-12)\end{equation*}
+\begin{equation*}
+\cos (\widehat{g_1,g_2}) = \frac {(g_1,g_2)}{\|g_1\|\|g_2\|} = \frac{-162}{\sqrt{486} \cdot \sqrt{180}}=-\sqrt{\frac{3}{10}}
+\end{equation*}
+\begin{equation*}
+ (\widehat{g_1,g_2})  = \arccos(-\sqrt{\frac{3}{10}}) \approx 123 ^\circ
+\end{equation*}
+
+\item Three partial derivatives --- $4$ points (answers from the previous question may be used). Approximate $\Delta f$ --- $4$ points. Approximate $f$ --- $2$ points.
+
+\textit{Solution.}
+\begin{equation*}
+f(1,1,-1) = 0
+\end{equation*}
+\begin{equation*}\nabla f = (6 x^2+3 y z,3 x z,3 x y-3 z^2)\end{equation*}
+\begin{equation*}
+\nabla f(1,1,-1) = (3,-3,0)
+\end{equation*}
+\begin{equation*}
+\Delta f \approx (\nabla f)^T \cdot \left( \begin{array}{c}
+\Delta x\\
+\Delta y\\
+\Delta z\\
+\end{array}
+\right)
+ =\left(3,-3,0 \right)   \cdot \left( \begin{array}{c}
+0.01\\
+-0.01\\
+0.02\\
+\end{array}
+\right) = 0.06
+\end{equation*}
+\begin{equation*}
+f(1.01, 0.99, -0.98) \approx f(1,1,-1) +\Delta f =0.06
+\end{equation*}
+
+
+\item Hesse matrix --- $5$ points. Young theorem penalty --- $(-1)$ point. Small b --- $5$ points.
+
+\textit{Solution.}
+\begin{equation*}
+\nabla f = \left(8 x^3+2 (x+y)+3 (x+z)^2,2 (x+y),3 (x+z)^2\right)
+\end{equation*}
+\begin{equation*}
+D^2f =\left(
+\begin{array}{ccc}
+ 2+24 x^2+6 (x+z) & 2 & 6 (x+z) \\
+ 2 & 2 & 0 \\
+ 6 (x+z) & 0 & 6 (x+z)
+\end{array}
+\right)
+\end{equation*}
+
+According to the Sylvester's criterion the matrix is positive definite iff $\Delta_1>0, \Delta_2>0, \Delta_3>0$:
+\begin{equation*}
+\begin{aligned}[c]
+\left\{
+\begin{array}{ccl}
+\Delta_1 &=& 2+24 x^2+6 (x+z) >0\\
+\Delta_2 &=& 48 x^2+12(x+z)>0\\
+\Delta_3 &=&288 x^3+288 x^2 z>0\\
+\end{array}
+\right.
+\end{aligned}
+\quad\Longleftrightarrow\quad
+\begin{aligned}[c]
+\left\{
+\begin{array}{l}
+ 12x^2+3 (x+z) +1>0\\
+4x^2+(x+z)>0\\
+x^2(x+z)>0\\
+\end{array}
+\right.
+\end{aligned}
+\end{equation*}
+
+The Hesse matrix is positive definite at the points $(x,y,z)$ s.t. $x\neq0, x+z>0$
+
+
+\item Sufficient conditions for the existence of the implicit function --- $2$ points. Two derivatives --- $8$ points.
+
+\textit{Solution.}
+
+Let $f_1 = 4x y z w+2x^3 y^3 z^3+4w^3-10, f_2=5 x+y+z^3+w^3+w^2 z^2-9$.
+
+\begin{enumerate}
+\item Check the conditions of the IFT:
+	\begin{enumerate}
+	\item $f_1(1,1,1,1) =0$, $f_2(1,1,1,1)=0$
+	\item $f_1, f_2 \in C^1$
+	\item \begin{equation*}
+\left|\frac {\partial(f_1,f_2)}{\partial(z,w)}\right|=\left|
+\begin{array}{cc}
+ 4 w x y+6 x^3 y^3 z^2 & 12 w^2+4 x y z \\
+ 2 w^2 z+3 z^2 & 3 w^2+2 w z^2
+\end{array}
+\right|=\left|
+\begin{array}{cc}
+ 10 & 16 \\
+ 5 & 5
+\end{array}
+\right| = -30 \neq 0
+\end{equation*}
+	\end{enumerate}
+\item
+\begin{equation*}
+\frac{\partial z}{\partial x} = -\frac{\left|\frac {\partial(f_1,f_2)}{\partial(x,w)}\right|}{\left|\frac {\partial(f_1,f_2)}{\partial(z,w)}\right|} = -\frac{
+\left|
+\begin{array}{cc}
+ 4 w y z+6 x^2 y^3 z^3 & 12 w^2+4 x y z \\
+ 5 & 3 w^2+2 w z^2
+\end{array}
+\right|
+} {
+\left|
+\begin{array}{cc}
+ 4 w x y+6 x^3 y^3 z^2 & 12 w^2+4 x y z \\
+ 2 w^2 z+3 z^2 & 3 w^2+2 w z^2
+\end{array}
+\right|} = -\frac{
+\left|
+\begin{array}{cc}
+ 10 & 16 \\
+ 5 & 5
+\end{array}
+\right|
+}{
+\left|
+\begin{array}{cc}
+ 10 & 16 \\
+ 5 & 5
+\end{array}
+\right|
+} = -1
+\end{equation*}
+\begin{equation*}
+\frac{\partial w}{\partial y} = -\frac{\left|\frac {\partial(f_1,f_2)}{\partial(z,y)}\right|}{\left|\frac {\partial(f_1,f_2)}{\partial(z,w)}\right|} = -\frac{
+\left|
+\begin{array}{cc}
+ 4 w x y+6 x^3 y^3 z^2 & 4 w x z+6 x^3 y^2 z^3 \\
+ 2 w^2 z+3 z^2 & 1
+\end{array}
+\right|
+} {
+\left|
+\begin{array}{cc}
+ 4 w x y+6 x^3 y^3 z^2 & 12 w^2+4 x y z \\
+ 2 w^2 z+3 z^2 & 3 w^2+2 w z^2
+\end{array}
+\right|} = -\frac{
+\left|
+\begin{array}{cc}
+ 10 & 	10 \\
+ 5 & 1
+\end{array}
+\right|
+}{
+\left|
+\begin{array}{cc}
+ 10 & 16 \\
+ 5 & 5
+\end{array}
+\right|
+} = -\frac 4 3
+\end{equation*}
+\end{enumerate}
+
+\item Probably the easiest ;) Two derivatives --- $8$ points, simplify --- $2$ points.
+
+\textit{Solution.}
+\begin{equation*}
+\begin{array}{l}
+\frac{\partial z}{\partial x} = f'(x^2+y^2) \cdot 2x\\
+\frac{\partial z}{\partial y} = f'(x^2+y^2) \cdot 2y\\
+y\frac{\partial z}{\partial x}-x \frac{\partial z}{\partial y} = y \cdot 2xf'(x^2+y^2) - x \cdot 2y f'(x^2+y^2) =0
+\end{array}
+\end{equation*}
+
+
+\item Showing that $f_i(tx_1,tx_2)=f_i(x_1,x_2)$ --- $6$ points, obtaining two zeros --- $4$ points. Typical given solutions: Using the fact that $f_i(tx_1,tx_2)=f_i(x_1,x_2)$ without proof --- penalty $(-4)$. Correct expression for $\frac{\partial f_i(tx_1,tx_2)}{\partial t}$ ignoring the fact that $f$ has constant returns to scale --- $4$ points in total.
+
+\textit{Solution.} Notice that $f_1 (tx_1,tx_2) = \frac{\partial f}{\partial x_1}(tx_1, tx_2).$ It means that you differentiate w.r.t. $x_1$ in the first place and only then you substitute the point $(tx_1, tx_2)$
+
+\noindent Method 1. Differentiate the identity $f(tx_1,tx_2)=tf(x_1,x_2)$ w.r.t. $x_1$ by chain rule. You get
+$$
+f_1 (tx_1,tx_2)\cdot\underbrace{\frac{\partial (tx_1)}{\partial x_1}}_{=t} +  f_2 (tx_1,tx_2)\cdot\underbrace{\frac{\partial (tx_2)}{\partial x_1}}_{=0} = t f_1(x_1,x_2).
+$$
+
+Divide both sides by $t.$ You get
+$$
+f_1(tx_1,tx_2) = f_1(x_1,x_2).
+$$
+
+By analogy $f_2(tx_1,tx_2) = f_2(x_1,x_2).$ Thus $f_i(tx_1,tx_2), \ i=1,2,$ are independent of $t$ and
+\[
+\frac{\partial f_1 (tx_1,tx_2)}{\partial t} = \frac{\partial f_2 (tx_1,tx_2)}{\partial t} = 0
+\]
+
+\noindent Method 2. By given conditions $f(x_1, x_2) = 1/t f(tx_1,tx_2).$ Therefore by chain rule
+\[
+f_1(x_1,x_2)=1/t \bigl(f_1 (tx_1,tx_2)\cdot\underbrace{\frac{\partial (tx_1)}{\partial x_1}}_{=t} +  f_2 (tx_1,tx_2)\cdot\underbrace{\frac{\partial (tx_2)}{\partial x_1}}_{=0}\bigr)=f_1(tx_1,tx_2).
+\]
+The conclusion is the same as in Method 1.
+
+
+\item FOC --- $10$ points, derivative --- $5$ points, sign --- $5$ points.
+\textit{Solution.}
+\begin{equation*}
+\begin{array}{ll}
+\text{(a) }& g(t) \rightarrow \max_{t\geq0}\\
+&\text{FOC:}\\
+&g'(t) = -p'(t)x_0-w =0\\
+\end{array}
+\end{equation*}
+
+
+(b) Optimal time $t^*$ satisfies the equation $F(t^*, x_0,w) = p'(t^*)x_0+w=0$. By IFT:
+\begin{equation*}
+\frac {\partial t^*}{\partial x_0} = - \frac {\frac {\partial F}{\partial x_0}} {\frac {\partial F}{\partial t^*}} = -\frac{p'(t^*)}{x_0p''(t^*)} > 0
+\end{equation*}
+
+
+\item $\frac{\partial z}{\partial x}$ --- $3$ points, $\frac{\partial z}{\partial y}$ --- $3$ points, expression for $dz$ --- $2$ points, second derivatives --- $3$ points each, expression for $d^2 z$ --- $3$ points.
+
+\textit{Solution.} Denote $F_1 = \frac{\partial F}{\partial x}, F_2 = \frac{\partial F}{\partial y}.$ Notice that in fact $F_i=F_i(x/z,y/z), i=1,2.$
+Firstly, we should mention that we can use IFT for $z=z(x,y)$ if the points (x,y,z) satisfy the condition $\frac{\partial F}{\partial z} = F_1 \cdot (-x/z^2)+ F_2 \cdot (-y/z^2)\neq 0.$
+
+Next,
+$$
+dz = \frac{\partial z}{\partial x}dx+\frac{\partial z}{\partial y}dy.
+$$
+
+By IFT
+\begin{gather*}
+\frac{\partial z}{\partial x} = -\frac{\partial F}{\partial x}/\frac{\partial F}{\partial z} =-\frac{F_1\cdot (1/z)}{F_1\cdot(-x/z^2)+F_2\cdot(-y/z^2)}=\frac{F_1 z}{F_1 x+F_2 y}, \\ \frac{\partial z}{\partial y} =\dots= \frac{F_2 z}{F_1 x+F_2 y}.
+\end{gather*}
+
+Next,
+$$
+d^2z = \frac{\partial^2 z}{\partial x^2} (dx)^2 + (\frac{\partial^2 z}{\partial y \partial x}+\frac{\partial^2 z}{\partial x\partial y}) dx dy + \frac{\partial^2 z}{\partial y^2} (dy)^2.
+$$
+Let's find second derivatives:
+\begin{align*}
+\frac{\partial^2 z}{\partial x^2}= \frac{(F_1 x+F_2 y)(\frac{\partial F_1}{\partial x} z + F_1 \frac{\partial z}{\partial x} ) - F_1 z(F_1 + \frac{\partial F_1}{\partial x} x + \frac{\partial F_2}{\partial x} y)}{(F_1 x+F_2 y)^2},\\
+%
+\frac{\partial^2 z}{\partial y \partial x} = \frac{(F_1 x+F_2 y)(\frac{\partial F_1}{\partial y} z + F_1 \frac{\partial z}{\partial y} ) - F_1 z(F_2 + \frac{\partial F_1}{\partial y}x +\frac{\partial F_2}{\partial y} y)}{(F_1 x+F_2 y)^2},\\
+%
+\frac{\partial^2 z}{\partial x\partial y} = \frac{(F_1 x+F_2 y)(\frac{\partial F_2}{\partial x} z + F_2 \frac{\partial z}{\partial x} ) - F_2 z(F_1 + \frac{\partial F_1}{\partial x}x +\frac{\partial F_2}{\partial x} y)}{(F_1 x+F_2 y)^2},\\
+%
+\frac{\partial^2 z}{\partial y^2} = \frac{(F_1 x+F_2 y)(\frac{\partial F_2}{\partial y} z + F_2 \frac{\partial z}{\partial y} ) - F_2 z(F_2 + \frac{\partial F_2}{\partial y} y + \frac{\partial F_1}{\partial y} x)}{(F_1 x+F_2 y)^2}.
+\end{align*}
+
+
+\end{enumerate}
+
+\subsection{MFE, fall semester exam, 25.12.2013}
+
+\textbf{SECTION A}
+
+\begin{enumerate}
+	\item Find the gradient of $f(x,y) =\frac{x^2y}{\sqrt{x^2+y^2}}$
+at the point $M(2,1)$. Compute the derivative of $f$ at $M$ in direction of the vector $\{-1, 1\}$.
+	\item The system of equations defines $x(z)$ and $y(z)$:
+\begin{equation}
+\begin{cases}
+x^2+zxy+y^2+5z+y^3=9 \\
+y^3x^2+3x+2y+z=7 \nonumber
+\end{cases}
+\end{equation}
+Find $x'(z)$ and $y'(z)$ at the point $x=1$ and $y=1$. State the implicit function theorem.
+ \item For the function $f(x,y)=x^3y^5+x^2-y^3+xy$ find first order Taylor approximation at the point $(1,1)$ and second order Taylor approximation at the same point.
+	\item Find all stationary points of $f(x,y) = -2y^3+24y-x^2e^y$. Classify them as local minimum, maximum or saddle point.
+	\item Find the constrained extrema of the function $f(x,y)=2x^2+x+y+y^2$ subject to $2x^2+y^2=5$.
+	\item  For each value of $a$ determine whether the function $f(x,y,z)=x^2+xz+ayz+z^2$ is concave, convex, strictly concave, strictly convex.
+\end{enumerate}
+
+\textbf{SECTION B}
+
+\begin{enumerate}[resume]
+\item Robinson Crusoe produces nuts (good $x$) and corn (good $y$) using two factors of production: labor $L$ and land $T$ in accordance with the production functions, namely $x=\sqrt{L_x T_x}$ and $y=\sqrt{L_y T_y}$, where the $L_x$, $L_y$, $T_x$, $T_y$ are the quantities of labor and land employed by Crusoe in the production processes. The overall supply of labor and supply of the cultivated land equal 1. In order to find the \textbf{Production Possibilities Frontier} in the Crusoe’s economy the following problem should be solved:
+\[
+(A)\,
+\begin{cases}
+	\sqrt{L_x T_x} \to \max \\
+	\sqrt{L_y T_y}=y=const \\
+	L_x + L_y = 1, \, T_x + T_y = 1
+\end{cases}
+\]
+In this problem all variables take nonnegative values and $0\leq y\leq 1$.
+
+\begin{enumerate}
+\item (15 points) Solve this maximization problem by the Lagrange multiplier method. You may consider only the case when $L_x,\, L_y,\, T_x, \, T_y>0$  and $0<y<1$.
+\item (5 points) Let $L_x^*$, $L_y^*$, $T_x^*$, $T_y^*$ be the solution of problem (A) (optimal combination of factors). Then the produced quantities of nuts and corn equal $x=\sqrt{L_x^* T_x^*}$ and $y=\sqrt{L_y^* T_y^*}$. Find the relationship between $x$ and $y$ in the form of some equation $G(x,y)=0$.
+\end{enumerate}
+
+\item (continuation) Crusoe does not care about his leisure time and consumes nuts and corn. His utility function is $u(x,y)=\frac{1}{3}\ln x + \frac{2}{3}\ln y$.
+
+\begin{enumerate}
+\item (10 points) By solving utility maximization problem:
+$
+\begin{cases}
+u(x,y) \to \max \\
+G(x,y)=0
+\end{cases},
+$ find his optimal consumption bundle $(\tilde{x},\tilde{y})$.
+\item (10 points) Crusoe has plowed more land in the amount of $dT$ (a small number). By using Envelope theorem find $\partial \tilde{x}/\partial T$. Hint. Firstly apply the theorem to problem (A).
+\end{enumerate}
+
+\end{enumerate}
+
+\subsection{MFE, 25.12.2013, marking scheme}
+
+\begin{enumerate}
+\item $f'_x$ --- 3 points (2 for formula, 1 for value at  the point), $f'_y$ --- 3 points, the rest --- 4 points
+\item Statement of IFT --- 2 points. Each derivative --- 4 points (3 for formula, 1 for calculations)
+\item 4 points --- first order (1 pt for each first derivative, 2 pt for final formula), 6 points --- second order (1 pts for each second derivative, 3 pts for final formula)
+\item Correct FOC --- 2 points, Solution of FOC --- 4 points. Check SOC --- 4 points.
+\item NDCQ --- 1 pt, Correct FOC --- 2 pts, Solution of FOC --- 4 pts, check SOC --- 3 pts.
+\item Hesse matrix --- 2 pts. Concavity and convexity --- 5 pts. Considering particular value of $a$ for strict concavity and strict convexity --- 3  pts.
+
+\item Point a. NDCQ --- 2 pts. Writing FOC --- 3 pts. Solving FOC --- 5 pts. Checking SOC --- 5 pts.
+
+First, simplify problem:
+\[
+\begin{cases}
+L_xT_x \to \max_{L_x, T_x} \\
+(1-L_x)(1-T_x)=y^2 \\
+0<L_x<1, \; 0<T_x<1, \; y>0
+\end{cases}
+\]
+
+Optimal point: $L_x=1-y$, $T_x=1-y$, $\lambda = (y-1)/y$
+
+Hesse: $\Delta = (1-L_x)(1-T_x)(1-\lambda)>0$
+
+Point b --- 5 pts:
+
+\[
+x=\sqrt{L_x T_x}=\sqrt{(1-y)^2}=1-y
+\]
+
+
+\item  Point a. NDCQ --- 1 pt. Writing FOC --- 2 pts. Solving FOC --- 4 pts. Checking SOC --- 3 pts. Point b. Solution 1. Applying Envelope theorem to problem (A) --- 5 pts, conclusion --- 5 pts. Solution 2. Applying IFT to the FOC --- 10 pts.
+
+\end{enumerate}
+
+\subsection{MFE, retake, 24.01.2014}
+
+Part A.
+
+\begin{enumerate}
+\item Give an example of
+\begin{enumerate}
+\item a function $f(x,y)$ that has a non-zero gradient in all the points except the point $(0,5)$ and zero gradient in the point $(0,5)$
+\item a function $g(x,y)$ that has no gradient on the line $x=3y$ and a non-zero gradient when $x\neq 3y$
+\end{enumerate}
+
+\item The population of a certain country grows exponentially, $N_t= N_{1990}\cdot \exp (r(t-1990))$. The population was 70 million in 1990 and 80 million in 2000,
+what will be the population in 2014?
+
+\item Find and classify the extrema of the function $f(x,y)=x^2-y^2$ subject to $x^2+y^2=1$.
+
+\item Given the system
+\[
+\begin{cases}
+xe^{u+v}+2uv=1 \\
+ye^{u-v}-\frac{u}{1+v}=2x
+\end{cases}
+\]
+find $du$ and $dv$ at $x_0 = 1$, $y_0 = 2$, $u_0 = 0$, $v_0 = 0$.
+
+
+
+\item Consider the objective function $f(x,y)=4kx^3+k^2xy+3ky^4-13x-13y$. The point $(x,y)=(1,1)$ is the maximum of the function. Find the value of $k$
+
+\item In the macroeconomic linear IS-LM model for the closed economy
+$Y=\bar{C}+m(Y-T)+G+\bar{I}-ar$ and $\bar{L}+bY-cr=M_s$, where $M_s$ is money supply, $r$ --- interest rate, $G$ --- government expenditures, $T$ --- lump sum tax and the constant parameters $\bar{C}>0$, $0<m<1$, $\bar{I}>0$, $a>0$, $\bar{L}>0$, $b>0$, $c>0$. Find the formulas for $dr/dT$, $dY/dT$. Assume that government expenditures and money supply are fixed exogenous variables.
+\end{enumerate}
+
+
+Part B.
+
+\begin{enumerate}[resume]
+\item The production function of a firm is given by $y=\sqrt{x_1}+\sqrt{x_2}$, where $x_1$ and $x_2$ are the factors of production. Given the factor prices $w_1=5w$, $w_2=w>0$ find the total costs function of the firm.
+\item A consumer splits her time $\bar{L}$ hours a week between labor and leisure. Her utility function is represented by $u(c,l)=c^{\alpha}l^{1-\alpha}$, where $c$ is the amount of consumption and $l$ is leisure in hours and $0<\alpha<1$. The weekly budget constraint is written as $pc+wl=w\bar{L}$,
+where $p$ is the price of consumption, $w$ is the hourly wage rate.
+\begin{enumerate}
+\item Find the consumer’s optimal bundle $(c^*,l^*)$. Justify your answer by checking second-order conditions or otherwise.
+\item Let $\alpha=1/4$, $\bar{L}=168$, $p=10$, $w=5$. Using Envelope Theorem estimate the change in the maximum value of her utility if the wage rate has decreased by $0.5$.
+\end{enumerate}
+
+\end{enumerate}
+
+\subsection{MFE, retake, marking scheme}
+
+\begin{enumerate}
+\item $5+5=10$, example $f(x,y)=x^2+(y-5)^2$, $f(x,y)=1/(x-3y)$
+\item equation for $r$ 3 pts, the rest --- 7 pts. $e^r=(8/7)^{0.1}$
+\item NDCQ --- 1 pt, formulated FOC --- 2 pts, solution --- 4 pts, SOC --- 3 pts, $(1,0)$, $(-1,0)$ --- maxima, $(0,1)$, $(0,-1)$ --- minima
+\item Use of IFT --- 1 pt, four partial derivatives --- 6 pts, differentials --- 3 pts.
+\item FOC, 2 values of $k$, $k_1=1$, $k_2=-13$ --- 6 pts, choice of $k=-13$ using SOC --- 4 pts.
+\item 5 pts each derivative, $Y'(T)=cm/(cm-c-ab)$, $r'(T)=bm/(cm-c-ab)$
+\item formulation of maximization problem --- 5 pts, NDCQ --- 2 pts, FOC --- 3 pts, solution of FOC --- 5 pts, SOC --- 5 pts
+\item  NDCQ --- 2 pts, FOC --- 3 pts, solution of FOC --- 5 pts, SOC --- 5 pts, question b --- 5 pts. $pc=\alpha w\bar{L}$, $wl=(1-\alpha)w\bar{L}$
+\end{enumerate}
+
+\subsection{MFE, mock exam, 24.03.14}
+
+\textbf{SECTION A}
+
+\begin{enumerate}
+\item Solve the differential equation $y''-8y'+7y=x$ with initial conditions $y(0)=0$, $y'(0)=1$.
+
+
+
+\item Find all the complex roots of the equation $z^3+3z^2+(3-i)z=0$.
+
+
+\item Expand the function $f(x)=x^2\sin(1-\cos(\ln(1+5x)))$  as a power series in terms up to $x^6$. State the range for which your expansion is valid.
+
+\item Determine the value of the following integrals
+
+\[
+\int \frac{\ln (5x)}{x^2} \, dx, \qquad \int \frac{1}{e^{5x}-e^{-5x}} \, dx
+\]
+
+\item Use the Lagrange multiplier method to find the maximum value of $f(x,y,z)=(5+\sqrt{x})^2(1+\sqrt{y})^2(5+\sqrt{z})^2$ among positive numbers with $x+25y+z=10$.
+
+
+\item Derive the explicit formula (without dots or sum sign) for the sum $S_n=1\cdot 3+2\cdot 4+3\cdot 5 +\ldots+ n\cdot (n+2)$.
+
+Hint: You may obtain and solve a difference equation for $S_n$
+
+
+\end{enumerate}
+
+\textbf{SECTION B}
+
+\begin{enumerate}[resume]
+\item A function $f(x)$ defined on $\mathbb{R}$ is called bounded if there exists a number $M>0$ such that $|f(x)| \leq M$ for all $x$. Consider the equation $y'+ ay = f (x)$, where $a>0$ is a number and $f (x)$  is a bounded continuous function defined on $\mathbb{R}$.
+\begin{enumerate}
+\item Using variation of constant method or otherwise find the general solution
+\item  Prove that there exists a bounded particular solution
+\item Let $\tilde{y}(x)$  be a bounded solution existence of which was proven in b). Prove that $\tilde{y}(x)$ is a unique solution with such property.
+\end{enumerate}
+Hint: parts b) and c) can be treated separately.
+
+
+\item Consider a problem of maximizing an output under the budget constraint $F(K,L) \to \max$ subject to $wL+rK=B$, where $w$, $r$ are fixed factor prices, $B$ is firm's budget and $F(K,L)$ is a continuously differentiable homogeneous production function. A set of points $(L(B),K(B))$ forms a so-called firm's expansion path, where $B$ take all positive values and $L(B)$, $K(B)$ are the solutions of the constrained maximization problem.
+
+Find the equation of the firm's expansion path if the point $(8,16)$ lies on this path.
+\end{enumerate}
+
+\subsection{MFE, mock marking scheme}
+
+\begin{enumerate}
+\item General solution of homogeneous --- 4 pts, particular solution --- 3 pts, constants --- 3 pts.
+\item $z=0$ --- 2 pts, correct discriminant  --- 2 pts, take root of complex number --- 6 pts.
+\item knowledge of Taylor expansion of $\sin$, $\cos$ and $\ln$ --- 3pts, correct expansion 4 pts, valid range --- 3 pts.
+\item Each integral --- 5 pts
+\item NDCQ --- 1 pt, FOC --- 2 pts, solution of FOC --- 4 pts, SOC --- 3 pts
+\item Equation --- 1 pt, General solution of homogeneous --- 2 pts, particular solution --- 5 pts, constant --- 2 pts.
+\item a --- 8 pts (if only the general solution of homegeneous is obtained then 4 pts), b --- 6 pts, c --- 6 pts.
+\item NDCQ --- 2 pts, Langrange function --- 1 pt, FOC --- 2 pts. Proof that expansion path is of the form $K=aL$ --- 13 pts, value of $a$ --- 2 pts.
+\end{enumerate}
+
+
+\subsection{MOR, exam, 23.05.14}
+
+You need to solve all the problems from Sections A, B, C.
+
+\textbf{SECTION A}
+
+\begin{enumerate}
+\item (15 points) A problem with the mixed constraints is given: $3x_1 x_2-x_2^3 \to \max$
+
+subject to $2x_1+5x_2 \geq 20$, $x_1-2x_2=5$, $x_1, x_2 \geq 0$.
+\begin{enumerate}
+\item Check NDCQ conditions.
+\item  Form the Langrangian function.
+\item Solve the maximization problem by the use of Langrange method or otherwise.
+\item Justify that the maximum point was found.
+\end{enumerate}
+\item  (20 points)   Consider the linear programming problem with parameter $\beta$ and nonnegative $x_i$:
+\begin{align*}
+3x_1+x_2-x_3+4x_4 \to \max \\
+x_1+x_2-x_3+x_4\leq 1 \\
+\beta x_1+x_2+x_3+2x_4 \leq 2
+\end{align*}
+
+\begin{enumerate}
+\item Find the optimal values of the primal variables for $\beta=6$.
+\item Find the function $\phi(\beta)$, where $\phi(\beta)$  is the maximum value of the objective function for fixed value of $\beta$.
+\item Sketch the graph of $\phi(\beta)$.
+\end{enumerate}
+
+
+\end{enumerate}
+
+\textbf{SECTION B}
+
+\begin{enumerate}[resume]
+\item (15 points)  Consider the system of difference equation:
+\[
+\begin{cases}
+x_{t+1}=x_t-y_t+6 \\
+y_{t+1}=2x_t-y_t+3
+\end{cases}
+\]
+
+\begin{enumerate}
+\item Solve the system of difference equations
+\item Explore the stability of its solutions.
+\end{enumerate}
+
+\item   (15 points)   Solve the  Euler’s equation $x^2y''-4xy'+6y=0$ on the interval $(0,\infty)$ by using the substitution $x=e^t$ or otherwise. 
+The answer should be written as a function of $x$.
+
+\end{enumerate}
+
+
+\textbf{SECTION C}
+
+\begin{enumerate}[resume]
+\item  (15 points)   Consider the following bimatrix game:
+
+
+\begin{tabular}{c|ccc}
+ & D & E & F \\
+\hline
+A & 4;3 & 2;2 & 2;1  \\
+B & -2;8 & 4;7 & 2;4  \\
+C & 1;2 & 3;1 & 3;3  \\
+\end{tabular}
+
+\begin{enumerate}
+\item Find all the pure and mixed Nash equilibria
+\item State whether the equilibria are Pareto-optimal
+\end{enumerate}
+
+\item  (20 points)  Three players play the following game. Simultenuously each of them chooses one of three numbers: $1$, $2$ and $3$. If all players choose the same number, then everyone gets nothing. Otherwise the player with smallest unique number receives two rubles, and other players pay one ruble each. Example: if $1$, $1$ and $3$ are chosen, then the winner is the player who chose $3$. She receives two rubles, and  each of the other two players pays one ruble.
+\begin{enumerate}
+\item Find all the pure and mixed Nash equilibria
+\item State whether the equilibria are Pareto-optimal
+\end{enumerate}
+
+
+
+\end{enumerate}
+
+
+\subsection{MOR, exam, 23.05.14, solution}
+
+\begin{enumerate}
+\item 
+\item 
+\item 
+\item Let's point that with substitution $g(t) = y(e^t)$ the derivatives $g'$ and $g''$ are calculated according to the chain rule!
+So $g'(t) = y'(x)x$ and $g''(t) = y''(x)x^2 + y'(x) x$.
+
+Hence, we get $g'' - 5g' + 6g=0$.
+
+The solution for $g$ is $g(t) = c_1 e^{2t} + c_2 e^{3t}$.
+
+We go back to $y(x)$ and we get $y(x) = c_1 x^2 + c_2 x^3$.
+
+It is also possible to avoid this substitution and start with a guess $y(x) = x^k$ and obtain $k=2$ and $k=3$.
+
+
+\end{enumerate}
+

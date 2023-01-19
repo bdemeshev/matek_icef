@@ -1,0 +1,266 @@
+\subsection{Mock}
+
+\textbf{SECTION A}
+
+\begin{enumerate}
+
+\item Consider the function $f(x,y)=x^3+2x-3xy^3-y^2$. Using the total differential find the approximate value of $f(0.98,1.99)$.
+
+\item Consider the system
+\[
+\begin{cases}
+x^3 + y^3 + 2z^3 = 4 \\
+x + x^3 + 2y + 3y^2 + xyz + z^3 = 9 \\
+\end{cases}
+\]
+\begin{enumerate}
+  \item Check whether the functions $y(z)$ and $x(z)$ are defined at a point $(1, 1, 1)$;
+  \item Find $y'(z)$ if possible.
+\end{enumerate}
+
+\item If possible find the limit
+\[
+	\lim_{x\to 0, y\to 0} \frac{\exp(x^2 + y^2)-1}{x^2+y^2+3|x|+|y|};
+\]
+
+\item The surface in $\mathbb{R}^3$ is defined by the equation $x^3 + 2y^3 + 3z^3 + zxy = 7$.
+\begin{enumerate}
+  \item Find a unit vector that is orthogonal to the tangent plane at the point $(x=1, y=1, z=1)$.
+  \item Find the equation of the tangent plane.
+\end{enumerate}
+
+\item Consider the function $f(x,y)=x^2 + y^3 + xy$, the vector $v=(1,2)$ and the point $A=(-1,-1)$.
+\begin{enumerate}
+	\item Find the gradient of $f$ at the point $A$.
+	\item Find the directional derivative of $f$ at the point $A$ in the direction given by $v$.
+\end{enumerate}
+
+\item Let $x_n$ be a sequence in $\mathbb{R}^2$ given by
+\[
+	x_n = \begin{pmatrix}
+		\cos\left( 2\pi n /3  \right) \\
+		\sin\left( 2\pi (n^2-1) /3n \right) \\
+	\end{pmatrix}
+\]
+
+\begin{enumerate}
+	\item Find the accumulation points of this sequence.
+	\item Find the limit of this sequence if it exists.
+\end{enumerate}
+
+
+
+\end{enumerate}
+
+\textbf{SECTION B}
+
+\begin{enumerate}[resume]
+
+
+	\item The production function is given by $q(K, L) = (K^{\rho} + L^{\rho})^{1/\rho}$, where $K>0$, $L>0$, $\rho \leq 1$ and $\rho \neq 0$.
+% The set of points in the $(K, L)$-plane satisfying $q(K, L)=const$ is called \textit{isoquant}.
+	\begin{enumerate}
+		\item MRTS (marginal rate of technical substitution) is defined as $\text{MRTS} = - \frac{dK}{dL}\mid_{q(K,L)=const}$. Using implicit function theorem find MRTS and express your answer as a function of $K/L$ alone.
+		\item Let $t=K/L$. Find the derivative $\sigma = \frac{d\ln t}{d\ln \text{MRTS}}$.
+		\item Suggest at least one production function $q(K,L)$ such that $\sigma = 1$.
+	\end{enumerate}
+\item The closed first quadrant is denoted by $\bar{\mathbb{R}}^2_+$. Consider the function $F(x, y)= xy - (x^p /p + y^q/q)$ defined on $\bar{\mathbb{R}}^2_+$, where $p>1$, $q>1$ and $(p-1)(q-1)=1$.
+	\begin{enumerate}
+	\item Find the set $S\subset \bar{\mathbb{R}}^2_+$ such that $\partial F/\partial x=0$ and $\partial F/\partial y =0$ at the same time. Sketch the set $S$.
+	\item What are the possible values of the function $F(x,y)$ for $(x,y)\in S$?
+	\item Is it true that the sign of $F(x,y)$ is the same for all $(x,y)\notin S$?
+	\end{enumerate}
+\end{enumerate}
+
+
+\subsection{Midterm}
+
+\begin{enumerate}
+\item {[10 points]} Check whether the function $f(x,y)= 4x^4 + y^2+y^4+4x^2+xy$ is concave, convex or neither.
+\item {[10 points]} Find and classify the local extrema of $f(x,y) = 4 + x^3 + y^3 - 3xy$.
+\item {[10 points]} Using Lagrange multiplier method find and classify the constrained extrema of $f(x, y, z) =  5x +4y + 8z$ subject to $x^2 + y^2 + z^2 = 1$.
+\item {[10 points]} Microbe Veniamin lives on the $(x, y)$ plane. Veniamin likes to hop and likes the function $f(x, y) = 5x^2 + 2y^4$. From the point $(x_t, y_t)$ he hops into the point
+\[
+(x_{t+1},y_{t+1})=(x_t, y_t) - 0.001\cdot \grad f(x_t, y_t)
+\]
+Veniamin starts hopping from the point $(x=1, y =2)$.
+
+\begin{enumerate}
+  \item What are the exact coordinates of Veniamin after one hop?
+  \item Where he may find himself after $10^{2017}$ hops?
+\end{enumerate}
+\item {[10 points]} Consider the function $p(x_1, x_2) = h(x_1 + x_2 a)$, where $h(t) = \exp(t)/(1+\exp(t))$ and $a$ is a fixed parameter. Find the second order Taylor expansion of $p$ at $(x_1=0, x_2=0)$.
+
+\item {[10 points]} Consider the function $f$ defined for $x>0$:
+\[
+f(x) = x + \frac{1}{x + \frac{1}{x + \frac{1}{x + \ldots}}}
+\]
+\begin{enumerate}
+  \item Simplify the expression $f(x) - \frac{1}{f(x)}$;
+  \item Using implicit function theorem find $f'(1)$.
+\end{enumerate}
+
+\item Let $f({x_1},\,{x_2})$ be twice continuously differentiable function whose Hessian is negative definite. Consider long-run profit maximization problem
+\[
+f({x_1},\,{x_2}) - {w_1}{x_1} - {w_2}{x_2} \to \max_{x_1, x_2},
+\]
+where ${w_1},\,{w_2} > 0$ are factor prices. The optimal bundle of factors consists of $x_1^L, x_2^L$ which are called demand on factors.
+\begin{enumerate}
+\item {[10 points]} Write down first-order conditions for the problem and check that IFT is applicable here in order to find $x_1^L, x_2^L$.
+\item {[10 points]} Prove that $\frac{{\partial x_1^L}}{{\partial {w_1}}} < 0$.
+\end{enumerate}
+
+\item The previous problem is stated in the long-run. In the short-run the quantity of ${x_2}$ is fixed, i.e. ${x_2} = b > 0$. The value function $\pi _L^*({w_1},\,{w_2})$ for long-run problem is called profit function. It is clear that $\pi_L^*({w_1},\,{w_2}) \geqslant \pi _S^*$, where $\pi_S^*({w_1},\,{w_2})$  is the profit function for the new short-run problem
+\[
+f({x_1},\,b) - {w_1}{x_1} - {w_2}b \to \max_{x_1}
+\]
+\begin{enumerate}
+  \item {[10 points]} Let $g({x_1}, {x_2}) \in {C^2}$ be an arbitrary function that takes the minimum value at $({\tilde x_1}, {\tilde x_2})$. Provide the argument justifying that $\frac{{{\partial ^2}g}}{{\partial x_1^2}} \geqslant 0$ at $({\tilde x_1}, {\tilde x_2})$.
+  \item {[5 points]} Let $z = \pi _L^* - \pi _S^*$. Explain why $\frac{{{\partial ^2}z}}{{\partial w_1^2}} \geqslant 0$.
+  \item {[5 points]} Using Envelope Theorem show that $\frac{{\partial x_1^L}}{{\partial {w_1}}} \leqslant \frac{{\partial x_1^S}}{{\partial {w_1}}}$, where $x_1^L$ and $x_1^S$ are factor demands in different periods.
+\end{enumerate}
+
+\end{enumerate}
+
+\subsection{Midterm marking}
+
+\begin{enumerate}
+  \item First derivatives - 2 points, Hessian matrix - 4 points, Hessian is positive definite - 2 points, Conclusion that the function is convex - 2 points
+  \item FOC - 2 points, Solution of FOC - 2 points, Hessian matrix - 2 points, Classification of critical point - 4 points: 2 points for each
+
+  \item NDCQ - 1 point,  Lagrangean - 1 point, FOC - 2 points, Solution of FOC - 2 points, SOC - 4 points: 2 points for each extremum
+\item
+Gradient - 2 points, Correct second step for $x$ - 2 points, Correct second step for $y$ - 2 points, Correct answer for coordinate $x$ with explanation - 2 points, Correct answer for coordinate $y$ with explanation - 2 points
+\item general formula for second order Taylor expansion — 2 points, value at the initial point — 1 point, first order derivatives — 3 points, second order derivatives — 4 points.
+\item point a — 2 points, $f'$ expressed in terms of $f$ — 5 points, exact value of $f$ — 3 points.
+\item
+а) FOC – 4 points; 1-st and 2-nd IFT conditions – 2 points; 3-d IFT conditions – 4 points;
+b) correct formula for derivative - 5 points
+\item
+a) only positive definite Hessian – 5 points
+b) application of a) – 5 points
+c) only Envelope theorem – 3 points
+\end{enumerate}
+
+\subsection{Midterm retake}
+
+\begin{enumerate}
+  \item  Find the local maxima and minima of the function $f(x,y)=x^4+2y^4-xy$.
+  \item
+Find all critical points of the function $z=z(x,y)$ implicitly defined by the equation
+\begin{equation}
+x^2+y^2+z^2-xz-yz+x+y+4z+1=0
+\end{equation}
+\item
+Using Lagrange multiplier method find and classify the constrained extrema of $f(x, y, z) =  5x +4y + 8z$ subject to $x^2 + y^2 + z^2 = 1$.
+\item
+  For the function $f(x,y)=2xy+3$ find the level curve and the equation for its tangent at the point $(1,2)$.
+\item
+Use the chain rule to find $f'(x)$ and $f''(x)$ for $f(x)=u(a,b,x)$ where $a=\sin(x)$ and $b=x^3$.
+\item
+Consider the function $f(x,y)=x^2+y^3-xy+3y$ at the point $(2;1)$. Find all the directions in which the  growth rate of the function constitutes $80\%$ of the maximal possible growth rate at that point.
+\item Consider an expenditure minimization problem for the agent whose utility function is $u({{x}_{1}},\ {{x}_{2}})=\sqrt{{{x}_{1}}{{x}_{2}}}$. Let $\bar{u}$ be a prescribed level of utility. Then find solution to the problem
+\[
+  \begin{cases}
+    {{p}_{1}}{{x}_{1}}+{{p}_{2}}{{x}_{2}}\to \min   \\
+    \sqrt[{}]{{{x}_{1}}{{x}_{2}}}=\bar{u}  \\
+  \end{cases},
+\]
+
+where ${x}_{1},\ {{x}_{2}}\ge 0$. Let $e={{p}_{1}}{{\tilde{x}}_{1}}+{{p}_{2}}{{\tilde{x}}_{2}}$ be the expenditure function, ${{\tilde{x}}_{1}}$ and ${{\tilde{x}}_{2}}$ being the solutions of the minimization problem. By using the appropriate envelope theorem find $\frac{\partial e}{\partial {{p}_{1}}}$ and $\frac{\partial e}{\partial {{p}_{2}}}$.
+\item
+ For what values of $p$, $q$ is the function $f(x,y)={{x}^{p}}+{{y}^{q}}$ convex or concave. Consider only $x>0$, $y>0$.
+\end{enumerate}
+
+\subsection{Mitderm retake marking}
+\begin{enumerate}
+  \item formulate FOC = 2 pts, solve FOC = 4 pts, SOC = 4 pts;
+  \item system of 3 equations and one inequality = 5 pts; solution = 5 pts; Frequent incomplete solution: only two equations (with argument) = 3 pts;
+  \item NDCQ =  1 pt; Lagrangian function = 1 pt; formulate FOC = 2 pts; solve FOC = 3 pts; SOC = 3 pts;
+  \item level curve = 5 pts; tangent line = 5 pts;
+  \item first derivative = 4 pts; second derivative = 6 pts;
+  \item grad = 2 pts; maximum growth speed = 1 pt; equation for direction = 2 pt; solution = 5 pts;
+  \item NDCQ = 2 pts; formulate FOC = 2 pts; solve FOC = 6 pts; envelope theorem = 4 pts;
+  \item Hesse matrix = 4 pts, convexity = 8 pts, concavity = 8 pts.
+\end{enumerate}
+
+
+\subsection{March exam}
+
+\begin{enumerate}
+\item Find the general solution of the differential equation $y'' + 4y' + 5y = 10x+23$.
+\item Find the general solution of the difference equation $y_{t+2} - 6y_{t+1} + 9y_t = 8$.
+\item Find all pure and mixed Nash equilibria in the following game
+
+\begin{center}
+\begin{tabular}{@{}cccc@{}}
+\toprule
+  & d & e & f \\ \midrule
+a & (5, 6) & (1, 0)  & (2, 2)   \\
+b & (1, 1) & (4, 4) & (2, 2)   \\
+c & (2, 4) & (2, 2) & (1, 3)   \\ \bottomrule
+\end{tabular}
+\end{center}
+
+\item Solve the following linear programming problem:
+\[
+\begin{cases}
+2x_1 + 2x_2 + 5x_3 \to \min \\
+x_1 \geq 0, x_2 \geq 0, x_3 \geq 0 \\
+3x_1 + 5x_2 + x_3 \geq 9 \\
+5x_1 + 3x_2 + x_3 \geq 8 \\
+\end{cases}.
+\]
+
+\item Expand the function $f(x) = \exp(1 - \cos^2 (\ln(1 + 2x)))$ as a power series in terms up to $x^5$.
+  State the range for which your expansion is valid.
+
+\item Sketch the set $\Re(z\cdot (1+i))+z\bar z =0$ on the complex plane.
+
+\item A firm with the production function $y=x_1x_2+x_1+x_2$ employs factors $x_1$, $x_2 \geq 0$.
+	  \begin{enumerate}[label=\alph*)]
+	    \item {[15 points]} Minimize the function $100x_1+x_2$  subject to constraint  $x_1x_2+x_1+x_2 \geq y$, where  $y\geq 0$ is the output.
+	      Justify the found optimal bundle(s).
+	    \item {[5 points]} Find the total costs function  $TC(y)$.
+	  \end{enumerate}
+
+\item Solve second-order differential equation $xy''-(2x+1)y'+2y=0$ following hints:
+	\begin{enumerate}[label=\alph*)]
+	    \item {[5 points]} Find a particular solution by substituting for $y(x)$ a polynomial $\tilde y(x)$ with
+	      the undetermined coefficients starting with the smallest degree possible.
+	    \item {[15 points]} Let $\tilde y(x)$  be the solution found in a),  introduce new function $z(x)=y(x)/\tilde y(x)$.
+	      Derive equation for $z$ and solve it. Then find $y$.
+	  \end{enumerate}
+
+
+\end{enumerate}
+
+\subsection{March marking scheme}
+
+\begin{enumerate}
+
+\item 10 points
+\item 10 points
+\item Dual — 2 points, plot — 3 points, solution of dual — 2 points, original $x_i$ — 3 points.
+
+Solution of dual $y = (0.25, 0.25)$, original $x = (13/16, 21/16, 0)$
+
+\item NE in pure — 2 points, elimination with correct argumentation — 3 points, best response functions — 2 points, plot — 2 points, conclusion — 1 point.
+
+2 pure NEs, and $p=1/3$, $q=3/7$.
+
+\item 10 points
+\item 10 points
+
+\item
+a. NDCQ - 2 points, Lagrangian - 2 points, FOC - 4 ponts, Solutions  - 6 points (2 points each), 1 point for describing dependence on the y-value
+
+b. 2 points for each of the functions, 1 point for describing dependence on the y-value
+
+\item
+a. Correct form of polynomial and its derivative - 2 points, plugging into initial equation and simplification - 2 points, result - 1 point
+
+b. The first derivative of y in terms of z and x - 2 points, he second derivative of y in terms of z and x - 2 points, differential equation with z' and z" - 2 points, substitution u=z' and the first order differential equation with u - 2 points, correct partial fractions and correct integral for u - 4 points, correct integral for z and final expression for y - 3 points.
+
+
+\end{enumerate}
